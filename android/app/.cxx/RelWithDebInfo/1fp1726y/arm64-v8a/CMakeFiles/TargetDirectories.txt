@@ -1,0 +1,2 @@
+/Users/luislabrador/AndroidStudioProjects/batidos_Salud/android/app/.cxx/RelWithDebInfo/1fp1726y/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/luislabrador/AndroidStudioProjects/batidos_Salud/android/app/.cxx/RelWithDebInfo/1fp1726y/arm64-v8a/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,2 @@
+/Users/luislabrador/AndroidStudioProjects/batidos_Salud/android/app/.cxx/Debug/6s2cy2d1/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/luislabrador/AndroidStudioProjects/batidos_Salud/android/app/.cxx/Debug/6s2cy2d1/armeabi-v7a/CMakeFiles/rebuild_cache.dir
