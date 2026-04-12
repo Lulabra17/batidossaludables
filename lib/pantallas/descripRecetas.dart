@@ -1,4 +1,6 @@
 import 'dart:io';
+import 'package:batidos_salud/l10n/l10n_extension.dart';
+import 'package:batidos_salud/services/ad_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -47,8 +49,7 @@ class _descripRecetaState extends State<descripReceta> {
 
   void _loadAdMobBanner() {
     _bannerAd = BannerAd(
-      //adUnitId: 'ca-app-pub-6698527085132528/5073839022', // REAL
-      adUnitId: 'ca-app-pub-3940256099942544/6300978111', // PRUEBA
+      adUnitId: AdHelper.bannerAdUnitId,
       size: AdSize.banner,
       request: const AdRequest(),
       listener: BannerAdListener(
@@ -63,8 +64,7 @@ class _descripRecetaState extends State<descripReceta> {
 
   void _loadAdMobInterstitial() {
     InterstitialAd.load(
-      //adUnitId: 'ca-app-pub-6698527085132528/6622508814', // REAL
-      adUnitId: 'ca-app-pub-3940256099942544/1033173712', // PRUEBA
+      adUnitId: AdHelper.interstitialAdUnitIdshare,
       request: const AdRequest(),
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (ad) {
@@ -106,6 +106,7 @@ class _descripRecetaState extends State<descripReceta> {
 
 
   Future<void> compartirRecetaConImagen(Recipe receta) async {
+    final l10n = context.l10n;
     File file;
 
     if (receta.image_smoothie.startsWith('assets/')) {
@@ -121,36 +122,37 @@ class _descripRecetaState extends State<descripReceta> {
     final String contenido = '''
 🍹 *${receta.name}*
 
-📝 *Ingredientes:*
+${l10n.shareIngredients}
 ${List.generate(receta.ingredient_description.length, (i) => '- ${receta.ingredient_amount[i]} ${receta.ingredient_description[i]}').join('\n')}
 
-👨‍🍳 *Preparación:*
+${l10n.sharePreparation}
 ${receta.preparation.join('\n')}
 
-¡Disfruta este batido saludable!
+${l10n.shareEnjoy}
+${l10n.shareDownloadApp}
 ''';
 
     await Share.shareXFiles(
       [XFile(file.path)],
       text: contenido,
-      subject: 'Receta: ${receta.name}',
+      subject: l10n.shareSubject(receta.name),
     );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Color(0xFFE8E8DE),
       appBar: AppBar(
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          icon: Icon(Icons.arrow_back, color: Colors.teal[600]),
           onPressed: () => Navigator.pop(context),
         ),
-        backgroundColor: Colors.teal[300],
+        backgroundColor: Colors.white,
         shadowColor: Colors.grey,
         actions: <Widget>[
           IconButton(
-            icon: const Icon(Icons.share, color: Colors.white),
+            icon: Icon(Icons.share, color: Colors.teal[600]),
             onPressed: () {
               _shareRecipeAfterAd(widget.recipe); // Mostrar el intersticial y luego compartir
             },
@@ -162,14 +164,15 @@ ${receta.preparation.join('\n')}
               child: Icon(
                 isFavorite ? Icons.favorite : Icons.favorite_border,
                 key: ValueKey<bool>(isFavorite),
-                color: isFavorite ? Colors.red : Colors.white,
+                color: isFavorite ? Colors.red : Colors.teal[600],
               ),
             ),
             onPressed: () {
+              final l10n = context.l10n;
               final recipeId = '${widget.recipe.id}';
               if (!isFavorite) {
                 Fluttertoast.showToast(
-                  msg: "Agregado a Favoritos",
+                  msg: l10n.addedToFavorites,
                   gravity: ToastGravity.TOP,
                   backgroundColor: Colors.red,
                 );
@@ -179,7 +182,7 @@ ${receta.preparation.join('\n')}
                 });
               } else {
                 Fluttertoast.showToast(
-                  msg: "Desde la sección de Favoritos podrás eliminarla.",
+                  msg: l10n.removeFromFavoritesHint,
                   gravity: ToastGravity.TOP,
                   backgroundColor: Colors.grey,
                 );
@@ -222,7 +225,7 @@ ${receta.preparation.join('\n')}
                           ),
                         )),
                     SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-                    Text('Ingredientes',
+                    Text(context.l10n.ingredientsTitle,
                         style: GoogleFonts.nunito(
                           textStyle: TextStyle(
                             color: Colors.black,
@@ -234,7 +237,7 @@ ${receta.preparation.join('\n')}
                     for (var i = 0; i < widget.recipe.ingredient_icon.length; i++)
                       listIngredientes(context, widget.recipe, i),
                     SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-                    Text('Preparación',
+                    Text(context.l10n.preparationTitle,
                         style: GoogleFonts.nunito(
                           textStyle: TextStyle(
                             color: Colors.black,

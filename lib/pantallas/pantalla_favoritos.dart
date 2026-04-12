@@ -1,6 +1,8 @@
 
+import 'package:batidos_salud/l10n/l10n_extension.dart';
 import 'package:batidos_salud/providers/provider.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import '../functions/functions.dart';
 import 'descripRecetas.dart';
@@ -47,23 +49,22 @@ class _PantallaFavoritosState extends State<PantallaFavoritos> {
 
 
     return Scaffold(
-        backgroundColor: Colors.teal[200],
+        backgroundColor: Color(0xFFE8E8DE),
         appBar: AppBar(
           automaticallyImplyLeading: false,
           leading: null,
-          title: const Text(
-            'Favoritos',
-            style: TextStyle(
-                color: Colors.white, fontWeight: FontWeight.w500, fontSize: 18),
+          title: Text(context.l10n.favoritesTitle,
+            style: GoogleFonts.nunito(textStyle: TextStyle(
+                color: Colors.black, fontWeight: FontWeight.bold, fontSize: MediaQuery.of(context).size.width*0.04),
+            ),
           ),
-          backgroundColor: Colors.teal[300],
+          backgroundColor: Colors.white,
           shadowColor: Colors.grey,),
         body: Builder(
           builder: (context) {
             if (listafavoritos.isEmpty) {
               //box.clear();
-              return
-                Center(child: Text('No hay recetas favoritas'));
+              return Center(child: Text(context.l10n.noFavorites));
             } else {
               return SingleChildScrollView(
                 child: Column(
@@ -146,7 +147,7 @@ BuildContext context, int index, dynamic recipe, void Function() delete) {
                     SizedBox(
                       height: 8,
                     ),
-                    Text('Batidos $nombreCategoria',
+                    Text(context.l10n.smoothiesCategoryTitle(nombreCategoria),
                       textAlign: TextAlign.center,
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,

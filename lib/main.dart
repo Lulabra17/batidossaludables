@@ -1,17 +1,19 @@
 import 'dart:ui';
 import 'package:alarm/alarm.dart';
 import 'package:batidos_salud/alarms_functions.dart';
+import 'package:batidos_salud/l10n/l10n_extension.dart';
 import 'package:batidos_salud/main/main_screen.dart';
 import 'package:batidos_salud/providers/provider.dart';
+import 'package:batidos_salud/services/ad_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:provider/provider.dart';
 import 'dart:async';
 import 'favoritos.dart';
-import 'package:flutter/material.dart';
 
 // configurando canales para reprogramar alarmas en un reinicio
 @pragma('vm:entry-point')
@@ -76,9 +78,26 @@ class MyApp extends StatelessWidget {
 
     return ChangeNotifierProvider(
         create: (context) => SmoothieProvider(),
-        child:  const MaterialApp(
+        child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Batidos Saludables',
+        // Título localizado — usa onGenerateTitle porque title se evalúa antes que los delegates
+        onGenerateTitle: (context) => context.l10n.appTitle,
+        // Configuración de internacionalización
+        localizationsDelegates: const [
+          AppLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: const [
+          Locale('en'), // inglés — idioma por defecto
+          Locale('es'), // español
+        ],
+        // Si el celular está en español se usa español; cualquier otro idioma usa inglés
+        localeResolutionCallback: (locale, supportedLocales) {
+          if (locale?.languageCode == 'es') return const Locale('es');
+          return const Locale('en');
+        },
         home: const Bienvenida(),
       ),
     );
@@ -104,8 +123,7 @@ class _BienvenidaState extends State<Bienvenida> {
 
   void _loadInterstitialAd() {
     InterstitialAd.load(
-      //adUnitId: 'ca-app-pub-6698527085132528/7842080932', // REAL
-      adUnitId: 'ca-app-pub-3940256099942544/1033173712', // PRUEBA
+      adUnitId: AdHelper.interstitialAdUnitIdwelcome,
       request: const AdRequest(),
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (InterstitialAd ad) {
@@ -169,6 +187,7 @@ class _BienvenidaState extends State<Bienvenida> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
     return Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
@@ -183,12 +202,12 @@ class _BienvenidaState extends State<Bienvenida> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Padding(
-                padding: EdgeInsets.all(25.0),
+              Padding(
+                padding: const EdgeInsets.all(25.0),
                 child: Text(
-                  'Bienvenid@, aqui encontraras bebidas naturales y nutritivas para cuidar tu cuerpo y tu mente.\n\nY lo mejor!!!\n\nPodrás hacerlas desde casa.',
+                  l10n.welcomeMessage,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
@@ -209,7 +228,7 @@ class _BienvenidaState extends State<Bienvenida> {
                     elevation: 0,
                   ),
                   onPressed: showInterstitialAdIfAllowed,
-                  child: const Text('¡Adelante!'),
+                  child: Text(l10n.welcomeButton),
                 ),
               ),
             ],

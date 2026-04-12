@@ -1,3 +1,4 @@
+import 'package:batidos_salud/l10n/l10n_extension.dart';
 import 'package:batidos_salud/pantallas/descripRecetas.dart';
 import 'package:batidos_salud/pantallas/listaRecetas.dart';
 import 'package:batidos_salud/pantallas/searchScreen.dart';
@@ -33,33 +34,19 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     final smProvider = Provider.of<SmoothieProvider>(context, listen: false);
     return Scaffold(
-      backgroundColor: Colors.teal[200],
+      backgroundColor: Color(0xFFE8E8DE),
       appBar: AppBar(
         automaticallyImplyLeading: false,
         leading: null,
-        title: Text('Bebidas Saludables \ndesde Casa',
+        title: Text(context.l10n.homeTitle,
             style: GoogleFonts.nunito(
               textStyle: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontWeight: FontWeight.bold,
                   fontSize: MediaQuery.of(context).size.width * 0.04),
             )),
-        backgroundColor: Colors.teal[300],
+        backgroundColor: Colors.white,
         shadowColor: Colors.grey,
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(
-              Icons.search,
-              color: Colors.white,
-            ),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const SearchScreen()),
-              );
-            },
-          )
-        ],
       ),
       body: Stack(children: [
         Consumer<SmoothieProvider>(
@@ -156,7 +143,7 @@ Widget listxCategoria(BuildContext context, dynamic category) {
   int ic = 0;
   final smProvider = Provider.of<SmoothieProvider>(context, listen: false);
   final List<Recipe> listaReceta =
-      depuratedListReceta(smProvider.recetas, idcategory);
+  depuratedListReceta(smProvider.recetas, idcategory);
   if (listaReceta.length <= 5) {
     ic = listaReceta.length;
   } else {
@@ -175,7 +162,7 @@ Widget listxCategoria(BuildContext context, dynamic category) {
                 width: 10,
               ),
               Expanded(
-                child: Text('Batidos ${category.name_category}',
+                child: Text(context.l10n.smoothiesCategoryTitle(category.name_category),
                     style: GoogleFonts.nunito(
                       textStyle: TextStyle(
                           color: Colors.black,

@@ -1,3 +1,4 @@
+import 'package:batidos_salud/l10n/l10n_extension.dart';
 import 'package:batidos_salud/models/receta_model.dart';
 import 'package:batidos_salud/pantallas/descripRecetas.dart';
 import 'package:batidos_salud/pantallas/searchScreen.dart';
@@ -8,6 +9,8 @@ import '../functions/functions.dart';
 import '../models/categories_model.dart';
 import '../providers/provider.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+
+import '../services/ad_helper.dart';
 
 class ListaRecetas extends StatefulWidget {
   final Category category;
@@ -29,8 +32,7 @@ class _ListaRecetasState extends State<ListaRecetas> {
 
   void _loadAdMobBanner() {
     _adMobBanner = BannerAd(
-      //adUnitId: 'ca-app-pub-6698527085132528/5073839022', // REAL
-      adUnitId: 'ca-app-pub-3940256099942544/6300978111', // PRUEBA
+      adUnitId: AdHelper.bannerAdUnitId,
       size: AdSize.banner,
       request: const AdRequest(),
       listener: BannerAdListener(
@@ -58,20 +60,20 @@ class _ListaRecetasState extends State<ListaRecetas> {
     final List<Recipe> listaReceta = depuratedListReceta(smProvider.recetas, idcategory);
 
     return Scaffold(
-      backgroundColor: Colors.teal[200],
+      backgroundColor: Color(0xFFE8E8DE),
       appBar: AppBar(
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          icon: Icon(Icons.arrow_back, color: Colors.teal[600]),
           onPressed: () => Navigator.pop(context),
         ),
         title: Text(
-          'Batidos ${widget.category.name_category}',
-          style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
+          context.l10n.smoothiesCategoryTitle(widget.category.name_category),
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: MediaQuery.of(context).size.width*0.04),
         ),
-        backgroundColor: Colors.teal[300],
+        backgroundColor: Colors.white,
         actions: [
           IconButton(
-            icon: const Icon(Icons.search, color: Colors.white),
+            icon: Icon(Icons.search, color: Colors.teal[600]),
             onPressed: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => const SearchScreen()),

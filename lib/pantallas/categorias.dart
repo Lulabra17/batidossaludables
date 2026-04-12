@@ -1,3 +1,4 @@
+import 'package:batidos_salud/l10n/l10n_extension.dart';
 import 'package:batidos_salud/pantallas/listaRecetas.dart';
 import 'package:batidos_salud/pantallas/searchScreen.dart';
 import 'package:flutter/material.dart';
@@ -31,31 +32,18 @@ class _CategoriasState extends State<Categorias> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.teal[200],
+      backgroundColor: Color(0xFFE8E8DE),
       appBar: AppBar(
         automaticallyImplyLeading: false,
         leading: null,
-        title: Text('Bebidas Saludables \ndesde Casa',
+        title: Text(context.l10n.categoriesTitle,
             style: GoogleFonts.nunito(textStyle: TextStyle(
-                color: Colors.white, fontWeight: FontWeight.bold, fontSize: MediaQuery.of(context).size.width*0.04),
+                color: Colors.black, fontWeight: FontWeight.bold, fontSize: MediaQuery.of(context).size.width*0.04),
             ),
         ),
-        backgroundColor: Colors.teal[300],
+        backgroundColor: Colors.white,
         shadowColor: Colors.grey,
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(
-              Icons.search,
-              color: Colors.white,
-            ),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const SearchScreen()),
-              );
-            },
-          )
-        ],
+
       ),
       body: Consumer<SmoothieProvider>(
         builder: (context, provider, child) {

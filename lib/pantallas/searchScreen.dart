@@ -1,3 +1,4 @@
+import 'package:batidos_salud/l10n/l10n_extension.dart';
 import 'package:batidos_salud/pantallas/listaRecetas.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -5,6 +6,7 @@ import 'package:diacritic/diacritic.dart';
 import '../models/receta_model.dart';
 import '../models/categories_model.dart';
 import '../providers/provider.dart';
+import '../services/ad_helper.dart';
 import 'categorias.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
@@ -26,8 +28,7 @@ class _SearchScreenState extends State<SearchScreen> {
     super.initState();
 
     _admobBanner = BannerAd(
-      //adUnitId: 'ca-app-pub-6698527085132528/5073839022', // REAL
-      adUnitId: 'ca-app-pub-3940256099942544/6300978111', // PRUEBA
+      adUnitId: AdHelper.bannerAdUnitId,
       size: AdSize.banner,
       request: const AdRequest(),
       listener: BannerAdListener(
@@ -73,7 +74,7 @@ class _SearchScreenState extends State<SearchScreen> {
     }).toList();
 
     return Scaffold(
-      backgroundColor: Colors.teal[100],
+      backgroundColor: Color(0xFFFAFAF8),
       appBar: AppBar(
         title: TextField(
           autofocus: true,
@@ -82,16 +83,16 @@ class _SearchScreenState extends State<SearchScreen> {
               searchQuery = value;
             });
           },
-          decoration: const InputDecoration(
-            hintText: "Busqueda por palabra o ingrediente...",
+          decoration: InputDecoration(
+            hintText: context.l10n.searchHint,
             border: InputBorder.none,
-            hintStyle: TextStyle(color: Colors.white60),
+            hintStyle: const TextStyle(color: Colors.black38),
           ),
-          style: const TextStyle(color: Colors.white),
-          cursorColor: Colors.white,
+          style: const TextStyle(color: Colors.black),
+          cursorColor: Colors.teal,
         ),
-        backgroundColor: Colors.teal[300],
-        iconTheme: const IconThemeData(color: Colors.white),
+        backgroundColor: Colors.white,
+        iconTheme: const IconThemeData(color: Colors.teal),
       ),
       body: Stack(
         children: [
@@ -99,10 +100,10 @@ class _SearchScreenState extends State<SearchScreen> {
             child: Padding(
               padding: EdgeInsets.only(bottom: _isAdmobBannerReady ? 60 : 0),
               child: searchQuery.isEmpty
-                  ? const Center(
+                  ? Center(
                 child: Text(
-                  'Introduce texto para iniciar la búsqueda...',
-                  style: TextStyle(fontSize: 16, color: Colors.black54),
+                  context.l10n.searchPrompt,
+                  style: const TextStyle(fontSize: 16, color: Colors.black54),
                 ),
               )
                   : filteredCategories.isNotEmpty
@@ -113,10 +114,10 @@ class _SearchScreenState extends State<SearchScreen> {
                 },
               )
                   : filteredRecipes.isEmpty
-                  ? const Center(
+                  ? Center(
                 child: Text(
-                  'No se encontraron coincidencias.',
-                  style: TextStyle(fontSize: 16, color: Colors.black54),
+                  context.l10n.noResults,
+                  style: const TextStyle(fontSize: 16, color: Colors.black54),
                 ),
               )
                   : ListView.builder(

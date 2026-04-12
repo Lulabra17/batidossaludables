@@ -1,9 +1,15 @@
-import 'package:alarm/utils/alarm_set.dart';
-import 'package:flutter/material.dart';
 import 'dart:math';
+import 'dart:ui';
+
 import 'package:alarm/alarm.dart';
 import 'package:alarm/model/volume_settings.dart';
+import 'package:alarm/utils/alarm_set.dart';
+import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
+
+// Detecta si el dispositivo usa español (funciona también en background sin BuildContext)
+bool _isSpanish() =>
+    PlatformDispatcher.instance.locale.languageCode == 'es';
 
 
 // Configurar las alarmas desde la lista de recordatorios
@@ -41,11 +47,11 @@ Future<void> scheduleDailyAlarms(List<Duration> alarmTimes) async {
       androidFullScreenIntent: true,
       allowAlarmOverlap: true,
       notificationSettings: NotificationSettings(
-          title: '¡Recordatorio!',
+          title: _isSpanish() ? '¡Recordatorio!' : 'Reminder!',
           body: phraseRandom(),
           icon: 'ic_notification',
           iconColor: Colors.teal,
-          stopButton: 'Detener'),
+          stopButton: _isSpanish() ? 'Detener' : 'Stop'),
       volumeSettings: VolumeSettings.fixed(
       volume: 0.9,
       volumeEnforced: true,
@@ -70,8 +76,8 @@ Future<void> loadAndScheduleAlarms() async {
 
 
 
-// Lista de frases para los recordatorios
-final List<String> phrases = [
+// Frases para recordatorios según idioma
+final List<String> _phrasesEs = [
   'Es hora de tomar tu vaso de agua.',
   '¡Hora de hidratarte! Toma un vaso de agua ahora.',
   'Tu cuerpo te lo agradecerá, bebe un vaso de agua.',
@@ -84,11 +90,23 @@ final List<String> phrases = [
   'Dale a tu cuerpo lo que necesita: un buen vaso de agua.',
 ];
 
+final List<String> _phrasesEn = [
+  'Time to drink your glass of water.',
+  'Time to hydrate! Drink a glass of water now.',
+  'Your body will thank you, drink a glass of water.',
+  'Take a break and drink a glass of fresh water.',
+  'Come on! A sip is not enough, drink a full glass of water.',
+  'Stay fit, drink your glass of water now.',
+  'Recharge your body! It\'s time to drink a glass of water.',
+  'Your health comes first, hydrate with a glass of water.',
+  'Take a healthy break! Drink a glass of water.',
+  'Give your body what it needs: a good glass of water.',
+];
 
-// Función para obtener una frase aleatoria de la lista
+// Retorna una frase aleatoria en el idioma actual del dispositivo
 String phraseRandom() {
-  final random = Random();
-  return phrases[random.nextInt(phrases.length)];
+  final phrases = _isSpanish() ? _phrasesEs : _phrasesEn;
+  return phrases[Random().nextInt(phrases.length)];
 }
 
 

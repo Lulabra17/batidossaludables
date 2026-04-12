@@ -1,0 +1,63 @@
+{
+  "@@locale": "es",
+
+  "appTitle": "Batidos Saludables",
+  "welcomeMessage": "Bienvenid@, aqui encontraras bebidas naturales y nutritivas para cuidar tu cuerpo y tu mente.\n\nY lo mejor!!!\n\nPodrás hacerlas desde casa.",
+  "welcomeButton": "¡Adelante!",
+
+  "homeTitle": "Bebidas Saludables desde Casa",
+  "smoothiesCategoryTitle": "Batidos {categoryName}",
+
+  "categoriesTitle": "Categorias",
+  "favoritesTitle": "Favoritos",
+  "noFavorites": "No hay recetas favoritas",
+
+  "ingredientsTitle": "Ingredientes",
+  "preparationTitle": "Preparación",
+
+  "addedToFavorites": "Agregado a Favoritos",
+  "removeFromFavoritesHint": "Desde la sección de Favoritos podrás eliminarla.",
+
+  "searchHint": "Busqueda por palabra o ingrediente...",
+  "searchPrompt": "Introduce texto para iniciar la búsqueda...",
+  "noResults": "No se encontraron coincidencias.",
+
+  "reminderScreenTitle": "Recordar tomar agua",
+  "dailyGoalLabel": "TU META DIARIA",
+  "enterWeightPrompt": "\nIngresa tu peso para calcular",
+  "perDayByWeight": "al día según tu peso",
+  "calculateByWeightLabel": "CALCULAR SEGÚN TU PESO",
+  "weightHint": "Tu peso en kg",
+  "calculateButton": "Calcular",
+  "reminderRoutineTitle": "Rutina de recordatorios",
+  "wakeUpLabel": "🌅  Me despierto",
+  "sleepLabel": "🌙  Me duermo",
+  "remindersCount": "Tienes {count} recordatorios programados",
+  "activateReminders": "Activar recordatorios",
+  "deleteReminders": "Borrar recordatorios existentes",
+  "scheduledRemindersLabel": "RECORDATORIOS PROGRAMADOS",
+  "drinkWaterAt": "Beber agua a las {time}",
+  "invalidWeightError": "Por favor, ingresa un peso válido.",
+  "calculateWaterFirstError": "Por favor, calcula la cantidad de agua primero.",
+  "sleepAfterWakeError": "La hora de dormir debe ser después de la de despertar.",
+  "notificationPermissionRequired": "El permiso de notificaciones es necesario para los recordatorios.",
+
+  "alarmNotificationTitle": "¡Recordatorio!",
+  "alarmNotificationStop": "Detener",
+  "waterPhrase0": "Es hora de tomar tu vaso de agua.",
+  "waterPhrase1": "¡Hora de hidratarte! Toma un vaso de agua ahora.",
+  "waterPhrase2": "Tu cuerpo te lo agradecerá, bebe un vaso de agua.",
+  "waterPhrase3": "Pausa lo que haces y toma un vaso de agua fresca.",
+  "waterPhrase4": "¡Vamos! Un sorbo no basta, toma un vaso completo de agua.",
+  "waterPhrase5": "Mantente en forma, toma tu vaso de agua ahora.",
+  "waterPhrase6": "¡Recarga tu cuerpo! Es momento de beber un vaso de agua.",
+  "waterPhrase7": "Tu salud es primero, hidrátate con un vaso de agua.",
+  "waterPhrase8": "¡Tómate un break saludable! Bebe un vaso de agua.",
+  "waterPhrase9": "Dale a tu cuerpo lo que necesita: un buen vaso de agua.",
+
+  "shareEnjoy": "¡Disfruta este batido saludable!",
+  "shareDownloadApp": "\nSi aun no has descargado nuestra app, puedes hacerlo ingresando a https://play.google.com/store/apps/details?id=com.slisapps.batidossalud",
+  "shareSubject": "Receta: {recipeName}",
+  "shareIngredients": "📝 *Ingredientes:*",
+  "sharePreparation": "👨‍🍳 *Preparación:*"
+}

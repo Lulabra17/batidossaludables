@@ -14,7 +14,7 @@ if (keystorePropertiesFile.exists()) {
 
 android {
     namespace = "com.slisapps.batidossalud"
-    compileSdk = 35
+    compileSdk = 36
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
@@ -35,8 +35,8 @@ android {
         minSdkVersion = flutter.minSdkVersion
         targetSdk = 35
         multiDexEnabled true
-        versionCode = 9
-        versionName = "1.1.4"
+        versionCode = 11
+        versionName = "1.1.6"
     }
 
     signingConfigs {

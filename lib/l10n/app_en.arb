@@ -1,0 +1,83 @@
+{
+  "@@locale": "en",
+
+  "appTitle": "Healthy Smoothies",
+  "welcomeMessage": "Welcome! Here you'll find natural and nutritious drinks to take care of your body and mind.\n\nAnd the best part!!!\n\nYou can make them at home.",
+  "welcomeButton": "Let's go!",
+
+  "homeTitle": "Healthy Drinks from Home",
+  "smoothiesCategoryTitle": "Smoothies {categoryName}",
+  "@smoothiesCategoryTitle": {
+    "placeholders": {
+      "categoryName": { "type": "String" }
+    }
+  },
+
+  "categoriesTitle": "Categories",
+  "favoritesTitle": "Favorites",
+  "noFavorites": "No favorite recipes",
+
+  "ingredientsTitle": "Ingredients",
+  "preparationTitle": "Preparation",
+
+  "addedToFavorites": "Added to Favorites",
+  "removeFromFavoritesHint": "From the Favorites section you can remove it.",
+
+  "searchHint": "Search by word or ingredient...",
+  "searchPrompt": "Enter text to start searching...",
+  "noResults": "No matches found.",
+
+  "reminderScreenTitle": "Remember to drink water",
+  "dailyGoalLabel": "YOUR DAILY GOAL",
+  "enterWeightPrompt": "\nEnter your weight to calculate",
+  "perDayByWeight": "per day based on your weight",
+  "calculateByWeightLabel": "CALCULATE BY YOUR WEIGHT",
+  "weightHint": "Your weight in kg",
+  "calculateButton": "Calculate",
+  "reminderRoutineTitle": "Reminder routine",
+  "wakeUpLabel": "🌅  I wake up",
+  "sleepLabel": "🌙  I go to sleep",
+  "remindersCount": "You have {count} reminders set",
+  "@remindersCount": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "activateReminders": "Activate reminders",
+  "deleteReminders": "Delete existing reminders",
+  "scheduledRemindersLabel": "SCHEDULED REMINDERS",
+  "drinkWaterAt": "Drink water at {time}",
+  "@drinkWaterAt": {
+    "placeholders": {
+      "time": { "type": "String" }
+    }
+  },
+  "invalidWeightError": "Please enter a valid weight.",
+  "calculateWaterFirstError": "Please calculate the water amount first.",
+  "sleepAfterWakeError": "Sleep time must be after wake time.",
+  "notificationPermissionRequired": "Notification permission is required for reminders.",
+
+  "alarmNotificationTitle": "Reminder!",
+  "alarmNotificationStop": "Stop",
+  "waterPhrase0": "Time to drink your glass of water.",
+  "waterPhrase1": "Time to hydrate! Drink a glass of water now.",
+  "waterPhrase2": "Your body will thank you, drink a glass of water.",
+  "waterPhrase3": "Take a break and drink a glass of fresh water.",
+  "waterPhrase4": "Come on! A sip is not enough, drink a full glass of water.",
+  "waterPhrase5": "Stay fit, drink your glass of water now.",
+  "waterPhrase6": "Recharge your body! It's time to drink a glass of water.",
+  "waterPhrase7": "Your health comes first, hydrate with a glass of water.",
+  "waterPhrase8": "Take a healthy break! Drink a glass of water.",
+  "waterPhrase9": "Give your body what it needs: a good glass of water.",
+
+  "shareEnjoy": "Enjoy this healthy smoothie!",
+  "shareDownloadApp": "\nIf you haven't downloaded our app yet, you can do so at https://play.google.com/store/apps/details?id=com.slisapps.batidossalud",
+  "shareSubject": "Recipe: {recipeName}",
+  "@shareSubject": {
+    "placeholders": {
+      "recipeName": { "type": "String" }
+    }
+  },
+  "shareIngredients": "📝 *Ingredients:*",
+  "sharePreparation": "👨‍🍳 *Preparation:*"
+}

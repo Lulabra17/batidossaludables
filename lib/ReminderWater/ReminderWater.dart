@@ -1,4 +1,5 @@
 import 'package:alarm/alarm.dart';
+import 'package:batidos_salud/l10n/l10n_extension.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -28,35 +29,36 @@ class _ReminderWaterState extends State<ReminderWater> {
   double waterAmountHigh = 0;
   List<Duration> listReminders = [];
 
-  InterstitialAd? _interstitialAd;
-  BannerAd? _bannerAd;
 
-  bool _isBannerAdReady = false;
-  bool _isInterstitialAdReady = false;
+  // ── Colores de la app ──────────────────────────────────────
+  static const _teal       = Color(0xFF2BBFAA);
+  static const _tealDark   = Color(0xFF008776);
+  static const _background = Color(0xFFE8E8DE);
+  static const _dark       = Color(0xFF1A1A2E);
 
-
-// Funcion para verificar permiso de notificaciones y solicitar al usuario su aprobación
   Future<void> requestNotificationPermission() async {
     var status = await Permission.notification.status;
     if (!status.isGranted) {
-      if (await Permission.notification.request().isGranted) {
-        print("Permiso de notificaciones concedido");
-      } else {
-        print("Permiso de notificaciones denegado");
-        Fluttertoast.showToast(
-          msg: "El permiso de notificaciones es necesario para los recordatorios.",
-          gravity: ToastGravity.TOP,
-          backgroundColor: Colors.orange,
-        );
+      if (!await Permission.notification.request().isGranted) {
+        if (mounted) {
+          Fluttertoast.showToast(
+            msg: context.l10n.notificationPermissionRequired,
+            gravity: ToastGravity.TOP,
+            backgroundColor: Colors.orange,
+          );
+        }
       }
     }
   }
 
-
   List<Duration> _generatorReminders() {
-    int newReminderLength = ((waterAmountHigh / 255).toInt()).clamp(1, double.infinity).toInt();
+    int newReminderLength =
+    ((waterAmountHigh / 255).toInt()).clamp(1, double.infinity).toInt();
     Duration newReminderDuring = Duration(
-      minutes: ((timeActive(getUpTime, wakeUpTime) / newReminderLength).toInt()).clamp(1, double.infinity).toInt(),
+      minutes: ((timeActive(getUpTime, wakeUpTime) / newReminderLength)
+          .toInt())
+          .clamp(1, double.infinity)
+          .toInt(),
     );
 
     List<Duration> newListReminders = [];
@@ -79,399 +81,553 @@ class _ReminderWaterState extends State<ReminderWater> {
     waterAmountHigh = weight * 35;
     if (weight <= 0) {
       Fluttertoast.showToast(
-        msg: "Por favor, ingresa un peso válido.",
+        msg: context.l10n.invalidWeightError,
         gravity: ToastGravity.TOP,
         backgroundColor: Colors.red,
       );
       return '';
     } else {
-      String waterIntakeResult = '${waterAmountLow.toStringAsFixed(0)} a ${waterAmountHigh.toStringAsFixed(0)} ml';
-      // Llamamos a setState solo una vez
       setState(() {
-        _waterIntake = waterIntakeResult;
+        _waterIntake =
+        '${waterAmountLow.toStringAsFixed(0)} – ${waterAmountHigh.toStringAsFixed(0)} ml';
       });
       return _waterIntake;
-    }}
+    }
+  }
 
   void _showWakeUpTimePicker(BuildContext context) {
     showCupertinoModalPopup(
       context: context,
-      builder: (context) {
-        return Container(
-          height: 250,
-          color: Colors.white,
-          child: CupertinoTimerPicker(
-            minuteInterval: 5,
-            mode: CupertinoTimerPickerMode.hm,
-            initialTimerDuration: wakeUpTime,
-            onTimerDurationChanged: (duration) {
-              setState(() {
-                wakeUpTime = duration;
-              });
-            },
-          ),
-        );
-      },
+      builder: (context) => Container(
+        height: 250,
+        color: Colors.white,
+        child: CupertinoTimerPicker(
+          minuteInterval: 5,
+          mode: CupertinoTimerPickerMode.hm,
+          initialTimerDuration: wakeUpTime,
+          onTimerDurationChanged: (duration) =>
+              setState(() => wakeUpTime = duration),
+        ),
+      ),
     );
   }
 
   void _showGetUpTimePicker(BuildContext context) {
     showCupertinoModalPopup(
       context: context,
-      builder: (context) {
-        return Container(
-          height: 250,
-          color: Colors.white,
-          child: CupertinoTimerPicker(
-            minuteInterval: 5,
-            mode: CupertinoTimerPickerMode.hm,
-            initialTimerDuration: getUpTime,
-            onTimerDurationChanged: (duration) {
-              setState(() {
-                getUpTime = duration;
-              });
-            },
-          ),
-        );
-      },
+      builder: (context) => Container(
+        height: 250,
+        color: Colors.white,
+        child: CupertinoTimerPicker(
+          minuteInterval: 5,
+          mode: CupertinoTimerPickerMode.hm,
+          initialTimerDuration: getUpTime,
+          onTimerDurationChanged: (duration) =>
+              setState(() => getUpTime = duration),
+        ),
+      ),
     );
   }
 
   String formatDuration(Duration duration) {
     String twoDigits(int n) => n.toString().padLeft(2, "0");
-    String twoDigitHours = twoDigits(duration.inHours.remainder(24));
-    String twoDigitMinutes = twoDigits(duration.inMinutes.remainder(60));
-    return "$twoDigitHours:$twoDigitMinutes";
+    return "${twoDigits(duration.inHours.remainder(24))}:${twoDigits(duration.inMinutes.remainder(60))}";
   }
 
-  int timeActive(Duration F, Duration I)  {
-    int timeTotal = ((F.inHours.remainder(24) * 60) + F.inMinutes.remainder(60))-((I.inHours.remainder(24) * 60) + I.inMinutes.remainder(60));
-    return timeTotal;
+  int timeActive(Duration f, Duration i) {
+    return ((f.inHours.remainder(24) * 60) + f.inMinutes.remainder(60)) -
+        ((i.inHours.remainder(24) * 60) + i.inMinutes.remainder(60));
   }
 
   @override
   void initState() {
     super.initState();
     requestNotificationPermission();
-    _loadInterstitialAd();
-    _loadBannerAd();
   }
 
-  void _loadBannerAd() {
-    _bannerAd = BannerAd(
-      //adUnitId: 'ca-app-pub-6698527085132528/5073839022', // REAL
-      adUnitId: 'ca-app-pub-3940256099942544/6300978111', // PRUEBA
-      request: AdRequest(),
-      size: AdSize.banner,
-      listener: BannerAdListener(
-        onAdLoaded: (_) => setState(() => _isBannerAdReady = true),
-        onAdFailedToLoad: (ad, error) {
-          ad.dispose();
-          print('❌ Error al cargar Banner: $error');
-        },
+
+  // ── Helpers de UI ──────────────────────────────────────────
+
+  // Card de resultado (litros/ml)
+  Widget _buildGoalCard() {
+    final l10n = context.l10n;
+    return Container(
+      width: double.infinity,
+      constraints: const BoxConstraints(minHeight: 122),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [_tealDark, _teal],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(20),
       ),
-    )..load();
-  }
-
-  void _loadInterstitialAd() {
-    InterstitialAd.load(
-      //adUnitId: 'ca-app-pub-6698527085132528/2356553640', // REAL
-      adUnitId: 'ca-app-pub-3940256099942544/1033173712', // PRUEBA
-      request: AdRequest(),
-      adLoadCallback: InterstitialAdLoadCallback(
-        onAdLoaded: (ad) {
-          _interstitialAd = ad;
-          _isInterstitialAdReady = true;
-          ad.setImmersiveMode(true);
-        },
-        onAdFailedToLoad: (error) {
-          print('❌ Error al cargar Interstitial: $error');
-        },
+      padding: const EdgeInsets.all(20),
+      child: Stack(
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(
+                l10n.dailyGoalLabel,
+                style: TextStyle(
+                  fontSize: 11,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white.withOpacity(0.7),
+                  letterSpacing: 1.2,
+                ),
+              ),
+              const SizedBox(height: 8),
+              _waterIntake.isEmpty
+                  ? Text(
+                l10n.enterWeightPrompt,
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.white.withOpacity(0.8),
+                  fontWeight: FontWeight.w500,
+                ),
+              )
+                  : Text(
+                _waterIntake,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.white,
+                ),
+              ),
+              if (_waterIntake.isNotEmpty)
+                Padding(
+                  padding: const EdgeInsets.only(top: 4),
+                  child: Text(
+                    l10n.perDayByWeight,
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.white.withOpacity(0.7),
+                    ),
+                  ),
+                ),
+            ],
+          ),
+          // Emoji decorativo
+          Positioned(
+            right: 10,
+            bottom: 10,
+            child: Container(
+              padding: const EdgeInsets.all(14),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.white.withOpacity(0.1),
+                border: Border.all(
+                  color: Colors.white.withOpacity(0.3),
+                  width: 1,
+                ),
+              ),
+              child: const Icon(
+                Icons.water_drop,
+                color: Colors.white,
+                size: 30,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
 
-  @override
-  void dispose() {
-    _interstitialAd?.dispose();
-    _bannerAd?.dispose();
-    super.dispose();
+  // Card de cálculo por peso
+  Widget _buildInputCard() {
+    final l10n = context.l10n;
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 2),
+          ),
+        ],
+      ),
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            l10n.calculateByWeightLabel,
+            style: TextStyle(
+              fontSize: 10,
+              fontWeight: FontWeight.w600,
+              color: Colors.grey[400],
+              letterSpacing: 1,
+            ),
+          ),
+          const SizedBox(height: 12),
+          Row(
+            children: [
+              Expanded(
+                child: TextField(
+                  cursorColor: _teal,
+                  controller: _weightController,
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(
+                    hintText: l10n.weightHint,
+                    hintStyle: TextStyle(color: Colors.grey[400], fontSize: 14),
+                    filled: true,
+                    fillColor: const Color(0xFFF5F5F5),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: BorderSide.none,
+                    ),
+                    contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 14, vertical: 12),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 10),
+              ElevatedButton(
+                onPressed: _calculateWaterIntake,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: _dark,
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 18, vertical: 14),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  elevation: 0,
+                ),
+                child: Text(
+                  l10n.calculateButton,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 13,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 
-  @override
-  Widget build(BuildContext context) {
-    List<String> myAlarms = listAlarms.get('Alarms', defaultValue: <String>[]).cast<String>();
-    print(myAlarms);
-
-    return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(
-            Icons.arrow_back,
-            color: Colors.white,
+  // Card de rutina de recordatorios
+  Widget _buildScheduleCard(List<String> myAlarms) {
+    final l10n = context.l10n;
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 2),
           ),
-            onPressed: () async {
-              if (_isInterstitialAdReady && _interstitialAd != null) {
-                _interstitialAd!.fullScreenContentCallback = FullScreenContentCallback(
-                  onAdDismissedFullScreenContent: (ad) {
-                    ad.dispose();
-                    Navigator.pop(context);
-                  },
-                  onAdFailedToShowFullScreenContent: (ad, error) {
-                    ad.dispose();
-                    Navigator.pop(context);
-                  },
-                );
-                _interstitialAd!.show();
-                _interstitialAd = null;
-              } else {
-                Navigator.pop(context);
-              }
-            }
-        ),
-        title: Text('Recordar tomar agua',
-            style: GoogleFonts.nunito(
-                textStyle: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: MediaQuery.of(context).size.width * 0.04))),
-        backgroundColor: Colors.teal[300],
-        shadowColor: Colors.grey,
+        ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(18.0),
-        child: Column(
-          children: [
-            Text(
-              '¿Sabés cuanta agua debes beber al día?',
-              style: TextStyle(
-                color: Colors.teal,
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Título
+          Text(
+            l10n.reminderRoutineTitle,
+            style: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w700,
+              color: _dark,
             ),
-            SizedBox(height: MediaQuery.of(context).size.width * 0.01),
-            SizedBox(
-              width: MediaQuery.of(context).size.width,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.55,
-                    child: TextField(
-                      cursorColor: Colors.teal,
-                      controller: _weightController,
-                      decoration: InputDecoration(
-                          enabledBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black54),
+          ),
+          const SizedBox(height: 14),
+
+          // Horas
+          Row(
+            children: [
+              Expanded(
+                child: GestureDetector(
+                  onTap: () => _showWakeUpTimePicker(context),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFF5F5F5),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 14, vertical: 12),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          l10n.wakeUpLabel,
+                          style: TextStyle(
+                              fontSize: 10,
+                              color: Colors.grey[500],
+                              letterSpacing: 0.5),
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          formatDuration(wakeUpTime),
+                          style: const TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.w800,
+                            color: _dark,
                           ),
-                          focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.teal)),
-                          labelStyle: TextStyle(color: Colors.black54),
-                          labelText: 'Ingresa tu peso (kg)'),
-                      keyboardType: TextInputType.number,
+                        ),
+                      ],
                     ),
                   ),
-                  SizedBox(width: MediaQuery.of(context).size.width * 0.055),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.3,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.teal,
-                      ),
-                      onPressed: _calculateWaterIntake,
-                      child: Text(
-                        style: TextStyle(
-                          color: Colors.white,
+                ),
+              ),
+              const SizedBox(width: 10),
+              Expanded(
+                child: GestureDetector(
+                  onTap: () => _showGetUpTimePicker(context),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFF5F5F5),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 14, vertical: 12),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          l10n.sleepLabel,
+                          style: TextStyle(
+                              fontSize: 10,
+                              color: Colors.grey[500],
+                              letterSpacing: 0.5),
                         ),
-                        'Calcular',
-                        textAlign: TextAlign.center,
+                        const SizedBox(height: 4),
+                        Text(
+                          formatDuration(getUpTime),
+                          style: const TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.w800,
+                            color: _dark,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 14),
+
+          // Info de frecuencia (solo si hay alarmas creadas)
+          if (myAlarms.isNotEmpty) ...[
+            Container(
+              decoration: BoxDecoration(
+                color: const Color(0xFFE6F7F5),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              padding:
+              const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+              child: Row(
+                children: [
+                  const Icon(Icons.notifications_active,
+                      color: _teal, size: 18),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(
+                      l10n.remindersCount(myAlarms.length),
+                      style: const TextStyle(
+                        fontSize: 12,
+                        color: _teal,
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
                   ),
                 ],
               ),
             ),
-            SizedBox(height: MediaQuery.of(context).size.width * 0.08),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                    child: Text(
-                      'Debes \nTomar',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          height: 1.2,
-                          color: Colors.black54,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20),
-                    )),
-                SizedBox(width: MediaQuery.of(context).size.width * 0.02),
-                Container(
-                    height: MediaQuery.of(context).size.height * 0.06,
-                    width: MediaQuery.of(context).size.width * 0.6,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      color: Colors.teal,
-                    ),
-                    child: Center(
-                      child: Text(
-                        _waterIntake,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 26,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                      ),
-                    )),
-                SizedBox(width: MediaQuery.of(context).size.width * 0.02),
-                SizedBox(
-                    child: Text(
-                      'al \ndía',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          height: 1.2,
-                          color: Colors.black54,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20),
-                    ))
-              ],
-            ),
-            SizedBox(
-              height: 25,
-            ),
-            Expanded(
-              child: Container(
-                decoration: BoxDecoration(
+            const SizedBox(height: 14),
+          ],
+
+          // Botón principal
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton.icon(
+              onPressed: () async {
+                final l10n = context.l10n;
+                if (waterAmountHigh == 0) {
+                  Fluttertoast.showToast(
+                    msg: l10n.calculateWaterFirstError,
+                    gravity: ToastGravity.TOP,
+                    backgroundColor: Colors.red,
+                  );
+                } else if (getUpTime <= wakeUpTime) {
+                  Fluttertoast.showToast(
+                    msg: l10n.sleepAfterWakeError,
+                    gravity: ToastGravity.TOP,
+                    backgroundColor: Colors.red,
+                  );
+                } else {
+                  List<Duration> newReminders = _generatorReminders();
+                  scheduleDailyAlarms(newReminders);
+                  List<String> formattedAlarms = newReminders
+                      .map((r) => formatDuration(r))
+                      .toList();
+                  await listAlarms.put('Alarms', formattedAlarms);
+                  setState(() {});
+                }
+              },
+              icon: const Icon(Icons.notifications, size: 18),
+              label: Text(
+                l10n.activateReminders,
+                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 14),
+              ),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: _teal,
+                foregroundColor: Colors.white,
+                padding: const EdgeInsets.symmetric(vertical: 14),
+                shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
-                  color: Colors.grey[350],
                 ),
-                child: Column(
-                  children: [
-                    SizedBox(height: 15),
-                    Text(
-                      'Programemos tu rutina para beber agua',
-                      style: TextStyle(
-                        color: Colors.teal,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    SizedBox(height: 10),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('Hora de\nDespertar:', style: TextStyle(fontSize: 12)),
-                        SizedBox(width: 10),
-                        ElevatedButton(
-                          onPressed: () => _showWakeUpTimePicker(context),
-                          child: Text(formatDuration(wakeUpTime),
-                              style: TextStyle(color: Colors.teal, fontSize: 20, fontWeight: FontWeight.bold)),
-                        ),
-                        SizedBox(width: 15),
-                        Text('Hora de\nDormir:', style: TextStyle(fontSize: 12)),
-                        SizedBox(width: 10),
-                        ElevatedButton(
-                          onPressed: () => _showGetUpTimePicker(context),
-                          child: Text(formatDuration(getUpTime),
-                              style: TextStyle(color: Colors.teal, fontSize: 20, fontWeight: FontWeight.bold)),
-                        ),
-                      ],
-                    ), SizedBox(height: 15),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.teal,),
-                          onPressed: () async {
-                            if (waterAmountHigh == 0) {
-                              Fluttertoast.showToast(
-                                msg: "Por favor, calcula la cantidad de agua que debes tomar.",
-                                gravity: ToastGravity.TOP,
-                                backgroundColor: Colors.red,
-                              );
-                            } else if (getUpTime <= wakeUpTime) {
-                              Fluttertoast.showToast(
-                                msg: "La hora de dormir debe ser después de la hora de despertar.",
-                                gravity: ToastGravity.TOP,
-                                backgroundColor: Colors.red,
-                              );
-                            } else {
-                              List<Duration> newReminders = _generatorReminders();
-                              print(newReminders); // Usa el retorno directamente
-                              scheduleDailyAlarms(newReminders);
-                              List<String> formattedAlarms = newReminders.map((reminder) => formatDuration(reminder)).toList();
-                              await listAlarms.put('Alarms', formattedAlarms);
-                            }
-                          },
-                          child: Text('Crear Alarmas', style: TextStyle(color: Colors.white),),
-                        ),
-                        SizedBox(width: 20),
-                        ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.red,),
-                          onPressed: () async {
-                            await listAlarms.clear();
-                            await box.clear();
-                            await Alarm.stopAll();
-                            setState(() {});
-                          },
-                          child: Text('Borrar Alarmas', style: TextStyle(color: Colors.white),),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 10),
-                    Expanded(
-                      child: ListView.builder(
-                        itemCount: myAlarms.length,
-                        itemBuilder: (context, index) {
-                          return Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 6),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(16),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.teal.withOpacity(0.15),
-                                    blurRadius: 8,
-                                    offset: Offset(0, 4),
-                                  ),
-                                ],
-                              ),
-                              child: ListTile(
-                                leading: Icon(Icons.local_drink, color: Colors.teal, size: 30),
-                                title: Text(
-                                  "Beber agua a las ${myAlarms[index]}",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black87,
-                                  ),
-                                ),
-                                trailing: Icon(Icons.alarm, color: Colors.teal),
-                              ),
-                            ),
-                          );
-                        },
-                      ),
-                    ),
-                  ],
+                elevation: 0,
+              ),
+            ),
+          ),
+
+          // Borrar — link de texto discreto
+          if (myAlarms.isNotEmpty)
+            Center(
+              child: TextButton(
+                onPressed: () async {
+                  await listAlarms.clear();
+                  await box.clear();
+                  await Alarm.stopAll();
+                  setState(() {});
+                },
+                child: Text(
+                  l10n.deleteReminders,
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ),
             ),
+        ],
+      ),
+    );
+  }
+
+  // Lista de alarmas programadas
+  Widget _buildAlarmsList(List<String> myAlarms) {
+    if (myAlarms.isEmpty) return const SizedBox.shrink();
+    final l10n = context.l10n;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(left: 4, bottom: 10),
+          child: Text(
+            l10n.scheduledRemindersLabel,
+            style: TextStyle(
+              fontSize: 10,
+              fontWeight: FontWeight.w600,
+              color: Colors.grey[400],
+              letterSpacing: 1,
+            ),
+          ),
+        ),
+        ListView.separated(
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          itemCount: myAlarms.length,
+          separatorBuilder: (_, __) => const SizedBox(height: 6),
+          itemBuilder: (context, index) {
+            return Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(12),
+                boxShadow: [
+                  BoxShadow(
+                    color: _teal.withOpacity(0.08),
+                    blurRadius: 8,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
+              ),
+              child: ListTile(
+                dense: true,
+                leading: Container(
+                  width: 36,
+                  height: 36,
+                  decoration: BoxDecoration(
+                    color: _teal.withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const Icon(Icons.water_drop, color: _teal, size: 18),
+                ),
+                title: Text(
+                  l10n.drinkWaterAt(myAlarms[index]),
+                  style: const TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
+                    color: _dark,
+                  ),
+                ),
+                trailing: const Icon(Icons.alarm, color: _teal, size: 18),
+              ),
+            );
+          },
+        ),
+      ],
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    List<String> myAlarms =
+    listAlarms.get('Alarms', defaultValue: <String>[]).cast<String>();
+
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      backgroundColor: _background,
+
+      // ── AppBar ───────────────────────────────────────────
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        surfaceTintColor: Colors.transparent,
+        title: Text(
+          context.l10n.reminderScreenTitle,
+          style: GoogleFonts.nunito(
+            textStyle: const TextStyle(
+              color: _dark,
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+            ),
+          ),
+        ),
+      ),
+
+      // ── Body ────────────────────────────────────────────
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _buildGoalCard(),
+            const SizedBox(height: 12),
+            _buildInputCard(),
+            const SizedBox(height: 12),
+            _buildScheduleCard(myAlarms),
+            const SizedBox(height: 16),
+            _buildAlarmsList(myAlarms),
+            const SizedBox(height: 24),
           ],
         ),
       ),
-      bottomNavigationBar: _isBannerAdReady
-          ? SizedBox(
-        height: _bannerAd!.size.height.toDouble(),
-        width: _bannerAd!.size.width.toDouble(),
-        child: AdWidget(ad: _bannerAd!),
-      )
-          : null,
     );
   }
 }
