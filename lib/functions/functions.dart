@@ -4,10 +4,10 @@ import 'package:batidos_salud/models/receta_model.dart';
 
 //funcion para reducir la lista de todas las recetas a solo las de una categoria en especial,
 //tiene como entradas la lista de recetas y un id de categoria
-List<Recipe> depuratedListReceta(List<Recipe> recipescomplete, id) {
+List<Recipe> depuratedListReceta(List<Recipe> recipescomplete, int categoryId) {
   final List<Recipe> newListReceta = [];
   for (var i = 0; i < recipescomplete.length; i++) {
-    if (recipescomplete[i].id.floor() == id) {
+    if (recipescomplete[i].id.floor() == categoryId) {
       newListReceta.add(recipescomplete[i]);
     }
   }

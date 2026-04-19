@@ -55,8 +55,15 @@
   "waterPhrase8": "¡Tómate un break saludable! Bebe un vaso de agua.",
   "waterPhrase9": "Dale a tu cuerpo lo que necesita: un buen vaso de agua.",
 
+  "recipeDayNotifTitle": "🥤 Tu batido del día",
+  "recipeDayNotifBody": "Abre la app y prepara tu batido saludable de hoy.",
+  "recipeDayCardTitle": "Receta del día",
+  "recipeDayCardSubtitle": "Recibe una receta nueva cada mañana a las 8am",
+  "recipeDayActivate": "Activar notificación diaria",
+  "recipeDayActive": "Notificación diaria activa",
+
   "shareEnjoy": "¡Disfruta este batido saludable!",
-  "shareDownloadApp": "\nSi aun no has descargado nuestra app, puedes hacerlo ingresando a https://play.google.com/store/apps/details?id=com.slisapps.batidossalud",
+  "shareDownloadApp": "\n🥤 Receta de *Batidos Saludables* — 144 recetas de jugos y batidos naturales, gratis para Android:\nhttps://play.google.com/store/apps/details?id=com.slisapps.batidossalud&utm_source=share&utm_medium=app&utm_campaign=recipe_share",
   "shareSubject": "Receta: {recipeName}",
   "shareIngredients": "📝 *Ingredientes:*",
   "sharePreparation": "👨‍🍳 *Preparación:*"

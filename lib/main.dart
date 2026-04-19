@@ -1,10 +1,10 @@
-import 'dart:ui';
 import 'package:alarm/alarm.dart';
 import 'package:batidos_salud/alarms_functions.dart';
 import 'package:batidos_salud/l10n/l10n_extension.dart';
 import 'package:batidos_salud/main/main_screen.dart';
 import 'package:batidos_salud/providers/provider.dart';
 import 'package:batidos_salud/services/ad_helper.dart';
+import 'package:batidos_salud/services/recipe_notification_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -49,11 +49,12 @@ Future<void> main() async {
   await Hive.openBox('listAlarms');
   await Hive.openBox('alarms');
 
-  await loadAndScheduleAlarms(); // Cargar y reprogramar alarmas al iniciar
-  //setupRepeatingAlarms();
-
- // Pedir permisos
+  // Pedir permisos antes de programar alarmas/notificaciones
   await requestPermissions();
+
+  await loadAndScheduleAlarms(); // Cargar y reprogramar alarmas al iniciar
+  await RecipeNotificationService.initialize(); // Notificación diaria de receta
+  await RecipeNotificationService.enableIfFirstTime(); // Activar por defecto en primera instalación
 
   runApp(MyApp());
 }
@@ -63,7 +64,7 @@ Future<void> requestPermissions() async {
     if (await Permission.scheduleExactAlarm.shouldShowRequestRationale) {
       await Permission.scheduleExactAlarm.request();
     } else {
-      print("⚠️ Habilita manualmente SCHEDULE_EXACT_ALARM en Configuración.");
+      debugPrint("⚠️ Habilita manualmente SCHEDULE_EXACT_ALARM en Configuración.");
       openAppSettings();
     }
   }
@@ -112,13 +113,27 @@ class Bienvenida extends StatefulWidget {
 
 class _BienvenidaState extends State<Bienvenida> {
   InterstitialAd? _interstitialAd;
-  DateTime? _lastInterstitialShown;
   bool _isAdReady = false;
+
+  // El intersticial solo se muestra a partir del 2° inicio para no bloquear la primera experiencia
+  static const _launchCountKey = 'launch_count';
+  final _prefsBox = Hive.box('Favoritos'); // reutilizamos una caja ya abierta
 
   @override
   void initState() {
     super.initState();
+    _incrementLaunchCount();
     _loadInterstitialAd();
+  }
+
+  void _incrementLaunchCount() {
+    final count = (_prefsBox.get(_launchCountKey) as int? ?? 0) + 1;
+    _prefsBox.put(_launchCountKey, count);
+  }
+
+  bool get _shouldShowAd {
+    final count = _prefsBox.get(_launchCountKey) as int? ?? 0;
+    return count >= 2;
   }
 
   void _loadInterstitialAd() {
@@ -127,28 +142,22 @@ class _BienvenidaState extends State<Bienvenida> {
       request: const AdRequest(),
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (InterstitialAd ad) {
-          print('✅ Interstitial Ad cargado');
           _interstitialAd = ad;
           _isAdReady = true;
-
-          // Manejar eventos del anuncio
           _interstitialAd!.setImmersiveMode(true);
           _interstitialAd!.fullScreenContentCallback = FullScreenContentCallback(
             onAdDismissedFullScreenContent: (InterstitialAd ad) {
-              print('🔚 Interstitial cerrado');
-              _lastInterstitialShown = DateTime.now();
               ad.dispose();
               goToMainScreen();
             },
             onAdFailedToShowFullScreenContent: (InterstitialAd ad, AdError error) {
-              print('❌ Error al mostrar interstitial: $error');
               ad.dispose();
               goToMainScreen();
             },
           );
         },
         onAdFailedToLoad: (LoadAdError error) {
-          print('❌ Error al cargar interstitial: $error');
+          debugPrint('❌ Error al cargar interstitial: $error');
           _isAdReady = false;
           goToMainScreen();
         },
@@ -157,23 +166,15 @@ class _BienvenidaState extends State<Bienvenida> {
   }
 
   void showInterstitialAdIfAllowed() {
-    final now = DateTime.now();
-    if (_lastInterstitialShown != null &&
-        now.difference(_lastInterstitialShown!) < const Duration(minutes: 2)) {
-      print('⏱️ Interstitial limitado (espera 2 minutos)');
-      goToMainScreen();
-      return;
-    }
-
-    if (_isAdReady && _interstitialAd != null) {
+    if (_shouldShowAd && _isAdReady && _interstitialAd != null) {
       _interstitialAd!.show();
     } else {
-      print('⚠️ Interstitial no cargado o no listo');
       goToMainScreen();
     }
   }
 
   void goToMainScreen() {
+    if (!mounted) return;
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(builder: (_) => const MainScreen()),
     );

@@ -162,11 +162,30 @@ class AppLocalizationsEn extends AppLocalizations {
       'Give your body what it needs: a good glass of water.';
 
   @override
+  String get recipeDayNotifTitle => '🥤 Your smoothie of the day';
+
+  @override
+  String get recipeDayNotifBody =>
+      'Open the app and make your healthy smoothie today.';
+
+  @override
+  String get recipeDayCardTitle => 'Recipe of the day';
+
+  @override
+  String get recipeDayCardSubtitle => 'Get a new recipe every morning at 8am';
+
+  @override
+  String get recipeDayActivate => 'Activate daily notification';
+
+  @override
+  String get recipeDayActive => 'Daily notification active';
+
+  @override
   String get shareEnjoy => 'Enjoy this healthy smoothie!';
 
   @override
   String get shareDownloadApp =>
-      '\nIf you haven\'t downloaded our app yet, you can do so at https://play.google.com/store/apps/details?id=com.slisapps.batidossalud';
+      '\n🥤 Recipe from *Healthy Smoothies* — 144 natural juice and smoothie recipes, free for Android:\nhttps://play.google.com/store/apps/details?id=com.slisapps.batidossalud&utm_source=share&utm_medium=app&utm_campaign=recipe_share';
 
   @override
   String shareSubject(String recipeName) {

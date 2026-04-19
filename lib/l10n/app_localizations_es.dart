@@ -165,11 +165,31 @@ class AppLocalizationsEs extends AppLocalizations {
       'Dale a tu cuerpo lo que necesita: un buen vaso de agua.';
 
   @override
+  String get recipeDayNotifTitle => '🥤 Tu batido del día';
+
+  @override
+  String get recipeDayNotifBody =>
+      'Abre la app y prepara tu batido saludable de hoy.';
+
+  @override
+  String get recipeDayCardTitle => 'Receta del día';
+
+  @override
+  String get recipeDayCardSubtitle =>
+      'Recibe una receta nueva cada mañana a las 8am';
+
+  @override
+  String get recipeDayActivate => 'Activar notificación diaria';
+
+  @override
+  String get recipeDayActive => 'Notificación diaria activa';
+
+  @override
   String get shareEnjoy => '¡Disfruta este batido saludable!';
 
   @override
   String get shareDownloadApp =>
-      '\nSi aun no has descargado nuestra app, puedes hacerlo ingresando a https://play.google.com/store/apps/details?id=com.slisapps.batidossalud';
+      '\n🥤 Receta de *Batidos Saludables* — 144 recetas de jugos y batidos naturales, gratis para Android:\nhttps://play.google.com/store/apps/details?id=com.slisapps.batidossalud&utm_source=share&utm_medium=app&utm_campaign=recipe_share';
 
   @override
   String shareSubject(String recipeName) {

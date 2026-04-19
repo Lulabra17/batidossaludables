@@ -374,6 +374,42 @@ abstract class AppLocalizations {
   /// **'Give your body what it needs: a good glass of water.'**
   String get waterPhrase9;
 
+  /// No description provided for @recipeDayNotifTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'🥤 Your smoothie of the day'**
+  String get recipeDayNotifTitle;
+
+  /// No description provided for @recipeDayNotifBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Open the app and make your healthy smoothie today.'**
+  String get recipeDayNotifBody;
+
+  /// No description provided for @recipeDayCardTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Recipe of the day'**
+  String get recipeDayCardTitle;
+
+  /// No description provided for @recipeDayCardSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Get a new recipe every morning at 8am'**
+  String get recipeDayCardSubtitle;
+
+  /// No description provided for @recipeDayActivate.
+  ///
+  /// In en, this message translates to:
+  /// **'Activate daily notification'**
+  String get recipeDayActivate;
+
+  /// No description provided for @recipeDayActive.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily notification active'**
+  String get recipeDayActive;
+
   /// No description provided for @shareEnjoy.
   ///
   /// In en, this message translates to:
@@ -383,7 +419,7 @@ abstract class AppLocalizations {
   /// No description provided for @shareDownloadApp.
   ///
   /// In en, this message translates to:
-  /// **'\nIf you haven\'t downloaded our app yet, you can do so at https://play.google.com/store/apps/details?id=com.slisapps.batidossalud'**
+  /// **'\n🥤 Recipe from *Healthy Smoothies* — 144 natural juice and smoothie recipes, free for Android:\nhttps://play.google.com/store/apps/details?id=com.slisapps.batidossalud&utm_source=share&utm_medium=app&utm_campaign=recipe_share'**
   String get shareDownloadApp;
 
   /// No description provided for @shareSubject.

@@ -2,8 +2,6 @@ import 'dart:math';
 import 'dart:ui';
 
 import 'package:alarm/alarm.dart';
-import 'package:alarm/model/volume_settings.dart';
-import 'package:alarm/utils/alarm_set.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 
@@ -58,7 +56,7 @@ Future<void> scheduleDailyAlarms(List<Duration> alarmTimes) async {
     ));
 
     await Alarm.set(alarmSettings: alarmSettings);
-    print('✅ Alarma $alarmId programada para $alarmTime');
+    debugPrint('✅ Alarma $alarmId programada para $alarmTime');
   }
 }
 
@@ -70,7 +68,7 @@ Future<void> loadAndScheduleAlarms() async {
   if (alarmStrings != null) {
     List<Duration> alarmTimes =
     alarmStrings.map((s) => Duration(minutes: int.parse(s))).toList();
-    scheduleDailyAlarms(alarmTimes);
+    await scheduleDailyAlarms(alarmTimes);
   }
 }
 

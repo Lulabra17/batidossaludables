@@ -32,7 +32,7 @@ class SmoothieProvider extends ChangeNotifier {
       notifyListeners();
     } catch (e) {
       // Manejo de errores
-      print("Error loading data: $e");
+      debugPrint("Error loading data: $e");
     }
   }
 

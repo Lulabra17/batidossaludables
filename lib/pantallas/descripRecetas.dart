@@ -9,6 +9,7 @@ import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:in_app_review/in_app_review.dart';
 import '../models/receta_model.dart';
 
 class descripReceta extends StatefulWidget {
@@ -26,25 +27,13 @@ class _descripRecetaState extends State<descripReceta> {
   BannerAd? _bannerAd;
   bool _isBannerAdReady = false;
 
-  InterstitialAd? _interstitialAd;
-  bool _isInterstitialAdReady = false;
-
   @override
   void initState() {
     super.initState();
-    initBox();
     _loadAdMobBanner();
-    _loadAdMobInterstitial();
 
     final recipeId = '${widget.recipe.id}';
     isFavorite = box.values.contains(recipeId);
-  }
-
-  Future<bool> initBox() async {
-    final directory = await getApplicationSupportDirectory();
-    Hive.init(directory.path);
-    await Hive.openBox('Favoritos');
-    return true;
   }
 
   void _loadAdMobBanner() {
@@ -53,68 +42,37 @@ class _descripRecetaState extends State<descripReceta> {
       size: AdSize.banner,
       request: const AdRequest(),
       listener: BannerAdListener(
-        onAdLoaded: (_) => setState(() => _isBannerAdReady = true),
+        onAdLoaded: (_) { if (mounted) setState(() => _isBannerAdReady = true); },
         onAdFailedToLoad: (ad, error) {
-          print('Error al cargar banner: $error');
+          debugPrint('Error al cargar banner: $error');
           ad.dispose();
         },
       ),
     )..load();
   }
 
-  void _loadAdMobInterstitial() {
-    InterstitialAd.load(
-      adUnitId: AdHelper.interstitialAdUnitIdshare,
-      request: const AdRequest(),
-      adLoadCallback: InterstitialAdLoadCallback(
-        onAdLoaded: (ad) {
-          _interstitialAd = ad;
-          _isInterstitialAdReady = true;
-        },
-        onAdFailedToLoad: (error) {
-          print('Error al cargar interstitial: $error');
-        },
-      ),
-    );
-  }
-
   @override
   void dispose() {
-    _interstitialAd?.dispose();
     _bannerAd?.dispose();
     super.dispose();
   }
 
-  void _shareRecipeAfterAd(Recipe receta) {
-    if (_isInterstitialAdReady && _interstitialAd != null) {
-      _interstitialAd!.fullScreenContentCallback = FullScreenContentCallback(
-        onAdDismissedFullScreenContent: (ad) {
-          ad.dispose();
-          compartirRecetaConImagen(receta);
-        },
-        onAdFailedToShowFullScreenContent: (ad, error) {
-          ad.dispose();
-          compartirRecetaConImagen(receta);
-        },
-      );
-      _interstitialAd!.show();
-      _interstitialAd = null;
-    } else {
-      compartirRecetaConImagen(receta);
-    }
-  }
-
 
   Future<void> compartirRecetaConImagen(Recipe receta) async {
+    // l10n capturado antes del primer await para evitar acceso a context desmontado
     final l10n = context.l10n;
     File file;
 
     if (receta.image_smoothie.startsWith('assets/')) {
       final ByteData bytes = await rootBundle.load(receta.image_smoothie);
+      if (!mounted) return;
       final Uint8List list = bytes.buffer.asUint8List();
       final tempDir = await getTemporaryDirectory();
+      if (!mounted) return;
       file = await File('${tempDir.path}/imagen_receta_temp.png').create();
+      if (!mounted) return;
       await file.writeAsBytes(list);
+      if (!mounted) return;
     } else {
       file = File(receta.image_smoothie);
     }
@@ -153,9 +111,7 @@ ${l10n.shareDownloadApp}
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.share, color: Colors.teal[600]),
-            onPressed: () {
-              _shareRecipeAfterAd(widget.recipe); // Mostrar el intersticial y luego compartir
-            },
+            onPressed: () => compartirRecetaConImagen(widget.recipe),
           ),
           IconButton(
             icon: AnimatedSwitcher(
@@ -167,7 +123,7 @@ ${l10n.shareDownloadApp}
                 color: isFavorite ? Colors.red : Colors.teal[600],
               ),
             ),
-            onPressed: () {
+            onPressed: () async {
               final l10n = context.l10n;
               final recipeId = '${widget.recipe.id}';
               if (!isFavorite) {
@@ -176,10 +132,21 @@ ${l10n.shareDownloadApp}
                   gravity: ToastGravity.TOP,
                   backgroundColor: Colors.red,
                 );
-                box.add(recipeId);
+                box.put(recipeId, recipeId);
                 setState(() {
                   isFavorite = true;
                 });
+                // Solicitar reseña cuando el usuario guarda su 3° favorito.
+                // Contamos solo entradas que son IDs de receta (doubles almacenados como string),
+                // excluyendo otras claves de configuración en la misma caja.
+                final favoriteCount = box.values
+                    .whereType<String>()
+                    .where((v) => double.tryParse(v) != null)
+                    .length;
+                if (favoriteCount == 3) {
+                  final review = InAppReview.instance;
+                  if (await review.isAvailable()) review.requestReview();
+                }
               } else {
                 Fluttertoast.showToast(
                   msg: l10n.removeFromFavoritesHint,
@@ -267,14 +234,17 @@ ${l10n.shareDownloadApp}
               ),
             ),
           ),
-          if (_isBannerAdReady)
+          if (_isBannerAdReady && _bannerAd != null)
             Positioned(
               bottom: 0,
               left: 0,
               right: 0,
-              child: SizedBox(
-                height: _bannerAd!.size.height.toDouble(),
-                child: AdWidget(ad: _bannerAd!),
+              child: SafeArea(
+                child: SizedBox(
+                  height: _bannerAd!.size.height.toDouble(),
+                  width: _bannerAd!.size.width.toDouble(),
+                  child: AdWidget(ad: _bannerAd!),
+                ),
               ),
             ),
         ],

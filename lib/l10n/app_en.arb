@@ -70,8 +70,15 @@
   "waterPhrase8": "Take a healthy break! Drink a glass of water.",
   "waterPhrase9": "Give your body what it needs: a good glass of water.",
 
+  "recipeDayNotifTitle": "🥤 Your smoothie of the day",
+  "recipeDayNotifBody": "Open the app and make your healthy smoothie today.",
+  "recipeDayCardTitle": "Recipe of the day",
+  "recipeDayCardSubtitle": "Get a new recipe every morning at 8am",
+  "recipeDayActivate": "Activate daily notification",
+  "recipeDayActive": "Daily notification active",
+
   "shareEnjoy": "Enjoy this healthy smoothie!",
-  "shareDownloadApp": "\nIf you haven't downloaded our app yet, you can do so at https://play.google.com/store/apps/details?id=com.slisapps.batidossalud",
+  "shareDownloadApp": "\n🥤 Recipe from *Healthy Smoothies* — 144 natural juice and smoothie recipes, free for Android:\nhttps://play.google.com/store/apps/details?id=com.slisapps.batidossalud&utm_source=share&utm_medium=app&utm_campaign=recipe_share",
   "shareSubject": "Recipe: {recipeName}",
   "@shareSubject": {
     "placeholders": {

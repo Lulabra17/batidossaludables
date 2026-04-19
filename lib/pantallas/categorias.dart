@@ -1,6 +1,5 @@
 import 'package:batidos_salud/l10n/l10n_extension.dart';
 import 'package:batidos_salud/pantallas/listaRecetas.dart';
-import 'package:batidos_salud/pantallas/searchScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -18,17 +17,6 @@ class Categorias extends StatefulWidget {
 }
 
 class _CategoriasState extends State<Categorias> {
-  @override
-  void dispose() {
-    super.dispose();
-  }
-
-  @override
-  void initState() {
-    super.initState();
-  }
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

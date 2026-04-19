@@ -18,6 +18,7 @@ class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
   BannerAd? _bannerAd;
   bool _isBannerLoaded = false;
+  bool _searchPressed = false;
 
   double get _bannerHeight =>
       _isBannerLoaded && _bannerAd != null
@@ -43,7 +44,7 @@ class _MainScreenState extends State<MainScreen> {
       request: const AdRequest(),
       listener: BannerAdListener(
         onAdLoaded: (ad) {
-          setState(() => _isBannerLoaded = true);
+          if (mounted) setState(() => _isBannerLoaded = true);
           debugPrint('✅ Banner cargado');
         },
         onAdFailedToLoad: (ad, error) {
@@ -66,98 +67,121 @@ class _MainScreenState extends State<MainScreen> {
       resizeToAvoidBottomInset: false,
       backgroundColor: Color(0xFFFAFAF8),
 
-      // ✅ Body limpio, solo el IndexedStack
-      body: IndexedStack(
-        index: _selectedIndex,
+      // ✅ Body con banner como overlay fijo en la parte inferior
+      body: Stack(
         children: [
-          const Home(),
-          const Categorias(),
-          PantallaFavoritos(),
-          ReminderWater(),
+          Padding(
+            padding: EdgeInsets.only(bottom: _isBannerLoaded ? _bannerHeight : 0),
+            child: IndexedStack(
+              index: _selectedIndex,
+              children: [
+                const Home(),
+                const Categorias(),
+                PantallaFavoritos(),
+                ReminderWater(),
+              ],
+            ),
+          ),
+          if (_isBannerLoaded && _bannerAd != null)
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: SafeArea(
+                child: SizedBox(
+                  height: _bannerHeight,
+                  width: _bannerAd!.size.width.toDouble(),
+                  child: AdWidget(ad: _bannerAd!),
+                ),
+              ),
+            ),
         ],
       ),
 
-      // ✅ FAB central con búsqueda
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.teal[600],
-        elevation: 6.0,
-        shape: const CircleBorder(),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const SearchScreen()),
-          );
-        },
-        child: const Icon(Icons.search, color: Colors.white),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-
-      // ✅ Banner + BottomAppBar en Column
-      bottomNavigationBar:  Column(
-          mainAxisSize: MainAxisSize.min,
+      // ✅ BottomAppBar con FAB embebido en el centro — banner en body overlay queda libre
+      bottomNavigationBar: BottomAppBar(
+        shadowColor: Colors.grey,
+        elevation: 4.0,
+        color: Colors.white,
+        height: 62,
+        clipBehavior: Clip.none,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
+            // ← Izquierda
+            IconButton(
+              icon: ImageIcon(
+                const AssetImage('assets/images/iconohome.png'),
+                color: _selectedIndex == 0 ? Colors.teal[600] : Colors.black45,
+              ),
+              onPressed: () => _onItemTapped(0),
+            ),
+            IconButton(
+              icon: Icon(
+                Icons.menu,
+                color: _selectedIndex == 1 ? Colors.teal[600] : Colors.black45,
+              ),
+              onPressed: () => _onItemTapped(1),
+            ),
 
-            BottomAppBar(
-              shape: const CircularNotchedRectangle(),
-              shadowColor: Colors.grey,
-              notchMargin: 8.0,
-              elevation: 4.0,
-              color: Colors.white,
-              height: 60,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  // ← Izquierda
-                  IconButton(
-                    icon: ImageIcon(
-                      const AssetImage('assets/images/iconohome.png'),
-                      color: _selectedIndex == 0
-                          ? Colors.teal[600]
-                          : Colors.black45,
+            // Botón de búsqueda con animación de escala al presionar
+            GestureDetector(
+              onTapDown: (_) => setState(() => _searchPressed = true),
+              onTapUp: (_) => setState(() => _searchPressed = false),
+              onTapCancel: () => setState(() => _searchPressed = false),
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SearchScreen()),
+              ),
+              child: SizedBox(
+                width: 72,
+                height: 62,
+                child: OverflowBox(
+                  maxWidth: 72,
+                  maxHeight: 80,
+                  child: AnimatedScale(
+                  scale: _searchPressed ? 0.85 : 1.0,
+                  duration: const Duration(milliseconds: 120),
+                  curve: Curves.easeInOut,
+                  child: Container(
+                    width: 60,
+                    height: 60,
+                    decoration: BoxDecoration(
+                      color: Colors.teal[600],
+                      shape: BoxShape.circle,
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Colors.black26,
+                          blurRadius: 6,
+                          offset: Offset(0, 3),
+                        ),
+                      ],
                     ),
-                    onPressed: () => _onItemTapped(0),
+                    child: const Icon(Icons.search, color: Colors.white, size: 28),
                   ),
-                  IconButton(
-                    icon: Icon(
-                      Icons.menu,
-                      color: _selectedIndex == 1
-                          ? Colors.teal[600]
-                          : Colors.black45,
-                    ),
-                    onPressed: () => _onItemTapped(1),
-                  ),
-
-                  const SizedBox(width: 48), // hueco para el FAB
-
-                  // → Derecha
-                  IconButton(
-                    icon: Icon(
-                      Icons.favorite,
-                      color: _selectedIndex == 2
-                          ? Colors.teal[600]
-                          : Colors.black45,
-                    ),
-                    onPressed: () => _onItemTapped(2),
-                  ),
-                  IconButton(
-                    icon: Icon(
-                      Icons.water_drop,
-                      color: _selectedIndex == 3
-                          ? Colors.teal[600]
-                          : Colors.black45,
-                    ),
-                    onPressed: () => _onItemTapped(3),
-                  ),
-                ],
+                ),
               ),
             ),
-            if (_isBannerLoaded && _bannerAd != null)
-              SizedBox(
-                height: _bannerHeight,
-                child: AdWidget(ad: _bannerAd!),
+            ),
+
+            // → Derecha
+            IconButton(
+              icon: Icon(
+                Icons.favorite,
+                color: _selectedIndex == 2 ? Colors.teal[600] : Colors.black45,
               ),
+              onPressed: () => _onItemTapped(2),
+            ),
+            IconButton(
+              icon: Icon(
+                Icons.water_drop,
+                color: _selectedIndex == 3 ? Colors.teal[600] : Colors.black45,
+              ),
+              onPressed: () => _onItemTapped(3),
+            ),
           ],
         ),
+      ),
     );
   }
 }

@@ -6,11 +6,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import '../functions/functions.dart';
 import 'descripRecetas.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:hive/hive.dart';
 
 class PantallaFavoritos extends StatefulWidget {
-  PantallaFavoritos({super.key});
+  const PantallaFavoritos({super.key});
 
   @override
   State<PantallaFavoritos> createState() => _PantallaFavoritosState();
@@ -19,31 +18,10 @@ class PantallaFavoritos extends StatefulWidget {
 class _PantallaFavoritosState extends State<PantallaFavoritos> {
   var box = Hive.box('Favoritos');
 
-  Future<bool> initBox() async {
-    final directory = await getApplicationSupportDirectory();
-    Hive.init(directory.path);
-    await Hive.openBox('Favoritos');
-    return true;
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    initBox();
-  }
-
   @override
   Widget build(BuildContext context) {
     final List listId = box.values.toList().cast();
-    print(box.toMap());
-    print(listId);
     final smProvider = Provider.of<SmoothieProvider>(context, listen: false);
-    print(smProvider.recetas);
     final List listafavoritos =
         depuratedListFavoritos(smProvider.recetas, listId);
 
@@ -63,7 +41,6 @@ class _PantallaFavoritosState extends State<PantallaFavoritos> {
         body: Builder(
           builder: (context) {
             if (listafavoritos.isEmpty) {
-              //box.clear();
               return Center(child: Text(context.l10n.noFavorites));
             } else {
               return SingleChildScrollView(
@@ -76,10 +53,8 @@ class _PantallaFavoritosState extends State<PantallaFavoritos> {
                       itemBuilder: (context, index) {
                         return cardReceta(context, index, listafavoritos[index], () {
                           setState(() {
-                            box.deleteAt(index);
-                            if (listafavoritos.length == 1) {
-                              box.clear();
-                            };
+                            final recipeId = '${listafavoritos[index].id}';
+                            box.delete(recipeId);
                           });
                         });
                       },

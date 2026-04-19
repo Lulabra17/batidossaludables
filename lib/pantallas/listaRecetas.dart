@@ -2,7 +2,6 @@ import 'package:batidos_salud/l10n/l10n_extension.dart';
 import 'package:batidos_salud/models/receta_model.dart';
 import 'package:batidos_salud/pantallas/descripRecetas.dart';
 import 'package:batidos_salud/pantallas/searchScreen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../functions/functions.dart';
@@ -37,10 +36,10 @@ class _ListaRecetasState extends State<ListaRecetas> {
       request: const AdRequest(),
       listener: BannerAdListener(
         onAdLoaded: (ad) {
-          setState(() => _isBannerAdReady = true);
+          if (mounted) setState(() => _isBannerAdReady = true);
         },
         onAdFailedToLoad: (ad, error) {
-          print('Error al cargar AdMob banner: $error');
+          debugPrint('Error al cargar AdMob banner: $error');
           ad.dispose();
         },
       ),

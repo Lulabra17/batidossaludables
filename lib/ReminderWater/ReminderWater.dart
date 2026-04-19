@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:hive/hive.dart';
 import 'package:permission_handler/permission_handler.dart';
 import '../alarms_functions.dart';
@@ -53,12 +52,11 @@ class _ReminderWaterState extends State<ReminderWater> {
 
   List<Duration> _generatorReminders() {
     int newReminderLength =
-    ((waterAmountHigh / 255).toInt()).clamp(1, double.infinity).toInt();
+    ((waterAmountHigh / 255).toInt()).clamp(1, 48);
     Duration newReminderDuring = Duration(
       minutes: ((timeActive(getUpTime, wakeUpTime) / newReminderLength)
           .toInt())
-          .clamp(1, double.infinity)
-          .toInt(),
+          .clamp(1, 1440),
     );
 
     List<Duration> newListReminders = [];
@@ -145,6 +143,12 @@ class _ReminderWaterState extends State<ReminderWater> {
     requestNotificationPermission();
   }
 
+  @override
+  void dispose() {
+    _weightController.dispose();
+    super.dispose();
+  }
+
 
   // ── Helpers de UI ──────────────────────────────────────────
 
@@ -173,7 +177,7 @@ class _ReminderWaterState extends State<ReminderWater> {
                 style: TextStyle(
                   fontSize: 11,
                   fontWeight: FontWeight.w600,
-                  color: Colors.white.withOpacity(0.7),
+                  color: Colors.white.withValues(alpha: 0.7),
                   letterSpacing: 1.2,
                 ),
               ),
@@ -183,7 +187,7 @@ class _ReminderWaterState extends State<ReminderWater> {
                 l10n.enterWeightPrompt,
                 style: TextStyle(
                   fontSize: 16,
-                  color: Colors.white.withOpacity(0.8),
+                  color: Colors.white.withValues(alpha: 0.8),
                   fontWeight: FontWeight.w500,
                 ),
               )
@@ -204,7 +208,7 @@ class _ReminderWaterState extends State<ReminderWater> {
                     l10n.perDayByWeight,
                     style: TextStyle(
                       fontSize: 12,
-                      color: Colors.white.withOpacity(0.7),
+                      color: Colors.white.withValues(alpha: 0.7),
                     ),
                   ),
                 ),
@@ -218,9 +222,9 @@ class _ReminderWaterState extends State<ReminderWater> {
               padding: const EdgeInsets.all(14),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: Colors.white.withOpacity(0.1),
+                color: Colors.white.withValues(alpha: 0.1),
                 border: Border.all(
-                  color: Colors.white.withOpacity(0.3),
+                  color: Colors.white.withValues(alpha: 0.3),
                   width: 1,
                 ),
               ),
@@ -245,7 +249,7 @@ class _ReminderWaterState extends State<ReminderWater> {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -323,7 +327,7 @@ class _ReminderWaterState extends State<ReminderWater> {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -470,7 +474,7 @@ class _ReminderWaterState extends State<ReminderWater> {
                   );
                 } else {
                   List<Duration> newReminders = _generatorReminders();
-                  scheduleDailyAlarms(newReminders);
+                  await scheduleDailyAlarms(newReminders);
                   List<String> formattedAlarms = newReminders
                       .map((r) => formatDuration(r))
                       .toList();
@@ -552,7 +556,7 @@ class _ReminderWaterState extends State<ReminderWater> {
                 borderRadius: BorderRadius.circular(12),
                 boxShadow: [
                   BoxShadow(
-                    color: _teal.withOpacity(0.08),
+                    color: _teal.withValues(alpha: 0.08),
                     blurRadius: 8,
                     offset: const Offset(0, 2),
                   ),
@@ -564,7 +568,7 @@ class _ReminderWaterState extends State<ReminderWater> {
                   width: 36,
                   height: 36,
                   decoration: BoxDecoration(
-                    color: _teal.withOpacity(0.1),
+                    color: _teal.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: const Icon(Icons.water_drop, color: _teal, size: 18),

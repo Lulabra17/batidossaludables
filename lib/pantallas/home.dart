@@ -1,7 +1,7 @@
 import 'package:batidos_salud/l10n/l10n_extension.dart';
 import 'package:batidos_salud/pantallas/descripRecetas.dart';
 import 'package:batidos_salud/pantallas/listaRecetas.dart';
-import 'package:batidos_salud/pantallas/searchScreen.dart';
+import 'package:batidos_salud/services/recipe_notification_service.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,17 +18,119 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  bool _notifEnabled = RecipeNotificationService.isEnabled();
 
-  @override
-  void dispose() {
-    super.dispose();
+  /// Selecciona la receta del día usando el día del año como semilla,
+  /// así todos los usuarios ven la misma receta cada día.
+  Recipe _recipeOfDay(List<Recipe> recipes) {
+    final dayOfYear =
+        DateTime.now().difference(DateTime(DateTime.now().year, 1, 1)).inDays;
+    return recipes[dayOfYear % recipes.length];
   }
 
-  @override
-  void initState() {
-    super.initState();
-  }
+  Widget _buildRecipeOfDayCard(BuildContext context, List<Recipe> recipes) {
+    if (recipes.isEmpty) return const SizedBox.shrink();
+    final l10n = context.l10n;
+    final recipe = _recipeOfDay(recipes);
 
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      child: GestureDetector(
+        onTap: () => Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => descripReceta(recipe: recipe)),
+        ),
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            gradient: const LinearGradient(
+              colors: [Color(0xFF008776), Color(0xFF2BBFAA)],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: const Color(0xFF2BBFAA).withValues(alpha: 0.35),
+                blurRadius: 10,
+                offset: const Offset(0, 4),
+              )
+            ],
+          ),
+          padding: const EdgeInsets.all(14),
+          child: Row(
+            children: [
+              // Imagen de la receta
+              ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: Image.asset(
+                  recipe.image_smoothie,
+                  width: 72,
+                  height: 72,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              const SizedBox(width: 12),
+              // Textos
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      l10n.recipeDayCardTitle,
+                      style: const TextStyle(
+                        color: Colors.white70,
+                        fontSize: 11,
+                        fontWeight: FontWeight.w600,
+                        letterSpacing: 1,
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      recipe.name,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 8),
+              // Botón de notificación
+              GestureDetector(
+                onTap: () async {
+                  if (_notifEnabled) {
+                    await RecipeNotificationService.disable();
+                  } else {
+                    await RecipeNotificationService.enable(
+                      title: l10n.recipeDayNotifTitle,
+                      body: l10n.recipeDayNotifBody,
+                    );
+                  }
+                  setState(() => _notifEnabled = !_notifEnabled);
+                },
+                child: Tooltip(
+                  message: _notifEnabled
+                      ? l10n.recipeDayActive
+                      : l10n.recipeDayActivate,
+                  child: Icon(
+                    _notifEnabled
+                        ? Icons.notifications_active
+                        : Icons.notifications_none,
+                    color: Colors.white,
+                    size: 28,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +174,6 @@ class _HomeState extends State<Home> {
                         scrollDirection: Axis.horizontal,
                       ),
                       items: smProvider.categories.map((i) {
-                        final index = i.id - 1;
                         return Builder(
                           builder: (BuildContext context) {
                             return GestureDetector(
@@ -97,8 +198,7 @@ class _HomeState extends State<Home> {
                                       ),
                                     ],
                                     image: DecorationImage(
-                                        image: AssetImage(provider
-                                            .categories[index].image_category),
+                                        image: AssetImage(i.image_category),
                                         fit: BoxFit.cover),
                                     borderRadius: BorderRadius.circular(20),
                                     color: Colors.grey),
@@ -109,6 +209,7 @@ class _HomeState extends State<Home> {
                       }).toList(),
                     ),
                   ),
+                  _buildRecipeOfDayCard(context, smProvider.recetas),
                   Padding(
                     padding: const EdgeInsets.only(top: 4.0),
                     child: SingleChildScrollView(

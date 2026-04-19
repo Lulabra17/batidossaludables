@@ -33,12 +33,10 @@ class _SearchScreenState extends State<SearchScreen> {
       request: const AdRequest(),
       listener: BannerAdListener(
         onAdLoaded: (_) {
-          setState(() {
-            _isAdmobBannerReady = true;
-          });
+          if (mounted) setState(() => _isAdmobBannerReady = true);
         },
         onAdFailedToLoad: (ad, error) {
-          print('Falló la carga del banner: $error');
+          debugPrint('Falló la carga del banner: $error');
           ad.dispose();
         },
       ),
@@ -55,8 +53,9 @@ class _SearchScreenState extends State<SearchScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final allRecipes = Provider.of<SmoothieProvider>(context).recetas;
-    final allCategories = Provider.of<SmoothieProvider>(context).categories;
+    final smProvider = Provider.of<SmoothieProvider>(context, listen: false);
+    final allRecipes = smProvider.recetas;
+    final allCategories = smProvider.categories;
 
     final normalizedSearchQuery = removeDiacritics(searchQuery.toLowerCase());
 
@@ -74,6 +73,7 @@ class _SearchScreenState extends State<SearchScreen> {
     }).toList();
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Color(0xFFFAFAF8),
       appBar: AppBar(
         title: TextField(
@@ -98,7 +98,7 @@ class _SearchScreenState extends State<SearchScreen> {
         children: [
           Positioned.fill(
             child: Padding(
-              padding: EdgeInsets.only(bottom: _isAdmobBannerReady ? 60 : 0),
+              padding: EdgeInsets.only(bottom: _isAdmobBannerReady ? _admobBanner.size.height.toDouble() : 0),
               child: searchQuery.isEmpty
                   ? Center(
                 child: Text(
@@ -136,7 +136,7 @@ class _SearchScreenState extends State<SearchScreen> {
               right: 0,
               child: SafeArea(
                 child: SizedBox(
-                  height: 50,
+                  height: _admobBanner.size.height.toDouble(),
                   child: AdWidget(ad: _admobBanner),
                 ),
               ),

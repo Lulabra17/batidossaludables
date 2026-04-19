@@ -1,7 +1,5 @@
 
-import "package:equatable/equatable.dart";
-
-class Recipe extends Equatable{
+class Recipe {
   double id;
   String image_smoothie;
   String name;
@@ -49,7 +47,4 @@ class Recipe extends Equatable{
         'ingredient_description: $ingredient_description, ingredient_icon: $ingredient_icon, preparation: $preparation}';
   }
 
-  @override
-  // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
 }
