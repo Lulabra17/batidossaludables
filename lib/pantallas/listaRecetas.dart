@@ -84,7 +84,7 @@ class _ListaRecetasState extends State<ListaRecetas> {
         children: [
           Positioned.fill(
             child: Padding(
-              padding: EdgeInsets.only(bottom: _isBannerAdReady ? 60 : 0),
+              padding: EdgeInsets.only(bottom: _isBannerAdReady ? _adMobBanner!.size.height.toDouble() : 0),
               child: Consumer<SmoothieProvider>(
                 builder: (context, provider, child) {
                   return SingleChildScrollView(

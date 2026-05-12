@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "473134881221",
+    "project_id": "batidos-saludables-fa9a8",
+    "storage_bucket": "batidos-saludables-fa9a8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:473134881221:android:773f22020d87ea54fb53ac",
+        "android_client_info": {
+          "package_name": "com.slisapps.batidossalud"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDauBNjXTKJvdYnGZPd2cj9ibHQMYpH3uk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

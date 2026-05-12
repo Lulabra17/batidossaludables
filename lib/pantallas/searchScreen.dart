@@ -18,7 +18,12 @@ class SearchScreen extends StatefulWidget {
 }
 
 class _SearchScreenState extends State<SearchScreen> {
-  String searchQuery = "";
+  String _searchQuery = "";
+  List<Recipe> _filteredRecipes = [];
+  List<Category> _filteredCategories = [];
+
+  late List<Recipe> _allRecipes;
+  late List<Category> _allCategories;
 
   late BannerAd _admobBanner;
   bool _isAdmobBannerReady = false;
@@ -26,6 +31,10 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   void initState() {
     super.initState();
+
+    final smProvider = Provider.of<SmoothieProvider>(context, listen: false);
+    _allRecipes = smProvider.recetas;
+    _allCategories = smProvider.categories;
 
     _admobBanner = BannerAd(
       adUnitId: AdHelper.bannerAdUnitId,
@@ -42,7 +51,11 @@ class _SearchScreenState extends State<SearchScreen> {
       ),
     );
 
-    _admobBanner.load();
+    // Delay banner load until after route transition + keyboard animation (~700ms total)
+    // to avoid AdMob PlatformView initialization blocking the main thread
+    Future.delayed(const Duration(milliseconds: 700), () {
+      if (mounted) _admobBanner.load();
+    });
   }
 
   @override
@@ -51,38 +64,39 @@ class _SearchScreenState extends State<SearchScreen> {
     super.dispose();
   }
 
+  void _onSearchChanged(String value) {
+    final normalized = removeDiacritics(value.toLowerCase());
+    setState(() {
+      _searchQuery = value;
+      if (value.isEmpty) {
+        _filteredRecipes = [];
+        _filteredCategories = [];
+      } else {
+        _filteredCategories = _allCategories.where((category) {
+          return removeDiacritics(category.name_category.toLowerCase())
+              .contains(normalized);
+        }).toList();
+
+        _filteredRecipes = _allRecipes.where((recipe) {
+          final name = removeDiacritics(recipe.name.toLowerCase());
+          final ingredients = recipe.ingredient_description
+              .map((ingredient) => removeDiacritics(ingredient.toLowerCase()))
+              .join(" ");
+          return name.contains(normalized) || ingredients.contains(normalized);
+        }).toList();
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    final smProvider = Provider.of<SmoothieProvider>(context, listen: false);
-    final allRecipes = smProvider.recetas;
-    final allCategories = smProvider.categories;
-
-    final normalizedSearchQuery = removeDiacritics(searchQuery.toLowerCase());
-
-    final List<Recipe> filteredRecipes = allRecipes.where((recipe) {
-      final name = removeDiacritics(recipe.name.toLowerCase());
-      final ingredients = recipe.ingredient_description
-          .map((ingredient) => removeDiacritics(ingredient.toLowerCase()))
-          .join(" ");
-      return name.contains(normalizedSearchQuery) || ingredients.contains(normalizedSearchQuery);
-    }).toList();
-
-    final List<Category> filteredCategories = allCategories.where((category) {
-      final categoryName = removeDiacritics(category.name_category.toLowerCase());
-      return categoryName.contains(normalizedSearchQuery);
-    }).toList();
-
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: Color(0xFFFAFAF8),
       appBar: AppBar(
         title: TextField(
           autofocus: true,
-          onChanged: (value) {
-            setState(() {
-              searchQuery = value;
-            });
-          },
+          onChanged: _onSearchChanged,
           decoration: InputDecoration(
             hintText: context.l10n.searchHint,
             border: InputBorder.none,
@@ -91,7 +105,7 @@ class _SearchScreenState extends State<SearchScreen> {
           style: const TextStyle(color: Colors.black),
           cursorColor: Colors.teal,
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFFFAFAF8),
         iconTheme: const IconThemeData(color: Colors.teal),
       ),
       body: Stack(
@@ -99,33 +113,33 @@ class _SearchScreenState extends State<SearchScreen> {
           Positioned.fill(
             child: Padding(
               padding: EdgeInsets.only(bottom: _isAdmobBannerReady ? _admobBanner.size.height.toDouble() : 0),
-              child: searchQuery.isEmpty
+              child: _searchQuery.isEmpty
                   ? Center(
-                child: Text(
-                  context.l10n.searchPrompt,
-                  style: const TextStyle(fontSize: 16, color: Colors.black54),
-                ),
-              )
-                  : filteredCategories.isNotEmpty
-                  ? ListView.builder(
-                itemCount: filteredCategories.length,
-                itemBuilder: (context, index) {
-                  return cardCategoria(context, filteredCategories[index]);
-                },
-              )
-                  : filteredRecipes.isEmpty
-                  ? Center(
-                child: Text(
-                  context.l10n.noResults,
-                  style: const TextStyle(fontSize: 16, color: Colors.black54),
-                ),
-              )
-                  : ListView.builder(
-                itemCount: filteredRecipes.length,
-                itemBuilder: (context, index) {
-                  return cardReceta(context, filteredRecipes[index]);
-                },
-              ),
+                      child: Text(
+                        context.l10n.searchPrompt,
+                        style: const TextStyle(fontSize: 16, color: Colors.black54),
+                      ),
+                    )
+                  : _filteredCategories.isNotEmpty
+                      ? ListView.builder(
+                          itemCount: _filteredCategories.length,
+                          itemBuilder: (context, index) {
+                            return cardCategoria(context, _filteredCategories[index]);
+                          },
+                        )
+                      : _filteredRecipes.isEmpty
+                          ? Center(
+                              child: Text(
+                                context.l10n.noResults,
+                                style: const TextStyle(fontSize: 16, color: Colors.black54),
+                              ),
+                            )
+                          : ListView.builder(
+                              itemCount: _filteredRecipes.length,
+                              itemBuilder: (context, index) {
+                                return cardReceta(context, _filteredRecipes[index]);
+                              },
+                            ),
             ),
           ),
 

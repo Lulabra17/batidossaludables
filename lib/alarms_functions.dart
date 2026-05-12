@@ -55,8 +55,12 @@ Future<void> scheduleDailyAlarms(List<Duration> alarmTimes) async {
       volumeEnforced: true,
     ));
 
-    await Alarm.set(alarmSettings: alarmSettings);
-    debugPrint('✅ Alarma $alarmId programada para $alarmTime');
+    try {
+      await Alarm.set(alarmSettings: alarmSettings);
+      debugPrint('✅ Alarma $alarmId programada para $alarmTime');
+    } catch (e) {
+      debugPrint('⚠️ No se pudo programar alarma $alarmId: $e');
+    }
   }
 }
 

@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:hive/hive.dart';
 import 'package:timezone/data/latest.dart' as tz;
@@ -91,25 +92,36 @@ class RecipeNotificationService {
     // Convertir a UTC y envolver en TZDateTime para flutter_local_notifications
     final tzScheduled = tz.TZDateTime.from(next8am.toUtc(), tz.UTC);
 
-    await _plugin.zonedSchedule(
-      _notifId,
-      title,
-      body,
-      tzScheduled,
-      const NotificationDetails(
-        android: AndroidNotificationDetails(
-          _channelId,
-          'Receta del día',
-          channelDescription: 'Receta saludable diaria a las 8am',
-          importance: Importance.defaultImportance,
-          priority: Priority.defaultPriority,
-          icon: 'ic_notification',
-        ),
+    const details = NotificationDetails(
+      android: AndroidNotificationDetails(
+        _channelId,
+        'Receta del día',
+        channelDescription: 'Receta saludable diaria a las 8am',
+        importance: Importance.defaultImportance,
+        priority: Priority.defaultPriority,
+        icon: 'ic_notification',
       ),
-      androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
-      matchDateTimeComponents: DateTimeComponents.time,
-      uiLocalNotificationDateInterpretation:
-          UILocalNotificationDateInterpretation.absoluteTime,
     );
+
+    try {
+      await _plugin.zonedSchedule(
+        _notifId, title, body, tzScheduled, details,
+        androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+        matchDateTimeComponents: DateTimeComponents.time,
+        uiLocalNotificationDateInterpretation:
+            UILocalNotificationDateInterpretation.absoluteTime,
+      );
+    } on PlatformException catch (e) {
+      // SCHEDULE_EXACT_ALARM not granted — fall back to inexact scheduling.
+      // The notification may arrive a few minutes late but will still fire.
+      debugPrint('⚠️ Exact alarm not available ($e), falling back to inexact.');
+      await _plugin.zonedSchedule(
+        _notifId, title, body, tzScheduled, details,
+        androidScheduleMode: AndroidScheduleMode.inexact,
+        matchDateTimeComponents: DateTimeComponents.time,
+        uiLocalNotificationDateInterpretation:
+            UILocalNotificationDateInterpretation.absoluteTime,
+      );
+    }
   }
 }

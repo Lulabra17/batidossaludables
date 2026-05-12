@@ -4,6 +4,7 @@ plugins {
     id "kotlin-kapt"
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id "dev.flutter.flutter-gradle-plugin"
+    id "com.google.gms.google-services"
 }
 
 def keystoreProperties = new Properties()
@@ -35,8 +36,8 @@ android {
         minSdkVersion = flutter.minSdkVersion
         targetSdk = 35
         multiDexEnabled true
-        versionCode = 13
-        versionName = "1.1.8"
+        versionCode = 15
+        versionName = "1.2.0"
     }
 
     signingConfigs {

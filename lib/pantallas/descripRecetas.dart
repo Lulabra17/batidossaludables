@@ -26,14 +26,27 @@ class _descripRecetaState extends State<descripReceta> {
 
   BannerAd? _bannerAd;
   bool _isBannerAdReady = false;
+  InterstitialAd? _shareInterstitialAd;
 
   @override
   void initState() {
     super.initState();
     _loadAdMobBanner();
+    _loadShareInterstitial();
 
     final recipeId = '${widget.recipe.id}';
     isFavorite = box.values.contains(recipeId);
+  }
+
+  void _loadShareInterstitial() {
+    InterstitialAd.load(
+      adUnitId: AdHelper.interstitialAdUnitIdshare,
+      request: const AdRequest(),
+      adLoadCallback: InterstitialAdLoadCallback(
+        onAdLoaded: (ad) => _shareInterstitialAd = ad,
+        onAdFailedToLoad: (_) => _shareInterstitialAd = null,
+      ),
+    );
   }
 
   void _loadAdMobBanner() {
@@ -54,12 +67,32 @@ class _descripRecetaState extends State<descripReceta> {
   @override
   void dispose() {
     _bannerAd?.dispose();
+    _shareInterstitialAd?.dispose();
     super.dispose();
   }
 
+  void compartirRecetaConImagen(Recipe receta) {
+    final ad = _shareInterstitialAd;
+    if (ad != null) {
+      _shareInterstitialAd = null;
+      ad.fullScreenContentCallback = FullScreenContentCallback(
+        onAdDismissedFullScreenContent: (a) {
+          a.dispose();
+          _loadShareInterstitial();
+          if (mounted) _doShare(receta);
+        },
+        onAdFailedToShowFullScreenContent: (a, _) {
+          a.dispose();
+          if (mounted) _doShare(receta);
+        },
+      );
+      ad.show();
+    } else {
+      _doShare(receta);
+    }
+  }
 
-  Future<void> compartirRecetaConImagen(Recipe receta) async {
-    // l10n capturado antes del primer await para evitar acceso a context desmontado
+  Future<void> _doShare(Recipe receta) async {
     final l10n = context.l10n;
     File file;
 
@@ -69,7 +102,7 @@ class _descripRecetaState extends State<descripReceta> {
       final Uint8List list = bytes.buffer.asUint8List();
       final tempDir = await getTemporaryDirectory();
       if (!mounted) return;
-      file = await File('${tempDir.path}/imagen_receta_temp.png').create();
+      file = await File('${tempDir.path}/imagen_receta_${receta.id}.png').create();
       if (!mounted) return;
       await file.writeAsBytes(list);
       if (!mounted) return;
@@ -161,7 +194,7 @@ ${l10n.shareDownloadApp}
       body: Stack(
         children: [
           Padding(
-            padding: EdgeInsets.only(bottom: _isBannerAdReady ? 60 : 0),
+            padding: EdgeInsets.only(bottom: _isBannerAdReady ? _bannerAd!.size.height.toDouble() : 0),
             child: SingleChildScrollView(
               child: Center(
                 child: Column(

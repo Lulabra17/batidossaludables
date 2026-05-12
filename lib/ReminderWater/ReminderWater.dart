@@ -16,8 +16,13 @@ class ReminderWater extends StatefulWidget {
 }
 
 class _ReminderWaterState extends State<ReminderWater> {
-  var listAlarms = Hive.box('listAlarms');
-  var box = Hive.box('alarms');
+  final _listAlarmsBox = Hive.box('listAlarms');
+  final _alarmsBox = Hive.box('alarms');
+  List<String> _myAlarms = [];
+
+  // alias para compatibilidad con métodos existentes
+  Box get listAlarms => _listAlarmsBox;
+  Box get box => _alarmsBox;
   final TextEditingController _weightController = TextEditingController();
   String _waterIntake = "";
   Duration wakeUpTime = Duration(hours: 7, minutes: 0);
@@ -141,6 +146,11 @@ class _ReminderWaterState extends State<ReminderWater> {
   void initState() {
     super.initState();
     requestNotificationPermission();
+    _refreshAlarms();
+  }
+
+  void _refreshAlarms() {
+    _myAlarms = _listAlarmsBox.get('Alarms', defaultValue: <String>[]).cast<String>();
   }
 
   @override
@@ -473,13 +483,22 @@ class _ReminderWaterState extends State<ReminderWater> {
                     backgroundColor: Colors.red,
                   );
                 } else {
+                  // Solicitar SCHEDULE_EXACT_ALARM solo cuando el usuario activa recordatorios
+                  final exactAlarm = await Permission.scheduleExactAlarm.status;
+                  if (exactAlarm.isDenied) {
+                    await Permission.scheduleExactAlarm.request();
+                  }
+                  if (await Permission.scheduleExactAlarm.isDenied) {
+                    await openAppSettings();
+                    return;
+                  }
                   List<Duration> newReminders = _generatorReminders();
                   await scheduleDailyAlarms(newReminders);
                   List<String> formattedAlarms = newReminders
                       .map((r) => formatDuration(r))
                       .toList();
                   await listAlarms.put('Alarms', formattedAlarms);
-                  setState(() {});
+                  setState(() => _refreshAlarms());
                 }
               },
               icon: const Icon(Icons.notifications, size: 18),
@@ -507,7 +526,7 @@ class _ReminderWaterState extends State<ReminderWater> {
                   await listAlarms.clear();
                   await box.clear();
                   await Alarm.stopAll();
-                  setState(() {});
+                  setState(() => _refreshAlarms());
                 },
                 child: Text(
                   l10n.deleteReminders,
@@ -592,9 +611,6 @@ class _ReminderWaterState extends State<ReminderWater> {
 
   @override
   Widget build(BuildContext context) {
-    List<String> myAlarms =
-    listAlarms.get('Alarms', defaultValue: <String>[]).cast<String>();
-
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: _background,
@@ -625,9 +641,9 @@ class _ReminderWaterState extends State<ReminderWater> {
             const SizedBox(height: 12),
             _buildInputCard(),
             const SizedBox(height: 12),
-            _buildScheduleCard(myAlarms),
+            _buildScheduleCard(_myAlarms),
             const SizedBox(height: 16),
-            _buildAlarmsList(myAlarms),
+            _buildAlarmsList(_myAlarms),
             const SizedBox(height: 24),
           ],
         ),

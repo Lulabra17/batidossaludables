@@ -1,7 +1,6 @@
 import 'package:batidos_salud/l10n/l10n_extension.dart';
 import 'package:batidos_salud/pantallas/descripRecetas.dart';
 import 'package:batidos_salud/pantallas/listaRecetas.dart';
-import 'package:batidos_salud/services/recipe_notification_service.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,8 +17,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  bool _notifEnabled = RecipeNotificationService.isEnabled();
-
   /// Selecciona la receta del día usando el día del año como semilla,
   /// así todos los usuarios ven la misma receta cada día.
   Recipe _recipeOfDay(List<Recipe> recipes) {
@@ -59,7 +56,6 @@ class _HomeState extends State<Home> {
           padding: const EdgeInsets.all(14),
           child: Row(
             children: [
-              // Imagen de la receta
               ClipRRect(
                 borderRadius: BorderRadius.circular(12),
                 child: Image.asset(
@@ -70,7 +66,6 @@ class _HomeState extends State<Home> {
                 ),
               ),
               const SizedBox(width: 12),
-              // Textos
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -96,33 +91,6 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                   ],
-                ),
-              ),
-              const SizedBox(width: 8),
-              // Botón de notificación
-              GestureDetector(
-                onTap: () async {
-                  if (_notifEnabled) {
-                    await RecipeNotificationService.disable();
-                  } else {
-                    await RecipeNotificationService.enable(
-                      title: l10n.recipeDayNotifTitle,
-                      body: l10n.recipeDayNotifBody,
-                    );
-                  }
-                  setState(() => _notifEnabled = !_notifEnabled);
-                },
-                child: Tooltip(
-                  message: _notifEnabled
-                      ? l10n.recipeDayActive
-                      : l10n.recipeDayActivate,
-                  child: Icon(
-                    _notifEnabled
-                        ? Icons.notifications_active
-                        : Icons.notifications_none,
-                    color: Colors.white,
-                    size: 28,
-                  ),
                 ),
               ),
             ],
@@ -279,9 +247,9 @@ Widget listxCategoria(BuildContext context, dynamic category) {
                             builder: (context) =>
                                 ListaRecetas(category: category)));
                   },
-                  icon: Icon(Icons.more_vert),
+                  icon: const Icon(Icons.arrow_forward_ios),
                   color: Colors.black,
-                  iconSize: 25),
+                  iconSize: 18),
             ],
           ),
         ),
@@ -310,14 +278,40 @@ Widget cardBatidos(BuildContext context, dynamic recipe) {
     child: Padding(
       padding: const EdgeInsets.only(left: 15.0, right: 0, bottom: 5, top: 0),
       child: Container(
-          width: MediaQuery.of(context).size.width * 0.35,
-          height: MediaQuery.of(context).size.width * 0.35,
+        width: MediaQuery.of(context).size.width * 0.35,
+        height: MediaQuery.of(context).size.width * 0.35,
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('${recipe.image_smoothie}'),
+                fit: BoxFit.cover),
+            borderRadius: BorderRadius.circular(12)),
+        child: Container(
           decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('${recipe.image_smoothie}'),
-                  fit: BoxFit.cover),
-              borderRadius: BorderRadius.circular(12)),
-          child: Center(child: Text(''))),
+            borderRadius: BorderRadius.circular(12),
+            gradient: const LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Colors.transparent, Colors.black54],
+            ),
+          ),
+          child: Align(
+            alignment: Alignment.bottomLeft,
+            child: Padding(
+              padding: const EdgeInsets.all(6.0),
+              child: Text(
+                recipe.name,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 10,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
     ),
   );
 }

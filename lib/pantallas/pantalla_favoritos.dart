@@ -41,7 +41,25 @@ class _PantallaFavoritosState extends State<PantallaFavoritos> {
         body: Builder(
           builder: (context) {
             if (listafavoritos.isEmpty) {
-              return Center(child: Text(context.l10n.noFavorites));
+              return Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.favorite_border, size: 64, color: Colors.teal[300]),
+                    const SizedBox(height: 16),
+                    Text(
+                      context.l10n.noFavorites,
+                      style: GoogleFonts.nunito(
+                        textStyle: TextStyle(
+                          color: Colors.grey[600],
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              );
             } else {
               return SingleChildScrollView(
                 child: Column(
@@ -87,8 +105,7 @@ BuildContext context, int index, dynamic recipe, void Function() delete) {
         width: MediaQuery.of(context).size.width,
         height: 125,
         child: Card(
-          elevation: 8.0,
-          color: Colors.black54,
+          elevation: 4.0,
           child: Row(
             children: <Widget>[
               Hero(
@@ -102,35 +119,32 @@ BuildContext context, int index, dynamic recipe, void Function() delete) {
                       borderRadius: BorderRadius.circular(12)),
                 ),
               ),
-              SizedBox(
-                width: 15,
-              ),
+              const SizedBox(width: 15),
               Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text('${recipe.name}',
-                        textAlign: TextAlign.center,
                         overflow: TextOverflow.ellipsis,
                         maxLines: 2,
-                        style: TextStyle(
-                            color: Colors.amberAccent,
-                            fontFamily: 'Quicksand',
+                        style: GoogleFonts.nunito(
+                          textStyle: TextStyle(
+                            color: Colors.teal[800],
                             fontSize: MediaQuery.of(context).size.width * 0.040,
-                            fontWeight: FontWeight.bold)),
-                    SizedBox(
-                      height: 8,
-                    ),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        )),
+                    const SizedBox(height: 4),
                     Text(context.l10n.smoothiesCategoryTitle(nombreCategoria),
-                      textAlign: TextAlign.center,
                       overflow: TextOverflow.ellipsis,
-                      maxLines: 2,
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'Quicksand',
-                          fontSize: MediaQuery.of(context).size.width * 0.025,
-                          fontWeight: FontWeight.bold))
+                      maxLines: 1,
+                      style: GoogleFonts.nunito(
+                        textStyle: TextStyle(
+                          color: Colors.grey[600],
+                          fontSize: MediaQuery.of(context).size.width * 0.030,
+                        ),
+                      ))
                   ],
                 ),
               ),

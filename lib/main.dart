@@ -4,7 +4,8 @@ import 'package:batidos_salud/l10n/l10n_extension.dart';
 import 'package:batidos_salud/main/main_screen.dart';
 import 'package:batidos_salud/providers/provider.dart';
 import 'package:batidos_salud/services/ad_helper.dart';
-import 'package:batidos_salud/services/recipe_notification_service.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -18,7 +19,11 @@ import 'favoritos.dart';
 // configurando canales para reprogramar alarmas en un reinicio
 @pragma('vm:entry-point')
 Future<void> reprogramAlarmsHandler() async {
-  await loadAndScheduleAlarms();
+  try {
+    await loadAndScheduleAlarms();
+  } catch (e) {
+    debugPrint('⚠️ reprogramAlarmsHandler: canal no disponible en background ($e)');
+  }
 }
 
 
@@ -48,26 +53,49 @@ Future<void> main() async {
   await Hive.openBox('Favoritos');
   await Hive.openBox('listAlarms');
   await Hive.openBox('alarms');
+  await Hive.openBox('prefs');
 
   // Pedir permisos antes de programar alarmas/notificaciones
   await requestPermissions();
 
-  await loadAndScheduleAlarms(); // Cargar y reprogramar alarmas al iniciar
-  await RecipeNotificationService.initialize(); // Notificación diaria de receta
-  await RecipeNotificationService.enableIfFirstTime(); // Activar por defecto en primera instalación
+  try {
+    await loadAndScheduleAlarms(); // Cargar y reprogramar alarmas al iniciar
+  } catch (e) {
+    debugPrint('⚠️ loadAndScheduleAlarms en startup: $e');
+  }
+
+  // Inicializar Firebase y suscribir al topic de receta diaria
+  await Firebase.initializeApp();
+  await _setupFCM();
 
   runApp(MyApp());
 }
 
+Future<void> _setupFCM() async {
+  final messaging = FirebaseMessaging.instance;
+
+  // Solicitar permiso de notificaciones (necesario en iOS y Android 13+)
+  await messaging.requestPermission(
+    alert: true,
+    badge: true,
+    sound: true,
+  );
+
+  // Suscribir al topic — todos los dispositivos reciben la notificación diaria
+  await messaging.subscribeToTopic('receta_del_dia');
+
+  // Manejar notificaciones cuando la app está en primer plano
+  FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+    debugPrint('📩 FCM foreground: ${message.notification?.title}');
+  });
+}
+
 Future<void> requestPermissions() async {
-  if (await Permission.scheduleExactAlarm.isDenied) {
-    if (await Permission.scheduleExactAlarm.shouldShowRequestRationale) {
-      await Permission.scheduleExactAlarm.request();
-    } else {
-      debugPrint("⚠️ Habilita manualmente SCHEDULE_EXACT_ALARM en Configuración.");
-      openAppSettings();
-    }
+  // Android 13+: permiso de notificaciones en tiempo de ejecución
+  if (await Permission.notification.isDenied) {
+    await Permission.notification.request();
   }
+  // SCHEDULE_EXACT_ALARM se solicita solo cuando el usuario activa recordatorios de agua
 }
 
 
@@ -117,7 +145,7 @@ class _BienvenidaState extends State<Bienvenida> {
 
   // El intersticial solo se muestra a partir del 2° inicio para no bloquear la primera experiencia
   static const _launchCountKey = 'launch_count';
-  final _prefsBox = Hive.box('Favoritos'); // reutilizamos una caja ya abierta
+  final _prefsBox = Hive.box('prefs');
 
   @override
   void initState() {
