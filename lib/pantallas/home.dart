@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import '../functions/category_name.dart';
 import '../functions/functions.dart';
 import '../models/receta_model.dart';
 import '../providers/locale_provider.dart';
@@ -195,7 +196,7 @@ class _HomeState extends State<Home> {
                                             ),
                                           ),
                                           child: Text(
-                                            _categoryName(context, i.id),
+                                            categoryLocalizedName(context, i.id),
                                             style: GoogleFonts.nunito(
                                               textStyle: const TextStyle(
                                                 color: Colors.white,
@@ -305,31 +306,6 @@ class _HomeState extends State<Home> {
   }
 }
 
-String _categoryName(BuildContext context, int id) {
-  final l10n = context.l10n;
-  switch (id) {
-    case 1:  return l10n.cat1;
-    case 2:  return l10n.cat2;
-    case 3:  return l10n.cat3;
-    case 4:  return l10n.cat4;
-    case 5:  return l10n.cat5;
-    case 6:  return l10n.cat6;
-    case 7:  return l10n.cat7;
-    case 8:  return l10n.cat8;
-    case 9:  return l10n.cat9;
-    case 10: return l10n.cat10;
-    case 11: return l10n.cat11;
-    case 12: return l10n.cat12;
-    case 13: return l10n.cat13;
-    case 14: return l10n.cat14;
-    case 15: return l10n.cat15;
-    case 16: return l10n.cat16;
-    case 17: return l10n.cat17;
-    case 18: return l10n.cat18;
-    default: return '';
-  }
-}
-
 Widget listxCategoria(BuildContext context, dynamic category) {
   final int idcategory = category.id;
   int ic = 0;
@@ -354,7 +330,7 @@ Widget listxCategoria(BuildContext context, dynamic category) {
                 width: 10,
               ),
               Expanded(
-                child: Text(context.l10n.smoothiesCategoryTitle(category.name_category),
+                child: Text(categoryLocalizedName(context, category.id),
                     style: GoogleFonts.nunito(
                       textStyle: TextStyle(
                           color: Colors.black,

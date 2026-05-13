@@ -1,9 +1,9 @@
-import 'package:batidos_salud/l10n/l10n_extension.dart';
 import 'package:batidos_salud/models/receta_model.dart';
 import 'package:batidos_salud/pantallas/descripRecetas.dart';
 import 'package:batidos_salud/pantallas/searchScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../functions/category_name.dart';
 import '../functions/functions.dart';
 import '../models/categories_model.dart';
 import '../providers/provider.dart';
@@ -66,7 +66,7 @@ class _ListaRecetasState extends State<ListaRecetas> {
           onPressed: () => Navigator.pop(context),
         ),
         title: Text(
-          context.l10n.smoothiesCategoryTitle(widget.category.name_category),
+          categoryLocalizedName(context, widget.category.id),
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: MediaQuery.of(context).size.width*0.04),
         ),
         backgroundColor: Colors.white,
