@@ -5,9 +5,13 @@ import 'package:alarm/alarm.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 
-// Detecta si el dispositivo usa español (funciona también en background sin BuildContext)
-bool _isSpanish() =>
-    PlatformDispatcher.instance.locale.languageCode == 'es';
+// Detecta idioma: primero la preferencia guardada en la app, luego el dispositivo
+bool _isSpanish() {
+  final box = Hive.box('prefs');
+  final saved = box.get('app_locale') as String?;
+  if (saved != null) return saved == 'es';
+  return PlatformDispatcher.instance.locale.languageCode == 'es';
+}
 
 
 // Configurar las alarmas desde la lista de recordatorios
