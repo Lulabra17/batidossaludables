@@ -121,7 +121,7 @@ Widget cardCategoria(BuildContext context, dynamic category) {
                     style: GoogleFonts.nunito(
                       textStyle: const TextStyle(
                         color: Colors.white,
-                        fontSize: 18,
+                        fontSize: 22,
                         fontWeight: FontWeight.bold,
                         shadows: [Shadow(color: Colors.black, blurRadius: 4)],
                       ),
