@@ -66,5 +66,24 @@
   "shareDownloadApp": "\n🥤 Receta de *Batidos Saludables* — 144 recetas de jugos y batidos naturales, gratis para Android:\nhttps://play.google.com/store/apps/details?id=com.slisapps.batidossalud&utm_source=share&utm_medium=app&utm_campaign=recipe_share",
   "shareSubject": "Receta: {recipeName}",
   "shareIngredients": "📝 *Ingredientes:*",
-  "sharePreparation": "👨‍🍳 *Preparación:*"
+  "sharePreparation": "👨‍🍳 *Preparación:*",
+
+  "cat1": "Desintoxicantes",
+  "cat2": "Para el Estreñimiento",
+  "cat3": "Para el Estrés y la Ansiedad",
+  "cat4": "Para la Retención de Líquidos",
+  "cat5": "Para la Circulación",
+  "cat6": "Para Mejorar la Piel",
+  "cat7": "Para Aumentar Masa Muscular",
+  "cat8": "Para Bajar la Grasa Abdominal",
+  "cat9": "Para el Dolor de Cabeza",
+  "cat10": "Para Personas con Diabetes",
+  "cat11": "Para la Hipertensión",
+  "cat12": "Para las Hemorroides",
+  "cat13": "Para Dolores Menstruales",
+  "cat14": "Para la Resaca",
+  "cat15": "Antigripales",
+  "cat16": "Para el Hígado Graso",
+  "cat17": "Para el Colon Inflamado",
+  "cat18": "Para la Gastritis"
 }

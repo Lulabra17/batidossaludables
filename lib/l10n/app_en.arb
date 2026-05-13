@@ -86,5 +86,24 @@
     }
   },
   "shareIngredients": "📝 *Ingredients:*",
-  "sharePreparation": "👨‍🍳 *Preparation:*"
+  "sharePreparation": "👨‍🍳 *Preparation:*",
+
+  "cat1": "Detox Smoothies",
+  "cat2": "For Constipation",
+  "cat3": "For Stress & Anxiety",
+  "cat4": "For Water Retention",
+  "cat5": "For Better Circulation",
+  "cat6": "For Better Skin",
+  "cat7": "For Muscle Mass",
+  "cat8": "For Abdominal Fat",
+  "cat9": "For Headaches",
+  "cat10": "For Diabetes",
+  "cat11": "For Hypertension",
+  "cat12": "For Hemorrhoids",
+  "cat13": "For Menstrual Pain",
+  "cat14": "For Hangovers",
+  "cat15": "For the Flu",
+  "cat16": "For Fatty Liver",
+  "cat17": "For Colon Inflammation",
+  "cat18": "For Gastritis"
 }
