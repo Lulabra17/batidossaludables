@@ -7,6 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import '../functions/functions.dart';
 import '../models/receta_model.dart';
+import '../providers/locale_provider.dart';
 import '../providers/provider.dart';
 
 class Home extends StatefulWidget {
@@ -117,6 +118,12 @@ class _HomeState extends State<Home> {
             )),
         backgroundColor: Colors.white,
         shadowColor: Colors.grey,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.language, color: Colors.black54),
+            onPressed: () => _showLanguageDialog(context),
+          ),
+        ],
       ),
       body: Stack(children: [
         Consumer<SmoothieProvider>(
@@ -203,6 +210,64 @@ class _HomeState extends State<Home> {
           },
         ),
       ]),
+    );
+  }
+
+  void _showLanguageDialog(BuildContext context) {
+    final localeProvider = context.read<LocaleProvider>();
+    final current = localeProvider.locale.languageCode;
+    showDialog(
+      context: context,
+      builder: (_) => AlertDialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: Row(
+          children: const [
+            Icon(Icons.language, color: Colors.teal),
+            SizedBox(width: 8),
+            Text('Idioma / Language'),
+          ],
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            _languageTile(
+              context,
+              flag: '🇪🇸',
+              label: 'Español',
+              code: 'es',
+              selected: current == 'es',
+              provider: localeProvider,
+            ),
+            _languageTile(
+              context,
+              flag: '🇺🇸',
+              label: 'English',
+              code: 'en',
+              selected: current == 'en',
+              provider: localeProvider,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _languageTile(
+    BuildContext context, {
+    required String flag,
+    required String label,
+    required String code,
+    required bool selected,
+    required LocaleProvider provider,
+  }) {
+    return ListTile(
+      leading: Text(flag, style: const TextStyle(fontSize: 28)),
+      title: Text(label, style: GoogleFonts.nunito(fontWeight: FontWeight.w600)),
+      trailing: selected ? const Icon(Icons.check_circle, color: Colors.teal) : null,
+      onTap: () {
+        provider.setLocale(code);
+        Navigator.pop(context);
+      },
     );
   }
 }

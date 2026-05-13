@@ -2,6 +2,7 @@ import 'package:alarm/alarm.dart';
 import 'package:batidos_salud/alarms_functions.dart';
 import 'package:batidos_salud/l10n/l10n_extension.dart';
 import 'package:batidos_salud/main/main_screen.dart';
+import 'package:batidos_salud/providers/locale_provider.dart';
 import 'package:batidos_salud/providers/provider.dart';
 import 'package:batidos_salud/services/ad_helper.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -101,29 +102,28 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return ChangeNotifierProvider(
-        create: (context) => SmoothieProvider(),
-        child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        // Título localizado — usa onGenerateTitle porque title se evalúa antes que los delegates
-        onGenerateTitle: (context) => context.l10n.appTitle,
-        // Configuración de internacionalización
-        localizationsDelegates: const [
-          AppLocalizations.delegate,
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
-        ],
-        supportedLocales: const [
-          Locale('en'), // inglés — idioma por defecto
-          Locale('es'), // español
-        ],
-        // Si el celular está en español se usa español; cualquier otro idioma usa inglés
-        localeResolutionCallback: (locale, supportedLocales) {
-          if (locale?.languageCode == 'es') return const Locale('es');
-          return const Locale('en');
-        },
-        home: const Bienvenida(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => SmoothieProvider()),
+        ChangeNotifierProvider(create: (_) => LocaleProvider(Hive.box('prefs'))),
+      ],
+      child: Consumer<LocaleProvider>(
+        builder: (context, localeProvider, _) => MaterialApp(
+          debugShowCheckedModeBanner: false,
+          locale: localeProvider.locale,
+          onGenerateTitle: (context) => context.l10n.appTitle,
+          localizationsDelegates: const [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: const [
+            Locale('en'),
+            Locale('es'),
+          ],
+          home: const Bienvenida(),
+        ),
       ),
     );
   }
