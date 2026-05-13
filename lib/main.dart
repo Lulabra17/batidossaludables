@@ -64,10 +64,6 @@ Future<void> main() async {
     debugPrint('⚠️ loadAndScheduleAlarms en startup: $e');
   }
 
-  // Inicializar Firebase y suscribir al topic de receta diaria
-  await Firebase.initializeApp();
-  await _setupFCM();
-
   runApp(MyApp());
 }
 
@@ -152,6 +148,16 @@ class _BienvenidaState extends State<Bienvenida> {
     super.initState();
     _incrementLaunchCount();
     _loadInterstitialAd();
+    _initFirebase();
+  }
+
+  Future<void> _initFirebase() async {
+    try {
+      await Firebase.initializeApp();
+      await _setupFCM();
+    } catch (e) {
+      debugPrint('⚠️ Firebase init en background: $e');
+    }
   }
 
   void _incrementLaunchCount() {
