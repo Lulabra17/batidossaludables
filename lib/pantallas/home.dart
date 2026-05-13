@@ -92,6 +92,16 @@ class _HomeState extends State<Home> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
+                    const SizedBox(height: 4),
+                    Text(
+                      categoryLocalizedName(context, recipe.id.toInt()),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        color: Colors.white70,
+                        fontSize: 11,
+                      ),
+                    ),
                   ],
                 ),
               ),
