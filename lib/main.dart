@@ -108,22 +108,30 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => LocaleProvider(Hive.box('prefs'))),
       ],
       child: Consumer<LocaleProvider>(
-        builder: (context, localeProvider, _) => MaterialApp(
-          debugShowCheckedModeBanner: false,
-          locale: localeProvider.locale,
-          onGenerateTitle: (context) => context.l10n.appTitle,
-          localizationsDelegates: const [
-            AppLocalizations.delegate,
-            GlobalMaterialLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate,
-          ],
-          supportedLocales: const [
-            Locale('en'),
-            Locale('es'),
-          ],
-          home: const Bienvenida(),
-        ),
+        builder: (context, localeProvider, _) {
+          // Recargar recetas cuando cambia el idioma
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            context.read<SmoothieProvider>().loadData(
+              locale: localeProvider.locale.languageCode,
+            );
+          });
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            locale: localeProvider.locale,
+            onGenerateTitle: (context) => context.l10n.appTitle,
+            localizationsDelegates: const [
+              AppLocalizations.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: const [
+              Locale('en'),
+              Locale('es'),
+            ],
+            home: const Bienvenida(),
+          );
+        },
       ),
     );
   }

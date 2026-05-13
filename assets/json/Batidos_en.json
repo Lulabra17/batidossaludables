@@ -1,0 +1,4359 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name_category": "Desintoxicantes",
+      "image_category": "assets/images/detox.png",
+      "recipes": [
+        {
+          "id": 1.1,
+          "image_smoothie": "assets/images/broc_manz.png",
+          "name": "Broccoli and Green Apple Juice",
+          "ingredient_amount": [
+            "100 g",
+            "1 pc",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Broccoli",
+            "Green Apple",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_brocoli.png",
+            "assets/images/icono_manzanaverde.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash the broccoli thoroughly and cut it into pieces.",
+            "- Cut the apple in half and remove the seeds and core.",
+            "- Then place both ingredients in the blender and cover with the cup of water.",
+            "- Blend for a few minutes until you get a smooth, lump-free drink.",
+            "- Serve without straining."
+          ]
+        },
+        {
+          "id": 1.2,
+          "image_smoothie": "assets/images/mang_esp.png",
+          "name": "Mango and Spinach Smoothie",
+          "ingredient_amount": [
+            "1 cup",
+            "1/2 pc",
+            "1/2 pc",
+            "1 slice",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Spinach Leaves",
+            "Chopped Mango",
+            "Chopped Banana",
+            "Pineapple",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_mango.png",
+            "assets/images/icono_banana.png",
+            "assets/images/icono_pina.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash the spinach leaves thoroughly and chop them.",
+            "- Place them in the blender along with the mango, pineapple, and water.",
+            "- Blend for a few minutes until everything is well combined.",
+            "- Serve and enjoy."
+          ]
+        },
+        {
+          "id": 1.3,
+          "image_smoothie": "assets/images/te_pe_pi.png",
+          "name": "Green Tea, Cucumber and Pineapple Smoothie",
+          "ingredient_amount": [
+            "2 or 3 sprigs",
+            "1 pc",
+            "1/2 small piece",
+            "1/2 pc",
+            "1 slice",
+            "",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Parsley",
+            "Cucumber, cut into pieces",
+            "Ginger (small piece)",
+            "Chopped Avocado",
+            "Pineapple",
+            "Juice of half a lemon",
+            "Green Tea"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_perejil.png",
+            "assets/images/icono_pepino.png",
+            "assets/images/icono_jengibre.png",
+            "assets/images/icono_aguacate.png",
+            "assets/images/icono_pina.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_teverde.png"
+          ],
+          "preparation": [
+            "- Add all the vegetables to the blender jar, including the ginger and avocado.",
+            "- Also add the pineapple, lemon juice, and green tea.",
+            "- Blend for a few moments until everything is well combined.",
+            "- Serve and enjoy immediately."
+          ]
+        },
+        {
+          "id": 1.4,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Green Tea, Pear and Orange Smoothie",
+          "ingredient_amount": [
+            "1 cup",
+            "1/2 pc",
+            "1 pc",
+            "1/2 pc",
+            "6 units"
+          ],
+          "ingredient_description": [
+            "Green Tea",
+            "Pear, cut into pieces",
+            "Chopped Plum",
+            "Orange",
+            "Almonds"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_teverde.png",
+            "assets/images/icono_pera.png",
+            "assets/images/icono_ciruela.png",
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_almendra.png"
+          ],
+          "preparation": [
+            "- Place all the ingredients in the blender jar, including the almonds.",
+            "- Blend for a few minutes.",
+            "- Once you have a smooth, lump-free drink, serve it."
+          ]
+        },
+        {
+          "id": 1.5,
+          "image_smoothie": "assets/images/to_ba_ag.png",
+          "name": "Grapefruit, Banana and Avocado Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "1/2 pc",
+            "1/2 pc",
+            "1 piece",
+            "1 cup",
+            "1 sprig"
+          ],
+          "ingredient_description": [
+            "Large Grapefruit",
+            "Banana",
+            "Ripe Avocado",
+            "Fresh Ginger",
+            "Water",
+            "Fresh Mint"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_toronja.png",
+            "assets/images/icono_banana.png",
+            "assets/images/icono_aguacate.png",
+            "assets/images/icono_jengibre.png",
+            "assets/images/icono_agua.png",
+            "assets/images/icono_menta.png"
+          ],
+          "preparation": [
+            "- Squeeze the juice from the grapefruit and add it to the blender with the banana, avocado, and ginger.",
+            "- Then add the mint and water.",
+            "- Finally, blend until everything is well combined."
+          ]
+        },
+        {
+          "id": 1.6,
+          "image_smoothie": "assets/images/me_ki_ma.png",
+          "name": "Melon, Kiwi and Apple Smoothie",
+          "ingredient_amount": [
+            "100 g",
+            "1/2 pc",
+            "1 pc",
+            "1 tbsp",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Chopped Melon",
+            "Apple, cut into pieces",
+            "Kiwi",
+            "Lemon Juice",
+            "Ice Cubes"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_melon.png",
+            "assets/images/icono_manzana.png",
+            "assets/images/icono_kiwi.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_hielo.png"
+          ],
+          "preparation": [
+            "- Cut all the fruits into pieces and place them in the blender along with the lemon and ice cubes.",
+            "- Blend until all the ingredients are well combined.",
+            "- Serve immediately, without straining."
+          ]
+        },
+        {
+          "id": 1.7,
+          "image_smoothie": "assets/images/mave_ag.png",
+          "name": "Green Apple and Avocado Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "1/2 pc",
+            "1 handful",
+            "1 1/2 cups"
+          ],
+          "ingredient_description": [
+            "Green Apple",
+            "Avocado",
+            "Spinach",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_manzanaverde.png",
+            "assets/images/icono_aguacate.png",
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Cut the apple, avocado, and spinach into pieces.",
+            "- Then place them in the blender jar along with the water.",
+            "- Blend for a few seconds until all the ingredients are well combined.",
+            "- Serve and enjoy."
+          ]
+        },
+        {
+          "id": 1.8,
+          "image_smoothie": "assets/images/ver_co.png",
+          "name": "Green Coconut Smoothie",
+          "ingredient_amount": [
+            "1 cup",
+            "1 tbsp",
+            "1 handful",
+            "1 pc"
+          ],
+          "ingredient_description": [
+            "Coconut Water",
+            "Coconut Yogurt",
+            "Spinach",
+            "Banana"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_coco.png",
+            "assets/images/icono_yogurt.png",
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_banana.png"
+          ],
+          "preparation": [
+            "- Pour the coconut water and yogurt into the blender.",
+            "- Chop the spinach and banana, and add them to the rest of the ingredients.",
+            "- Blend for a few moments until you get a creamy, smooth drink."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name_category": "para el Estreñimiento",
+      "image_category": "assets/images/constipation.png",
+      "recipes": [
+        {
+          "id": 2.1,
+          "image_smoothie": "assets/images/manz_pi_per.png",
+          "name": "Apple, Pineapple and Pear Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "1/2 pc",
+            "1 slice",
+            "1 pc",
+            "1/2 cup"
+          ],
+          "ingredient_description": [
+            "Pear",
+            "Apple",
+            "Pineapple",
+            "Orange",
+            "Water, or a full glass if orange juice is not used"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_pera.png",
+            "assets/images/icono_manzana.png",
+            "assets/images/icono_pina.png",
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Peel the apple, remove the core, and cut it into pieces.",
+            "- Cut the pineapple into pieces and remove the pear's core.",
+            "- Squeeze the juice from the orange.",
+            "- Place the apple, pineapple, and pear in the blender jar.",
+            "- Add the water and orange juice.",
+            "- Blend well and drink immediately."
+          ]
+        },
+        {
+          "id": 2.2,
+          "image_smoothie": "assets/images/manz_pap.png",
+          "name": "Apple and Papaya Smoothie",
+          "ingredient_amount": [
+            "1/2 pc",
+            "1 pc",
+            "1 cup",
+            ""
+          ],
+          "ingredient_description": [
+            "Small Papaya",
+            "Apple",
+            "Water",
+            "Honey to taste (optional)"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_papaya.png",
+            "assets/images/icono_manzana.png",
+            "assets/images/icono_agua.png",
+            "assets/images/icono_miel.png"
+          ],
+          "preparation": [
+            "- Cut the apple into quarters and remove the core. You can peel it if you like, though leaving the skin will give you more nutrients.",
+            "- Halve the papaya, remove the seeds and skin.",
+            "- Place the fruits in the blender.",
+            "- Add the water and honey if desired.",
+            "- Blend well and once you have a smooth cream, it is ready to drink."
+          ]
+        },
+        {
+          "id": 2.3,
+          "image_smoothie": "assets/images/mo_manz.png",
+          "name": "Blackberry and Apple Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "10 pcs",
+            "1/2 cup",
+            "2 tbsp"
+          ],
+          "ingredient_description": [
+            "Apple",
+            "Blackberries",
+            "Milk",
+            "Instant Oats"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_manzana.png",
+            "assets/images/icono_mora.png",
+            "assets/images/icono_leche.png",
+            "assets/images/icono_avena.png"
+          ],
+          "preparation": [
+            "- Wash the apple and remove the core.",
+            "- Clean the blackberries thoroughly.",
+            "- In the blender jar, add the fruits, milk, and oats.",
+            "- Blend well and drink right away. If the result is too thick, add a little more water or milk.",
+            "Note: You can substitute the apple with strawberries if desired."
+          ]
+        },
+        {
+          "id": 2.4,
+          "image_smoothie": "assets/images/pa_pi.png",
+          "name": "Papaya and Pineapple Smoothie",
+          "ingredient_amount": [
+            "1/2 pc",
+            "1 slice",
+            "1/2 cup",
+            "1 tsp",
+            "2 tsp"
+          ],
+          "ingredient_description": [
+            "Small Papaya",
+            "Pineapple",
+            "Plain Yogurt",
+            "Coconut Extract",
+            "Flaxseeds"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_papaya.png",
+            "assets/images/icono_pina.png",
+            "assets/images/icono_yogurt.png",
+            "assets/images/icono_coco.png",
+            "assets/images/icono_linaza.png"
+          ],
+          "preparation": [
+            "- Place the papaya and pineapple pulp, peeled and chopped, in the blender.",
+            "- Add the yogurt, coconut extract, and flaxseeds.",
+            "- If desired, you can add a little water or ice.",
+            "- Blend everything well and drink."
+          ]
+        },
+        {
+          "id": 2.5,
+          "image_smoothie": "assets/images/pi_na_cir.png",
+          "name": "Pineapple, Orange and Plum Smoothie",
+          "ingredient_amount": [
+            "2 pcs",
+            "1 slice",
+            "",
+            "1 tbsp"
+          ],
+          "ingredient_description": [
+            "Plums",
+            "Pineapple",
+            "Juice of one Orange",
+            "Flaxseeds"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_ciruela.png",
+            "assets/images/icono_pina.png",
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_linaza.png"
+          ],
+          "preparation": [
+            "- Peel and cut the pineapple slice.",
+            "- Wash the plums and remove the pits.",
+            "- Squeeze the oranges.",
+            "- Place the pineapple, plums, and orange juice in the blender.",
+            "- Add the flaxseeds.",
+            "- Blend until everything is well mixed and drink."
+          ]
+        },
+        {
+          "id": 2.6,
+          "image_smoothie": "assets/images/ba_mo.png",
+          "name": "Banana and Blackberry Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "1 cup",
+            "A handful",
+            "1/2 cup"
+          ],
+          "ingredient_description": [
+            "Banana",
+            "Blackberries",
+            "Almonds",
+            "Water or Milk"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_banana.png",
+            "assets/images/icono_mora.png",
+            "assets/images/icono_almendra.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Peel the banana and slice it.",
+            "- Wash the blackberries well and halve the almonds.",
+            "- Place the fruits, almonds, and water or milk in the blender.",
+            "- Blend everything well and once you have a smooth mixture, enjoy it."
+          ]
+        },
+        {
+          "id": 2.7,
+          "image_smoothie": "assets/images/li_man_na.png",
+          "name": "Lemon, Mango and Orange Smoothie",
+          "ingredient_amount": [
+            "1/2 pc",
+            "",
+            "1 pc",
+            "1/2 pc"
+          ],
+          "ingredient_description": [
+            "Large Mango",
+            "Juice of one Lemon",
+            "Orange",
+            "Avocado (OPTIONAL)"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_mango.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_aguacate.png"
+          ],
+          "preparation": [
+            "- Peel the mango and remove the pit. Cut the pulp and do the same with the orange.",
+            "- Squeeze the lemon juice.",
+            "- If you want to add the avocado, cut it into pieces.",
+            "- Place everything in the blender and blend well.",
+            "- Drink immediately."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name_category": "para controlar estrés y ansiedad",
+      "image_category": "assets/images/estres.png",
+      "recipes": [
+        {
+          "id": 3.1,
+          "image_smoothie": "assets/images/manz_pap.png",
+          "name": "Apple and Papaya Smoothie",
+          "ingredient_amount": [
+            "1/2 pc",
+            "1 pc",
+            "1 cup",
+            ""
+          ],
+          "ingredient_description": [
+            "Small Papaya",
+            "Apple",
+            "Water",
+            "Honey to taste (optional)"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_papaya.png",
+            "assets/images/icono_manzana.png",
+            "assets/images/icono_agua.png",
+            "assets/images/icono_miel.png"
+          ],
+          "preparation": [
+            "- Cut the apple into quarters and remove the core. You can peel it if you like, though leaving the skin will give you more nutrients.",
+            "- Halve the papaya, remove the seeds and skin.",
+            "- Place the fruits in the blender.",
+            "- Add the water and honey if desired.",
+            "- Blend well and once you have a smooth cream, it is ready to drink."
+          ]
+        },
+        {
+          "id": 3.2,
+          "image_smoothie": "assets/images/col_za.png",
+          "name": "Cabbage and Carrot Juice",
+          "ingredient_amount": [
+            "1/4 pc",
+            "3 pcs",
+            "2 heads",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Medium Cabbage",
+            "Large Carrots",
+            "Fennel",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_col.png",
+            "assets/images/icono_zanahoria.png",
+            "assets/images/icono_hinojo.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Cut the cabbage into pieces.",
+            "- Chop the carrots into small pieces.",
+            "- Cut each fennel head into 4 pieces.",
+            "- Place the vegetables in the blender along with the water.",
+            "- Blend well and drink immediately."
+          ]
+        },
+        {
+          "id": 3.3,
+          "image_smoothie": "assets/images/ba_fre_pe.png",
+          "name": "Banana, Strawberry and Pear Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "250 g",
+            "1 pc",
+            "1/2 glass"
+          ],
+          "ingredient_description": [
+            "Banana",
+            "Strawberries",
+            "Pear",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_banana.png",
+            "assets/images/icono_fresa.png",
+            "assets/images/icono_pera.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Cut all the ingredients into pieces.",
+            "- Add everything to the blender along with the water.",
+            "- Blend for a couple of minutes until everything is completely combined.",
+            "- Drink this juice in the mornings."
+          ]
+        },
+        {
+          "id": 3.4,
+          "image_smoothie": "assets/images/pe_ave.png",
+          "name": "Pear and Oat Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "2 tbsp",
+            "",
+            "1 glass"
+          ],
+          "ingredient_description": [
+            "Ripe Pear",
+            "Ground Oats",
+            "Honey to taste",
+            "Peppermint Infusion"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_pera.png",
+            "assets/images/icono_avena.png",
+            "assets/images/icono_miel.png",
+            "assets/images/icono_menta.png"
+          ],
+          "preparation": [
+            "- Cut the pear into pieces.",
+            "- Add the pear along with the oats and peppermint infusion to the blender.",
+            "- Blend for a few minutes until everything is combined.",
+            "- Finally, add honey to taste and drink."
+          ]
+        },
+        {
+          "id": 3.5,
+          "image_smoothie": "assets/images/man_nu.png",
+          "name": "Apple and Walnut Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "1 cup",
+            "4 pcs",
+            ""
+          ],
+          "ingredient_description": [
+            "Apple",
+            "Almond Milk",
+            "Walnuts",
+            "Orange Blossom Honey"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_manzana.png",
+            "assets/images/icono_almendra.png",
+            "assets/images/icono_nuez.png",
+            "assets/images/icono_azahar.png"
+          ],
+          "preparation": [
+            "- Remove the apple core and cut it into pieces.",
+            "- Blend the apple together with the almond milk.",
+            "- Add the walnuts and continue blending.",
+            "- Finally, add a little orange blossom honey and drink it nice and cold."
+          ]
+        },
+        {
+          "id": 3.6,
+          "image_smoothie": "assets/images/es_manver.png",
+          "name": "Spinach and Green Apple Smoothie",
+          "ingredient_amount": [
+            "1 cup",
+            "1 pc",
+            "1 pc",
+            "1 pc",
+            "1 glass"
+          ],
+          "ingredient_description": [
+            "Fresh Spinach",
+            "Green Apple",
+            "Cucumber",
+            "Lemon",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_manzanaverde.png",
+            "assets/images/icono_pepino.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash the spinach, apple, and cucumber well.",
+            "- Peel the lemon and cut all the ingredients into pieces.",
+            "- Place the ingredients in the blender along with the water.",
+            "- Blend until you get a smooth mixture.",
+            "- Strain the juice if you prefer a smoother texture, or drink as-is to get the full benefit of the fiber.",
+            "- Serve and consume immediately to get the most out of the nutrients."
+          ]
+        },
+        {
+          "id": 3.7,
+          "image_smoothie": "assets/images/na_za_jen.png",
+          "name": "Orange, Carrot and Ginger Juice",
+          "ingredient_amount": [
+            "2 pcs",
+            "2 pcs",
+            "1 piece",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Oranges",
+            "Carrots",
+            "Ginger",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_zanahoria.png",
+            "assets/images/icono_jengibre.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash and peel the carrots well.",
+            "- Wash and peel the oranges, then cut them into pieces. Remove any seeds.",
+            "- Peel the ginger and cut a small piece.",
+            "- Place everything in the blender with the cup of water and blend for 2 or 3 minutes, or until smooth.",
+            "- Pour into a glass and drink.",
+            "- You can strain it or drink as-is to benefit from the fiber."
+          ]
+        },
+        {
+          "id": 3.8,
+          "image_smoothie": "assets/images/re_ma_za.png",
+          "name": "Beet, Apple and Carrot Juice",
+          "ingredient_amount": [
+            "1 pc",
+            "1 pc",
+            "1 pc",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Beet",
+            "Apple",
+            "Carrot",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_remolacha.png",
+            "assets/images/icono_manzana.png",
+            "assets/images/icono_zanahoria.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash, peel, and cut the beet and carrot into pieces.",
+            "- Wash and cut the apple with the skin on, removing the core first.",
+            "- Place in the blender with a cup of water and blend until the mixture is smooth.",
+            "- Pour into a glass and drink, preferably without straining."
+          ]
+        },
+        {
+          "id": 3.9,
+          "image_smoothie": "assets/images/ara_ba.png",
+          "name": "Blueberry and Banana Juice",
+          "ingredient_amount": [
+            "1 cup",
+            "1 pc",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Blueberries",
+            "Banana",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_arandano.png",
+            "assets/images/icono_banana.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash the blueberries and peel the banana.",
+            "- Place in the blender with a cup of water.",
+            "- Blend until the mixture is smooth.",
+            "- Pour into a glass and drink immediately."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name_category": "para retención de liquidos",
+      "image_category": "assets/images/liquido.png",
+      "recipes": [
+        {
+          "id": 4.1,
+          "image_smoothie": "assets/images/me_man.png",
+          "name": "Melon and Apple Smoothie",
+          "ingredient_amount": [
+            "1 slice",
+            "",
+            "1 pc"
+          ],
+          "ingredient_description": [
+            "Melon",
+            "Juice of half a Lemon",
+            "Small Apple or half a large one"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_melon.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_manzana.png"
+          ],
+          "preparation": [
+            "- Remove the rind and seeds from the melon and wash the apple.",
+            "- Place both fruits in the blender along with the juice of half a lemon.",
+            "- Blend until smooth and homogeneous.",
+            "- If you prefer a thinner consistency, add a little more water."
+          ]
+        },
+        {
+          "id": 4.2,
+          "image_smoothie": "assets/images/pi_mang.png",
+          "name": "Pineapple and Mango Smoothie",
+          "ingredient_amount": [
+            "1/2 pc",
+            "1 slice",
+            "1/2 glass"
+          ],
+          "ingredient_description": [
+            "Mango",
+            "Pineapple",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_mango.png",
+            "assets/images/icono_pina.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Peel the pineapple and mango, and cut them into pieces.",
+            "- Place both fruits in the blender along with the water.",
+            "- Blend well until you get a smooth, homogeneous drink."
+          ]
+        },
+        {
+          "id": 4.3,
+          "image_smoothie": "assets/images/pe_fruro.png",
+          "name": "Cucumber and Red Berries Smoothie",
+          "ingredient_amount": [
+            "1/2 pc",
+            "150 g",
+            "1/2 glass"
+          ],
+          "ingredient_description": [
+            "Medium Cucumber",
+            "Red Berries (Strawberries, Raspberries, Blackberries or a mix)",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_pepino.png",
+            "assets/images/icono_frutosrojos.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash all the ingredients and remove the green tops from the strawberries (if you chose them).",
+            "- Cut into roughly even pieces and place them in the blender.",
+            "- Add water and blend until you get a smooth texture."
+          ]
+        },
+        {
+          "id": 4.4,
+          "image_smoothie": "assets/images/ap_pe_men.png",
+          "name": "Celery, Pear and Mint Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "2 stalks",
+            "1/2 glass",
+            ""
+          ],
+          "ingredient_description": [
+            "Pear",
+            "Celery",
+            "Water",
+            "Fresh Mint leaves"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_pera.png",
+            "assets/images/icono_apio.png",
+            "assets/images/icono_agua.png",
+            "assets/images/icono_menta.png"
+          ],
+          "preparation": [
+            "- Wash and chop the pear, celery stalks and mint.",
+            "- Blend them together in a blender.",
+            "- Add the water to help blend and obtain a lighter, diuretic smoothie."
+          ]
+        },
+        {
+          "id": 4.5,
+          "image_smoothie": "assets/images/pa_ba.png",
+          "name": "Papaya and Banana Smoothie",
+          "ingredient_amount": [
+            "1 glass",
+            "1/2 pc",
+            "1 slice"
+          ],
+          "ingredient_description": [
+            "Water",
+            "Banana",
+            "Papaya"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_agua.png",
+            "assets/images/icono_banana.png",
+            "assets/images/icono_papaya.png"
+          ],
+          "preparation": [
+            "- Remove the seeds from the papaya slice and cut it into several pieces.",
+            "- Then blend it in the blender with the banana and the glass of water.",
+            "- Process everything together until you get a smooth, homogeneous drink."
+          ]
+        },
+        {
+          "id": 4.6,
+          "image_smoothie": "assets/images/uva_aran.png",
+          "name": "Grape and Blueberry Juice",
+          "ingredient_amount": [
+            "1 glass",
+            "100 g",
+            "100 g"
+          ],
+          "ingredient_description": [
+            "Water",
+            "Blueberries",
+            "Black Grapes"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_agua.png",
+            "assets/images/icono_arandano.png",
+            "assets/images/icono_uva.png"
+          ],
+          "preparation": [
+            "- Wash all the fruits under a good stream of cold water.",
+            "- Place them in the blender or any kitchen appliance suitable for making smoothies.",
+            "- Add the water and blend until everything is well combined."
+          ]
+        },
+        {
+          "id": 4.7,
+          "image_smoothie": "assets/images/na_za.png",
+          "name": "Orange and Carrot Juice",
+          "ingredient_amount": [
+            "1 pc",
+            "1 pc",
+            "1/2 glass"
+          ],
+          "ingredient_description": [
+            "Orange",
+            "Carrot",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_zanahoria.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash and peel the carrot, then peel the orange.",
+            "- Place both ingredients in the blender and add the water.",
+            "- Blend well until combined and you get a fairly smooth texture. Add more liquid to taste."
+          ]
+        },
+        {
+          "id": 4.8,
+          "image_smoothie": "assets/images/es_ki.png",
+          "name": "Spinach and Kiwi Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "1/2 glass",
+            "",
+            "A handful"
+          ],
+          "ingredient_description": [
+            "Kiwi",
+            "Water",
+            "Juice of half a Lemon",
+            "Spinach"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_kiwi.png",
+            "assets/images/icono_agua.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_espinaca.png"
+          ],
+          "preparation": [
+            "- Start by washing the spinach, drain slightly and place it in a blender.",
+            "- Peel the kiwi and add the flesh along with the spinach. Then squeeze the juice of half a lemon.",
+            "- Now blend everything together for a couple of minutes. Adjust the consistency with the water."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name_category": "para la circulación",
+      "image_category": "assets/images/circulacion.png",
+      "recipes": [
+        {
+          "id": 5.1,
+          "image_smoothie": "assets/images/li_man_na.png",
+          "name": "Lemon, Mango and Orange Smoothie",
+          "ingredient_amount": [
+            "1/2 pc",
+            "",
+            "1 pc"
+          ],
+          "ingredient_description": [
+            "Large Mango",
+            "Juice of one Lemon",
+            "Orange"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_mango.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_naranja.png"
+          ],
+          "preparation": [
+            "- Peel the mango and remove the pit. Cut the flesh and do the same with the orange.",
+            "- Squeeze the lemon juice.",
+            "- Place everything in the blender and blend well.",
+            "- Drink immediately."
+          ]
+        },
+        {
+          "id": 5.2,
+          "image_smoothie": "assets/images/san_ce_pi.png",
+          "name": "Watermelon, Cherry and Pineapple Juice",
+          "ingredient_amount": [
+            "10 pcs",
+            "2 slices",
+            "1 slice",
+            "1 glass"
+          ],
+          "ingredient_description": [
+            "Cherries",
+            "Watermelon",
+            "Pineapple",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_cereza.png",
+            "assets/images/icono_sandia.png",
+            "assets/images/icono_pina.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Pit the cherries.",
+            "- Remove the seeds from the watermelon and cut it into pieces along with the pineapple.",
+            "- Add everything to the blender along with the water and blend until well incorporated, then drink."
+          ]
+        },
+        {
+          "id": 5.3,
+          "image_smoothie": "assets/images/re_na_pe.png",
+          "name": "Beet, Orange and Parsley Juice",
+          "ingredient_amount": [
+            "1 pc",
+            "2 pcs",
+            "4 leaves",
+            "1 glass"
+          ],
+          "ingredient_description": [
+            "Beet",
+            "Oranges",
+            "Parsley",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_remolacha.png",
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_perejil.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Peel the beet and the oranges.",
+            "- Cut into pieces and add to the blender along with the parsley.",
+            "- Blend everything, adding water to reach your desired consistency."
+          ]
+        },
+        {
+          "id": 5.4,
+          "image_smoothie": "assets/images/za_ap.png",
+          "name": "Carrot and Celery Juice",
+          "ingredient_amount": [
+            "1 pc",
+            "1 stalk",
+            "1 glass"
+          ],
+          "ingredient_description": [
+            "Carrot",
+            "Celery",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_zanahoria.png",
+            "assets/images/icono_apio.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash the carrot and celery well, slice them and blend until you get a smooth, homogeneous mixture.",
+            "- Pour into a glass with ice and drink with any meal of the day, preferably unfiltered."
+          ]
+        },
+        {
+          "id": 5.5,
+          "image_smoothie": "assets/images/na_pe_pe_ma.png",
+          "name": "Orange, Cucumber, Parsley and Mandarin Juice",
+          "ingredient_amount": [
+            "1 pc",
+            "1 pc",
+            "1/2 pc",
+            "1 tsp"
+          ],
+          "ingredient_description": [
+            "Orange",
+            "Mandarin",
+            "Cucumber with skin",
+            "Chopped Parsley"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_mandarina.png",
+            "assets/images/icono_pepino.png",
+            "assets/images/icono_perejil.png"
+          ],
+          "preparation": [
+            "- Wash the cucumber well and slice it.",
+            "- Peel the orange and mandarin and cut them into cubes.",
+            "- Place all the ingredients in the blender and blend for 2 minutes or until you get a homogeneous mixture.",
+            "- Pour into a glass with ice and drink unfiltered."
+          ]
+        },
+        {
+          "id": 5.6,
+          "image_smoothie": "assets/images/pi_jen.png",
+          "name": "Pineapple and Ginger Smoothie",
+          "ingredient_amount": [
+            "1 slice",
+            "1cm",
+            "1 glass",
+            ""
+          ],
+          "ingredient_description": [
+            "Pineapple",
+            "Ginger root",
+            "Water",
+            "Ice to taste"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_pina.png",
+            "assets/images/icono_jengibre.png",
+            "assets/images/icono_agua.png",
+            "assets/images/icono_hielo.png"
+          ],
+          "preparation": [
+            "- Blend all the ingredients for 2 minutes, or until you get a smooth, homogeneous mixture.",
+            "- Pour the smoothie into a glass with ice.",
+            "- Drink unfiltered."
+          ]
+        },
+        {
+          "id": 5.7,
+          "image_smoothie": "assets/images/san_li.png",
+          "name": "Watermelon and Lemon Juice",
+          "ingredient_amount": [
+            "1 cup",
+            "",
+            "3/4 cup",
+            ""
+          ],
+          "ingredient_description": [
+            "Watermelon cut into cubes",
+            "Juice of one Lemon",
+            "Water",
+            "Ice to taste"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_sandia.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_agua.png",
+            "assets/images/icono_hielo.png"
+          ],
+          "preparation": [
+            "- Place the watermelon, water and lemon juice in a blender and blend for 1 minute.",
+            "- Pour the juice into a glass with ice and drink immediately."
+          ]
+        },
+        {
+          "id": 5.8,
+          "image_smoothie": "assets/images/mara_col.png",
+          "name": "Passion Fruit and Cabbage Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "1 leaf",
+            "1 glass"
+          ],
+          "ingredient_description": [
+            "Passion Fruit",
+            "Cabbage",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_maracuya.png",
+            "assets/images/icono_col.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash and cut the cabbage leaf into pieces.",
+            "- Place the passion fruit pulp along with the cabbage in a blender.",
+            "- Blend for 2 to 3 minutes or until you get a smooth consistency.",
+            "- Pour the juice into a glass and drink, preferably unfiltered."
+          ]
+        },
+        {
+          "id": 5.9,
+          "image_smoothie": "assets/images/re_za.png",
+          "name": "Beet and Carrot Juice",
+          "ingredient_amount": [
+            "1 pc",
+            "2 pcs",
+            "1 pc",
+            "1 piece",
+            "",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Beet",
+            "Carrots",
+            "Green Apple",
+            "Small piece of Ginger",
+            "Juice of half a Lemon",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_remolacha.png",
+            "assets/images/icono_zanahoria.png",
+            "assets/images/icono_manzanaverde.png",
+            "assets/images/icono_jengibre.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash and peel all the ingredients; for the apple, remove the core.",
+            "- Cut everything into pieces and place in the blender along with the lemon juice.",
+            "- Blend until you get a homogeneous mixture.",
+            "- You can strain the juice or drink it as is, and add ice to taste."
+          ]
+        },
+        {
+          "id": 5.11,
+          "image_smoothie": "assets/images/pi_es_ap.png",
+          "name": "Pineapple, Spinach and Celery Juice",
+          "ingredient_amount": [
+            "1 cup",
+            "2 cups",
+            "2 sprigs",
+            "1 pc",
+            "",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Fresh Pineapple",
+            "Spinach",
+            "Celery",
+            "Cucumber",
+            "Juice of half a Lemon",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_pina.png",
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_apio.png",
+            "assets/images/icono_pepino.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash, peel and chop the pineapple and cucumber.",
+            "- Wash the spinach and celery well and cut them into pieces.",
+            "- Blend all the ingredients until you get a smooth, homogeneous mixture.",
+            "- Serve in a glass, straining if you prefer."
+          ]
+        },
+        {
+          "id": 5.12,
+          "image_smoothie": "assets/images/na_gra_jen.png",
+          "name": "Orange, Pomegranate and Ginger Juice",
+          "ingredient_amount": [
+            "2 pcs",
+            "1 pc",
+            "1 piece",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Oranges",
+            "Pomegranate",
+            "Small piece of Ginger",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_granada.png",
+            "assets/images/icono_jengibre.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Squeeze the juice from the oranges, avoiding the seeds.",
+            "- Remove the seeds from the pomegranate.",
+            "- Peel the ginger and finely chop the small piece.",
+            "- Blend all the ingredients with a cup of water until fully combined.",
+            "- Serve in a glass; you can strain the mixture if desired."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name_category": "para mejorar la piel",
+      "image_category": "assets/images/piel.png",
+      "recipes": [
+        {
+          "id": 6.1,
+          "image_smoothie": "assets/images/uva_man.png",
+          "name": "Grape and Apple Smoothie",
+          "ingredient_amount": [
+            "10 pcs",
+            "1 pc",
+            "1 glass",
+            "1/2 pc",
+            ""
+          ],
+          "ingredient_description": [
+            "Grapes",
+            "Apple",
+            "Water",
+            "Lemon",
+            "Honey to taste (Optional)"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_uva.png",
+            "assets/images/icono_manzana.png",
+            "assets/images/icono_agua.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_miel.png"
+          ],
+          "preparation": [
+            "- Wash the grapes well and cut the apple into small cubes, first removing the core.",
+            "- Add all the ingredients to the blender and blend for a few moments.",
+            "- Once you get a smooth, homogeneous drink, serve it unfiltered.",
+            "- Consume immediately, as fruit oxidizes quickly and sitting too long can spoil it.",
+            "- Enjoy this drink on an empty stomach or mid-morning."
+          ]
+        },
+        {
+          "id": 6.2,
+          "image_smoothie": "assets/images/ki_na_es.png",
+          "name": "Kiwi, Orange and Spinach Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "1 glass",
+            "1 handful",
+            ""
+          ],
+          "ingredient_description": [
+            "Kiwi",
+            "Orange juice",
+            "Spinach",
+            "Ice to taste"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_kiwi.png",
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_hielo.png"
+          ],
+          "preparation": [
+            "- Peel the kiwi and cut it into several pieces.",
+            "- Then blend everything in the blender with the orange juice, spinach and ice.",
+            "- Enjoy as soon as you prepare it."
+          ]
+        },
+        {
+          "id": 6.3,
+          "image_smoothie": "assets/images/fram_me.png",
+          "name": "Raspberry and Melon Smoothie",
+          "ingredient_amount": [
+            "200g",
+            "2 slices",
+            "1 stalk",
+            "100ml"
+          ],
+          "ingredient_description": [
+            "Raspberries",
+            "Melon",
+            "Celery (Optional)",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_frambuesa.png",
+            "assets/images/icono_melon.png",
+            "assets/images/icono_apio.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash the raspberries well, and cut the melon slices.",
+            "- Pour all the ingredients into the blender and process until you get a smooth, homogeneous drink.",
+            "- Serve immediately, unfiltered."
+          ]
+        },
+        {
+          "id": 6.4,
+          "image_smoothie": "assets/images/ag_ba_jen.png",
+          "name": "Avocado, Banana and Ginger Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "1 pc",
+            "100ml",
+            "1 pinch"
+          ],
+          "ingredient_description": [
+            "Chopped Banana",
+            "Chopped Avocado",
+            "Coconut Water",
+            "Ginger"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_banana.png",
+            "assets/images/icono_aguacate.png",
+            "assets/images/icono_coco.png",
+            "assets/images/icono_jengibre.png"
+          ],
+          "preparation": [
+            "- Peel and chop the banana and avocado.",
+            "- Place the fruits in the blender and blend with the coconut water.",
+            "- Once ready, add the pinch of ginger.",
+            "- Serve well chilled and enjoy."
+          ]
+        },
+        {
+          "id": 6.5,
+          "image_smoothie": "assets/images/gua_na.png",
+          "name": "Guava and Orange Smoothie",
+          "ingredient_amount": [
+            "2 pcs",
+            "2 pcs",
+            "200ml"
+          ],
+          "ingredient_description": [
+            "Ripe Guavas",
+            "Oranges",
+            "Coconut Milk"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_guayaba.png",
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_coco.png"
+          ],
+          "preparation": [
+            "- Peel both fruits well. Then remove the seeds from the oranges and trim any white pith.",
+            "- Place the chopped fruits in the blender with the coconut milk.",
+            "- Blend for a few moments until you get a creamy, homogeneous smoothie.",
+            "- Serve unfiltered and enjoy."
+          ]
+        },
+        {
+          "id": 6.6,
+          "image_smoothie": "assets/images/mav_pe_ap.png",
+          "name": "Green Apple, Cucumber and Celery Smoothie",
+          "ingredient_amount": [
+            "1/2 pc",
+            "1 pc",
+            "1 stalk",
+            "1 glass"
+          ],
+          "ingredient_description": [
+            "Cucumber",
+            "Green Apple",
+            "Celery",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_pepino.png",
+            "assets/images/icono_manzanaverde.png",
+            "assets/images/icono_apio.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Chop the cucumber and add it to the blender with the apple, celery and water.",
+            "- Process for a few moments until you get a smooth, homogeneous drink.",
+            "- Consume immediately."
+          ]
+        },
+        {
+          "id": 6.7,
+          "image_smoothie": "assets/images/pe_aran.png",
+          "name": "Cucumber and Blueberry Smoothie",
+          "ingredient_amount": [
+            "1/2 pc",
+            "100g",
+            "1 handful",
+            "200g"
+          ],
+          "ingredient_description": [
+            "Cucumber",
+            "Blueberries",
+            "Spinach",
+            "Greek Yogurt"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_pepino.png",
+            "assets/images/icono_arandano.png",
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_yogurt.png"
+          ],
+          "preparation": [
+            "- Chop the cucumber and add it to the blender with the blueberries, spinach and yogurt.",
+            "- Process everything until you get a creamy, homogeneous drink.",
+            "- Serve with ice and enjoy."
+          ]
+        },
+        {
+          "id": 6.8,
+          "image_smoothie": "assets/images/man_ag.png",
+          "name": "Mango and Avocado Smoothie",
+          "ingredient_amount": [
+            "1/2 pc",
+            "1/2 pc",
+            "200g",
+            ""
+          ],
+          "ingredient_description": [
+            "Ripe Mango",
+            "Ripe Avocado",
+            "Greek Yogurt",
+            "Ice to taste"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_mango.png",
+            "assets/images/icono_aguacate.png",
+            "assets/images/icono_yogurt.png",
+            "assets/images/icono_hielo.png"
+          ],
+          "preparation": [
+            "- Cut the ripe mango and avocado into cubes.",
+            "- Put everything in the blender with the yogurt and ice.",
+            "- Process until you get a creamy, homogeneous smoothie."
+          ]
+        },
+        {
+          "id": 6.9,
+          "image_smoothie": "assets/images/fruro_col.png",
+          "name": "Red Berries and Kale Smoothie",
+          "ingredient_amount": [
+            "100g",
+            "100g",
+            "50g",
+            "1 pc",
+            "1 leaf",
+            "1/2 glass"
+          ],
+          "ingredient_description": [
+            "Strawberries",
+            "Raspberries",
+            "Blueberries",
+            "Banana",
+            "Cabbage",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_fresa.png",
+            "assets/images/icono_frambuesa.png",
+            "assets/images/icono_arandano.png",
+            "assets/images/icono_banana.png",
+            "assets/images/icono_col.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash the red berries well and blend them with the rest of the ingredients.",
+            "- Make sure to process until everything is well combined.",
+            "- Consume immediately."
+          ]
+        },
+        {
+          "id": 6.11,
+          "image_smoothie": "assets/images/ba_te_pi.png",
+          "name": "Banana, Green Tea and Pineapple Smoothie",
+          "ingredient_amount": [
+            "2 pcs",
+            "2 tsp",
+            "1 glass",
+            "1/2 cup",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Ripe Bananas",
+            "Powdered Green Tea",
+            "Coconut Milk",
+            "Chopped Ripe Pineapple",
+            "Spinach"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_banana.png",
+            "assets/images/icono_teverde.png",
+            "assets/images/icono_coco.png",
+            "assets/images/icono_pina.png",
+            "assets/images/icono_espinaca.png"
+          ],
+          "preparation": [
+            "- Chop the ripe bananas and pineapple.",
+            "- Wash the spinach and add all the ingredients to the blender.",
+            "- Blend for a couple of minutes until everything is well combined.",
+            "- Serve and enjoy immediately."
+          ]
+        },
+        {
+          "id": 6.12,
+          "image_smoothie": "assets/images/za_jen_cur.png",
+          "name": "Carrot, Ginger and Turmeric Smoothie",
+          "ingredient_amount": [
+            "1 glass",
+            "1 pc",
+            "1/2 cup",
+            "5g",
+            "1g",
+            "1 tbsp"
+          ],
+          "ingredient_description": [
+            "Coconut Milk",
+            "Frozen Banana",
+            "Carrot Juice",
+            "Fresh Grated Ginger",
+            "Ground Turmeric",
+            "Lemon Juice"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_coco.png",
+            "assets/images/icono_banana.png",
+            "assets/images/icono_zanahoria.png",
+            "assets/images/icono_jengibre.png",
+            "assets/images/icono_curcuma.png",
+            "assets/images/icono_limon.png"
+          ],
+          "preparation": [
+            "- Chop the frozen banana and place it in the blender with the rest of the ingredients, except the lemon juice.",
+            "- Blend for a few moments until you get a creamy, homogeneous drink.",
+            "- If desired, add the lemon juice when serving for a citrusy touch.",
+            "- Consume immediately."
+          ]
+        },
+        {
+          "id": 6.13,
+          "image_smoothie": "assets/images/alo_ki_ba.png",
+          "name": "Aloe Vera, Kiwi and Banana Smoothie",
+          "ingredient_amount": [
+            "50g",
+            "1 pc",
+            "2 pcs",
+            "500ml"
+          ],
+          "ingredient_description": [
+            "Aloe Vera gel",
+            "Banana",
+            "Peeled Kiwis",
+            "Coconut Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_aloe.png",
+            "assets/images/icono_banana.png",
+            "assets/images/icono_kiwi.png",
+            "assets/images/icono_coco.png"
+          ],
+          "preparation": [
+            "- Pour the aloe vera gel, chopped banana and peeled, sliced kiwis into the blender.",
+            "- Add the coconut water and blend for a few moments.",
+            "- Once everything is fully combined, serve unfiltered.",
+            "",
+            "Note: Before extracting the aloe vera, remember to soak the plant leaf in a jar of water to drain its aloin."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name_category": "para aumentar masa muscular",
+      "image_category": "assets/images/musculo.png",
+      "recipes": [
+        {
+          "id": 7.1,
+          "image_smoothie": "assets/images/pro_man_chia.png",
+          "name": "Protein Smoothie with Mango and Chia",
+          "ingredient_amount": [
+            "1 cup",
+            "1 tbsp",
+            "1 scoop",
+            "1 cup",
+            "1/2 cup",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Fresh Mango cubed",
+            "Chia Seeds",
+            "Protein Powder",
+            "Milk",
+            "Greek Yogurt",
+            "Ice"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_mango.png",
+            "assets/images/icono_chia.png",
+            "assets/images/icono_proteina.png",
+            "assets/images/icono_leche.png",
+            "assets/images/icono_yogurt.png",
+            "assets/images/icono_hielo.png"
+          ],
+          "preparation": [
+            "- Place all ingredients in a blender.",
+            "- Blend until smooth and lump-free.",
+            "- Serve and consume immediately after your workout."
+          ]
+        },
+        {
+          "id": 7.2,
+          "image_smoothie": "assets/images/ba_ave.png",
+          "name": "Banana and Oat Smoothie",
+          "ingredient_amount": [
+            "2 pcs",
+            "500ml",
+            "3 tbsp",
+            "5 pcs"
+          ],
+          "ingredient_description": [
+            "Bananas",
+            "Milk",
+            "Oats",
+            "Cooked Eggs (5 whites and 2 yolks)"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_banana.png",
+            "assets/images/icono_leche.png",
+            "assets/images/icono_avena.png",
+            "assets/images/icono_huevo.png"
+          ],
+          "preparation": [
+            "- Place all ingredients in a blender.",
+            "- Blend until smooth, achieving a uniform and homogeneous texture that is pleasant to drink.",
+            "- Enjoy at room temperature or with ice to refresh yourself after each workout."
+          ]
+        },
+        {
+          "id": 7.3,
+          "image_smoothie": "assets/images/pro_cho_al.png",
+          "name": "Protein, Chocolate and Almond Smoothie",
+          "ingredient_amount": [
+            "1 cup",
+            "1 scoop",
+            "1/2"
+          ],
+          "ingredient_description": [
+            "Milk",
+            "Protein Powder",
+            "Chocolate Almond Brownie"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_leche.png",
+            "assets/images/icono_proteina.png",
+            "assets/images/icono_chocolate.png"
+          ],
+          "preparation": [
+            "- Use a blender to mix all the ingredients.",
+            "- Blend until smooth and homogeneous.",
+            "- Drink it before your workout sessions."
+          ]
+        },
+        {
+          "id": 7.4,
+          "image_smoothie": "assets/images/pro_ave.png",
+          "name": "Protein and Oat Smoothie",
+          "ingredient_amount": [
+            "500ml",
+            "60g",
+            "1 scoop",
+            "15g",
+            "1 tbsp"
+          ],
+          "ingredient_description": [
+            "Milk",
+            "Oats",
+            "Protein Powder",
+            "Wheat Germ",
+            "Honey"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_leche.png",
+            "assets/images/icono_avena.png",
+            "assets/images/icono_proteina.png",
+            "assets/images/icono_germen.png",
+            "assets/images/icono_miel.png"
+          ],
+          "preparation": [
+            "- Pour all ingredients into a blender.",
+            "- Blend until you reach a texture you enjoy.",
+            "- Drink immediately."
+          ]
+        },
+        {
+          "id": 7.5,
+          "image_smoothie": "assets/images/nue_ba.png",
+          "name": "Walnut and Banana Smoothie",
+          "ingredient_amount": [
+            "1 cup",
+            "1/2 cup",
+            "1/4 cup",
+            "3 pcs",
+            "50g",
+            "1 pc"
+          ],
+          "ingredient_description": [
+            "Milk",
+            "Water",
+            "Greek Yogurt",
+            "Cooked Egg Whites",
+            "Walnuts",
+            "Banana"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_leche.png",
+            "assets/images/icono_agua.png",
+            "assets/images/icono_yogurt.png",
+            "assets/images/icono_huevo.png",
+            "assets/images/icono_nuez.png",
+            "assets/images/icono_banana.png"
+          ],
+          "preparation": [
+            "- Add all ingredients to a blender.",
+            "- Blend everything until smooth and homogeneous.",
+            "- You can add ice if you like.",
+            "- Drink it after your workout to refresh yourself."
+          ]
+        },
+        {
+          "id": 7.6,
+          "image_smoothie": "assets/images/melo_pro.png",
+          "name": "Protein Smoothie with Peach",
+          "ingredient_amount": [
+            "2 cups",
+            "1/4 cup",
+            "1/2 cup",
+            "1 scoop"
+          ],
+          "ingredient_description": [
+            "Chopped Peaches",
+            "Greek Yogurt",
+            "Orange Juice",
+            "Protein Powder"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_melocoton.png",
+            "assets/images/icono_yogurt.png",
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_proteina.png"
+          ],
+          "preparation": [
+            "- Place all ingredients in a blender.",
+            "- Blend until completely smooth and homogeneous.",
+            "- Drink immediately after each workout."
+          ]
+        },
+        {
+          "id": 7.7,
+          "image_smoothie": "assets/images/hue_ave.png",
+          "name": "Egg and Oat Smoothie",
+          "ingredient_amount": [
+            "1 liter",
+            "3 pcs",
+            "3 tbsp",
+            "1 pc"
+          ],
+          "ingredient_description": [
+            "Milk",
+            "Cooked Egg Whites",
+            "Oats",
+            "Banana"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_leche.png",
+            "assets/images/icono_huevo.png",
+            "assets/images/icono_avena.png",
+            "assets/images/icono_banana.png"
+          ],
+          "preparation": [
+            "- Add all ingredients to a blender.",
+            "- Blend until well combined and smooth.",
+            "- You can add ice if you like.",
+            "- Drink it immediately after every workout."
+          ]
+        },
+        {
+          "id": 7.8,
+          "image_smoothie": "assets/images/pro_fruro.png",
+          "name": "Protein and Mixed Berry Smoothie",
+          "ingredient_amount": [
+            "1 cup",
+            "1 tbsp",
+            "1 scoop",
+            "1 cup",
+            "1 tbsp",
+            ""
+          ],
+          "ingredient_description": [
+            "Mixed Berries (strawberries, blueberries, raspberries or blackberries)",
+            "Chia Seeds",
+            "Protein Powder",
+            "Milk",
+            "Honey (Optional)",
+            "Ice to taste"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_frutosrojos.png",
+            "assets/images/icono_chia.png",
+            "assets/images/icono_proteina.png",
+            "assets/images/icono_leche.png",
+            "assets/images/icono_miel.png",
+            "assets/images/icono_hielo.png"
+          ],
+          "preparation": [
+            "- Combine the berries, milk, protein powder and chia seeds in a blender.",
+            "- Add ice and honey if desired.",
+            "- Blend until smooth and homogeneous.",
+            "- Serve immediately and enjoy."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name_category": "para bajar la grasa abdominal",
+      "image_category": "assets/images/grasa.png",
+      "recipes": [
+        {
+          "id": 8.1,
+          "image_smoothie": "assets/images/fram_man_na.png",
+          "name": "Raspberry, Apple and Orange Juice",
+          "ingredient_amount": [
+            "20 pcs",
+            "1 pc",
+            "3 pcs",
+            "1/2 glass"
+          ],
+          "ingredient_description": [
+            "Raspberries",
+            "Green Apple",
+            "Oranges",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_frambuesa.png",
+            "assets/images/icono_manzanaverde.png",
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Peel the apple and cut it into pieces.",
+            "- Add the apple and raspberries to the blender and blend everything together.",
+            "- Squeeze the oranges, strain the juice, add it to the blender and continue blending.",
+            "- If needed, add a little water.",
+            "- Strain the juice to remove the raspberry seeds and it's ready.",
+            "- Drink on an empty stomach for one week. Pair with a healthy diet."
+          ]
+        },
+        {
+          "id": 8.2,
+          "image_smoothie": "assets/images/za_mave.png",
+          "name": "Carrot and Green Apple Juice",
+          "ingredient_amount": [
+            "4 pcs",
+            "2 pcs",
+            "1 handful",
+            "1 pc",
+            ""
+          ],
+          "ingredient_description": [
+            "Carrot",
+            "Green Apple",
+            "Spinach Leaves",
+            "Lemon (Optional)",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_zanahoria.png",
+            "assets/images/icono_manzanaverde.png",
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash, peel and chop the carrots.",
+            "- Wash the apples thoroughly and slice them. You can leave the skin on as it is beneficial for the body.",
+            "- Wash the spinach thoroughly.",
+            "- Place everything in the blender and blend. You can also add the juice of one lemon if desired.",
+            "- Add the necessary amount of water and some crushed ice to serve the juice nice and cold.",
+            "- Drink one glass on an empty stomach for one or two weeks."
+          ]
+        },
+        {
+          "id": 8.3,
+          "image_smoothie": "assets/images/me_ki.png",
+          "name": "Melon and Kiwi Juice",
+          "ingredient_amount": [
+            "1/2 pc",
+            "3 pcs",
+            "1/2 pc",
+            "2 glasses"
+          ],
+          "ingredient_description": [
+            "Melon",
+            "Ripe Kiwis",
+            "Lemon",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_melon.png",
+            "assets/images/icono_kiwi.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Peel the kiwis and slice them.",
+            "- Remove the seeds and rind from the melon and dice the flesh.",
+            "- Add the fruits to the blender, squeeze in the lemon juice and blend well.",
+            "- Add the necessary amount of water and serve cold.",
+            "- Drink every morning on an empty stomach for one or two weeks, and in smaller amounts between meals to help stay full."
+          ]
+        },
+        {
+          "id": 8.4,
+          "image_smoothie": "assets/images/aran_pi.png",
+          "name": "Blueberry and Pineapple Juice",
+          "ingredient_amount": [
+            "1/2 cup",
+            "1 slice",
+            "1 pc",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Blueberries",
+            "Pineapple",
+            "Orange",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_arandano.png",
+            "assets/images/icono_pina.png",
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Squeeze the orange and set the juice aside.",
+            "- Chop the pineapple and rinse the blueberries thoroughly.",
+            "- Place the above ingredients into the blender and blend everything together.",
+            "- Add the water and crushed ice if desired.",
+            "- Drink two glasses daily: one on an empty stomach and another half an hour before lunch.",
+            "- Maintain a healthy diet."
+          ]
+        },
+        {
+          "id": 8.5,
+          "image_smoothie": "assets/images/li_pe.png",
+          "name": "Lemon and Parsley Juice",
+          "ingredient_amount": [
+            "2 pcs",
+            "1 bunch",
+            "1 glass"
+          ],
+          "ingredient_description": [
+            "Lemons",
+            "Parsley",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_limon.png",
+            "assets/images/icono_perejil.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Squeeze the juice from the lemons and pour it into the blender.",
+            "- Wash the parsley and add it to the blender.",
+            "- Blend and add the necessary amount of water and ice.",
+            "- Drink on an empty stomach and wait half an hour before having a healthy, balanced breakfast."
+          ]
+        },
+        {
+          "id": 8.6,
+          "image_smoothie": "assets/images/na_za_jen.png",
+          "name": "Orange, Carrot and Ginger Juice",
+          "ingredient_amount": [
+            "2 pcs",
+            "2 pcs",
+            "1 piece",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Orange",
+            "Carrots",
+            "Ginger",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_zanahoria.png",
+            "assets/images/icono_jengibre.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash and peel the carrots thoroughly.",
+            "- Wash and peel the oranges and cut them into pieces. Avoid the seeds.",
+            "- Peel the ginger and cut a small piece.",
+            "- Place everything in the blender along with the cup of water and blend for 2 to 3 minutes or until smooth.",
+            "- Pour into a glass and drink.",
+            "- You can strain it or drink as is to take advantage of the fiber.",
+            "- Drink one glass mid-morning and another in the afternoon for a maximum of 10 consecutive days."
+          ]
+        },
+        {
+          "id": 8.7,
+          "image_smoothie": "assets/images/fre_re_jen.png",
+          "name": "Strawberry, Beet and Ginger Juice",
+          "ingredient_amount": [
+            "15 pcs",
+            "1 pc",
+            "1/2 tsp",
+            "2 cups"
+          ],
+          "ingredient_description": [
+            "Strawberries",
+            "Cooked Beet",
+            "Fresh Ginger",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_fresa.png",
+            "assets/images/icono_remolacha.png",
+            "assets/images/icono_jengibre.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash the strawberries and chop them.",
+            "- Chop the beet, add it to the blender and add the strawberries.",
+            "- Add the peeled and chopped ginger and blend.",
+            "- Pour in the water and continue blending.",
+            "- Consume on an empty stomach and maintain a balanced diet."
+          ]
+        },
+        {
+          "id": 8.8,
+          "image_smoothie": "assets/images/uva_vi.png",
+          "name": "Grape and Apple Cider Vinegar Juice",
+          "ingredient_amount": [
+            "200g",
+            "1 tbsp",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Fresh Grapes (red or green)",
+            "Apple Cider Vinegar",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_uva.png",
+            "assets/images/icono_vinagre.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash the grapes and place them in the blender.",
+            "- Add the vinegar and blend.",
+            "- Add the water, continue blending, then strain the juice to remove any remaining grape seeds.",
+            "- Drink 3 glasses of this juice over 7 days: the first on an empty stomach and the rest half an hour before each meal."
+          ]
+        },
+        {
+          "id": 8.9,
+          "image_smoothie": "assets/images/pi_mave_chia.png",
+          "name": "Pineapple, Green Apple and Chia Juice",
+          "ingredient_amount": [
+            "1 pc",
+            "5 tsp",
+            "3 pcs",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Pineapple",
+            "Chia Seeds",
+            "Green Apples",
+            "Water or Orange Juice"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_pina.png",
+            "assets/images/icono_chia.png",
+            "assets/images/icono_manzanaverde.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Peel the pineapple, remove the core and cut into slices.",
+            "- Wash and chop the apples and add them to the blender along with the pineapple.",
+            "- Blend and add the orange juice or water.",
+            "- Add the chia seeds and stir to combine.",
+            "- Consume on an empty stomach half an hour before breakfast."
+          ]
+        },
+        {
+          "id": 8.11,
+          "image_smoothie": "assets/images/pi_ap.png",
+          "name": "Pineapple and Celery Juice",
+          "ingredient_amount": [
+            "5 stalks",
+            "3 slices",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Celery",
+            "Pineapple",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_apio.png",
+            "assets/images/icono_pina.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash the celery and slice it.",
+            "- Chop the pineapple and add it to the blender.",
+            "- Add the celery and blend everything together.",
+            "- Add the necessary amount of water and ice to serve the juice nice and cold.",
+            "- Consume on an empty stomach 3 days a week."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name_category": "para el dolor de cabeza",
+      "image_category": "assets/images/hurtshead.png",
+      "recipes": [
+        {
+          "id": 9.1,
+          "image_smoothie": "assets/images/pe_ma.png",
+          "name": "Pear and Apple Juice",
+          "ingredient_amount": [
+            "1 pc",
+            "1 pc",
+            "A pinch",
+            "1 tbsp",
+            "1/2 glass",
+            ""
+          ],
+          "ingredient_description": [
+            "Apple",
+            "Pear",
+            "Cinnamon",
+            "Brewer's Yeast",
+            "Water",
+            "Ice to taste"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_manzana.png",
+            "assets/images/icono_pera.png",
+            "assets/images/icono_canela.png",
+            "assets/images/icono_levacerveza.png",
+            "assets/images/icono_agua.png",
+            "assets/images/icono_hielo.png"
+          ],
+          "preparation": [
+            "- Wash the fruits well, peel them and add them to a blender.",
+            "- Add the brewer's yeast and a pinch of cinnamon.",
+            "- Then add the water and serve with ice to taste.",
+            "- Drink it slowly — the juice refreshes and relieves pain."
+          ]
+        },
+        {
+          "id": 9.2,
+          "image_smoothie": "assets/images/man_fre.png",
+          "name": "Mango, Strawberry and Watermelon Juice",
+          "ingredient_amount": [
+            "5 pcs",
+            "1 slice",
+            "1 pc",
+            "2 pcs",
+            "1/2 glass"
+          ],
+          "ingredient_description": [
+            "Strawberries",
+            "Watermelon",
+            "Medium-sized Mango",
+            "Walnuts",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_fresa.png",
+            "assets/images/icono_sandia.png",
+            "assets/images/icono_mango.png",
+            "assets/images/icono_nuez.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Start by grinding the walnuts, then wash and cut the fruits into small pieces.",
+            "- Place the strawberries, watermelon, mango and ground walnuts in the blender.",
+            "- Add the water and blend until smooth.",
+            "- If desired, you can add a tablespoon of honey.",
+            "- These ingredients relieve discomfort and help prevent dizziness."
+          ]
+        },
+        {
+          "id": 9.3,
+          "image_smoothie": "assets/images/zanahoria.png",
+          "name": "Carrot Juice",
+          "ingredient_amount": [
+            "2 pcs",
+            "1 stalk",
+            "2 pcs",
+            "1/2 pc"
+          ],
+          "ingredient_description": [
+            "Carrot",
+            "Celery",
+            "Orange",
+            "Lemon"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_zanahoria.png",
+            "assets/images/icono_apio.png",
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_limon.png"
+          ],
+          "preparation": [
+            "- Wash the carrots and celery thoroughly, then squeeze the oranges and the half lemon.",
+            "- Place all the ingredients in the blender and blend well until smooth.",
+            "- Its aroma and freshness are immediately noticeable, making it a purifying and relaxing remedy."
+          ]
+        },
+        {
+          "id": 9.4,
+          "image_smoothie": "assets/images/pe_man.png",
+          "name": "Cucumber, Green Apple and Ginger Juice",
+          "ingredient_amount": [
+            "1 pc",
+            "2 cm",
+            "1 pc",
+            "1 stalk",
+            "1/2 glass"
+          ],
+          "ingredient_description": [
+            "Green Apple",
+            "Ginger",
+            "Cucumber",
+            "Celery",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_manzanaverde.png",
+            "assets/images/icono_jengibre.png",
+            "assets/images/icono_pepino.png",
+            "assets/images/icono_apio.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash all the ingredients thoroughly.",
+            "- Cut them into pieces and place in the blender with the water, preferably cold.",
+            "- Blend for 2 to 3 minutes or until smooth.",
+            "- Pour into a glass and consume immediately."
+          ]
+        },
+        {
+          "id": 9.5,
+          "image_smoothie": "assets/images/za_me_pe.png",
+          "name": "Carrot, Melon and Cucumber Juice",
+          "ingredient_amount": [
+            "1 cup",
+            "2 pcs",
+            "",
+            "1 pc",
+            "1/2 cup"
+          ],
+          "ingredient_description": [
+            "Chopped Melon",
+            "Chopped Carrots",
+            "Juice of one Lemon",
+            "Cucumber",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_melon.png",
+            "assets/images/icono_zanahoria.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_pepino.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash all the ingredients, chop them into pieces and place in the blender along with the lemon juice and water.",
+            "- Blend until smooth.",
+            "- Pour into a glass and drink right away, slowly and preferably cold."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name_category": "para personas con diabetes",
+      "image_category": "assets/images/diabetes.png",
+      "recipes": [
+        {
+          "id": 10.1,
+          "image_smoothie": "assets/images/na_ara_jen.png",
+          "name": "Orange, Blueberry and Ginger Juice",
+          "ingredient_amount": [
+            "2 pcs",
+            "1/2 cup",
+            "1/2 cup",
+            "1 tsp",
+            "1/2 cup"
+          ],
+          "ingredient_description": [
+            "Orange",
+            "Skim or Lactose-Free Milk",
+            "Blueberries",
+            "Grated Ginger"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_leche.png",
+            "assets/images/icono_arandano.png",
+            "assets/images/icono_jengibre.png"
+          ],
+          "preparation": [
+            "- First, squeeze the juice from both oranges using a juicer.",
+            "- It is better if you keep the fibers.",
+            "- Pour the juice into the blender with the blueberries, ginger, and milk.",
+            "- Blend everything until you get a smooth, lump-free mixture.",
+            "- You can refrigerate it or add ice before drinking.",
+            "- Consume no more than once a day. Consult your doctor first."
+          ]
+        },
+        {
+          "id": 10.2,
+          "image_smoothie": "assets/images/pa_fre.png",
+          "name": "Papaya and Strawberry Smoothie",
+          "ingredient_amount": [
+            "150g",
+            "50g",
+            "20g",
+            "1/2 cup"
+          ],
+          "ingredient_description": [
+            "Papaya",
+            "Greek Yogurt",
+            "Ripe Strawberries",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_papaya.png",
+            "assets/images/icono_yogurt.png",
+            "assets/images/icono_fresa.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Peel the papaya and cut it into slices that are not too thick.",
+            "- Wash and drain the strawberries well.",
+            "- Once you have the ingredients, place them in the blender jar.",
+            "- Blend for a couple of minutes until well combined.",
+            "- You can have this smoothie as part of your breakfast; we recommend drinking it once a day.",
+            "- Consult your doctor.",
+            "NOTE: Choose a low-fat yogurt with no added sugar. You can replace it with skim milk or water if you prefer a lower-calorie smoothie."
+          ]
+        },
+        {
+          "id": 10.3,
+          "image_smoothie": "assets/images/es_manver.png",
+          "name": "Spinach, Green Apple and Cucumber Smoothie",
+          "ingredient_amount": [
+            "1 cup",
+            "1 pc",
+            "1 pc",
+            "1 glass"
+          ],
+          "ingredient_description": [
+            "Fresh Spinach",
+            "Green Apple",
+            "Cucumber",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_manzanaverde.png",
+            "assets/images/icono_pepino.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash the spinach, apple, and cucumber well.",
+            "- Cut all ingredients into pieces.",
+            "- Place the ingredients in the blender along with the water.",
+            "- Blend until you get a smooth mixture.",
+            "- Strain the juice if you prefer a smoother texture, or drink as is to keep the fiber.",
+            "- Serve and consume immediately to get the most nutrients.",
+            "- You can drink it 2 to 3 times per week. Consult your doctor."
+          ]
+        },
+        {
+          "id": 10.4,
+          "image_smoothie": "assets/images/man_to_pe.png",
+          "name": "Green Apple, Tomato and Parsley Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "1 handful",
+            "1/2 glass",
+            "2 pcs"
+          ],
+          "ingredient_description": [
+            "Green Apple",
+            "Parsley Sprigs",
+            "Water",
+            "Ripe Tomato"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_manzanaverde.png",
+            "assets/images/icono_perejil.png",
+            "assets/images/icono_agua.png",
+            "assets/images/icono_tomate.png"
+          ],
+          "preparation": [
+            "- Wash, drain, and slice the apples and tomatoes. Leave the skin on.",
+            "- Remove the core from the apples.",
+            "- Then wash, drain, and finely chop the parsley.",
+            "- Put all ingredients in the blender and process.",
+            "- Drink immediately; you can have it 3 times per week.",
+            "- Consult your doctor first."
+          ]
+        },
+        {
+          "id": 10.5,
+          "image_smoothie": "assets/images/ki_man_es.png",
+          "name": "Kiwi, Green Apple and Spinach Smoothie",
+          "ingredient_amount": [
+            "25g",
+            "1 pc",
+            "1 pc",
+            "1 glass"
+          ],
+          "ingredient_description": [
+            "Fresh Spinach",
+            "Green Apple",
+            "Ripe Kiwi",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_manzanaverde.png",
+            "assets/images/icono_kiwi.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Peel the kiwi and cut it into slices.",
+            "- Wash and julienne the apple, remove the core but leave the skin.",
+            "- Place all ingredients in the blender and process until fully combined.",
+            "- Once ready, let it cool and consume 2 to 3 times per week.",
+            "- Consult your doctor."
+          ]
+        },
+        {
+          "id": 10.6,
+          "image_smoothie": "assets/images/ave_fram.png",
+          "name": "Oat and Raspberry Smoothie",
+          "ingredient_amount": [
+            "50g",
+            "40g",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Raspberries",
+            "Rolled Oats",
+            "Skim Milk"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_frambuesa.png",
+            "assets/images/icono_avena.png",
+            "assets/images/icono_leche.png"
+          ],
+          "preparation": [
+            "- Wash the raspberries and place them in the blender.",
+            "- Add the oats and milk.",
+            "- Blend until everything is well combined.",
+            "- Drink cold once a day.",
+            "- Consult your doctor."
+          ]
+        },
+        {
+          "id": 10.7,
+          "image_smoothie": "assets/images/ver_za.png",
+          "name": "Green Smoothie with Carrot",
+          "ingredient_amount": [
+            "30g",
+            "40g",
+            "20g",
+            "50g",
+            "20g",
+            "1/2 glass"
+          ],
+          "ingredient_description": [
+            "Celery",
+            "Green Apple",
+            "Cucumber",
+            "Spinach",
+            "Carrot",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_apio.png",
+            "assets/images/icono_manzanaverde.png",
+            "assets/images/icono_pepino.png",
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_zanahoria.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Start by washing and chopping all ingredients.",
+            "- Then place them in a blender and process until you get a smooth drink.",
+            "- Drink cold, 2 times per week.",
+            "- Consult your doctor."
+          ]
+        },
+        {
+          "id": 10.8,
+          "image_smoothie": "assets/images/ki_ba_man.png",
+          "name": "Kiwi, Banana and Green Apple Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "50g",
+            "1 pc",
+            "1/2 glass"
+          ],
+          "ingredient_description": [
+            "Kiwi",
+            "Banana",
+            "Green or Yellow Apple",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_kiwi.png",
+            "assets/images/icono_banana.png",
+            "assets/images/icono_manzanaverde.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- First wash and chop the apples.",
+            "- Then peel the kiwi and banana, and cut them into small pieces.",
+            "- Place all ingredients in a blender and process until there are no large fruit chunks.",
+            "- Enjoy this drink once per week.",
+            "- Consult your doctor."
+          ]
+        },
+        {
+          "id": 10.9,
+          "image_smoothie": "assets/images/nopal.png",
+          "name": "Nopal Smoothie",
+          "ingredient_amount": [
+            "1 pad",
+            "",
+            "1 glass"
+          ],
+          "ingredient_description": [
+            "Nopal (Prickly Pear Cactus)",
+            "Juice of half a Lemon",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_nopal.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- To make this smoothie, first wash the nopal, remove the spines, and cut it into pieces.",
+            "- Place it in a blender, add the lemon juice and water.",
+            "- Finally, blend everything thoroughly before drinking. You can have 1 glass per day.",
+            "- Consult your doctor."
+          ]
+        },
+        {
+          "id": 10.11,
+          "image_smoothie": "assets/images/granada.png",
+          "name": "Pomegranate Smoothie",
+          "ingredient_amount": [
+            "3 pcs"
+          ],
+          "ingredient_description": [
+            "Pomegranate"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_granada.png"
+          ],
+          "preparation": [
+            "- First cut the pomegranates in half.",
+            "- Then, using a juicer, extract the juice until you fill a glass.",
+            "- Finally, drink 1 glass per day.",
+            "- Consult your doctor."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name_category": "para la hipertensión",
+      "image_category": "assets/images/hipertension.png",
+      "recipes": [
+        {
+          "id": 11.1,
+          "image_smoothie": "assets/images/to_pe_za.png",
+          "name": "Tomato, Cucumber and Carrot Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "2 pcs",
+            "1 pc",
+            "A handful",
+            "1/2 glass"
+          ],
+          "ingredient_description": [
+            "Cucumber",
+            "Carrot",
+            "Tomato",
+            "Parsley",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_pepino.png",
+            "assets/images/icono_zanahoria.png",
+            "assets/images/icono_tomate.png",
+            "assets/images/icono_perejil.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- First wash and chop the cucumber, tomatoes, and carrot.",
+            "- Then place them in a blender along with the parsley and half a glass of water.",
+            "- Process all ingredients until you get a smooth mixture.",
+            "- Drink the smoothie freshly made.",
+            "- Have it at least 3 times per week."
+          ]
+        },
+        {
+          "id": 11.2,
+          "image_smoothie": "assets/images/pi_to_es.png",
+          "name": "Pineapple, Grapefruit and Spinach Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "2 slices",
+            "A handful",
+            "1/2 glass"
+          ],
+          "ingredient_description": [
+            "Grapefruit or Pomelo",
+            "Pineapple",
+            "Spinach",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_toronja.png",
+            "assets/images/icono_pina.png",
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- First extract the juice from the grapefruit.",
+            "- Then put it in the blender and combine with the pineapple, spinach leaves, and half a glass of water.",
+            "- Process everything for a few seconds until well combined and smooth.",
+            "- You can drink it every day on an empty stomach."
+          ]
+        },
+        {
+          "id": 11.3,
+          "image_smoothie": "assets/images/za_es.png",
+          "name": "Carrot and Spinach Smoothie",
+          "ingredient_amount": [
+            "A handful",
+            "A handful",
+            "2 pcs",
+            "2 stalks",
+            "1/2 glass"
+          ],
+          "ingredient_description": [
+            "Parsley",
+            "Spinach",
+            "Carrots",
+            "Celery",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_perejil.png",
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_zanahoria.png",
+            "assets/images/icono_apio.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash and disinfect all ingredients.",
+            "- Process everything in the blender until you get a smooth juice, adding water until it reaches the desired consistency.",
+            "- Drink on an empty stomach without straining, at least 3 times per week."
+          ]
+        },
+        {
+          "id": 11.4,
+          "image_smoothie": "assets/images/ki_es_lech.png",
+          "name": "Kiwi, Spinach and Lettuce Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "5 leaves",
+            "3 leaves",
+            "1 tbsp",
+            "1 glass"
+          ],
+          "ingredient_description": [
+            "Kiwi",
+            "Spinach",
+            "Lettuce",
+            "Honey",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_kiwi.png",
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_lechuga.png",
+            "assets/images/icono_miel.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Peel and wash the kiwi, spinach leaves, and lettuce leaves.",
+            "- Then put them in a blender with the glass of water.",
+            "- Process for a few seconds until you get a smooth mixture.",
+            "- Drink fresh, preferably on an empty stomach."
+          ]
+        },
+        {
+          "id": 11.5,
+          "image_smoothie": "assets/images/ave_man.png",
+          "name": "Oat and Apple Smoothie",
+          "ingredient_amount": [
+            "1 cup",
+            "1 pc",
+            "",
+            "1 glass"
+          ],
+          "ingredient_description": [
+            "Oats",
+            "Apple",
+            "Honey to taste",
+            "Water or Skim Milk"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_avena.png",
+            "assets/images/icono_manzana.png",
+            "assets/images/icono_miel.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Place the oats in a container with water and let them soak overnight.",
+            "- The next day, drain them and put them in the blender along with the apple, previously washed, peeled, and cut into pieces.",
+            "- In the blender, add the water or milk along with the other ingredients and blend until smooth.",
+            "- Serve the smoothie and enjoy during breakfast or at any time of day."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name_category": "para desinflamar las hemorroides",
+      "image_category": "assets/images/hemorroides.png",
+      "recipes": [
+        {
+          "id": 12.1,
+          "image_smoothie": "assets/images/pa_lina_li_es.png",
+          "name": "Papaya, Flaxseed, Lemon and Spinach Smoothie",
+          "ingredient_amount": [
+            "1 tbsp",
+            "2 slices",
+            "",
+            "A handful",
+            "1/2 cup"
+          ],
+          "ingredient_description": [
+            "Ground Flaxseed",
+            "Papaya",
+            "Juice of half a Lemon",
+            "Spinach",
+            "Oatmeal cooked with unsweetened almond milk"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_linaza.png",
+            "assets/images/icono_papaya.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_avena.png"
+          ],
+          "preparation": [
+            "- Place in a blender the papaya, flaxseed, previously washed spinach, and the juice of half a lemon.",
+            "- Blend for a few seconds then add the cooked oatmeal.",
+            "- Blend until you get a smooth, lump-free mixture.",
+            "- Serve and enjoy 2 times per week."
+          ]
+        },
+        {
+          "id": 12.2,
+          "image_smoothie": "assets/images/manz_pap.png",
+          "name": "Apple and Papaya Smoothie",
+          "ingredient_amount": [
+            "1/2 pc",
+            "1 pc",
+            "1 cup",
+            ""
+          ],
+          "ingredient_description": [
+            "Small Papaya",
+            "Apple",
+            "Water",
+            "Honey to taste (optional)"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_papaya.png",
+            "assets/images/icono_manzana.png",
+            "assets/images/icono_agua.png",
+            "assets/images/icono_miel.png"
+          ],
+          "preparation": [
+            "- Quarter the apple and remove the core. You can peel it if you like, though leaving the skin on will give you more nutrients.",
+            "- Halve the papaya, remove the seeds and skin.",
+            "- Place the fruits in the blender.",
+            "- Add the water and honey if desired.",
+            "- Blend well and once you get a smooth cream, it is ready to drink.",
+            "- Drink one or two glasses per day."
+          ]
+        },
+        {
+          "id": 12.3,
+          "image_smoothie": "assets/images/ginkgo.png",
+          "name": "Ginkgo Biloba Juice",
+          "ingredient_amount": [
+            "2 slices",
+            "1 tbsp",
+            "30 drops",
+            "4 sprigs",
+            "A piece",
+            "2 glasses"
+          ],
+          "ingredient_description": [
+            "Pineapple",
+            "Honey",
+            "Ginkgo Biloba extract",
+            "Celery",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_pina.png",
+            "assets/images/icono_miel.png",
+            "assets/images/icono_ginkgo.png",
+            "assets/images/icono_apio.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash all ingredients.",
+            "- First blend the celery with the pineapple and ginger, add the water and honey, and the ginkgo extract.",
+            "- Place the fruits in the blender.",
+            "- Blend again until fully combined.",
+            "- Serve and drink immediately."
+          ]
+        },
+        {
+          "id": 12.4,
+          "image_smoothie": "assets/images/berro.png",
+          "name": "Watercress and Spinach Juice",
+          "ingredient_amount": [
+            "2 leaves",
+            "3 tbsps",
+            "3 sprigs",
+            "3 leaves",
+            "1 glass"
+          ],
+          "ingredient_description": [
+            "Spinach",
+            "Oats",
+            "Watercress",
+            "Lettuce",
+            "Carrot Juice"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_avena.png",
+            "assets/images/icono_berro.png",
+            "assets/images/icono_lechuga.png",
+            "assets/images/icono_zanahoria.png"
+          ],
+          "preparation": [
+            "- Wash the watercress, spinach, and lettuce thoroughly under running water.",
+            "- Place the vegetables in the blender jar along with the carrot juice.",
+            "- Process for a few seconds.",
+            "- Add the tablespoons of oats and blend into the mixture.",
+            "- Serve and drink this juice on an empty stomach until you feel the hemorrhoids have gone away."
+          ]
+        },
+        {
+          "id": 12.5,
+          "image_smoothie": "assets/images/pe_alf.png",
+          "name": "Cucumber and Alfalfa Juice",
+          "ingredient_amount": [
+            "1 tsp",
+            "1 cup",
+            "1/2 pc",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Honey",
+            "Alfalfa Leaves",
+            "Cucumber",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_miel.png",
+            "assets/images/icono_alfalfa.png",
+            "assets/images/icono_pepino.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash the alfalfa well to remove all dirt.",
+            "- Wash the cucumber and peel it.",
+            "- Add the vegetables with the rest of the ingredients.",
+            "- Process until you get a smooth mixture.",
+            "- Serve and drink daily in the mornings."
+          ]
+        },
+        {
+          "id": 12.6,
+          "image_smoothie": "assets/images/na_be.png",
+          "name": "Turnip and Watercress Juice",
+          "ingredient_amount": [
+            "1 bunch",
+            "2 pcs",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Watercress",
+            "Turnips",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_berro.png",
+            "assets/images/icono_nabo.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash and chop the watercress and turnips.",
+            "- Add to the blender and blend for a few seconds or until the mixture is well combined.",
+            "- Serve and drink freshly made.",
+            "- You can drink a glass daily for fifteen days alongside a diet rich in liquids and fiber."
+          ]
+        },
+        {
+          "id": 12.7,
+          "image_smoothie": "assets/images/ba_jen_li.png",
+          "name": "Banana, Ginger and Lemon Juice",
+          "ingredient_amount": [
+            "1 pc",
+            "1cm",
+            "1 pc",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Banana",
+            "Ginger",
+            "Lemon",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_banana.png",
+            "assets/images/icono_jengibre.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Cut and squeeze the lemon, making sure not to leave seeds in the liquid.",
+            "- Strain and peel the ginger and banana.",
+            "- Blend everything with the water for 60 seconds.",
+            "- Consume immediately."
+          ]
+        },
+        {
+          "id": 12.8,
+          "image_smoothie": "assets/images/pa_chia.png",
+          "name": "Papaya and Chia Seed Smoothie",
+          "ingredient_amount": [
+            "1 cup",
+            "1 tbsp",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Peeled Papaya, seeds removed",
+            "Soaked Chia Seeds",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_papaya.png",
+            "assets/images/icono_chia.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Place the chia seeds in a cup covered with water and wait 6 to 8 hours for them to hydrate.",
+            "- Place all ingredients in a blender jar and process until you get a smooth mixture.",
+            "- Serve and consume immediately."
+          ]
+        },
+        {
+          "id": 12.9,
+          "image_smoothie": "assets/images/ave_man.png",
+          "name": "Oat and Apple Smoothie",
+          "ingredient_amount": [
+            "1 cup",
+            "1 pc",
+            "",
+            "1 glass"
+          ],
+          "ingredient_description": [
+            "Oats",
+            "Apple",
+            "Honey to taste",
+            "Water or Skim Milk"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_avena.png",
+            "assets/images/icono_manzana.png",
+            "assets/images/icono_miel.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Place the oats in a container with water and let them soak overnight.",
+            "- The next day, drain them and put them in the blender along with the apple, previously washed, peeled, and cut into pieces.",
+            "- In the blender, add the water or milk along with the other ingredients and blend until smooth.",
+            "- Serve the smoothie and enjoy during breakfast or at any time of day."
+          ]
+        },
+        {
+          "id": 12.11,
+          "image_smoothie": "assets/images/pe_chia.png",
+          "name": "Pear and Chia Seed Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "1 tbsp",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Pear",
+            "Chia Seeds",
+            "Water or Skim Milk"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_pera.png",
+            "assets/images/icono_chia.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Leave the chia seeds in a container covered with water for 6 to 8 hours to hydrate.",
+            "- Wash, peel, and core the pears, then cut them into pieces.",
+            "- Blend everything for 40 seconds or until you reach a smooth consistency.",
+            "- Drink immediately."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name_category": "para aliviar dolores menstruales",
+      "image_category": "assets/images/menstruales.png",
+      "recipes": [
+        {
+          "id": 13.1,
+          "image_smoothie": "assets/images/mang_cur.png",
+          "name": "Mango and Turmeric Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "1 sprig",
+            "A handful",
+            "1/2 pc",
+            "1 tsp",
+            "1 small piece",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Mango",
+            "Fennel",
+            "Spinach",
+            "Cucumber",
+            "Turmeric powder",
+            "Ginger",
+            "Coconut Water or Green Tea"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_mango.png",
+            "assets/images/icono_hinojo.png",
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_pepino.png",
+            "assets/images/icono_curcuma.png",
+            "assets/images/icono_jengibre.png",
+            "assets/images/icono_coco.png"
+          ],
+          "preparation": [
+            "- Peel the cucumber and cut into chunks.",
+            "- Peel the mango, remove the pit and cut into chunks.",
+            "- Pour the coconut water into the blender with all ingredients except the mango, and blend for 5 seconds.",
+            "- Add the mango and blend until smooth.",
+            "- You can garnish with mango chunks and fennel."
+          ]
+        },
+        {
+          "id": 13.2,
+          "image_smoothie": "assets/images/ba_mo.png",
+          "name": "Banana and Blackberry Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "1 cup",
+            "A handful",
+            "1/2 cup",
+            "1 tbsp"
+          ],
+          "ingredient_description": [
+            "Banana",
+            "Blackberries",
+            "Almonds",
+            "Water or milk",
+            "Cinnamon (Optional)"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_banana.png",
+            "assets/images/icono_mora.png",
+            "assets/images/icono_almendra.png",
+            "assets/images/icono_agua.png",
+            "assets/images/icono_canela.png"
+          ],
+          "preparation": [
+            "- Peel the banana and slice it.",
+            "- Wash the blackberries well and halve the almonds.",
+            "- Place the fruits, almonds, and water or milk in the blender.",
+            "- Blend everything well until smooth and enjoy.",
+            "- You can add ice at the end and garnish with cinnamon."
+          ]
+        },
+        {
+          "id": 13.3,
+          "image_smoothie": "assets/images/za_na_pe.png",
+          "name": "Carrot, Orange and Parsley Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "1 pc",
+            "2 sprigs"
+          ],
+          "ingredient_description": [
+            "Carrot",
+            "Orange",
+            "Parsley"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_zanahoria.png",
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_perejil.png"
+          ],
+          "preparation": [
+            "- Trim the ends of the carrots and break up the parsley sprigs.",
+            "- Add the carrots to the blender along with the remaining ingredients.",
+            "- Blend for 90 seconds and strain.",
+            "- Serve and enjoy."
+          ]
+        },
+        {
+          "id": 13.4,
+          "image_smoothie": "assets/images/ba_ca.png",
+          "name": "Banana and Cinnamon Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "1 tbsp",
+            "1 tbsp",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Banana",
+            "Cinnamon",
+            "Ground Almonds",
+            "Coconut Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_banana.png",
+            "assets/images/icono_canela.png",
+            "assets/images/icono_almendra.png",
+            "assets/images/icono_coco.png"
+          ],
+          "preparation": [
+            "- Peel the banana and cut it into slices.",
+            "- Add all ingredients to the blender and process until smooth.",
+            "- You can add cocoa powder if desired.",
+            "- Drink immediately."
+          ]
+        },
+        {
+          "id": 13.5,
+          "image_smoothie": "assets/images/pi_es_jen.png",
+          "name": "Pineapple, Spinach and Ginger Smoothie",
+          "ingredient_amount": [
+            "1 cup",
+            "1 cup",
+            "1/2 tsp",
+            "1/2 cup",
+            "1 cup",
+            "1 tsp"
+          ],
+          "ingredient_description": [
+            "Frozen pineapple chunks",
+            "Spinach",
+            "Ginger",
+            "Cucumber",
+            "Water",
+            "Chia seeds"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_piña.png",
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_jengibre.png",
+            "assets/images/icono_pepino.png",
+            "assets/images/icono_agua.png",
+            "assets/images/icono_chia.png"
+          ],
+          "preparation": [
+            "- Place everything in a blender or food processor and blend until completely smooth.",
+            "- Add ice to taste if needed.",
+            "- Pour into a glass and enjoy."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name_category": "para la resaca o guayabo",
+      "image_category": "assets/images/resaca.png",
+      "recipes": [
+        {
+          "id": 14.1,
+          "image_smoothie": "assets/images/so_li_jen.png",
+          "name": "Soda, Lemon and Ginger Juice",
+          "ingredient_amount": [
+            "",
+            "",
+            "1 glass",
+            "1 tsp",
+            "A pinch"
+          ],
+          "ingredient_description": [
+            "Ice",
+            "Juice of 1/2 Lemon",
+            "Soda water",
+            "Grated Ginger",
+            "Salt"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_hielo.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_soda.png",
+            "assets/images/icono_jegibre.png",
+            "assets/images/icono_sal.png"
+          ],
+          "preparation": [
+            "- Add ice to a glass.",
+            "- Grate the ginger and add it to the glass along with the lemon juice.",
+            "- Add a pinch of salt.",
+            "- Add the soda water, preferably very cold.",
+            "- Drink slowly."
+          ]
+        },
+        {
+          "id": 14.2,
+          "image_smoothie": "assets/images/tomate.png",
+          "name": "Tomato Juice",
+          "ingredient_amount": [
+            "1 pc",
+            "1 cup",
+            "A pinch",
+            "A splash"
+          ],
+          "ingredient_description": [
+            "Tomato",
+            "Water",
+            "Salt and Pepper",
+            "Lemon"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_tomate.png",
+            "assets/images/icono_agua.png",
+            "assets/images/icono_sal.png",
+            "assets/images/icono_limon.png"
+          ],
+          "preparation": [
+            "- Add the tomato to a blender, then add one cup of water.",
+            "- Also add a pinch of salt and pepper.",
+            "- Blend and serve in a glass with ice.",
+            "- Once in the glass, add a splash of lemon."
+          ]
+        },
+        {
+          "id": 14.3,
+          "image_smoothie": "assets/images/to_pe_ce.png",
+          "name": "Tomato, Cucumber and Onion Juice",
+          "ingredient_amount": [
+            "3 pcs",
+            "1 pc",
+            "1/4 pc",
+            "1 tbsp",
+            "1/2 glass"
+          ],
+          "ingredient_description": [
+            "Tomatoes",
+            "Cucumber",
+            "Onion",
+            "Olive Oil",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_tomate.png",
+            "assets/images/icono_pepino.png",
+            "assets/images/icono_cebolla.png",
+            "assets/images/icono_aceite.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- First wash all the ingredients and then place them in the blender.",
+            "- Add the half glass of water and the olive oil.",
+            "- Blend at maximum speed until everything is fully combined.",
+            "- Consume before going to bed and again in the morning.",
+            "- It may not have the most pleasant taste; however, its diuretic and cleansing properties make it one of the best remedies for alcohol intoxication."
+          ]
+        },
+        {
+          "id": 14.4,
+          "image_smoothie": "assets/images/ba_na.png",
+          "name": "Banana and Orange Smoothie",
+          "ingredient_amount": [
+            "1/2 glass",
+            "1 pc"
+          ],
+          "ingredient_description": [
+            "Orange Juice",
+            "Banana"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_banana.png"
+          ],
+          "preparation": [
+            "- Peel the banana and cut it into slices.",
+            "- Blend the banana together with the orange juice — use freshly squeezed.",
+            "- Consume the juice preferably on an empty stomach when you wake up."
+          ]
+        },
+        {
+          "id": 14.5,
+          "image_smoothie": "assets/images/pi_es_jen.png",
+          "name": "Carrot and Citrus Juice",
+          "ingredient_amount": [
+            "1 pc",
+            "1 pc",
+            "1 pc"
+          ],
+          "ingredient_description": [
+            "Carrot",
+            "Orange",
+            "Lemon"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_zanahoria.png",
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_limon.png"
+          ],
+          "preparation": [
+            "- Wash all the ingredients well.",
+            "- Squeeze the juice from the orange and lemon and pour into the blender along with the carrot, cut into pieces.",
+            "- Process for a few moments until you get a smooth drink.",
+            "- Consume before going to bed and again in the morning when you wake up."
+          ]
+        },
+        {
+          "id": 14.6,
+          "image_smoothie": "assets/images/ki_fre.png",
+          "name": "Kiwi and Strawberry Smoothie",
+          "ingredient_amount": [
+            "2 pcs",
+            "6 pcs",
+            "1/2 glass",
+            ""
+          ],
+          "ingredient_description": [
+            "Kiwi",
+            "Strawberries",
+            "Water",
+            "Ice to taste"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_kiwi.png",
+            "assets/images/icono_fresa.png",
+            "assets/images/icono_agua.png",
+            "assets/images/icono_hielo.png"
+          ],
+          "preparation": [
+            "- Peel the kiwis, wash the strawberries well and cut all the fruit into pieces.",
+            "- Place everything in the blender.",
+            "- Add 1/2 glass of water and ice to taste, then blend for a few moments until everything is combined.",
+            "- Consume on an empty stomach and again mid-morning."
+          ]
+        },
+        {
+          "id": 14.7,
+          "image_smoothie": "assets/images/na_re_za.png",
+          "name": "Orange, Beet and Carrot Juice",
+          "ingredient_amount": [
+            "1/2 pc",
+            "1 pc",
+            "1 pc",
+            "2 stalks",
+            "1/2 glass"
+          ],
+          "ingredient_description": [
+            "Fresh Beet",
+            "Orange",
+            "Carrot",
+            "Celery",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_remolacha.png",
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_zanahoria.png",
+            "assets/images/icono_apio.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash and peel all ingredients.",
+            "- Then chop the beet, celery and carrot.",
+            "- Squeeze the orange juice and place everything in the blender with half a glass of water.",
+            "- Blend at maximum speed for a few moments until you get a smooth drink.",
+            "- Drink before going to bed and again when you wake up in the morning."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name_category": "Antigripales",
+      "image_category": "assets/images/gripa.png",
+      "recipes": [
+        {
+          "id": 15.1,
+          "image_smoothie": "assets/images/ci_mi_ave.png",
+          "name": "Citrus, Honey and Oat Smoothie",
+          "ingredient_amount": [
+            "2 cups",
+            "3 pcs",
+            "3 pcs",
+            "4 pcs",
+            "2 tsp",
+            "2 tsp",
+            "1 slice"
+          ],
+          "ingredient_description": [
+            "Orange Juice",
+            "Lemons",
+            "Strawberries",
+            "Guavas",
+            "Honey to taste",
+            "Oats",
+            "Pineapple"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_fresa.png",
+            "assets/images/icono_guayaba.png",
+            "assets/images/icono_miel.png",
+            "assets/images/icono_avena.png",
+            "assets/images/icono_pina.png"
+          ],
+          "preparation": [
+            "- Blend the orange juice with the lemon juice, strawberries, guavas and pineapple for 3 minutes or until fully combined.",
+            "- Add the honey and mix well.",
+            "- Serve and garnish with oats."
+          ]
+        },
+        {
+          "id": 15.2,
+          "image_smoothie": "assets/images/na_li_po.png",
+          "name": "Orange, Lemon and Propolis Smoothie",
+          "ingredient_amount": [
+            "2 pcs",
+            "1 pc",
+            "1 tbsp"
+          ],
+          "ingredient_description": [
+            "Orange",
+            "Lemon",
+            "Propolis"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_miel.png"
+          ],
+          "preparation": [
+            "- Squeeze all the citrus fruits and add the propolis.",
+            "- Ideally consume it in the morning."
+          ]
+        },
+        {
+          "id": 15.3,
+          "image_smoothie": "assets/images/man_mi.png",
+          "name": "Apple and Honey Smoothie",
+          "ingredient_amount": [
+            "2 pcs",
+            "1 glass",
+            "1/2 pc",
+            ""
+          ],
+          "ingredient_description": [
+            "Apples",
+            "Water",
+            "Lemon",
+            "Honey to taste"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_manzana.png",
+            "assets/images/icono_agua.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_miel.png"
+          ],
+          "preparation": [
+            "- Wash and cut the apples into chunks.",
+            "- Blend the apples with the glass of water, then add the juice of half a lemon at the end.",
+            "- Consume right away, in the morning and at night."
+          ]
+        },
+        {
+          "id": 15.4,
+          "image_smoothie": "assets/images/pi_fre_gua.png",
+          "name": "Pineapple, Strawberry and Guava Smoothie",
+          "ingredient_amount": [
+            "2 cups",
+            "",
+            "3 pcs",
+            "4 pcs",
+            "1 slice",
+            ""
+          ],
+          "ingredient_description": [
+            "Orange Juice",
+            "Juice of 3 lemons",
+            "Strawberries",
+            "Guavas",
+            "Pineapple",
+            "Honey to taste"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_fresa.png",
+            "assets/images/icono_guayaba.png",
+            "assets/images/icono_pina.png",
+            "assets/images/icono_miel.png"
+          ],
+          "preparation": [
+            "- Wash and cut all the fruit into pieces.",
+            "- Place in the blender and blend together with the two cups of orange juice and the lemon juice.",
+            "- Process for 3 minutes.",
+            "- Once you have a smooth mixture, pour into a glass and enjoy."
+          ]
+        },
+        {
+          "id": 15.5,
+          "image_smoothie": "assets/images/na_za.png",
+          "name": "Orange and Carrot Juice",
+          "ingredient_amount": [
+            "1 pc",
+            "1 pc",
+            "1/2 glass"
+          ],
+          "ingredient_description": [
+            "Orange",
+            "Carrot",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_zanahoria.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash and peel the carrot. Then peel the orange.",
+            "- Place both ingredients in the blender and add the water.",
+            "- Blend well until combined and fairly smooth in texture. Add more liquid to taste."
+          ]
+        },
+        {
+          "id": 15.6,
+          "image_smoothie": "assets/images/pi_na_jen.png",
+          "name": "Pineapple, Orange and Ginger Juice",
+          "ingredient_amount": [
+            "2 slices",
+            "1 tbsp",
+            "1 glass",
+            "",
+            "1 pc"
+          ],
+          "ingredient_description": [
+            "Pineapple",
+            "Grated Ginger",
+            "Orange Juice",
+            "Juice of one Lemon",
+            "Guava, cut into pieces"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_pina.png",
+            "assets/images/icono_jengibre.png",
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_guayaba.png"
+          ],
+          "preparation": [
+            "- Place all ingredients in the blender.",
+            "- Blend for 3 minutes.",
+            "- Pour into a glass and enjoy."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name_category": "para el hígado graso",
+      "image_category": "assets/images/higado.png",
+      "recipes": [
+        {
+          "id": 16.1,
+          "image_smoothie": "assets/images/li_pa.png",
+          "name": "Lemon and Papaya Juice",
+          "ingredient_amount": [
+            "1/2 pc",
+            "",
+            "1 glass"
+          ],
+          "ingredient_description": [
+            "Papaya",
+            "Juice of 1/2 Lemon",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_papaya.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Peel and chop the papaya.",
+            "- Place the chopped papaya in the blender and add the remaining ingredients.",
+            "- Blend until smooth and lump-free.",
+            "- You can add half a tablespoon of honey and 4 mint leaves when serving."
+          ]
+        },
+        {
+          "id": 16.2,
+          "image_smoothie": "assets/images/re_li.png",
+          "name": "Beet and Lemon Juice",
+          "ingredient_amount": [
+            "1 pc",
+            "1 pc",
+            "1 glass"
+          ],
+          "ingredient_description": [
+            "Beet",
+            "Large Lemon",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_remolacha.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash, peel and cut the beet into pieces. Bring to a boil.",
+            "- Once cooked, allow to cool completely.",
+            "- Squeeze the lemon juice and remove the seeds.",
+            "- Place all ingredients in the blender, add ice and blend until smooth."
+          ]
+        },
+        {
+          "id": 16.3,
+          "image_smoothie": "assets/images/ba_cur.png",
+          "name": "Banana and Turmeric Juice",
+          "ingredient_amount": [
+            "2 pcs",
+            "1/2 tbsp",
+            "1 tsp",
+            "A pinch",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Bananas",
+            "Fresh Ginger",
+            "Turmeric",
+            "Cinnamon",
+            "Skim Milk or Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_banana.png",
+            "assets/images/icono_jengibre.png",
+            "assets/images/icono_curcuma.png",
+            "assets/images/icono_canela.png",
+            "assets/images/icono_leche.png"
+          ],
+          "preparation": [
+            "- Peel the bananas, slice them and place in the blender.",
+            "- Peel the ginger and add it to the blender.",
+            "- Add the remaining ingredients and blend.",
+            "- Serve and enjoy."
+          ]
+        },
+        {
+          "id": 16.4,
+          "image_smoothie": "assets/images/to_li_na.png",
+          "name": "Grapefruit, Lemon and Orange Juice",
+          "ingredient_amount": [
+            "2 pcs",
+            "2 pcs",
+            "1 pc",
+            "1 tsp"
+          ],
+          "ingredient_description": [
+            "Peeled seedless Grapefruits",
+            "Peeled seedless Lemons",
+            "Peeled seedless Orange",
+            "Olive Oil"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_toronja.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_aceite.png"
+          ],
+          "preparation": [
+            "- Add all ingredients to the blender or food processor.",
+            "- Blend and, if needed, add 1/2 glass of water to thin out.",
+            "- Drink freshly made, preferably on an empty stomach to get the most benefit."
+          ]
+        },
+        {
+          "id": 16.5,
+          "image_smoothie": "assets/images/na_jen.png",
+          "name": "Orange and Ginger Juice",
+          "ingredient_amount": [
+            "1 cup",
+            "1 tbsp",
+            "1 tbsp"
+          ],
+          "ingredient_description": [
+            "Freshly squeezed Orange juice",
+            "Fresh grated Ginger",
+            "Olive Oil"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_jengibre.png",
+            "assets/images/icono_aceite.png"
+          ],
+          "preparation": [
+            "- Blend all ingredients in a blender or food processor.",
+            "- Drink the juice freshly made.",
+            "- You can prepare it before bedtime for 3 consecutive nights.",
+            "- For a deep cleanse, take it for 7 consecutive nights."
+          ]
+        },
+        {
+          "id": 16.6,
+          "image_smoothie": "assets/images/manzana.png",
+          "name": "Apple and Lemon Juice",
+          "ingredient_amount": [
+            "1/2 Kg",
+            "",
+            "2 glasses"
+          ],
+          "ingredient_description": [
+            "Apples",
+            "Juice of half a Lemon",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_manzana.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash the apples, peel them and cut into pieces.",
+            "- Add to the blender together with the lemon juice.",
+            "- Process until everything is well combined.",
+            "- Drink this juice on an empty stomach for 7 consecutive days."
+          ]
+        },
+        {
+          "id": 16.7,
+          "image_smoothie": "assets/images/za_li_jen.png",
+          "name": "Carrot, Lemon and Ginger Juice",
+          "ingredient_amount": [
+            "3 pcs",
+            "",
+            "1 tsp",
+            "1 tsp",
+            "1/2 glass"
+          ],
+          "ingredient_description": [
+            "Carrots",
+            "Juice of half a Lemon",
+            "Ginger",
+            "Honey to taste",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_zanahoria.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_jengibre.png",
+            "assets/images/icono_miel.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Peel the carrots and blend them with the water.",
+            "- Squeeze the lemon and add the juice to the carrots.",
+            "- Add the ginger and honey, and stir until fully combined.",
+            "- Drink on an empty stomach for 7 days."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name_category": "para desinflamar el colon",
+      "image_category": "assets/images/colon.png",
+      "recipes": [
+        {
+          "id": 17.1,
+          "image_smoothie": "assets/images/aloe_pi.png",
+          "name": "Aloe Vera and Pineapple Smoothie",
+          "ingredient_amount": [
+            "1 leaf",
+            "2 slices",
+            "1 glass"
+          ],
+          "ingredient_description": [
+            "Aloe Vera",
+            "Pineapple",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_aloe.png",
+            "assets/images/icono_pina.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Extract the gel from the aloe vera leaf.",
+            "- Place the gel, pineapple and water in the blender.",
+            "- Blend well until smooth.",
+            "- Drink this juice in the morning on an empty stomach.",
+            "- Although aloe vera has notable benefits for the body, this juice is not recommended for pregnant or breastfeeding women.",
+            "",
+            "Note: Before extracting the aloe vera, remember to soak the plant leaf in a jar of water to drain its aloin."
+          ]
+        },
+        {
+          "id": 17.2,
+          "image_smoothie": "assets/images/man_za.png",
+          "name": "Apple and Carrot Juice",
+          "ingredient_amount": [
+            "2 pcs",
+            "2 pcs",
+            "1 glass"
+          ],
+          "ingredient_description": [
+            "Apples",
+            "Carrot",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_manzana.png",
+            "assets/images/icono_zanahoria.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash and cut the apples and carrots into small pieces.",
+            "- Place the apples, carrots and water in a blender.",
+            "- Blend until smooth.",
+            "- Drink this juice once a day."
+          ]
+        },
+        {
+          "id": 17.3,
+          "image_smoothie": "assets/images/jen_li.png",
+          "name": "Ginger and Lemon Juice",
+          "ingredient_amount": [
+            "1 small piece",
+            "",
+            "1 glass"
+          ],
+          "ingredient_description": [
+            "Ginger",
+            "Juice of one lemon",
+            "Warm Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_jengibre.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Grate the ginger and squeeze the lemon juice.",
+            "- Mix the grated ginger, lemon juice and warm water.",
+            "- Blend for 3 minutes and drink this juice in the morning on an empty stomach."
+          ]
+        },
+        {
+          "id": 17.4,
+          "image_smoothie": "assets/images/na_aran_pi.png",
+          "name": "Orange, Blueberry and Pineapple Juice",
+          "ingredient_amount": [
+            "1 pc",
+            "1 slice",
+            "1 glass",
+            "1 tbsp"
+          ],
+          "ingredient_description": [
+            "Orange",
+            "Pineapple",
+            "Blueberries",
+            "Honey to taste"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_pina.png",
+            "assets/images/icono_arandano.png",
+            "assets/images/icono_miel.png"
+          ],
+          "preparation": [
+            "- Place all washed and peeled ingredients in the blender.",
+            "- Blend until smooth.",
+            "- Serve immediately."
+          ]
+        },
+        {
+          "id": 17.5,
+          "image_smoothie": "assets/images/manz_man.png",
+          "name": "Apple and Mango Smoothie",
+          "ingredient_amount": [
+            "2 pcs",
+            "1 pc",
+            "1 can"
+          ],
+          "ingredient_description": [
+            "Green Apple",
+            "Mango",
+            "Coconut Milk"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_manzanaverde.png",
+            "assets/images/icono_mango.png",
+            "assets/images/icono_coco.png"
+          ],
+          "preparation": [
+            "- Place all ingredients in the blender.",
+            "- Blend until smooth and lump-free.",
+            "- Serve immediately."
+          ]
+        },
+        {
+          "id": 17.6,
+          "image_smoothie": "assets/images/man_pe_ki.png",
+          "name": "Green Apple, Pear, Kiwi and Celery Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "1 pc",
+            "2 pcs",
+            "4 stalks",
+            "2 glasses"
+          ],
+          "ingredient_description": [
+            "Green Apple",
+            "Pear",
+            "Kiwi",
+            "Celery",
+            "Orange Juice"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_manzanaverde.png",
+            "assets/images/icono_pera.png",
+            "assets/images/icono_kiwi.png",
+            "assets/images/icono_apio.png",
+            "assets/images/icono_naranja.png"
+          ],
+          "preparation": [
+            "- Place all ingredients in the blender.",
+            "- Blend until smooth.",
+            "- Serve and drink immediately."
+          ]
+        },
+        {
+          "id": 17.7,
+          "image_smoothie": "assets/images/san_fre.png",
+          "name": "Watermelon and Strawberry Smoothie",
+          "ingredient_amount": [
+            "2 cups",
+            "1 cup",
+            "1/2 pc",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "Seedless Watermelon",
+            "Strawberries",
+            "Lemon",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_sandia.png",
+            "assets/images/icono_fresa.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Place all ingredients in the blender.",
+            "- Blend until smooth.",
+            "- Serve and drink immediately."
+          ]
+        },
+        {
+          "id": 17.8,
+          "image_smoothie": "assets/images/aran_esp.png",
+          "name": "Blueberry and Spinach Smoothie",
+          "ingredient_amount": [
+            "1 cup",
+            "1 cup",
+            "1/2 cup",
+            "1 cup",
+            "1 tbsp"
+          ],
+          "ingredient_description": [
+            "Blueberries",
+            "Fresh pre-washed Spinach",
+            "Greek Yogurt",
+            "Water",
+            "Honey to taste"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_arandano.png",
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_yogurt.png",
+            "assets/images/icono_agua.png",
+            "assets/images/icono_miel.png"
+          ],
+          "preparation": [
+            "- Place all ingredients in a blender.",
+            "- Blend until completely smooth.",
+            "- Serve and drink immediately."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name_category": "para la gastritis",
+      "image_category": "assets/images/gastritis.png",
+      "recipes": [
+        {
+          "id": 18.1,
+          "image_smoothie": "assets/images/za_pe.png",
+          "name": "Carrot and Parsley Juice",
+          "ingredient_amount": [
+            "2 pcs",
+            "1 cup",
+            "1 sprig"
+          ],
+          "ingredient_description": [
+            "Carrots",
+            "Water",
+            "Parsley"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_zanahoria.png",
+            "assets/images/icono_agua.png",
+            "assets/images/icono_perejil.png"
+          ],
+          "preparation": [
+            "- Start by washing, peeling and cutting the carrots into pieces.",
+            "- Place them in the blender.",
+            "- Add the parsley and a glass of water.",
+            "- Blend until well mixed. If too thick, adjust the consistency with a little more water."
+          ]
+        },
+        {
+          "id": 18.2,
+          "image_smoothie": "assets/images/man_ap_esp.png",
+          "name": "Apple, Celery and Spinach Juice",
+          "ingredient_amount": [
+            "1/2 pc",
+            "2 stalks",
+            "A handful",
+            "A glass"
+          ],
+          "ingredient_description": [
+            "Apple",
+            "Celery",
+            "Spinach leaves",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_manzana.png",
+            "assets/images/icono_apio.png",
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash the celery, spinach and apple thoroughly.",
+            "- Peel the apple.",
+            "- Cut into pieces and transfer to the blender.",
+            "- Add the water.",
+            "- Blend everything well until smooth.",
+            "- Serve and drink immediately."
+          ]
+        },
+        {
+          "id": 18.3,
+          "image_smoothie": "assets/images/papaya.png",
+          "name": "Papaya Juice",
+          "ingredient_amount": [
+            "1/2 pc",
+            "A glass"
+          ],
+          "ingredient_description": [
+            "Ripe Papaya",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_papaya.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Peel the papaya, remove the seeds and cut into cubes.",
+            "- Blend with the water until smooth.",
+            "- Serve and enjoy immediately."
+          ]
+        },
+        {
+          "id": 18.4,
+          "image_smoothie": "assets/images/ba_pe.png",
+          "name": "Banana and Pear Smoothie",
+          "ingredient_amount": [
+            "1/2 pc",
+            "1/2 pc",
+            "A glass"
+          ],
+          "ingredient_description": [
+            "Ripe Banana",
+            "Ripe Pear",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_banana.png",
+            "assets/images/icono_pera.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Start by peeling and cutting the fruit into roughly equal pieces.",
+            "- Combine all ingredients in a blender until smooth.",
+            "- Serve and drink immediately."
+          ]
+        },
+        {
+          "id": 18.5,
+          "image_smoothie": "assets/images/man_co.png",
+          "name": "Apple and Coconut Water Smoothie",
+          "ingredient_amount": [
+            "1 pc",
+            "A glass"
+          ],
+          "ingredient_description": [
+            "Ripe Apple",
+            "Coconut Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_manzana.png",
+            "assets/images/icono_coco.png"
+          ],
+          "preparation": [
+            "- Clean, peel and core the apple, then cut into pieces.",
+            "- Blend the apple and coconut water until completely smooth.",
+            "- Serve and enjoy."
+          ]
+        },
+        {
+          "id": 18.6,
+          "image_smoothie": "assets/images/aloe_pa.png",
+          "name": "Aloe Vera and Papaya Juice",
+          "ingredient_amount": [
+            "2 tbsp",
+            "1/2 pc",
+            "1 glass"
+          ],
+          "ingredient_description": [
+            "Aloe Vera juice",
+            "Papaya",
+            "Water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_aloe.png",
+            "assets/images/icono_papaya.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Place all ingredients in a food processor or blender.",
+            "- Blend until smooth.",
+            "- Drink once ready.",
+            "- Although aloe vera has notable benefits for the body, this juice is not recommended for pregnant or breastfeeding women.",
+            "",
+            "Note: Before extracting the aloe vera, remember to soak the plant leaf in a jar of water to drain its aloin."
+          ]
+        },
+        {
+          "id": 18.7,
+          "image_smoothie": "assets/images/col.png",
+          "name": "Cabbage Juice",
+          "ingredient_amount": [
+            "150g",
+            "A glass"
+          ],
+          "ingredient_description": [
+            "Cabbage leaves",
+            "Water or Almond Milk"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_col.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash the cabbage and cut it in half.",
+            "- Blend with the water or almond milk.",
+            "- Serve and consume immediately."
+          ]
+        },
+        {
+          "id": 18.8,
+          "image_smoothie": "assets/images/ag_mang.png",
+          "name": "Avocado and Mango Juice",
+          "ingredient_amount": [
+            "1 pc",
+            "1/2 pc",
+            "A glass",
+            "A pinch"
+          ],
+          "ingredient_description": [
+            "Mango",
+            "Avocado",
+            "Water or skim milk",
+            "Cinnamon to taste"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_mango.png",
+            "assets/images/icono_aguacate.png",
+            "assets/images/icono_agua.png",
+            "assets/images/icono_canela.png"
+          ],
+          "preparation": [
+            "- Peel the mango and avocado, remove the pit and pour the pulp into the blender.",
+            "- Blend everything with the water or milk until smooth.",
+            "- Pour into a glass and add a pinch of cinnamon to taste."
+          ]
+        }
+      ]
+    }
+  ]
+}

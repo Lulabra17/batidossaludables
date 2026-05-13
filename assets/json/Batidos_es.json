@@ -1,0 +1,4366 @@
+{"categories": [{
+      "id": 1,
+      "name_category": "Desintoxicantes",
+      "image_category": "assets/images/detox.png",
+      "recipes": [
+        {
+          "id": 1.1,
+          "image_smoothie": "assets/images/broc_manz.png",
+          "name": "Jugo de Brócoli y Manzana Verde",
+          "ingredient_amount": [
+            "100 grs",
+            "1 pza",
+            "1 taza"
+          ],
+          "ingredient_description": [
+            "de Brócoli",
+            "de Manzana Verde",
+            "de Agua"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_brocoli.png",
+            "assets/images/icono_manzanaverde.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Lava bien el brócoli y cortalo en trozos.",
+            "- Corta la manzana por la mitad y retírale las semillas y el corazón.",
+            "- Luego, introduce ambos ingredientes en la licuadora y cúbrelos con la taza de agua.",
+            "- Licua por unos minutos hasta conseguir una bebida homogénea y sin grumos.",
+            "- Sírvelo sin colar."
+          ]
+        },
+        {
+          "id": 1.2,
+          "image_smoothie": "assets/images/mang_esp.png",
+          "name": "Batido de Mango y Espinaca",
+          "ingredient_amount": [
+            "1 taza",
+            "1/2 pza",
+            "1/2 pza",
+            "1 rodaja",
+            "1 taza"
+          ],
+          "ingredient_description": [
+            "de Hojas de espinaca",
+            "de Mango troceado",
+            "de Banana troceada",
+            "de Piña",
+            "de Agua"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_mango.png",
+            "assets/images/icono_banana.png",
+            "assets/images/icono_pina.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Lava bien las hojas de espinacas y trocéalas.",
+            "- Llévalas a la licuadora junto con el mango, la piña y el agua.",
+            "- Licua por unos minutos, hasta que todo este bien integrado.",
+            "- Sírvelo y disfrútalo."
+          ]
+        },
+        {
+          "id": 1.3,
+          "image_smoothie": "assets/images/te_pe_pi.png",
+          "name": "Batido de Té verde, Pepino y Piña",
+          "ingredient_amount": [
+            "2 o 3 ramas",
+            "1 pza",
+            "1/2 trozo",
+            "1/2 pza",
+            "1 rodaja",
+            "",
+            "1 taza"
+
+          ],
+          "ingredient_description": [
+            "de Perejil",
+            "de Pepino cortado en trozos",
+            "pequeño de Jengibre",
+            "de Aguacate troceado",
+            "de Piña",
+            "Zumo de medio limón",
+            "de Té verde"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_perejil.png",
+            "assets/images/icono_pepino.png",
+            "assets/images/icono_jengibre.png",
+            "assets/images/icono_aguacate.png",
+            "assets/images/icono_pina.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_teverde.png"
+
+          ],
+          "preparation": [
+            "- Incorpora todas las verduras en el vaso de la licuadora, incluyendo el jengibre y el aguacate.",
+            "- Añade tambien la piña, el zumo de limón y el té verde.",
+            "- Licua por unos instantes hasta que todo este bien integrado.",
+            "- Sírvelo y disfrutalo al instante."
+          ]
+        },
+        {
+          "id": 1.4,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Batido de Té Verde, Pera y Naranja",
+          "ingredient_amount": [
+            "1 taza",
+            "1/2 pza",
+            "1 pza",
+            "1/2 pza",
+            "6 unidades"
+
+          ],
+          "ingredient_description": [
+            "de Té Verde",
+            "de Pera en trozos",
+            "de Ciruela troceada",
+            "de Naranja",
+            "de Almendras"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_teverde.png",
+            "assets/images/icono_pera.png",
+            "assets/images/icono_ciruela.png",
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_almendra.png"
+          ],
+          "preparation": [
+            "- Incorpora todos los ingredientes en el vaso de la licuadora, incluyendo las almendras.",
+            "- Licua por unos minutos.",
+            "- Una vez obtengas una bebida homogénea y sin grumos, sírvela."
+          ]
+        },
+        {
+          "id": 1.5,
+          "image_smoothie": "assets/images/to_ba_ag.png",
+          "name": "Batido de Toronja, Banana y Aguacate",
+          "ingredient_amount": [
+            "1 pza",
+            "1/2 pza",
+            "1/2 pza",
+            "1 trozo",
+            "1 taza",
+            "1 Rama"
+          ],
+          "ingredient_description": [
+            "de Toronja grande",
+            "de Banana",
+            "de Aguacate maduro",
+            "de Jengibre fresco",
+            "de Agua",
+            "de Menta fresca"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_toronja.png",
+            "assets/images/icono_banana.png",
+            "assets/images/icono_aguacate.png",
+            "assets/images/icono_jengibre.png",
+            "assets/images/icono_agua.png",
+            "assets/images/icono_menta.png"
+          ],
+          "preparation": [
+            "- Extrae el zumo de la toronja, y llévalo a la licuadora con la banana, el aguacate y el jengibre.",
+            "- A continuación agrega la menta y el agua.",
+            "- Por último procesa hasta que todo este bien integrado."
+          ]
+        },
+        {
+          "id": 1.6,
+          "image_smoothie": "assets/images/me_ki_ma.png",
+          "name": "Batido de Melón, Kiwi y Manzana",
+          "ingredient_amount": [
+            "100 grs",
+            "1/2 pza",
+            "1 pza",
+            "1 cucharada",
+            "1 taza"
+          ],
+          "ingredient_description": [
+            "de Melón troceado",
+            "de Manzana en trozos",
+            "de Kiwi",
+            "de Zumo de limón",
+            "de cubos de hielo"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_melon.png",
+            "assets/images/icono_manzana.png",
+            "assets/images/icono_kiwi.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_hielo.png"
+          ],
+          "preparation": [
+            "- Corta todas las frutas en trozos y llévalos a la licuadora junto con el limón y los cubos de hielo.",
+            "- Pon a licuar y dejálo hasta que todos los ingredientes se integren bien.",
+            "- Sírvelo al instante, sin colar."
+          ]
+        },
+        {
+          "id": 1.7,
+          "image_smoothie": "assets/images/mave_ag.png",
+          "name": "Batido de Manzana Verde y Aguacate",
+          "ingredient_amount": [
+            "1 pza",
+            "1/2 pza",
+            "1 puñado",
+            "1 1/2 taza"
+          ],
+          "ingredient_description": [
+            "de Manzana Verde",
+            "de Aguacate",
+            "de Espinacas",
+            "de Agua"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_manzanaverde.png",
+            "assets/images/icono_aguacate.png",
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Corta la manzana, el aguacate y la espinaca en trozos.",
+            "- Luego, llévalos al vaso de la licuadora junto con el agua.",
+            "- Procesa por unos segundos, hasta que todos los ingredientes se integren bien.",
+            "- Sírvelo y disfruta."
+          ]
+        },
+        {
+          "id": 1.8,
+          "image_smoothie": "assets/images/ver_co.png",
+          "name": "Batido Verde de Coco",
+          "ingredient_amount": [
+            "1 taza",
+            "1 cucharada",
+            "1 puñado",
+            "1 pza"
+          ],
+          "ingredient_description": [
+            "de Agua de coco",
+            "de Yogurt de coco",
+            "de Espinacas",
+            "de Banana"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_coco.png",
+            "assets/images/icono_yogurt.png",
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_banana.png"
+          ],
+          "preparation": [
+            "- Vierte el agua de coco y el yogurt en la licuadora.",
+            "- Corta en trozos las espinacas y la banana, y agrégalos con el resto de ingredientes.",
+            "- Licua por unos instantes, hasta conseguir una bebida cremosa y homogénea."
+          ]
+        }
+
+
+      ]
+    },
+      {
+        "id": 2,
+        "name_category": "para el Estreñimiento",
+        "image_category": "assets/images/constipation.png",
+        "recipes": [
+          {
+            "id": 2.1,
+            "image_smoothie": "assets/images/manz_pi_per.png",
+            "name": "Batido de Manzana, Piña y Pera",
+            "ingredient_amount": [
+              "1 pza",
+              "1/2 pza",
+              "1 rodaja",
+              "1 pza",
+              "1/2 taza"
+
+            ],
+            "ingredient_description": [
+              "de Pera",
+              "de Manzana",
+              "de Piña",
+              "de Naranja",
+              "de Agua, o un vaso entero si no se usa el jugo de naranja"
+            ],
+            "ingredient_icon": [
+              "assets/images/icono_pera.png",
+              "assets/images/icono_manzana.png",
+              "assets/images/icono_pina.png",
+              "assets/images/icono_naranja.png",
+              "assets/images/icono_agua.png"
+            ],
+            "preparation": [
+              "- Pela la manzana, quita el corazón y córtala en trozos.",
+              "- Corta en trozos la piña y retira el corazón de la pera.",
+              "- Exprime el jugo de la naranja.",
+              "- Coloca la manzana, la piña, y la pera en el vaso de la licuadora.",
+              "- Añade el agua y el jugo de naranja.",
+              "- Licua bien y bebe de inmediato."
+            ]
+          },
+          {
+            "id": 2.2,
+            "image_smoothie": "assets/images/manz_pap.png",
+            "name": "Batido de Manzana y Papaya",
+            "ingredient_amount": [
+              "1/2 pza",
+              "1 pza",
+              "1 taza",
+              ""
+            ],
+            "ingredient_description": [
+              "de Papaya pequeña",
+              "de Manzana",
+              "de Agua",
+              "Miel al gusto (opcional)"
+            ],
+            "ingredient_icon": [
+              "assets/images/icono_papaya.png",
+              "assets/images/icono_manzana.png",
+              "assets/images/icono_agua.png",
+              "assets/images/icono_miel.png"
+            ],
+            "preparation": [
+              "- Corta la manzana en cuartos y retira el corazón. Si lo deseas puedes pelarla  aunque si dejas la cáscara obtendrás mas nutrientes.",
+              "- Parte la papaya, retira las semillas y la cáscara.",
+              "- Pon en la licuadora las frutas.",
+              "- Agrega el agua y la miel si deseas.",
+              "- Licua bien y cuando obtengas una crema homogénea, podrás tomarlo."
+            ]
+          },
+          {
+            "id": 2.3,
+            "image_smoothie": "assets/images/mo_manz.png",
+            "name": "Batido de Moras y Manzanas",
+            "ingredient_amount": [
+              "1 pza",
+              "10 pzas",
+              "1/2 taza",
+              "2 cdas"
+            ],
+            "ingredient_description": [
+              "de Manzana",
+              "de Moras",
+              "de Leche",
+              "de Avena instantanea"
+            ],
+            "ingredient_icon": [
+              "assets/images/icono_manzana.png",
+              "assets/images/icono_mora.png",
+              "assets/images/icono_leche.png",
+              "assets/images/icono_avena.png"
+            ],
+            "preparation": [
+              "- Lava la manzana y quita el corazón.",
+              "- Limpia bien las moras.",
+              "- En el vaso de la licuadora, añade las frutas, la leche y la avena.",
+              "- Licua bien y bebe al momento. Si el resultado es muy espeso añade un poco mas de agua o leche.",
+              "Nota: Si deseas puede sustituir la manzana por fresas."
+            ]
+          },
+          {
+            "id": 2.4,
+            "image_smoothie": "assets/images/pa_pi.png",
+            "name": "Licuado de Papaya y Piña",
+            "ingredient_amount": [
+              "1/2 pza",
+              "1 rodaja",
+              "1/2 taza",
+              "1 cdta",
+              "2 cdtas"
+            ],
+            "ingredient_description": [
+              "de Papaya pequeña",
+              "de Piña",
+              "de Yogurt Natural",
+              "de extracto de Coco",
+              "de semillas de Linaza"
+            ],
+            "ingredient_icon": [
+              "assets/images/icono_papaya.png",
+              "assets/images/icono_pina.png",
+              "assets/images/icono_yogurt.png",
+              "assets/images/icono_coco.png",
+              "assets/images/icono_linaza.png"
+            ],
+            "preparation": [
+              "- En la licuadora coloca la pulpa de la papaya y la piña, peladas y troceadas.",
+              "- Añade el yogurt, el extracto de coco y las semillas de lino.",
+              "- Si lo deseas, puedes agregar un poco de agua o hielo",
+              "- Licua todo muy bien y consume."
+            ]
+          },
+          {
+            "id": 2.5,
+            "image_smoothie": "assets/images/pi_na_cir.png",
+            "name": "Batido de Piña, Naranja y Ciruela",
+            "ingredient_amount": [
+              "2 pzas",
+              "1 rodaja",
+              "",
+              "1 cda"
+            ],
+            "ingredient_description": [
+              "de Ciruelas",
+              "de Piña",
+              "Zumo de una Naranja",
+              "de semillas de Linaza"
+            ],
+            "ingredient_icon": [
+              "assets/images/icono_ciruela.png",
+              "assets/images/icono_pina.png",
+              "assets/images/icono_naranja.png",
+              "assets/images/icono_linaza.png"
+            ],
+            "preparation": [
+              "- Pela y corta la rodaja de piña.",
+              "- Lava y quita el corazón de las ciruelas",
+              "- Exprime las naranjas.",
+              "- En la licuadora coloca la piña, las ciruelas y el jugo de naranja.",
+              "- Agrega las semillas de linaza.",
+              "- Licua hasta que se mezcle todo bien y bebe."
+            ]
+          },
+          {
+            "id": 2.6,
+            "image_smoothie": "assets/images/ba_mo.png",
+            "name": "Batido de Banana y Moras",
+            "ingredient_amount": [
+              "1 pza",
+              "1 taza",
+              "Un puñado",
+              "1/2 taza"
+            ],
+            "ingredient_description": [
+              "de Banana",
+              "de Moras",
+              "de Almendras",
+              "de Agua o leche"
+            ],
+            "ingredient_icon": [
+              "assets/images/icono_banana.png",
+              "assets/images/icono_mora.png",
+              "assets/images/icono_almendra.png",
+              "assets/images/icono_agua.png"
+            ],
+            "preparation": [
+              "- Pela la banana y córtala en rebanadas.",
+              "- Lava bien las moras y pica las almendras a la mitad.",
+              "- Coloca en la licuadora las frutas, almendras, y el agua o leche.",
+              "- Licua todo bien y cuando tengas una mezcla homogénea, disfrútala."
+            ]
+          },
+          {
+            "id": 2.7,
+            "image_smoothie": "assets/images/li_man_na.png",
+            "name": "Batido de Limón, Mango y Naranja",
+            "ingredient_amount": [
+              "1/2 pza",
+              "",
+              "1 pza",
+              "1/2 pza"
+            ],
+            "ingredient_description": [
+              "de Mango grande",
+              "Jugo de un Limón",
+              "de Naranja",
+              "de Aguacate (OPCIONAL)"
+            ],
+            "ingredient_icon": [
+              "assets/images/icono_mango.png",
+              "assets/images/icono_limon.png",
+              "assets/images/icono_naranja.png",
+              "assets/images/icono_aguacate.png"
+            ],
+            "preparation": [
+              "- Pela el mango y retira la pepa. Corta la pulpa y haz lo mismo con la naranja.",
+              "- Exprime el zumo de limón.",
+              "- Si quieres añadir el aguacate, córtalo en pedazos.",
+              "- Coloca todo en la licuadora y bate bien.",
+              "- Bebe de inmediato."
+            ]
+          }
+        ]
+      },
+  {
+    "id": 3,
+    "name_category": "para controlar estrés y ansiedad",
+    "image_category": "assets/images/estres.png",
+    "recipes": [
+      {
+        "id": 3.1,
+        "image_smoothie": "assets/images/manz_pap.png",
+        "name": "Batido de manzana y papaya",
+        "ingredient_amount": [
+          "1/2 pza",
+          "1 pza",
+          "1 taza",
+          ""
+        ],
+        "ingredient_description": [
+          "de Papaya pequeña",
+          "de Manzana",
+          "de Agua",
+          "Miel al gusto (opcional)"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_papaya.png",
+          "assets/images/icono_manzana.png",
+          "assets/images/icono_agua.png",
+          "assets/images/icono_miel.png"
+        ],
+        "preparation": [
+          "- Corta la manzana en cuartos y retira el corazón. Si lo deseas puedes pelarla , aunque si dejas la cáscara obtendrás mas nutrientes.",
+          "- Parte la papaya, retira las semillas y la cáscara.",
+          "- Pon en la licuadora las frutas.",
+          "- Agrega el agua y la miel si deseas.",
+          "- Licua bien y cuando obtengas una crema homogénea, podrás tomarlo."
+        ]
+      },
+      {
+        "id": 3.2,
+        "image_smoothie": "assets/images/col_za.png",
+        "name": "Jugo de Col y Zanahoria",
+        "ingredient_amount": [
+          "1/4 pza",
+          "3 pzas",
+          "2 cabezas",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Col mediana",
+          "de Zanahorias grandes",
+          "de Hinojo",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_col.png",
+          "assets/images/icono_zanahoria.png",
+          "assets/images/icono_hinojo.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Corta la col en trozos.",
+          "- Pica las zanahorias en pedazos pequeños.",
+          "- Corta las cabezas de hinjo en 4 trozos cada una.",
+          "- Introduce los vegetales en la licuadora junto con el agua.",
+          "- Licua bien y bebe de inmediato."
+        ]
+      },
+      {
+        "id": 3.3,
+        "image_smoothie": "assets/images/ba_fre_pe.png",
+        "name": "Batido de Banana, Fresa y Pera",
+        "ingredient_amount": [
+          "1 pza",
+          "250 grs",
+          "1 pza",
+          "1/2 vaso"
+        ],
+        "ingredient_description": [
+          "de Banana",
+          "de Fresas",
+          "de Pera",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_banana.png",
+          "assets/images/icono_fresa.png",
+          "assets/images/icono_pera.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Corta en trozos todos los ingredientes.",
+          "- Agrega todo a la licuadora junto con el agua.",
+          "- Licúa por un par de minutos hasta que este completamente integrado todo.",
+          "- Bebe este jugo por las mañanas."
+        ]
+      },
+      {
+        "id": 3.4,
+        "image_smoothie": "assets/images/pe_ave.png",
+        "name": "Batido de Pera con Avena",
+        "ingredient_amount": [
+          "1 pza",
+          "2 cdas",
+          "",
+          "1 vaso"
+        ],
+        "ingredient_description": [
+          "de Pera Madura",
+          "de Avena molida",
+          "Miel al gusto",
+          "de Infusión de Hierbabuena"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_pera.png",
+          "assets/images/icono_avena.png",
+          "assets/images/icono_miel.png",
+          "assets/images/icono_menta.png"
+        ],
+        "preparation": [
+          "- Corta la pera en trozos.",
+          "- Agrega la pera junto con la avena y la infusión de hierbabuena a la licuadora.",
+          "- Bate durante unos minutos para que todo se integre.",
+          "- Por último agrega la miel al gusto y cónsumelo."
+        ]
+      },
+      {
+        "id": 3.5,
+        "image_smoothie": "assets/images/man_nu.png",
+        "name": "Batido de Manzana y Nuez",
+        "ingredient_amount": [
+          "1 pza",
+          "1 taza",
+          "4 pzas",
+          ""
+        ],
+        "ingredient_description": [
+          "de Manzana",
+          "de Leche de Almendras",
+          "de Nueces",
+          "Miel de Azahar"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_manzana.png",
+          "assets/images/icono_almendra.png",
+          "assets/images/icono_nuez.png",
+          "assets/images/icono_azahar.png"
+        ],
+        "preparation": [
+          "- Retira el corazón de la manzana, y córtala en trozos.",
+          "- Licúa la manzana junto con la leche de almendras.",
+          "- Agrégale las nueces y sigue licuando.",
+          "- Finalmente agrégale un poco de miel de azahar y bébelo bien fresco."
+        ]
+      },
+      {
+        "id": 3.6,
+        "image_smoothie": "assets/images/es_manver.png",
+        "name": "Batido de Espinaca y Manzana Verde",
+        "ingredient_amount": [
+          "1 taza",
+          "1 pza",
+          "1 pza",
+          "1 pza",
+          "1 vaso"
+        ],
+        "ingredient_description": [
+          "de Espinacas frescas",
+          "de Manzana verde",
+          "de Pepino",
+          "de Limón",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_espinaca.png",
+          "assets/images/icono_manzanaverde.png",
+          "assets/images/icono_pepino.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lavar bien las espinacas, la manzana y el pepino.",
+          "- Pelar el limón y cortar todos los ingredientes en trozos.",
+          "- Colocar los ingredientes en la licuadora junto con el agua.",
+          "- Licuar hasta obtener una mezcla homogénea.",
+          "- Colar el jugo si se desea una textura mas suave o consumir tal cual para aprovechar la fibra.",
+          "- Servir y consumir inmediatamente para aprovechar al máximo los nutrientes."
+        ]
+      },
+      {
+        "id": 3.7,
+        "image_smoothie": "assets/images/na_za_jen.png",
+        "name": "Jugo de Naranja, Zanahoria y Jengibre",
+        "ingredient_amount": [
+          "2 pzas",
+          "2 pzas",
+          "1 trozo",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Naranja",
+          "de Zanahorias",
+          "de Jengibre",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_zanahoria.png",
+          "assets/images/icono_jengibre.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lavar y pelar bien las zanahorias.",
+          "- Lavar y pelar las naranjas y cortarlas en trozos. Evitar las semillas.",
+          "- Pelar el jengibre y cortar un trozo pequeño.",
+          "- Llevar a la licuadora junto con la taza de agua y licuar por 2 o 3 minutos, o hasta tener una mezcla homogénea.",
+          "- Servir en un vaso y beber.",
+          "- Se puede colar o tomar así para aprovechar la fibra."
+        ]
+      },
+      {
+        "id": 3.8,
+        "image_smoothie": "assets/images/re_ma_za.png",
+        "name": "Jugo de Remolacha, Manzana y Zanahoria",
+        "ingredient_amount": [
+          "1 pza",
+          "1 pza",
+          "1 pza",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Remolacha",
+          "de Manzana",
+          "de Zanahoria",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_remolacha.png",
+          "assets/images/icono_manzana.png",
+          "assets/images/icono_zanahoria.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lavar, pelar y cortar en trozos la remolacha y la zanahoria.",
+          "- Lavar y cortar la manzana con concha, antes retira el corazón.",
+          "- Llevar a la licuadora con una taza de agua, licuar hasta que la mezcla quede homogénea. ",
+          "- Servir en un vaso y beber preferiblemente sin colar."
+        ]
+      },
+      {
+        "id": 3.9,
+        "image_smoothie": "assets/images/ara_ba.png",
+        "name": "Jugo de Arándanos y Banana",
+        "ingredient_amount": [
+          "1 taza",
+          "1 pza",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Arándanos",
+          "de Banana",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_arandano.png",
+          "assets/images/icono_banana.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lavar los arándanos y pelar la banana.",
+          "- Llevar a la licuadora con una taza de agua.",
+          "- licuar hasta que la mezcla quede homogénea.",
+          "- Servir en un vaso y beber inmediatamente."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name_category": "para retención de liquidos",
+    "image_category": "assets/images/liquido.png",
+    "recipes": [
+      {
+        "id": 4.1,
+        "image_smoothie": "assets/images/me_man.png",
+        "name": "Batido de Melón y Manzana",
+        "ingredient_amount": [
+          "1 rodaja",
+          "",
+          "1 pza"
+        ],
+        "ingredient_description": [
+          "de Melón",
+          "Zumo de medio Limón",
+          "de Manzana pequeña o la mitad de una grande"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_melon.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_manzana.png"
+        ],
+        "preparation": [
+          "- Retira la cáscara y las semillas del melón y lava la manzana.",
+          "- Incorpora ambas frutas en el vaso de la licuadora junto con el zumo de medio limón.",
+          "- Licúa todo hasta que quede homogéneo.",
+          "- Si lo prefieres más liquido, añade un poco mas de agua."
+        ]
+      },
+      {
+        "id": 4.2,
+        "image_smoothie": "assets/images/pi_mang.png",
+        "name": "Batido de Piña y Mango",
+        "ingredient_amount": [
+          "1/2 pza",
+          "1 rodaja",
+          "1/2 vaso"
+        ],
+        "ingredient_description": [
+          "de Mango",
+          "de Piña",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_mango.png",
+          "assets/images/icono_pina.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Pela la piña y el mango, y córtalos en trozos.",
+          "- Coloca ambas frutas en el vaso de la licuadora, junto con el agua.",
+          "- Bate bien hasta conseguir una bebida homogénea."
+        ]
+      },
+      {
+        "id": 4.3,
+        "image_smoothie": "assets/images/pe_fruro.png",
+        "name": "Batido de Pepino y Frutos Rojos",
+        "ingredient_amount": [
+          "1/2 pza",
+          "150 grs",
+          "1/2 vaso"
+        ],
+        "ingredient_description": [
+          "de Pepino mediano",
+          "de Frutos Rojos (Fresas, Frambuesas, Moras o una mezcla)",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_pepino.png",
+          "assets/images/icono_frutosrojos.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lava todos los ingredientes y retira la parte verde de las fresas (si la haz elegido).",
+          "- Corta en trozos más o menos regulares y ponlo en el vaso de la licuadora.",
+          "- Añade agua y licua hasta que tenga una textura lisa."
+        ]
+      },
+      {
+        "id": 4.4,
+        "image_smoothie": "assets/images/ap_pe_men.png",
+        "name": "Batido de Apio, Pera y Menta",
+        "ingredient_amount": [
+          "1 pza",
+          "2 tallos",
+          "1/2 vaso",
+          ""
+        ],
+        "ingredient_description": [
+          "de Pera",
+          "de Apio",
+          "de Agua",
+          "Hojitas de Menta fresca"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_pera.png",
+          "assets/images/icono_apio.png",
+          "assets/images/icono_agua.png",
+          "assets/images/icono_menta.png"
+        ],
+        "preparation": [
+          "- Lava y trocea la pera, las ramas de apio y la menta.",
+          "- Tritúralos con una licuadora.",
+          "- Añade el agua para ayudarte y obtener un batido diurético menos consistente."
+        ]
+      },
+      {
+        "id": 4.5,
+        "image_smoothie": "assets/images/pa_ba.png",
+        "name": "Batido de Papaya y Banana",
+        "ingredient_amount": [
+          "1 vaso",
+          "1/2 pza",
+          "1 rodaja"
+        ],
+        "ingredient_description": [
+          "de Agua",
+          "de Banana",
+          "de Papaya"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_agua.png",
+          "assets/images/icono_banana.png",
+          "assets/images/icono_papaya.png"
+        ],
+        "preparation": [
+          "- Retirale las semillas a la rodaja de papaya y córtala en varios trozos.",
+          "- A continuación, batéla en la licuadora con la banana y el vaso de agua.",
+          "- Procesa todo junto hasta que obtengas una bebida homogénea."
+        ]
+      },
+      {
+        "id": 4.6,
+        "image_smoothie": "assets/images/uva_aran.png",
+        "name": "Jugo de Uvas y Arándanos",
+        "ingredient_amount": [
+          "1 vaso",
+          "100 grs",
+          "100 grs"
+        ],
+        "ingredient_description": [
+          "de Agua",
+          "de Arándanos",
+          "de Uvas Negras"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_agua.png",
+          "assets/images/icono_arandano.png",
+          "assets/images/icono_uva.png"
+        ],
+        "preparation": [
+          "- Lava todas las frutas bajo un buen chorro de agua fría.",
+          "- Ahora, introdúcelas en el vaso de la licuadora o de cualquier robot de cocina útil para hacer batidos.",
+          "- Añade el agua y tritura hasta que quede bien mezclado."
+        ]
+      },
+      {
+        "id": 4.7,
+        "image_smoothie": "assets/images/na_za.png",
+        "name": "Jugo de Naranja y Zanahoria",
+        "ingredient_amount": [
+          "1 pza",
+          "1 pza",
+          "1/2 vaso"
+        ],
+        "ingredient_description": [
+          "de Naranja",
+          "de Zanahoria",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_zanahoria.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lava y retira la piel de la zanahoria. Después pela la naranja.",
+          "- Introduce los dos ingredientes en el vaso de la licuadora y añade el agua.",
+          "- Tritura bien para que quede combinado y con una textura más o menos lisa. Añade más liquido al gusto."
+        ]
+      },
+      {
+        "id": 4.8,
+        "image_smoothie": "assets/images/es_ki.png",
+        "name": "Batido de Espinacas y Kiwi",
+        "ingredient_amount": [
+          "1 pza",
+          "1/2 vaso",
+          "",
+          "Un puñado"
+        ],
+        "ingredient_description": [
+          "de Kiwi",
+          "de Agua",
+          "Zumo de medio Limón",
+          "de Espinacas"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_kiwi.png",
+          "assets/images/icono_agua.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_espinaca.png"
+        ],
+        "preparation": [
+          "- Empieza la elaboración lavando las espinacas, escurre un poco y colócalas en una licuadora.",
+          "- Pela el kiwi y vierte la pulpa junto con las espinacas. Después, exprime el zumo de medio limón.",
+          "- Ahora, licua todo junto durante un par de minutos. Corrige la textura con el agua."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name_category": "para la circulación",
+    "image_category": "assets/images/circulacion.png",
+    "recipes": [
+      {
+        "id": 5.1,
+        "image_smoothie": "assets/images/li_man_na.png",
+        "name": "Batido de Limón, Mango y Naranja",
+        "ingredient_amount": [
+          "1/2 pza",
+          "",
+          "1 pza"
+        ],
+        "ingredient_description": [
+          "de Mango grande",
+          "Jugo de un Limón",
+          "Naranja"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_mango.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_naranja.png"
+        ],
+        "preparation": [
+          "- Pela el mango y retira la pepa. Corta la pulpa y haz lo mismo con la naranja.",
+          "- Exprime el zumo de limón.",
+          "- Coloca todo en la licuadora y bate bien.",
+          "- Bebe de inmediato."
+        ]
+      },
+      {
+        "id": 5.2,
+        "image_smoothie": "assets/images/san_ce_pi.png",
+        "name": "Jugo de Sandía, Cerezas y Piña",
+        "ingredient_amount": [
+          "10 pzas",
+          "2 rodajas",
+          "1 rodaja",
+          "1 vaso"
+        ],
+        "ingredient_description": [
+          "de Cerezas",
+          "de Sandía",
+          "de Piña",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_cereza.png",
+          "assets/images/icono_sandia.png",
+          "assets/images/icono_pina.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Toma las cerezas y retirales todos los huesos.",
+          "- Retira las semillas de la sandía y cortala en trozos junto con la piña.",
+          "- Agrega todo a la licuadora junto con el agua y licua hasta que este bien incorporado y bebe."
+        ]
+      },
+      {
+        "id": 5.3,
+        "image_smoothie": "assets/images/re_na_pe.png",
+        "name": "Jugo de Remolacha, Naranja y Perejil",
+        "ingredient_amount": [
+          "1 pza",
+          "2 pzas",
+          "4 hojas",
+          "1 vaso"
+        ],
+        "ingredient_description": [
+          "de Remolacha",
+          "de Naranjas",
+          "de Perejil",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_remolacha.png",
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_perejil.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Quita la piel de la remolacha y de las naranjas.",
+          "- Corta en trozos y añade al vaso de la licuadora junto con el perejil.",
+          "- Licua todo, agrega el agua para obtener la consistencia que desees."
+        ]
+      },
+      {
+        "id": 5.4,
+        "image_smoothie": "assets/images/za_ap.png",
+        "name": "Jugo de Zanahoria con Apio",
+        "ingredient_amount": [
+          "1 pza",
+          "1 tallo",
+          "1 vaso"
+        ],
+        "ingredient_description": [
+          "de Zanahoria",
+          "de Apio",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_zanahoria.png",
+          "assets/images/icono_apio.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lavar bien la zanahoria y el apio, córtalos en rodajas y licualos hasta obtener una mezcla homogénea.",
+          "- Colócalo en un vaso con hielo y beber con cualquier comida del día, preferiblemente sin colar."
+        ]
+      },
+      {
+        "id": 5.5,
+        "image_smoothie": "assets/images/na_pe_pe_ma.png",
+        "name": "Jugo de Naranja, Pepino, Perejil y Mandarina",
+        "ingredient_amount": [
+          "1 pza",
+          "1 pza",
+          "1/2 pza",
+          "1 cdta"
+        ],
+        "ingredient_description": [
+          "de Naranja",
+          "de Mandarina",
+          "de Pepino con cáscara",
+          "de Perejil picado"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_mandarina.png",
+          "assets/images/icono_pepino.png",
+          "assets/images/icono_perejil.png"
+        ],
+        "preparation": [
+          "- Lavar bien el pepino y córtalo en rodajas.",
+          "- Pela la naranja y la mandarina y cortala en cubos.",
+          "- Se colocan todos los ingredientes en la licuadora y bate por 2 minutos o hasta obtener una mezcla homogénea.",
+          "- Agregalo a un vaso con hielo y beber sin colar."
+        ]
+      },
+      {
+        "id": 5.6,
+        "image_smoothie": "assets/images/pi_jen.png",
+        "name": "Batido de Piña y Jengibre",
+        "ingredient_amount": [
+          "1 rodaja",
+          "1cm",
+          "1 vaso",
+          ""
+        ],
+        "ingredient_description": [
+          "de Piña",
+          "de raíz de Jengibre",
+          "de Agua",
+          "Hielo a gusto"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_pina.png",
+          "assets/images/icono_jengibre.png",
+          "assets/images/icono_agua.png",
+          "assets/images/icono_hielo.png"
+        ],
+        "preparation": [
+          "- Licuar todos los ingredientes durante 2 minutos, ó  hasta que quede una mezcla homogénea.",
+          "- Agregar el batido a un vaso con hielo.",
+          "- Beber sin colar."
+        ]
+      },
+      {
+        "id": 5.7,
+        "image_smoothie": "assets/images/san_li.png",
+        "name": "Jugo de Sandía y Limón",
+        "ingredient_amount": [
+          "1 taza",
+          "",
+          "3/4 taza",
+          ""
+        ],
+        "ingredient_description": [
+          "de Sandía cortada en cubos",
+          "Jugo de un Limón",
+          "de Agua",
+          "Hielo a gusto"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_sandia.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_agua.png",
+          "assets/images/icono_hielo.png"
+        ],
+        "preparation": [
+          "- Coloca la sandía, el agua y el jugo de limón en una licuadora y bate durante 1 minuto.",
+          "- Agregar el jugo en un vaso con hielo y beber de inmediato."
+        ]
+      },
+      {
+        "id": 5.8,
+        "image_smoothie": "assets/images/mara_col.png",
+        "name": "Batido de Maracuyá con Col",
+        "ingredient_amount": [
+          "1 pza",
+          "1 hoja",
+          "1 vaso"
+        ],
+        "ingredient_description": [
+          "de Maracuyá",
+          "de Col",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_maracuya.png",
+          "assets/images/icono_col.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lavar y cortar la hoja de col en trozos.",
+          "- Coloca la pulpa de la maracuyá junto con la col en una licuadora.",
+          "- Licuar durante 2 o 3 minutos o hasta obtener una consistencia homogénea.",
+          "- Colocar el jugo en un vaso y beber, preferiblemente sin colar."
+        ]
+      },
+      {
+        "id": 5.9,
+        "image_smoothie": "assets/images/re_za.png",
+        "name": "Jugo de Remolacha con Zanahoria",
+        "ingredient_amount": [
+          "1 pza",
+          "2 pzas",
+          "1 pza",
+          "1 trozo",
+          "",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Remolacha",
+          "de Zanahorias",
+          "de Manzana Verde",
+          "pequeño de Jengibre",
+          "Jugo de medio Limón",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_remolacha.png",
+          "assets/images/icono_zanahoria.png",
+          "assets/images/icono_manzanaverde.png",
+          "assets/images/icono_jengibre.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lava y pela los ingredientes, en el caso de la manzana retira el corazón.",
+          "- Corta todo en trozos y ponlos en la licuadora junto con el jugo de limón.",
+          "- Licuar todo hasta obtener una mezcla homogénea.",
+          "- Puedes colar el jugo o tomarlo tal como está, y agregar hielo al gusto."
+        ]
+      },
+      {
+        "id": 5.11,
+        "image_smoothie": "assets/images/pi_es_ap.png",
+        "name": "Jugo de Piña, Espinaca y Apio",
+        "ingredient_amount": [
+          "1 taza",
+          "2 tazas",
+          "2 ramas",
+          "1 pza",
+          "",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Piña fresca",
+          "de Espinaca",
+          "de Apio",
+          "de Pepino",
+          "Jugo de medio Limón",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_pina.png",
+          "assets/images/icono_espinaca.png",
+          "assets/images/icono_apio.png",
+          "assets/images/icono_pepino.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lava, pela y pica la piña y el pepino.",
+          "- Lava bien la espinaca y el apio y córtalo en trozos.",
+          "- Licuar todos los ingredientes hasta obtener una mezcla homogénea.",
+          "- Sirve en un vaso, antes de hacerlo cuélalo si así lo prefieres."
+        ]
+      },
+      {
+        "id": 5.12,
+        "image_smoothie": "assets/images/na_gra_jen.png",
+        "name": "Jugo de Naranja, Granada y Jengibre",
+        "ingredient_amount": [
+          "2 pzas",
+          "1 pza",
+          "1 trozo",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Naranjas",
+          "de Granada",
+          "pequeño de Jengibre",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_granada.png",
+          "assets/images/icono_jengibre.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Exprime el zumo de las naranjas evitando las semillas.",
+          "- Retira las semillas de la granada.",
+          "- Pela el jengibre y pica el trozo pequeño.",
+          "- Licua todos los ingredientes con una taza de agua, hasta integrar todo por completo.",
+          "- Sirve en un vaso, puedes colar la mezcla si deseas."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name_category": "para mejorar la piel",
+    "image_category": "assets/images/piel.png",
+    "recipes": [
+      {
+        "id": 6.1,
+        "image_smoothie": "assets/images/uva_man.png",
+        "name": "Batido de Uva y Manzana",
+        "ingredient_amount": [
+          "10 pzas",
+          "1 pza",
+          "1 vaso",
+          "1/2 pza",
+          ""
+        ],
+        "ingredient_description": [
+          "de Uvas",
+          "de Manzana",
+          "de Agua",
+          "de Limón",
+          "Miel al gusto (Opcional)"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_uva.png",
+          "assets/images/icono_manzana.png",
+          "assets/images/icono_agua.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_miel.png"
+        ],
+        "preparation": [
+          "- Lava bien las uvas y corta la manzana en cubitos, previamente debes retirar el corazón de la manzana.",
+          "- Incorpora todos los ingredientes en la licuadora y bátelos por unos instantes.",
+          "- Cuando obtengas una bebida homogénea, sírvela sin colar.",
+          "- Consúmela al instante, ten en cuenta que la fruta se oxida con facilidad, por lo que dejarla mucho tiempo puede estropearla.",
+          "- Disfruta esta bebida en ayunas o a media mañana."
+        ]
+      },
+      {
+        "id": 6.2,
+        "image_smoothie": "assets/images/ki_na_es.png",
+        "name": "Batido de Kiwi, Naranja y Espinaca",
+        "ingredient_amount": [
+          "1 pza",
+          "1 vaso",
+          "1 puñado",
+          ""
+        ],
+        "ingredient_description": [
+          "de Kiwi",
+          "de zumo de Naranja",
+          "de Espinacas",
+          "Hielo al gusto"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_kiwi.png",
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_espinaca.png",
+          "assets/images/icono_hielo.png"
+        ],
+        "preparation": [
+          "- Pela el kiwi y córtalo en varios trozos.",
+          "- Luego, bate todo en la licuadora con el zumo de naranja, las espinacas y el hielo.",
+          "- Disfruta tan pronto como lo prepares."
+        ]
+      },
+      {
+        "id": 6.3,
+        "image_smoothie": "assets/images/fram_me.png",
+        "name": "Batido de Frambuesas y Melón",
+        "ingredient_amount": [
+          "200grs",
+          "2 rodajas",
+          "1 tallo",
+          "100ml"
+        ],
+        "ingredient_description": [
+          "de Frambuesas",
+          "de Melón",
+          "de Apio (Opcional)",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_frambuesa.png",
+          "assets/images/icono_melon.png",
+          "assets/images/icono_apio.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lava bien las frambuesas, y corta las rodajas de melón.",
+          "- Vierte todos los ingredientes en la licuadora y procósalos hasta obtener una bebida homogénea.",
+          "- Sírvelo al instante, sin colar."
+        ]
+      },
+      {
+        "id": 6.4,
+        "image_smoothie": "assets/images/ag_ba_jen.png",
+        "name": "Batido de Aguacate, Banana y Jengibre",
+        "ingredient_amount": [
+          "1 pza",
+          "1 pza",
+          "100ml",
+          "1 pizca"
+        ],
+        "ingredient_description": [
+          "de Banana troceada",
+          "de Aguacate troceado",
+          "de Agua de Coco",
+          "de Jengibre"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_banana.png",
+          "assets/images/icono_aguacate.png",
+          "assets/images/icono_coco.png",
+          "assets/images/icono_jengibre.png"
+        ],
+        "preparation": [
+          "- Pela y trocea la banana y el aguacate.",
+          "- Coloca las frutas en la licuadora y bátela con el agua de coco.",
+          "- Cuando este listo, agrégale la pizca de jengibre.",
+          "- Sirve bien frio y disfruta."
+        ]
+      },
+      {
+        "id": 6.5,
+        "image_smoothie": "assets/images/gua_na.png",
+        "name": "Batido de Guayaba y Naranja",
+        "ingredient_amount": [
+          "2 pzas",
+          "2 pzas",
+          "200ml"
+        ],
+        "ingredient_description": [
+          "de Guayabas Maduras",
+          "de Naranjas",
+          "de Leche de Coco"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_guayaba.png",
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_coco.png"
+        ],
+        "preparation": [
+          "- Pela bien ambas frutas. Luego, retira las semillas de las naranjas y elimina sus partes blancas.",
+          "- Ahora, pon las frutas troceadas en la licuadora con la leche de coco.",
+          "- Bate por unos instantes hasta obtener batidos cremosos homogéneos.",
+          "- Sírvela sin colar y disfruta."
+        ]
+      },
+      {
+        "id": 6.6,
+        "image_smoothie": "assets/images/mav_pe_ap.png",
+        "name": "Batido de Manzana Verde, Pepino y Apio",
+        "ingredient_amount": [
+          "1/2 pza",
+          "1 pza",
+          "1 tallo",
+          "1 vaso"
+        ],
+        "ingredient_description": [
+          "de Pepino",
+          "de Manzana Verde",
+          "de Apio",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_pepino.png",
+          "assets/images/icono_manzanaverde.png",
+          "assets/images/icono_apio.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Trocea el pepino y mételo en la licuadora con la manzaza, el apio y el agua.",
+          "- Procesa por unos instantes, hasta obtener una bebida homogénea.",
+          "- Consúmelo al instante."
+        ]
+      },
+      {
+        "id": 6.7,
+        "image_smoothie": "assets/images/pe_aran.png",
+        "name": "Batido de Pepino y Arándanos",
+        "ingredient_amount": [
+          "1/2 pza",
+          "100grs",
+          "1 puñado",
+          "200grs"
+        ],
+        "ingredient_description": [
+          "de Pepino",
+          "de Arándanos",
+          "de Espinaca",
+          "de Yogurt Griego"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_pepino.png",
+          "assets/images/icono_arandano.png",
+          "assets/images/icono_espinaca.png",
+          "assets/images/icono_yogurt.png"
+        ],
+        "preparation": [
+          "- Trocea el pepino y mételo en la licuadora con los arándanos, las espinacas y el yogurt.",
+          "- Procesa todo hasta obtener una bebida cremosa y homogénea.",
+          "- Sirve con hielo y disfruta."
+        ]
+      },
+      {
+        "id": 6.8,
+        "image_smoothie": "assets/images/man_ag.png",
+        "name": "Batido de Mango y Aguacate",
+        "ingredient_amount": [
+          "1/2 pza",
+          "1/2 pza",
+          "200grs",
+          ""
+        ],
+        "ingredient_description": [
+          "de Mango Maduro",
+          "de Aguacate Maduro",
+          "de Yogurt Griego",
+          "Hielo al gusto"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_mango.png",
+          "assets/images/icono_aguacate.png",
+          "assets/images/icono_yogurt.png",
+          "assets/images/icono_hielo.png"
+        ],
+        "preparation": [
+          "- Corta el mango maduro y el aguacate en cubos.",
+          "- Pon todo en la licuadora con el yogurt y el hielo.",
+          "- Procesa hasta conseguir un licuado cremoso y homogéneo."
+        ]
+      },
+      {
+        "id": 6.9,
+        "image_smoothie": "assets/images/fruro_col.png",
+        "name": "Batido de Frutos Rojos y Col Rizada",
+        "ingredient_amount": [
+          "100grs",
+          "100grs",
+          "50grs",
+          "1 pza",
+          "1 hoja",
+          "1/2 vaso"
+        ],
+        "ingredient_description": [
+          "de Fresas",
+          "de Frambuesas",
+          "de Arándanos",
+          "de Banana",
+          "de Col",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_fresa.png",
+          "assets/images/icono_frambuesa.png",
+          "assets/images/icono_arandano.png",
+          "assets/images/icono_banana.png",
+          "assets/images/icono_col.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lavar bien los frutos rojos y bátelos en la licuadora con el resto de los ingredientes.",
+          "- Asegurate de procesar hasta que todo quede bien integrado.",
+          "- Consúmelo al instante."
+        ]
+      },
+      {
+        "id": 6.11,
+        "image_smoothie": "assets/images/ba_te_pi.png",
+        "name": "Batido de Banana, Té Verde y Piña",
+        "ingredient_amount": [
+          "2 pzas",
+          "2 cdtas",
+          "1 vaso",
+          "1/2 taza",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Bananas Maduras",
+          "de Té Verde en polvo",
+          "de Leche de Coco",
+          "de Piña Madura Picada",
+          "de Espinaca"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_banana.png",
+          "assets/images/icono_teverde.png",
+          "assets/images/icono_coco.png",
+          "assets/images/icono_pina.png",
+          "assets/images/icono_espinaca.png"
+        ],
+        "preparation": [
+          "- Trocea las bananas maduras y la piña.",
+          "- Lava las espinacas y lleva todos los ingredientes al vaso de la licuadora.",
+          "- Bate por un par de minutos, hasta que todo quede bien integrado.",
+          "- Sírvelo y disfruta al instante."
+        ]
+      },
+      {
+        "id": 6.12,
+        "image_smoothie": "assets/images/za_jen_cur.png",
+        "name": "Batido de Zanahoria, Jengibre y Cúrcuma",
+        "ingredient_amount": [
+          "1 vaso",
+          "1 pza",
+          "1/2 taza",
+          "5grs",
+          "1gr",
+          "1 cda"
+        ],
+        "ingredient_description": [
+          "de Leche de Coco",
+          "de Banana congelada",
+          "de Zumo de Zanahoria",
+          "de Jengibre fresco rallado",
+          "de Cúrcuma molida",
+          "de Zumo de Limón"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_coco.png",
+          "assets/images/icono_banana.png",
+          "assets/images/icono_zanahoria.png",
+          "assets/images/icono_jengibre.png",
+          "assets/images/icono_curcuma.png",
+          "assets/images/icono_limon.png"
+        ],
+        "preparation": [
+          "- Trocea la banana congelada y ponla en la licuadora con el resto de los ingredientes, excepto el limón.",
+          "- Bate por unos instantes hasta obtener una bebida cremosa y homogénea.",
+          "- Si desea, al servir, agrégale el limón para darle un toque cítrico.",
+          "- Consúmelo al instante."
+        ]
+      },
+      {
+        "id": 6.13,
+        "image_smoothie": "assets/images/alo_ki_ba.png",
+        "name": "Batido de Aloe Vera, Kiwi y Banana",
+        "ingredient_amount": [
+          "50grs",
+          "1 pza",
+          "2 pzas",
+          "500ml"
+        ],
+        "ingredient_description": [
+          "de gel de Aloe Vera",
+          "de Banana",
+          "de Kiwis pelados",
+          "de Agua de coco"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_aloe.png",
+          "assets/images/icono_banana.png",
+          "assets/images/icono_kiwi.png",
+          "assets/images/icono_coco.png"
+        ],
+        "preparation": [
+          "- Vierte el gel del aloe vera, la banana troceada y los kiwis pelados y cortados en la licuadora.",
+          "- Agrega el agua de coco y bate por unos instantes.",
+          "- Cuando esté todo integrado sírvelo sin colar.",
+          "",
+          "Nota: Antes de extraer el aloe vera, recuerda poner la hoja de la planta en remojo en una jarra con agua para drenar su aloina."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name_category": "para aumentar masa muscular",
+    "image_category": "assets/images/musculo.png",
+    "recipes": [
+      {
+        "id": 7.1,
+        "image_smoothie": "assets/images/pro_man_chia.png",
+        "name": "Batido de Proteína con Mango y Chía",
+        "ingredient_amount": [
+          "1 taza",
+          "1 cda",
+          "1 medida",
+          "1 taza",
+          "1/2 taza",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Mango fresco en cubos",
+          "de Semillas de Chía",
+          "de Proteína en Polvo",
+          "de Leche",
+          "de Yogurt griego",
+          "de Hielo"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_mango.png",
+          "assets/images/icono_chia.png",
+          "assets/images/icono_proteina.png",
+          "assets/images/icono_leche.png",
+          "assets/images/icono_yogurt.png",
+          "assets/images/icono_hielo.png"
+        ],
+        "preparation": [
+          "- Coloca todos los ingredientes en una licuadora.",
+          "- Licua hasta obtener una mezcla suave y sin grumos.",
+          "- Sirve y consume inmediatamente, después del entrenamiento."
+        ]
+      },
+      {
+        "id": 7.2,
+        "image_smoothie": "assets/images/ba_ave.png",
+        "name": "Batido de Banana y Avena",
+        "ingredient_amount": [
+          "2 pzas",
+          "500ml",
+          "3 cdas",
+          "5 pzas"
+        ],
+        "ingredient_description": [
+          "de Bananas",
+          "de Leche",
+          "de Avena",
+          "de Huevos cocidos (5 claras y 2 yemas)"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_banana.png",
+          "assets/images/icono_leche.png",
+          "assets/images/icono_avena.png",
+          "assets/images/icono_huevo.png"
+        ],
+        "preparation": [
+          "- Coloca todos los ingredientes en una licuadora.",
+          "- Licua hasta que desaparezcan los grumos, dejando una textura homogénea y uniforme, agradable al paladar.",
+          "- Tómalo a temperatura ambiente o con hielo para refrescarte después de cada entrenamiento."
+        ]
+      },
+      {
+        "id": 7.3,
+        "image_smoothie": "assets/images/pro_cho_al.png",
+        "name": "Batido de Proteína, Chocolate y Almendras",
+        "ingredient_amount": [
+          "1 taza",
+          "1 medida",
+          "1/2"
+        ],
+        "ingredient_description": [
+          "de leche",
+          "de Proteína en Polvo",
+          "Brownie de chocolate con almendras"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_leche.png",
+          "assets/images/icono_proteina.png",
+          "assets/images/icono_chocolate.png"
+        ],
+        "preparation": [
+          "- Utiliza una licuadora para mezclar todos los ingredientes.",
+          "- Consigue una textura homogénea.",
+          "- Bébelo previamente al inicio de tus entrenamientos."
+        ]
+      },
+      {
+        "id": 7.4,
+        "image_smoothie": "assets/images/pro_ave.png",
+        "name": "Batido de Proteína y Avena",
+        "ingredient_amount": [
+          "500ml",
+          "60grs",
+          "1 medida",
+          "15 grs",
+          "1 cda"
+        ],
+        "ingredient_description": [
+          "de Leche",
+          "de Avena",
+          "de Proteína en Polvo",
+          "de Germen de Trigo",
+          "de Miel"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_leche.png",
+          "assets/images/icono_avena.png",
+          "assets/images/icono_proteina.png",
+          "assets/images/icono_germen.png",
+          "assets/images/icono_miel.png"
+        ],
+        "preparation": [
+          "- Vierte todos los ingredientes en una licuadora.",
+          "- Mezcla hasta conseguir una textura agradable para ti.",
+          "- Bebe de inmediato."
+        ]
+      },
+      {
+        "id": 7.5,
+        "image_smoothie": "assets/images/nue_ba.png",
+        "name": "Batido de Nueces y Banana",
+        "ingredient_amount": [
+          "1 taza",
+          "1/2 taza",
+          "1/4 taza",
+          "3 pzas",
+          "50grs",
+          "1 pza"
+        ],
+        "ingredient_description": [
+          "de Leche",
+          "de Agua",
+          "de Yogurt griego",
+          "de Claras de Huevo cocido",
+          "de Nueces",
+          "de Banana"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_leche.png",
+          "assets/images/icono_agua.png",
+          "assets/images/icono_yogurt.png",
+          "assets/images/icono_huevo.png",
+          "assets/images/icono_nuez.png",
+          "assets/images/icono_banana.png"
+        ],
+        "preparation": [
+          "- Agrega todos los ingredientes a una licuadora.",
+          "- Mezcla todo hasta que quede homogéneo.",
+          "- Puedes agregarle hielo si deseas.",
+          "- Bébelo después del entrenamiento para refrescarte."
+        ]
+      },
+      {
+        "id": 7.6,
+        "image_smoothie": "assets/images/melo_pro.png",
+        "name": "Batido de Proteína con Melocotón",
+        "ingredient_amount": [
+          "2 tazas",
+          "1/4 taza",
+          "1/2 taza",
+          "1 medida"
+        ],
+        "ingredient_description": [
+          "de Melocotones troceados",
+          "de Yogurt griego",
+          "de Zumo de Naranja",
+          "de Proteína en Polvo"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_melocoton.png",
+          "assets/images/icono_yogurt.png",
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_proteina.png"
+        ],
+        "preparation": [
+          "- Coloca todos los ingredientes en una licuadora.",
+          "- Licua todo hasta que quede completamente homogéneo.",
+          "- Bebe de inmediato después de cada entrenamiento."
+        ]
+      },
+      {
+        "id": 7.7,
+        "image_smoothie": "assets/images/hue_ave.png",
+        "name": "Batido de Huevo y Avena",
+        "ingredient_amount": [
+          "1 litro",
+          "3 pzas",
+          "3 cdas",
+          "1 pza"
+        ],
+        "ingredient_description": [
+          "de Leche",
+          "de Claras de Huevo cocido",
+          "de Avena",
+          "de Banana"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_leche.png",
+          "assets/images/icono_huevo.png",
+          "assets/images/icono_avena.png",
+          "assets/images/icono_banana.png"
+        ],
+        "preparation": [
+          "- Agrega los ingredientes a una licuadora.",
+          "- Bate todo hasta que este bien integrado y homogéneo.",
+          "- Puedes agregarle hielo si deseas.",
+          "- Bébelo de inmediato cada vez que realices un entrenamiento."
+        ]
+      },
+      {
+        "id": 7.8,
+        "image_smoothie": "assets/images/pro_fruro.png",
+        "name": "Batido de Proteína y Frutos Rojos",
+        "ingredient_amount": [
+          "1 taza",
+          "1 cda",
+          "1 medida",
+          "1 taza",
+          "1 cda",
+          ""
+        ],
+        "ingredient_description": [
+          "de Frutos Rojos (fresas,arándanos, frambuesas o moras)",
+          "de Semillas de Chía",
+          "de Proteína en Polvo",
+          "de Leche",
+          "de Miel (Opcional)",
+          "Hielo al gusto"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_frutosrojos.png",
+          "assets/images/icono_chia.png",
+          "assets/images/icono_proteina.png",
+          "assets/images/icono_leche.png",
+          "assets/images/icono_miel.png",
+          "assets/images/icono_hielo.png"
+        ],
+        "preparation": [
+          "- Combina los frutos rojos, la leche, la proteína en polvo y las semillas de chía en una licuadora.",
+          "- Agrega el hielo y la miel si lo deseas.",
+          "- Licua hasta obtener una textura suave y homogénea.",
+          "- Sirve de inmediato y disfruta."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name_category": "para bajar la grasa abdominal",
+    "image_category": "assets/images/grasa.png",
+    "recipes": [
+      {
+        "id": 8.1,
+        "image_smoothie": "assets/images/fram_man_na.png",
+        "name": "Jugo de Frambuesa, Manzana y Naranja",
+        "ingredient_amount": [
+          "20 pzas",
+          "1 pza",
+          "3 pzas",
+          "1/2 vaso"
+        ],
+        "ingredient_description": [
+          "de Frambuesas",
+          "de Manzana Verde",
+          "de Naranjas",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_frambuesa.png",
+          "assets/images/icono_manzanaverde.png",
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Pela la manzana y troceala.",
+          "- Añade la manzana y las frambuesas al vaso de la licuadora y tritura todo.",
+          "- Exprime las naranjas, cuela el jugo, agrégalo a la licuadora y sigue licuando.",
+          "- Si lo consideras necesario, vierte un poco de agua.",
+          "- Cuela el jugo para retirar las semillas de las frambuesas y listo.",
+          "- Tomar en ayunas durante una semana. Acompañar de una dieta saludable."
+        ]
+      },
+      {
+        "id": 8.2,
+        "image_smoothie": "assets/images/za_mave.png",
+        "name": "Jugo de Zanahoria y Manzana Verde",
+        "ingredient_amount": [
+          "4 pzas",
+          "2 pzas",
+          "1 puñado",
+          "1 pza",
+          ""
+        ],
+        "ingredient_description": [
+          "de Zanahoria",
+          "de Manzana Verde",
+          "de Hojas de Espinaca",
+          "de Limón (Opcional)",
+          "Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_zanahoria.png",
+          "assets/images/icono_manzanaverde.png",
+          "assets/images/icono_espinaca.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lava, pela las zanahoria y trocealas.",
+          "- Lava bien las manzanas y córtalas. Puedes dejar la piel o no puesto que es beneficiosa para el organismo.",
+          "- Lava las espinacas minuciosamente.",
+          "- Introduce todo en el vaso de la licuadora y tritura. Si quieres, también puedes añadir el jugo de un limón.",
+          "- Añade la cantidad de agua necesaria y para tomar el jugo bien frio un poco de hielo picado.",
+          "- Consumir un vaso en ayunas durante una o dos semanas."
+        ]
+      },
+      {
+        "id": 8.3,
+        "image_smoothie": "assets/images/me_ki.png",
+        "name": "Jugo de Melón y kiwi",
+        "ingredient_amount": [
+          "1/2 pza",
+          "3 pzas",
+          "1/2 pza",
+          "2 vasos"
+        ],
+        "ingredient_description": [
+          "de Melón",
+          "de Kiwis bien maduros",
+          "de Limón",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_melon.png",
+          "assets/images/icono_kiwi.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Pela los kiwis y córtalos en rodajas.",
+          "- Retira las semillas del melón y la cáscara y trocea la pulpa.",
+          "- Añade las frutas a un vaso de licuadora, exprime el limón y vierte su jugo y licua bien.",
+          "- Agrega la cantidad de agua necesaria y sirve frío.",
+          "- Consumir cada mañana en ayunas durante una o dos semanas y beber en cantidades mas pequeñas entre horas con la finalidad de saciarnos."
+        ]
+      },
+      {
+        "id": 8.4,
+        "image_smoothie": "assets/images/aran_pi.png",
+        "name": "Jugo de Arándanos y Piña",
+        "ingredient_amount": [
+          "1/2 taza",
+          "1 rodaja",
+          "1 pza",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Arándanos",
+          "de Piña",
+          "de Naranja",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_arandano.png",
+          "assets/images/icono_pina.png",
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Exprime la naranja y reserva el jugo un momento.",
+          "- Corta la piña y lava bien los arándanos.",
+          "- Introduce los ingredientes anteriores en el vaso de la licuadora y tritura todo.",
+          "- Añade el agua y si quieres hielo picado.",
+          "- Consumir dos vasos diarios. Uno en ayunas y otro media hora antes del almuerzo.",
+          "- Mantener una dieta saludable."
+        ]
+      },
+      {
+        "id": 8.5,
+        "image_smoothie": "assets/images/li_pe.png",
+        "name": "Jugo de Limón y Perejil",
+        "ingredient_amount": [
+          "2 pzas",
+          "1 manojo",
+          "1 vaso"
+        ],
+        "ingredient_description": [
+          "de Limones",
+          "de Perejil",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_limon.png",
+          "assets/images/icono_perejil.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Exprime el zumo de los limones e introdúcelo en la licuadora.",
+          "- Lava el perejil y añádelo al vaso de de la licuadora.",
+          "- Tritura y agrega la cantidad de agua necesaria y hielo.",
+          "- Consume en ayunas y espera media hora para proceder a desayunar de forma saludable y equilibrada."
+        ]
+      },
+      {
+        "id": 8.6,
+        "image_smoothie": "assets/images/na_za_jen.png",
+        "name": "Jugo de Naranja, Zanahoria y Jengibre",
+        "ingredient_amount": [
+          "2 pzas",
+          "2 pzas",
+          "1 trozo",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Naranja",
+          "de Zanahorias",
+          "de Jengibre",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_zanahoria.png",
+          "assets/images/icono_jengibre.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lavar y pelar bien las zanahorias.",
+          "- Lavar y pelar las naranjas y cortarlas en trozos. Evitar las semillas.",
+          "- Pelar el jengibre y cortar un trozo pequeño.",
+          "- Llevar a la licuadora junto con la taza de agua y licuar por 2 o 3 minutos, o hasta tener una mezcla homogénea.",
+          "- Servir en un vaso y beber.",
+          "- Se puede colar o tomar así para aprovechar la fibra.",
+          "- Consume un vaso a media mañana y otro durante la tarde en un plazo máximo de 10 días seguidos."
+        ]
+      },
+      {
+        "id": 8.7,
+        "image_smoothie": "assets/images/fre_re_jen.png",
+        "name": "Jugo de Fresa, Remolacha y Jengibre",
+        "ingredient_amount": [
+          "15 pzas",
+          "1 pza",
+          "1/2 cdta",
+          "2 tazas"
+        ],
+        "ingredient_description": [
+          "de Fresas",
+          "de Remolacha cocida",
+          "de Jengibre fresco",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_fresa.png",
+          "assets/images/icono_remolacha.png",
+          "assets/images/icono_jengibre.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lavar las fresas y trocéalas.",
+          "- Corta la remolacha, añádela a la licuadora y agrega las fresas.",
+          "- Incorpora el jengibre pelado, troceado y tritura.",
+          "- Vierte el agua y sigue licuando.",
+          "- Consúmelo en ayunas, manten una dieta equilibrada."
+        ]
+      },
+      {
+        "id": 8.8,
+        "image_smoothie": "assets/images/uva_vi.png",
+        "name": "Jugo de Uva y Vinagre de Manzana",
+        "ingredient_amount": [
+          "200grs",
+          "1 cda",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Uvas frescas (rojas o verdes)",
+          "de Vinagre de Manzana",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_uva.png",
+          "assets/images/icono_vinagre.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lava las uvas e introdúcelas en la licuadora.",
+          "- Añade el vinagre y licua.",
+          "- Agrega el agua, sigue licuando y cuela el jugo para retirar el resto de las semillas de las uvas.",
+          "- Consumir 3 vasos de este jugo durante 7 días, el primero en ayunas y el resto media hora antes de cada comida."
+        ]
+      },
+      {
+        "id": 8.9,
+        "image_smoothie": "assets/images/pi_mave_chia.png",
+        "name": "Jugo de Piña, Manzana Verde y Chía",
+        "ingredient_amount": [
+          "1 pza",
+          "5 cdtas",
+          "3 pzas",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Piña",
+          "de semillas de Chía",
+          "de Manzanas Verdes",
+          "de Agua o de Jugo de Naranja"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_pina.png",
+          "assets/images/icono_chia.png",
+          "assets/images/icono_manzanaverde.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Pela la piña, retira el corazón y córtalo en rodajas.",
+          "- Lava las manzanas y trocéalas y añadelas a la licuadora junto con la piña.",
+          "- Tritura y vierte el jugo de naranja o el agua.",
+          "- Añade la chía y mezcla.",
+          "- Consumir en ayunas media hora antes de desayunar."
+        ]
+      },
+      {
+        "id": 8.11,
+        "image_smoothie": "assets/images/pi_ap.png",
+        "name": "Jugo de Piña y Apio",
+        "ingredient_amount": [
+          "5 tallos",
+          "3 rodajas",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Apio",
+          "de Piña",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_apio.png",
+          "assets/images/icono_pina.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lavar el apio y córtalo en rodajas",
+          "- Trocea la piña y añádela al vaso de la licuadora.",
+          "- Incorpora el apio y tritura todo.",
+          "- Agrega la cantidad de agua necesaria y de hielo para servir el jugo bien frío.",
+          "- Consumir en ayunas 3 días a la semana."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name_category": "para el dolor de cabeza",
+    "image_category": "assets/images/hurtshead.png",
+    "recipes": [
+      {
+        "id": 9.1,
+        "image_smoothie": "assets/images/pe_ma.png",
+        "name": "Jugo de Pera y Manzana",
+        "ingredient_amount": [
+          "1 pza",
+          "1 pza",
+          "Una pizca",
+          "1 cda",
+          "1/2 vaso",
+          ""
+        ],
+        "ingredient_description": [
+          "de Manzana",
+          "de Pera",
+          "de Canela",
+          "de Levadura de Cerveza",
+          "de Agua",
+          "Hielo al gusto"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_manzana.png",
+          "assets/images/icono_pera.png",
+          "assets/images/icono_canela.png",
+          "assets/images/icono_levacerveza.png",
+          "assets/images/icono_agua.png",
+          "assets/images/icono_hielo.png"
+        ],
+        "preparation": [
+          "- Lavar bien las frutas, pelarlas y añadirlas a una licuadora.",
+          "- Se añade la levadura de cerveza y una pizca de canela.",
+          "- Luego añade el agua y sirve con hielo al gusto.",
+          "- Bébelo lentamente, el jugo refresca y alivia el dolor."
+        ]
+      },
+      {
+        "id": 9.2,
+        "image_smoothie": "assets/images/man_fre.png",
+        "name": "Jugo de Mango, Fresa y Sandía",
+        "ingredient_amount": [
+          "5 pzas",
+          "1 rodaja",
+          "1 pza",
+          "2 pzas",
+          "1/2 vaso"
+        ],
+        "ingredient_description": [
+          "de Fresas",
+          "de Sandía",
+          "de Mango de tamaño mediano",
+          "de Nueces",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_fresa.png",
+          "assets/images/icono_sandia.png",
+          "assets/images/icono_mango.png",
+          "assets/images/icono_nuez.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Empieza por moler las nueces, luego se lavan y se cortan las frutas en pequeños trozos.",
+          "- Se ponen las fresas, la sandía, el mango y las nueces molidas en la licuadora.",
+          "- Añade el agua y licua hasta obtener una bebida homogénea.",
+          "- Si deseas puedes añadir una cucharada de miel.",
+          "- Estos ingredientes alivian el malestar y evitan los vértigos."
+        ]
+      },
+      {
+        "id": 9.3,
+        "image_smoothie": "assets/images/zanahoria.png",
+        "name": "Jugo de Zanahoria",
+        "ingredient_amount": [
+          "2 pzas",
+          "1 rama",
+          "2 pzas",
+          "1/2 pza"
+        ],
+        "ingredient_description": [
+          "de Zanahoria",
+          "de Apio",
+          "de Naranja",
+          "de Limón"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_zanahoria.png",
+          "assets/images/icono_apio.png",
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_limon.png"
+        ],
+        "preparation": [
+          "- Se lavan bien las zanahorias y el apio, se exprimen las naranjas y el medio limón.",
+          "- Finalmente se ponen los ingredientes en la licuadora y se mezcla bien para que quede homogéneo.",
+          "- Enseguida se percibe su aroma, su frescura por lo que resulta un remedio purificador y relajante a la vez."
+        ]
+      },
+      {
+        "id": 9.4,
+        "image_smoothie": "assets/images/pe_man.png",
+        "name": "Jugo de Pepino, Manzana Verde y Jengibre",
+        "ingredient_amount": [
+          "1 pza",
+          "2 cms",
+          "1 pza",
+          "1 tallo",
+          "1/2 vaso"
+        ],
+        "ingredient_description": [
+          "de Manzana Verde",
+          "de Jengibre",
+          "de Pepino",
+          "de Apio",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_manzanaverde.png",
+          "assets/images/icono_jengibre.png",
+          "assets/images/icono_pepino.png",
+          "assets/images/icono_apio.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Se lavan bien todos los ingredientes.",
+          "- Se cortan en trozos y se llevan a la licuadora con el agua, preferiblemente fría.",
+          "- Se licua de 2 a 3 min o hasta que quede una mezcla homogénea.",
+          "- Servir en un vaso y consumir inmediatamente."
+        ]
+      },
+      {
+        "id": 9.5,
+        "image_smoothie": "assets/images/za_me_pe.png",
+        "name": "Jugo de Zanahoria, Melón y Pepino",
+        "ingredient_amount": [
+          "1 taza",
+          "2 pzas",
+          "",
+          "1 pza",
+          "1/2 taza"
+        ],
+        "ingredient_description": [
+          "de Melón cortado",
+          "de Zanahorias picadas en trozos",
+          "Jugo de un Limón",
+          "de Pepino",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_melon.png",
+          "assets/images/icono_zanahoria.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_pepino.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lavar todos los ingredientes, picarlos en trozos y llevar a la licuadora junto con el jugo de limón y el agua.",
+          "- Licuar hasta obtener una mezcla homogénea.",
+          "- Servir en un vaso y beber enseguida pero lentamente, preferiblemente frío."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name_category": "para personas con diabetes",
+    "image_category": "assets/images/diabetes.png",
+    "recipes": [
+      {
+        "id": 10.1,
+        "image_smoothie": "assets/images/na_ara_jen.png",
+        "name": "Jugo de Naranja, Arándanos y Jengibre",
+        "ingredient_amount": [
+          "2 pzas",
+          "1/2 taza",
+          "1/2 taza",
+          "1 cdta",
+          "1/2 taza"
+        ],
+        "ingredient_description": [
+          "de Naranja",
+          "de Leche descremada o deslactosada",
+          "de Arándanos",
+          "de Jengibre rallado"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_leche.png",
+          "assets/images/icono_arandano.png",
+          "assets/images/icono_jengibre.png"
+        ],
+        "preparation": [
+          "- Primero, extrae el zumo de las dos naranjas con ayuda de un exprimidor.",
+          "- Es mejor si conservas sus fibras",
+          "- Vierte el zumo en la licuadora con los arándanos, el jengibre y la leche.",
+          "- Licua todo hasta conseguir una mezcla homogénea y sin grumos.",
+          "- Puedes llevarlo al refrigerador o agregar hielo antes de consumirlo.",
+          "- Consume máximo una vez al día. Consulta antes con tu médico tratante."
+        ]
+      },
+      {
+        "id": 10.2,
+        "image_smoothie": "assets/images/pa_fre.png",
+        "name": "Batido de Papaya y Fresas",
+        "ingredient_amount": [
+          "150grs",
+          "50grs",
+          "20grs",
+          "1/2 taza"
+        ],
+        "ingredient_description": [
+          "de Papaya",
+          "de Yogurt Griego",
+          "de Fresas Maduras",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_papaya.png",
+          "assets/images/icono_yogurt.png",
+          "assets/images/icono_fresa.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Pela la papaya y córtala en rodajas no demasiado gruesas.",
+          "- Además lava y escurre bien las fresas.",
+          "- Una vez que tengas los ingredientes introdúcelos en el vaso de la licuadora.",
+          "- Bate todo durante un par de minutos hasta que quede bien integrado.",
+          "- Puedes consumir el batido como parte de tu desayuno, te recomendamos beberlo una vez al día.",
+          "- Consulta con tu médico tratante.",
+          "NOTA: Elige un yogurt que sea bajo en grasa y no contenga azúcar añadida. Puedes reemplazarlo por leche descremada o agua si prefieres un batido con menos calorias."
+        ]
+      },
+      {
+        "id": 10.3,
+        "image_smoothie": "assets/images/es_manver.png",
+        "name": "Batido de Espinaca, Manzana Verde y Pepino",
+        "ingredient_amount": [
+          "1 taza",
+          "1 pza",
+          "1 pza",
+          "1 vaso"
+        ],
+        "ingredient_description": [
+          "de Espinacas frescas",
+          "de Manzana verde",
+          "de Pepino",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_espinaca.png",
+          "assets/images/icono_manzanaverde.png",
+          "assets/images/icono_pepino.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lavar bien las espinacas, la manzana y el pepino.",
+          "- Cortar todos los ingredientes en trozos.",
+          "- Colocar los ingredientes en la licuadora junto con el agua.",
+          "- Licuar hasta obtener una mezcla homogénea.",
+          "- Colar el jugo si se desea una textura mas suave o consumir tal cual para aprovechar la fibra.",
+          "- Servir y consumir inmediatamente para aprovechar al máximo los nutrientes.",
+          "- Puedes tomarlo de 2 a 3 veces por semana. Consulta con tu médico tratante."
+        ]
+      },
+      {
+        "id": 10.4,
+        "image_smoothie": "assets/images/man_to_pe.png",
+        "name": "Batido de Manzana Verde, Tomate y Perejil",
+        "ingredient_amount": [
+          "1 pza",
+          "1 puñado",
+          "1/2 vaso",
+          "2 pzas"
+        ],
+        "ingredient_description": [
+          "de Manzana Verde",
+          "de Ramas de Perejil",
+          "de Agua",
+          "de Tomate Maduro"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_manzanaverde.png",
+          "assets/images/icono_perejil.png",
+          "assets/images/icono_agua.png",
+          "assets/images/icono_tomate.png"
+        ],
+        "preparation": [
+          "- Lava, escurre, y corta las rodajas de manzana y los tomates. No les quites la piel.",
+          "- Quita el corazón a las manzanas.",
+          "- Luego, lava, escurre y pica de manera fina el perejil.",
+          "- Lleva todos los ingredientes a la licuadora y procésalos.",
+          "- Bebe al momento, puedes tomarlo 3 veces por semana.",
+          "- Consulta antes con tu médico tratante."
+        ]
+      },
+      {
+        "id": 10.5,
+        "image_smoothie": "assets/images/ki_man_es.png",
+        "name": "Batido de Kiwi, Manzana Verde y Espinaca",
+        "ingredient_amount": [
+          "25grs",
+          "1 pza",
+          "1 pza",
+          "1 vaso"
+        ],
+        "ingredient_description": [
+          "de Espinacas frescas",
+          "de Manzana verde",
+          "de Kiwi Maduro",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_espinaca.png",
+          "assets/images/icono_manzanaverde.png",
+          "assets/images/icono_kiwi.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Pela el kiwi y córtalo en rodajas.",
+          "- Lava y pica la manzana en julianas, retira el corazón pero no la piel.",
+          "- Lleva todos los ingredientes a la licuadora y procesa hasta integrarlo todo.",
+          "- Una vez listo, dejalo enfríar y consumir 2 a 3 veces por semana.",
+          "- Consulta con tu médico tratante."
+        ]
+      },
+      {
+        "id": 10.6,
+        "image_smoothie": "assets/images/ave_fram.png",
+        "name": "Batido de Avena y Frambuesas",
+        "ingredient_amount": [
+          "50grs",
+          "40grs",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Frambuesas",
+          "de copos de Avena",
+          "de Leche Descremada"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_frambuesa.png",
+          "assets/images/icono_avena.png",
+          "assets/images/icono_leche.png"
+        ],
+        "preparation": [
+          "- Lavar las frambuesas y colocarlas en la licuadora.",
+          "- Agrega la avena y la leche.",
+          "- Mezcla hasta que esté bien integrado todo.",
+          "- Consume bien frío una vez al día.",
+          "- Consulta con tu médico tratante."
+        ]
+      },
+      {
+        "id": 10.7,
+        "image_smoothie": "assets/images/ver_za.png",
+        "name": "Batido Verde con Zanahoria",
+        "ingredient_amount": [
+          "30grs",
+          "40grs",
+          "20grs",
+          "50grs",
+          "20grs",
+          "1/2 vaso"
+        ],
+        "ingredient_description": [
+          "de Apio",
+          "de Manzana Verde",
+          "de Pepino",
+          "de Espinaca",
+          "de Zanahoria",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_apio.png",
+          "assets/images/icono_manzanaverde.png",
+          "assets/images/icono_pepino.png",
+          "assets/images/icono_espinaca.png",
+          "assets/images/icono_zanahoria.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Comienza por lavar y trocear todos los ingredientes.",
+          "- Después, colócalos en una licuadora y procesa hasta obtener una bebida sin grumos.",
+          "- Bebe cuando este frío, 2 veces por semana.",
+          "- Consulta con tu médico tratante."
+        ]
+      },
+      {
+        "id": 10.8,
+        "image_smoothie": "assets/images/ki_ba_man.png",
+        "name": "Batido de Kiwi, Banana y Manzana Verde",
+        "ingredient_amount": [
+          "1 pza",
+          "50grs",
+          "1 pza",
+          "1/2 vaso"
+        ],
+        "ingredient_description": [
+          "de Kiwi",
+          "de Banana",
+          "de Manzana Verde o Amarilla",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_kiwi.png",
+          "assets/images/icono_banana.png",
+          "assets/images/icono_manzanaverde.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Primero lava y trocea las manzanas.",
+          "- Enseguida pela el kiwi y la banana, también córtalos en pequeños trozos.",
+          "- Coloca todos los ingredientes en una licuadora y procesa hasta que no hayan pedazos grandes de frutas.",
+          "- Disfruta esta bebida una vez por semana.",
+          "- Consulta con tu médico tratante."
+        ]
+      },
+      {
+        "id": 10.9,
+        "image_smoothie": "assets/images/nopal.png",
+        "name": "Batido de Nopal",
+        "ingredient_amount": [
+          "1 penca",
+          "",
+          "1 vaso"
+        ],
+        "ingredient_description": [
+          "de Nopal",
+          "Jugo de medio Limón",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_nopal.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Para realizar este licuado, primero lava el nopal, quítale las espinas y córtalo en trozos.",
+          "- Colócalo en una licuadora, suma el jugo de limón y el agua.",
+          "- Por último procesa todo muy bien antes de consumir. Puedes beber 1 vaso al día.",
+          "- Consulta con tu médico tratante."
+        ]
+      },
+      {
+        "id": 10.11,
+        "image_smoothie": "assets/images/granada.png",
+        "name": "Batido de Granada",
+        "ingredient_amount": [
+          "3 pzas"
+        ],
+        "ingredient_description": [
+          "de Granada"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_granada.png"
+        ],
+        "preparation": [
+          "- Primero parte las granadas a la mitad.",
+          "- Luego, con ayuda de un exprimidor extrae su jugo hasta llenar un vaso.",
+          "- Por último bebe, 1 vaso al día.",
+          "- Consulta con tu médico tratante."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name_category": "para la hipertensión",
+    "image_category": "assets/images/hipertension.png",
+    "recipes": [
+      {
+        "id": 11.1,
+        "image_smoothie": "assets/images/to_pe_za.png",
+        "name": "Batido de Tomate, Pepino y Zanahoria",
+        "ingredient_amount": [
+          "1 pza",
+          "2 pzas",
+          "1 pza",
+          "Un puñado",
+          "1/2 vaso"
+        ],
+        "ingredient_description": [
+          "de Pepino",
+          "de Zanahoria",
+          "de Tomate",
+          "de Perejil",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_pepino.png",
+          "assets/images/icono_zanahoria.png",
+          "assets/images/icono_tomate.png",
+          "assets/images/icono_perejil.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Primero lava y trocea el pepino, los tomates y la zanahoria.",
+          "- Luego incorpóralos en una licuadora junto con el perejil y el medio vaso de agua.",
+          "- Procesa todos los ingredientes hasta obtener una mezcla homogénea.",
+          "- Consume el licuado recien hecho.",
+          "- Toma como mínimo 3 veces por semana."
+        ]
+      },
+      {
+        "id": 11.2,
+        "image_smoothie": "assets/images/pi_to_es.png",
+        "name": "Batido de Piña, Toronja y Espinaca",
+        "ingredient_amount": [
+          "1 pza",
+          "2 rodajas",
+          "Un puñado",
+          "1/2 vaso"
+        ],
+        "ingredient_description": [
+          "de Toronja o Pomelo",
+          "de Piña",
+          "de Espinacas",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_toronja.png",
+          "assets/images/icono_pina.png",
+          "assets/images/icono_espinaca.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Primero extrae el jugo de la toronja.",
+          "- Luego llévalo a la licuadora para combinarlo con la piña, las hojas de espinaca y el medio vaso de agua.",
+          "- Procesa todo unos segundos hasta que quede bien incorporado y sin grumos.",
+          "- Puedes tomárlo todos los días en ayunas."
+        ]
+      },
+      {
+        "id": 11.3,
+        "image_smoothie": "assets/images/za_es.png",
+        "name": "Batido de Zanahoria y Espinaca",
+        "ingredient_amount": [
+          "Un puñado",
+          "Un puñado",
+          "2 pzas",
+          "2 tallos",
+          "1/2 vaso"
+        ],
+        "ingredient_description": [
+          "de Perejil",
+          "de Espinacas",
+          "de Zanahorias",
+          "de Apio",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_perejil.png",
+          "assets/images/icono_espinaca.png",
+          "assets/images/icono_zanahoria.png",
+          "assets/images/icono_apio.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lava y desinfecta todos los ingredientes.",
+          "- Procesa todo en la licuadora hasta obtener un jugo sin grumos, agrega agua hasta que quede tan líquido como desees.",
+          "- Tómalo en ayunas y sin colar mínimo 3 veces por semana."
+        ]
+      },
+      {
+        "id": 11.4,
+        "image_smoothie": "assets/images/ki_es_lech.png",
+        "name": "Batido de Kiwi, Espinaca y Lechuga",
+        "ingredient_amount": [
+          "1 pza",
+          "5 hojas",
+          "3 hojas",
+          "1 cda",
+          "1 vaso"
+        ],
+        "ingredient_description": [
+          "de Kiwi",
+          "de Espinacas",
+          "de Lechuga",
+          "de Miel",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_kiwi.png",
+          "assets/images/icono_espinaca.png",
+          "assets/images/icono_lechuga.png",
+          "assets/images/icono_miel.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Pela y lava el kiwi, las hojas de las espinacas y de la lechuga.",
+          "- Luego introdúcelo en una licuadora con el vaso de agua.",
+          "- Procesa unos segundos hasta obtener una mezcla homogénea.",
+          "- Toma bien fresco, preferiblemente en ayunas."
+        ]
+      },
+      {
+        "id": 11.5,
+        "image_smoothie": "assets/images/ave_man.png",
+        "name": "Batido de Avena y Manzana",
+        "ingredient_amount": [
+          "1 taza",
+          "1 pza",
+          "",
+          "1 vaso"
+        ],
+        "ingredient_description": [
+          "de Avena",
+          "de Manzana",
+          "Miel al gusto",
+          "de Agua o Leche descremada"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_avena.png",
+          "assets/images/icono_manzana.png",
+          "assets/images/icono_miel.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Coloca la avena en un recipiente con agua y déjala hidratar toda la noche.",
+          "- Al otro día escúrrela y llévala a la licuadora junto con la manzana previamente lavada, pelada y cortada en trozos.",
+          "- En la licuadora agrega el agua o la leche junto con los demás ingredientes y licua hasta tener una mezcla homogénea.",
+          "- Sirve el batido y disfruta durante el desayuno o a cualquier hora del día."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name_category": "para desinflamar las hemorroides",
+    "image_category": "assets/images/hemorroides.png",
+    "recipes": [
+      {
+        "id": 12.1,
+        "image_smoothie": "assets/images/pa_lina_li_es.png",
+        "name": "Batido de Papaya, Linaza, Limón y Espinaca",
+        "ingredient_amount": [
+          "1 cda",
+          "2 rebanadas",
+          "",
+          "Un puñado",
+          "1/2 taza"
+        ],
+        "ingredient_description": [
+          "de Linaza molida",
+          "de Papaya",
+          "Jugo de medio Limón",
+          "de Espinacas",
+          "de Avena cocida con leche de almendras sin ázucar"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_linaza.png",
+          "assets/images/icono_papaya.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_espinaca.png",
+          "assets/images/icono_avena.png"
+        ],
+        "preparation": [
+          "- Coloca en una licuadora la papaya, la linaza, las espinacas previamente lavadas y el jugo de medio limón.",
+          "- Bate por unos segundos y luego agrega la avena cocida.",
+          "- Licua hasta obtener una mezcla homogénea y sin grumos.",
+          "- Sirve y disfruta 2 veces por semana."
+        ]
+      },
+      {
+        "id": 12.2,
+        "image_smoothie": "assets/images/manz_pap.png",
+        "name": "Batido de Manzana y Papaya",
+        "ingredient_amount": [
+          "1/2 pza",
+          "1 pza",
+          "1 taza",
+          ""
+        ],
+        "ingredient_description": [
+          "de Papaya pequeña",
+          "de Manzana",
+          "de Agua",
+          "Miel al gusto (opcional)"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_papaya.png",
+          "assets/images/icono_manzana.png",
+          "assets/images/icono_agua.png",
+          "assets/images/icono_miel.png"
+        ],
+        "preparation": [
+          "- Corta la manzana en cuartos y retira el corazón. Si lo deseas puedes pelarla  aunque si dejas la cáscara obtendrás mas nutrientes.",
+          "- Parte la papaya, retira las semillas y la cáscara.",
+          "- Pon en la licuadora las frutas.",
+          "- Agrega el agua y la miel si deseas.",
+          "- Licua bien y cuando obtengas una crema homogénea, podrás tomarlo.",
+          "- Bebe uno o dos vasos al día."
+        ]
+      },
+      {
+        "id": 12.3,
+        "image_smoothie": "assets/images/ginkgo.png",
+        "name": "Jugo de Ginkgo Biloba",
+        "ingredient_amount": [
+          "2 rodajas",
+          "1 cda",
+          "30 gotas",
+          "4 ramas",
+          "Un trozo",
+          "2 vasos"
+        ],
+        "ingredient_description": [
+          "de Piña",
+          "de Miel",
+          "de extracto de Ginkgo Biloba",
+          "de Apio",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_pina.png",
+          "assets/images/icono_miel.png",
+          "assets/images/icono_ginkgo.png",
+          "assets/images/icono_apio.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lava todos los ingredientes.",
+          "- Licua primeramente el apio con la piña y el jengibre, añade el agua y la miel, y el extracto de ginkgo.",
+          "- Pon en la licuadora las frutas.",
+          "- Licua nuevamente hasta integrar.",
+          "- Sirve y toma inmediatamente."
+        ]
+      },
+      {
+        "id": 12.4,
+        "image_smoothie": "assets/images/berro.png",
+        "name": "Jugo de Berro y Espinaca",
+        "ingredient_amount": [
+          "2 hojas",
+          "3 cdas",
+          "3 ramas",
+          "3 hojas",
+          "1 vaso"
+        ],
+        "ingredient_description": [
+          "de Espinaca",
+          "de Avena",
+          "de Berros",
+          "de Lechuga",
+          "de Jugo de Zanahoria"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_espinaca.png",
+          "assets/images/icono_avena.png",
+          "assets/images/icono_berro.png",
+          "assets/images/icono_lechuga.png",
+          "assets/images/icono_zanahoria.png"
+        ],
+        "preparation": [
+          "- Lava bien todos los berros, espinacas y lechuga bajo el grifo.",
+          "- Coloca en el vaso de la licuadora los vegetales junto con el jugo de zanahoria.",
+          "- Procesa todo durante unos segundos.",
+          "- Añade las cucharadas de avena e integra al licuado.",
+          "- Sirve y bebe este jugo en ayunas hasta que sientas que desaparecen las hemorroides."
+        ]
+      },
+      {
+        "id": 12.5,
+        "image_smoothie": "assets/images/pe_alf.png",
+        "name": "Jugo de Pepino y Alfalfa",
+        "ingredient_amount": [
+          "1 cdta",
+          "1 taza",
+          "1/2 pza",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Miel",
+          "de Hojas de Alfalfa",
+          "de Pepino",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_miel.png",
+          "assets/images/icono_alfalfa.png",
+          "assets/images/icono_pepino.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lava bien la alfalfa para quitar toda la suciedad que tenga.",
+          "- Lava el pepino y pélalo.",
+          "- Añade los vegetales con el resto de los ingredientes.",
+          "- Procesa hasta obtener una mezcla homogénea.",
+          "- Sirve y toma a diario por las mañanas."
+        ]
+      },
+      {
+        "id": 12.6,
+        "image_smoothie": "assets/images/na_be.png",
+        "name": "Jugo de Nabo y Berro",
+        "ingredient_amount": [
+          "1 manojo",
+          "2 pzas",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Berros",
+          "de Nabos",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_berro.png",
+          "assets/images/icono_nabo.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lava y trocea el berro y los nabos.",
+          "- Añade a la licuadora y bate por unos segundos o hasta integrar bien la mezcla.",
+          "- Sirve y toma recien hecho.",
+          "- Puedes beber un vaso a diario por quince dias acompañando a una dieta rica en líquidos y fibras."
+        ]
+      },
+      {
+        "id": 12.7,
+        "image_smoothie": "assets/images/ba_jen_li.png",
+        "name": "Jugo de Banana, Jengibre y Limón",
+        "ingredient_amount": [
+          "1 pza",
+          "1cm",
+          "1 pza",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Banana",
+          "de Jengibre",
+          "de Limón",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_banana.png",
+          "assets/images/icono_jengibre.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Cortar y exprimir el limón, procura no dejar semillas en el liquido.",
+          "- Colar y pelar el jengibre y la banana.",
+          "- Licuar todo con el agua por 60 segundos.",
+          "- Consume de inmediato."
+        ]
+      },
+      {
+        "id": 12.8,
+        "image_smoothie": "assets/images/pa_chia.png",
+        "name": "Batido de Papaya y semillas de Chía",
+        "ingredient_amount": [
+          "1 taza",
+          "1 cda",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Papaya pelada sin semillas",
+          "de Semillas de Chía remojadas",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_papaya.png",
+          "assets/images/icono_chia.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Poner las semillas de chía en una taza cubierta de agua y esperar de 6 a 8 horas a que se hidraten.",
+          "- Colocar los ingredientes en el vaso de una licuadora, y procesa hasta obtener una mezcla homogénea.",
+          "- Sirva y consuma de inmediato."
+        ]
+      },
+      {
+        "id": 12.9,
+        "image_smoothie": "assets/images/ave_man.png",
+        "name": "Batido de Avena y Manzana",
+        "ingredient_amount": [
+          "1 taza",
+          "1 pza",
+          "",
+          "1 vaso"
+        ],
+        "ingredient_description": [
+          "de Avena",
+          "de Manzana",
+          "Miel al gusto",
+          "de Agua o Leche descremada"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_avena.png",
+          "assets/images/icono_manzana.png",
+          "assets/images/icono_miel.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Coloca la avena en un recipiente con agua y dejala hidratar toda la noche.",
+          "- Al otro día escúrrela y llévala a la licuadora junto con la manzana previamente lavada, pelada y cortada en trozos.",
+          "- En la licuadora agrega el agua o la leche junto con los demás ingredientes y licua hasta tener una mezcla homogénea.",
+          "- Sirve el batido y disfruta durante el desayuno o a cualquier hora del día."
+        ]
+      },
+      {
+        "id": 12.11,
+        "image_smoothie": "assets/images/pe_chia.png",
+        "name": "Batido de Pera y semillas de Chía",
+        "ingredient_amount": [
+          "1 pza",
+          "1 cda",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Pera",
+          "de Semillas de Chía",
+          "de Agua o Leche descremada"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_pera.png",
+          "assets/images/icono_chia.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Dejar las semillas de Chía en un recipiente cubierto de agua de 6 a 8 horas para que se hidraten.",
+          "- Lavar, pelar y quitar el corazón a las peras, y luego trocearlas.",
+          "- Licuar todo por 40 segundos o hasta lograr una consistencia homogénea.",
+          "- Bebe de inmediato."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name_category": "para aliviar dolores menstruales",
+    "image_category": "assets/images/menstruales.png",
+    "recipes": [
+      {
+        "id": 13.1,
+        "image_smoothie": "assets/images/mang_cur.png",
+        "name": "Batido de Mango y Cúrcuma",
+        "ingredient_amount": [
+          "1 pza",
+          "1 rama",
+          "Un puñado",
+          "1/2 pza",
+          "1 cdta",
+          "1 trozo peq",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Mango",
+          "de Hinojo",
+          "de Espinaca",
+          "de Pepino",
+          "de Cúrcuma en polvo",
+          "de Jengibre",
+          "de Agua de Coco o de Té verde"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_mango.png",
+          "assets/images/icono_hinojo.png",
+          "assets/images/icono_espinaca.png",
+          "assets/images/icono_pepino.png",
+          "assets/images/icono_curcuma.png",
+          "assets/images/icono_jengibre.png",
+          "assets/images/icono_coco.png"
+        ],
+        "preparation": [
+          "- Retira la cáscara al pepino y corta en trozos.",
+          "- Pela el mango, retira el hueso y córtalo en trozos.",
+          "- Vierte el agua de coco en la licuadora con todos los ingredientes excepto el mango, y bate por 5 segundos.",
+          "- Agrega el mango y bate hasta obtener una mezcla homogénea.",
+          "- Puedes decorar con trozos de mango e hinojo."
+        ]
+      },
+      {
+        "id": 13.2,
+        "image_smoothie": "assets/images/ba_mo.png",
+        "name": "Batido de Banana y Moras",
+        "ingredient_amount": [
+          "1 pza",
+          "1 taza",
+          "Un puñado",
+          "1/2 taza",
+          "1 cda"
+        ],
+        "ingredient_description": [
+          "de Banana",
+          "de Moras",
+          "de almendras",
+          "de Agua o leche",
+          "de Canela (Opcional)"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_banana.png",
+          "assets/images/icono_mora.png",
+          "assets/images/icono_almendra.png",
+          "assets/images/icono_agua.png",
+          "assets/images/icono_canela.png"
+        ],
+        "preparation": [
+          "- Pela la banana y córtala en rebanadas.",
+          "- Lava bien las moras y pica las almendras a la mitad.",
+          "- Coloca en la licuadora las frutas, almendras, y el agua o leche.",
+          "- Licua todo bien y cuando tengas una mezcla homogénea, disfrutala.",
+          "- Puedes agregar hielo al final y decorar con canela."
+        ]
+      },
+      {
+        "id": 13.3,
+        "image_smoothie": "assets/images/za_na_pe.png",
+        "name": "Batido de Zanahoria, Naranjas y Perejil",
+        "ingredient_amount": [
+          "1 pza",
+          "1 pza",
+          "2 ramas"
+        ],
+        "ingredient_description": [
+          "de Zanahoria",
+          "de Naranja",
+          "de Perejil"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_zanahoria.png",
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_perejil.png"
+        ],
+        "preparation": [
+          "- Corta las puntas de las zanahorias y parte las ramas de perejil.",
+          "- Agrega las zanahorias en la licuadora con los demás ingredientes.",
+          "- Licua por 90 seg y cuela.",
+          "- Sírvelo y disfruta."
+        ]
+      },
+      {
+        "id": 13.4,
+        "image_smoothie": "assets/images/ba_ca.png",
+        "name": "Batido de Banana y Canela",
+        "ingredient_amount": [
+          "1 pza",
+          "1 cda",
+          "1 cda",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Banana",
+          "de Canela",
+          "de Almendras Molidas",
+          "de Agua de Coco"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_banana.png",
+          "assets/images/icono_canela.png",
+          "assets/images/icono_almendra.png",
+          "assets/images/icono_coco.png"
+        ],
+        "preparation": [
+          "- Retira la cáscara de la banana y córtala en rodajas.",
+          "- Agrega los ingredientes en la licuadora y procésalas hasta obtener una mezcla homogénea.",
+          "- Puedes agregar cocoa en polvo si deseas.",
+          "- Bebe de inmediato"
+        ]
+      },
+      {
+        "id": 13.5,
+        "image_smoothie": "assets/images/pi_es_jen.png",
+        "name": "Batido de Piña, Espinaca y Jengibre",
+        "ingredient_amount": [
+          "1 taza",
+          "1 taza",
+          "1/2 cdta",
+          "1/2 taza",
+          "1 taza",
+          "1 cdta"
+        ],
+        "ingredient_description": [
+          "de Piña congelada en cubos",
+          "de Espinaca",
+          "de Jengibre",
+          "de Pepino",
+          "de Agua",
+          "de semillas de Chía"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_piña.png",
+          "assets/images/icono_espinaca.png",
+          "assets/images/icono_jengibre.png",
+          "assets/images/icono_pepino.png",
+          "assets/images/icono_agua.png",
+          "assets/images/icono_chia.png"
+        ],
+        "preparation": [
+          "- Poner todo en una licuadora o procesador de alimentos y batir hasta que este completamente suave.",
+          "- Agregar hielo al gusto en caso de ser necesario.",
+          "- Verter en un vaso y disfrutar."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name_category": "para la resaca o guayabo",
+    "image_category": "assets/images/resaca.png",
+    "recipes": [
+      {
+        "id": 14.1,
+        "image_smoothie": "assets/images/so_li_jen.png",
+        "name": "Jugo de Soda, Limón y Jengibre",
+        "ingredient_amount": [
+          "",
+          "",
+          "1 vaso",
+          "1 cdta",
+          "Una pizca"
+        ],
+        "ingredient_description": [
+          "Hielo",
+          "Zumo de 1/2 Limón",
+          "de Soda",
+          "de Jengibre rallado",
+          "de Sal"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_hielo.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_soda.png",
+          "assets/images/icono_jegibre.png",
+          "assets/images/icono_sal.png"
+        ],
+        "preparation": [
+          "- Agrega hielo en un vaso.",
+          "- Ralla jengibre y agrega al vaso junto con el jugo de limón.",
+          "- Agrega una pizca de sal.",
+          "- Agrega la soda preferiblemente bien fría.",
+          "- Bebe poco a poco."
+        ]
+      },
+      {
+        "id": 14.2,
+        "image_smoothie": "assets/images/tomate.png",
+        "name": "Jugo de Tomate",
+        "ingredient_amount": [
+          "1 pza",
+          "1 taza",
+          "Una pizca",
+          "Un chorrito"
+        ],
+        "ingredient_description": [
+          "de Tomate",
+          "de Agua",
+          "de Sal y Pimienta",
+          "de Limón"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_tomate.png",
+          "assets/images/icono_agua.png",
+          "assets/images/icono_sal.png",
+          "assets/images/icono_limon.png"
+        ],
+        "preparation": [
+          "- En una licuadora agrega el tomate. Luego una taza de agua.",
+          "- También debes agregar una pizca de sal y pimienta.",
+          "- Licua y sírvelo en un vaso con hielo.",
+          "- Cuando este en el vaso agrega un chorrito de limón."
+        ]
+      },
+      {
+        "id": 14.3,
+        "image_smoothie": "assets/images/to_pe_ce.png",
+        "name": "Jugo de Tomate, Pepino y Cebolla",
+        "ingredient_amount": [
+          "3 pzas",
+          "1 pza",
+          "1/4 pza",
+          "1 cda",
+          "1/2 vaso"
+        ],
+        "ingredient_description": [
+          "de Tomates",
+          "de Pepino",
+          "de Cebolla",
+          "de Aceite de Oliva",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_tomate.png",
+          "assets/images/icono_pepino.png",
+          "assets/images/icono_cebolla.png",
+          "assets/images/icono_aceite.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- En primer lugar lava los ingredientes y luego llévalos a la licuadora.",
+          "- Incorpora el medio vaso de agua y el aceite de oliva.",
+          "- Licua a maxima velocidad hasta que todo quede integrado.",
+          "- Consume antes de dormir y a la mañana siguiente.",
+          "- Quizas no tenga el sabor mas agradable, sin embargo, sus propiedades diuréticas y depurativas lo convierte en uno de los mejores remedios para la intoxicación por alcohol."
+        ]
+      },
+      {
+        "id": 14.4,
+        "image_smoothie": "assets/images/ba_na.png",
+        "name": "Batido de Banana y Naranja",
+        "ingredient_amount": [
+          "1/2 vaso",
+          "1 pza"
+        ],
+        "ingredient_description": [
+          "de Jugo de Naranja",
+          "de Banana"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_banana.png"
+        ],
+        "preparation": [
+          "- Retira la cáscara de la banana y córtala en rodajas.",
+          "- Licua la banana junto con el jugo de naranja, que sea natural.",
+          "- Consume el jugo preferiblemente en ayunas al levantarte."
+        ]
+      },
+      {
+        "id": 14.5,
+        "image_smoothie": "assets/images/pi_es_jen.png",
+        "name": "Jugo de Zanahoria y Cítricos",
+        "ingredient_amount": [
+          "1 pza",
+          "1 pza",
+          "1 pza"
+        ],
+        "ingredient_description": [
+          "de Zanahoria",
+          "de Naranja",
+          "de Limón"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_zanahoria.png",
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_limon.png"
+        ],
+        "preparation": [
+          "- Lava bien los ingredientes.",
+          "- Extrae el jugo de la naranja y el limón y viértelos en la licuadora con la zanahoria previamente troceada.",
+          "- Procesa por unos instantes hasta obtener una bebida homogénea.",
+          "- Consume antes de dormir y por la mañana y al levantarte."
+        ]
+      },
+      {
+        "id": 14.6,
+        "image_smoothie": "assets/images/ki_fre.png",
+        "name": "Batido de Kiwi con Fresa",
+        "ingredient_amount": [
+          "2 pzas",
+          "6 pzas",
+          "1/2 vaso",
+          ""
+        ],
+        "ingredient_description": [
+          "de Kiwi",
+          "de Fresas",
+          "de Agua",
+          "Hielo al gusto"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_kiwi.png",
+          "assets/images/icono_fresa.png",
+          "assets/images/icono_agua.png",
+          "assets/images/icono_hielo.png"
+        ],
+        "preparation": [
+          "- Pela los kiwis, lava bien las fresas y trocea todas las frutas.",
+          "- Lleva todo a la licuadora.",
+          "- Agrega 1/2 vaso de agua, hielo al gusto y licua por unos instantes hasta que este todo integrado.",
+          "- Consume en ayunas y luego a media mañana."
+        ]
+      },
+      {
+        "id": 14.7,
+        "image_smoothie": "assets/images/na_re_za.png",
+        "name": "Jugo de Naranja, Remolacha y Zanahoria",
+        "ingredient_amount": [
+          "1/2 pza",
+          "1 pza",
+          "1 pza",
+          "2 ramas",
+          "1/2 vaso"
+        ],
+        "ingredient_description": [
+          "de Remolacha fresca",
+          "de Naranja",
+          "de Zanahoria",
+          "de Apio",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_remolacha.png",
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_zanahoria.png",
+          "assets/images/icono_apio.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lava todos los ingredientes y pélalos.",
+          "- Luego, trocea la remolacha, el apio y la zanahoria.",
+          "- Exprime el jugo de naranja y pon todo en la licuadora con medio vaso de agua.",
+          "- A continuación licua a velocidad máxima por unos instantes hasta conseguir una bebida homogénea.",
+          "- Toma antes de acostarte y al levantarte."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name_category": "Antigripales",
+    "image_category": "assets/images/gripa.png",
+    "recipes": [
+      {
+        "id": 15.1,
+        "image_smoothie": "assets/images/ci_mi_ave.png",
+        "name": "Batido de Cítricos, Miel y Avena",
+        "ingredient_amount": [
+          "2 tazas",
+          "3 pzas",
+          "3 pzas",
+          "4 pzas",
+          "2 cdtas",
+          "2 cdtas",
+          "1 rodaja"
+        ],
+        "ingredient_description": [
+          "de Jugo de Naranja",
+          "de Limones",
+          "de Fresas",
+          "de Guayabas",
+          "de Miel al gusto",
+          "de Avena",
+          "de Piña"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_fresa.png",
+          "assets/images/icono_guayaba.png",
+          "assets/images/icono_miel.png",
+          "assets/images/icono_avena.png",
+          "assets/images/icono_pina.png"
+        ],
+        "preparation": [
+          "- Licua el jugo de naranja con el jugo de limón, las fresas, las guayabas y la piña durante 3 minutos o hasta integrar por completo.",
+          "- Añade la miel y mezcla bien.",
+          "- Sirve y decora con avena."
+        ]
+      },
+      {
+        "id": 15.2,
+        "image_smoothie": "assets/images/na_li_po.png",
+        "name": "Batido de Naranja, Limón y Propóleo",
+        "ingredient_amount": [
+          "2 pzas",
+          "1 pza",
+          "1 cda"
+        ],
+        "ingredient_description": [
+          "de Naranja",
+          "de Limón",
+          "de Propóleo"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_miel.png"
+        ],
+        "preparation": [
+          "- Se exprimen todos los cítricos y se agrega el propóleo.",
+          "- Lo ideal es consumirlo en la mañana."
+        ]
+      },
+      {
+        "id": 15.3,
+        "image_smoothie": "assets/images/man_mi.png",
+        "name": "Batido de Manzana y Miel",
+        "ingredient_amount": [
+          "2 pzas",
+          "1 vaso",
+          "1/2 pza",
+          ""
+        ],
+        "ingredient_description": [
+          "de Manzanas",
+          "de Agua",
+          "de Limón",
+          "Miel al gusto"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_manzana.png",
+          "assets/images/icono_agua.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_miel.png"
+        ],
+        "preparation": [
+          "- Lavar y cortar en trozos las manzanas.",
+          "- Licuar las manzanas con el vaso de agua y agregar al final el jugo del medio limón.",
+          "- Consumir enseguida en la mañana y en la noche."
+        ]
+      },
+      {
+        "id": 15.4,
+        "image_smoothie": "assets/images/pi_fre_gua.png",
+        "name": "Batido de Piña, Fresa y Guayaba",
+        "ingredient_amount": [
+          "2 tazas",
+          "",
+          "3 pzas",
+          "4 pzas",
+          "1 rodaja",
+          ""
+        ],
+        "ingredient_description": [
+          "de Jugo de Naranja",
+          "Jugo de 3 limones",
+          "de Fresas",
+          "de Guayabas",
+          "de Piña",
+          "Miel al gusto"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_fresa.png",
+          "assets/images/icono_guayaba.png",
+          "assets/images/icono_pina.png",
+          "assets/images/icono_miel.png"
+        ],
+        "preparation": [
+          "- Lava y corta en trozos todas las frutas.",
+          "- Lleva a la licuadora y licua junto con las dos tazas de jugo de naranja y el jugo de los limones.",
+          "- Procesa por 3 minutos.",
+          "- Luego de tener una mezcla homogénea, sirve en un vaso y disfruta."
+        ]
+      },
+      {
+        "id": 15.5,
+        "image_smoothie": "assets/images/na_za.png",
+        "name": "Jugo de Naranja y Zanahoria",
+        "ingredient_amount": [
+          "1 pza",
+          "1 pza",
+          "1/2 vaso"
+        ],
+        "ingredient_description": [
+          "de Naranja",
+          "de Zanahoria",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_zanahoria.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lava y retira la piel de la zanahoria. Después pela la naranja.",
+          "- Introduce los dos ingredientes en el vaso de la licuadora y añade el agua.",
+          "- Tritura bien para que quede combinado y con una textura más o menos lisa. Añade más líquido al gusto."
+        ]
+      },
+      {
+        "id": 15.6,
+        "image_smoothie": "assets/images/pi_na_jen.png",
+        "name": "Jugo de Piña, Naranja y Jengibre",
+        "ingredient_amount": [
+          "2 rodajas",
+          "1 cda",
+          "1 vaso",
+          "",
+          "1 pza"
+        ],
+        "ingredient_description": [
+          "de Piña",
+          "de Jengibre rallado",
+          "de Jugo de Naranja",
+          "Jugo de un Limón",
+          "de Guayaba en trozos"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_pina.png",
+          "assets/images/icono_jengibre.png",
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_guayaba.png"
+        ],
+        "preparation": [
+          "- Introduce todos los ingredientes en la licuadora.",
+          "- Licuar por 3 minutos.",
+          "- Servir en un vaso y disfrutar."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name_category": "para el hígado graso",
+    "image_category": "assets/images/higado.png",
+    "recipes": [
+      {
+        "id": 16.1,
+        "image_smoothie": "assets/images/li_pa.png",
+        "name": "Jugo de Limón y Papaya",
+        "ingredient_amount": [
+          "1/2 pza",
+          "",
+          "1 vaso"
+        ],
+        "ingredient_description": [
+          "de Papaya",
+          "Jugo de 1/2 Limón",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_papaya.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Pelar y trozar la papaya.",
+          "- Incorporar la papaya picada en la licuadora y agregar el resto de los ingredientes.",
+          "- Mezclar hasta lograr una preparación homogénea y sin grumos.",
+          "- Se puede agregar media cucharada de miel y 4 hojas de menta al servir."
+        ]
+     },
+      {
+        "id": 16.2,
+        "image_smoothie": "assets/images/re_li.png",
+        "name": "Jugo de Remolacha y Limón",
+        "ingredient_amount": [
+          "1 pza",
+          "1 pza",
+          "1 vaso"
+        ],
+        "ingredient_description": [
+          "de Remolacha",
+          "de Limón grande",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_remolacha.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lavar, pelar y cortar en trozos la remolacha. Llevarla a hervir.",
+          "- Una vez que este cocida, esperar a que este fría.",
+          "- Exprimir el jugo del limón y quitar las semillas.",
+          "- Colocar todos los ingredientes dentro de la licuadora, agregar hielo y mezclar hasta obtener un líquido homogéneo."
+        ]
+      },
+      {
+        "id": 16.3,
+        "image_smoothie": "assets/images/ba_cur.png",
+        "name": "Jugo de Banana y Cúrcuma",
+        "ingredient_amount": [
+          "2 pzas",
+          "1/2 cda",
+          "1 cdta",
+          "Una pizca",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Bananas",
+          "de Jengibre fresco",
+          "de Cúrcuma",
+          "de Canela",
+          "de Leche descremada o Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_banana.png",
+          "assets/images/icono_jengibre.png",
+          "assets/images/icono_curcuma.png",
+          "assets/images/icono_canela.png",
+          "assets/images/icono_leche.png"
+        ],
+        "preparation": [
+          "- Pelar las bananas, cortarlas y colocarlas en la licuadora.",
+          "- Pelar el jengibre y agregarlo a la licuadora.",
+          "- Añadir el resto de los ingredientes y licuar.",
+          "- Sírvelo y disfruta."
+        ]
+      },
+      {
+        "id": 16.4,
+        "image_smoothie": "assets/images/to_li_na.png",
+        "name": "Jugo de Toronja, Limón y Naranja",
+        "ingredient_amount": [
+          "2 pzas",
+          "2 pzas",
+          "1 pza",
+          "1 cdta"
+        ],
+        "ingredient_description": [
+          "de Toronjas peladas y sin semillas",
+          "de Limones pelados y sin semillas",
+          "de Naranja pelada y sin semillas",
+          "de Aceite de Oliva"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_toronja.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_aceite.png"
+        ],
+        "preparation": [
+          "- Añade todos los ingredientes a la licuadora o procesador de alimentos.",
+          "- Mezcla y de ser necesario agrega 1/2 vaso de agua para que no quede tan espeso.",
+          "- Bebe recién preparado, preferiblemente en ayunas para aprovechar mejor sus propiedades."
+        ]
+      },
+      {
+        "id": 16.5,
+        "image_smoothie": "assets/images/na_jen.png",
+        "name": "Jugo de Naranja y Jengibre",
+        "ingredient_amount": [
+          "1 taza",
+          "1 cda",
+          "1 cda"
+        ],
+        "ingredient_description": [
+          "de jugo de Naranja recien exprimido",
+          "de Jengibre fresco y rallado",
+          "de Aceite de Oliva"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_jengibre.png",
+          "assets/images/icono_aceite.png"
+        ],
+        "preparation": [
+          "- Mezcla todos los ingredientes en la licuadora o procesador de alimentos.",
+          "- Bebe el jugo recien preparado.",
+          "- Puedes prepararlo antes de dormir durante 3 noches seguidas.",
+          "- Para una limpieza profunda tómalo por 7 noches seguidas."
+        ]
+      },
+      {
+        "id": 16.6,
+        "image_smoothie": "assets/images/manzana.png",
+        "name": "Jugo de Manzana y Limón",
+        "ingredient_amount": [
+          "1/2Kg",
+          "",
+          "2 vasos"
+        ],
+        "ingredient_description": [
+          "de Manzanas",
+          "Jugo de medio Limón",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_manzana.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lava las manzanas, pélalas y córtalas en trozos.",
+          "- Agrega a la licuadora junto con el jugo del limón.",
+          "- Procesa hasta que todo se integre bien.",
+          "- Toma este jugo en ayunas por 7 días consecutivos."
+        ]
+      },
+      {
+        "id": 16.7,
+        "image_smoothie": "assets/images/za_li_jen.png",
+        "name": "Jugo de Zanahoria, Limón y Jengibre",
+        "ingredient_amount": [
+          "3 pzas",
+          "",
+          "1 cdta",
+          "1 cdta",
+          "1/2 vaso"
+        ],
+        "ingredient_description": [
+          "de Zanahorias",
+          "Jugo de medio Limón",
+          "de Jengibre",
+          "de Miel al gusto",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_zanahoria.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_jengibre.png",
+          "assets/images/icono_miel.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Pela las zanahorias y procesalas en una licuadora junto con el agua.",
+          "- Exprime el limón y agrega el jugo a las zanahorias.",
+          "- Agrega el jengibre y la miel, y remueve para que todo se integre por completo.",
+          "- Bebe en ayunas durante 7 días."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name_category": "para desinflamar el colon",
+    "image_category": "assets/images/colon.png",
+    "recipes": [
+      {
+        "id": 17.1,
+        "image_smoothie": "assets/images/aloe_pi.png",
+        "name": "Batido de Aloe Vera y Piña",
+        "ingredient_amount": [
+          "1 hoja",
+          "2 rodajas",
+          "1 vaso"
+        ],
+        "ingredient_description": [
+          "de Aloe Vera",
+          "de Piña",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_aloe.png",
+          "assets/images/icono_pina.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Extraer el gel de la hoja de aloe vera.",
+          "- Colocar el gel, la piña y el agua en la licuadora.",
+          "- Mezclar bien hasta obtener un jugo homogéneo.",
+          "- Bebe este jugo por las mañanas en ayunas.",
+          "- Aunque el aloe vera tiene destacadas acciones en el organismo, este jugo no esta aconsejado en mujeres embarazadas y lactantes.",
+          "",
+          "Nota: Antes de extraer el aloe vera, recuerda poner la hoja de la planta en remojo en una jarra de agua para drenar su aloina."
+        ]
+      },
+      {
+        "id": 17.2,
+        "image_smoothie": "assets/images/man_za.png",
+        "name": "Jugo de Manzana y Zanahoria",
+        "ingredient_amount": [
+          "2 pzas",
+          "2 pzas",
+          "1 vaso"
+        ],
+        "ingredient_description": [
+          "de Manzanas",
+          "de Zanahoria",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_manzana.png",
+          "assets/images/icono_zanahoria.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lava y corta las manzanas y zanahorias en trozos pequeños.",
+          "- Coloca las manzanas, zanahorias y agua en una licuadora.",
+          "- Licua hasta obtener una mezcla homogénea.",
+          "- Bebe este jugo una vez al día."
+        ]
+      },
+      {
+        "id": 17.3,
+        "image_smoothie": "assets/images/jen_li.png",
+        "name": "Jugo de Jengibre y Limón",
+        "ingredient_amount": [
+          "1 trozo peq",
+          "",
+          "1 vaso"
+        ],
+        "ingredient_description": [
+          "de Jengibre",
+          "Jugo de un limón",
+          "de Agua Tibia"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_jengibre.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Ralla el jengibre y exprime el jugo del limón.",
+          "- Mezcla el jengibre rallado, el jugo de limón y el agua tibia.",
+          "- Licua por 3 minutos y bebe este jugo por las mañanas en ayunas."
+        ]
+      },
+      {
+        "id": 17.4,
+        "image_smoothie": "assets/images/na_aran_pi.png",
+        "name": "Jugo de Naranja, Arándanos y Piña",
+        "ingredient_amount": [
+          "1 pza",
+          "1 rodaja",
+          "1 vaso",
+          "1 cda"
+        ],
+        "ingredient_description": [
+          "de Naranja",
+          "de Piña",
+          "de Arándanos",
+          "de Miel al gusto"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_naranja.png",
+          "assets/images/icono_pina.png",
+          "assets/images/icono_arandano.png",
+          "assets/images/icono_miel.png"
+        ],
+        "preparation": [
+          "- Coloca todos los ingredientes en la licuadora previamente lavados y pelados.",
+          "- Licua hasta lograr una mezcla homogénea.",
+          "- Sirve inmediatamente."
+        ]
+      },
+      {
+        "id": 17.5,
+        "image_smoothie": "assets/images/manz_man.png",
+        "name": "Batido de Manzana y Mango",
+        "ingredient_amount": [
+          "2 pzas",
+          "1 pza",
+          "1 lata"
+        ],
+        "ingredient_description": [
+          "de Manzana Verde",
+          "de Mango",
+          "de Leche de Coco"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_manzanaverde.png",
+          "assets/images/icono_mango.png",
+          "assets/images/icono_coco.png"
+        ],
+        "preparation": [
+          "- Coloca todos los ingredientes en la licuadora.",
+          "- Licua hasta que quede suave y sin grumos.",
+          "- Sirve inmediatamente."
+        ]
+      },
+      {
+        "id": 17.6,
+        "image_smoothie": "assets/images/man_pe_ki.png",
+        "name": "Batido de Manzana Verde, Pera, Kiwi y Apio",
+        "ingredient_amount": [
+          "1 pza",
+          "1 pza",
+          "2 pzas",
+          "4 tallos",
+          "2 vasos"
+        ],
+        "ingredient_description": [
+          "de Manzana Verde",
+          "de Pera",
+          "de Kiwi",
+          "de Apio",
+          "de Jugo de Naranja"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_manzanaverde.png",
+          "assets/images/icono_pera.png",
+          "assets/images/icono_kiwi.png",
+          "assets/images/icono_apio.png",
+          "assets/images/icono_naranja.png"
+        ],
+        "preparation": [
+          "- Coloca todos los ingredientes en la licuadora.",
+          "- Licua hasta que se logre una mezcla homogénea.",
+          "- Sirve  y bebe inmediatamente."
+        ]
+      },
+      {
+        "id": 17.7,
+        "image_smoothie": "assets/images/san_fre.png",
+        "name": "Batido de Sandía y Fresas",
+        "ingredient_amount": [
+          "2 tazas",
+          "1 taza",
+          "1/2 pza",
+          "1 taza"
+        ],
+        "ingredient_description": [
+          "de Sandía sin semillas",
+          "de Fresas",
+          "de Limón",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_sandia.png",
+          "assets/images/icono_fresa.png",
+          "assets/images/icono_limon.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Coloca todos los ingredientes en el vaso de la licuadora.",
+          "- Licua todo hasta obtener una mezcla homogénea.",
+          "- Sirve  y bebe inmediatamente."
+        ]
+      },
+      {
+        "id": 17.8,
+        "image_smoothie": "assets/images/aran_esp.png",
+        "name": "Batido de Arándanos y Espinaca",
+        "ingredient_amount": [
+          "1 taza",
+          "1 taza",
+          "1/2 taza",
+          "1 taza",
+          "1 cda"
+        ],
+        "ingredient_description": [
+          "de Arándanos",
+          "de Espinacas frescas lavadas previamente",
+          "de Yogurt Griego",
+          "de Agua",
+          "de Miel al gusto"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_arandano.png",
+          "assets/images/icono_espinaca.png",
+          "assets/images/icono_yogurt.png",
+          "assets/images/icono_agua.png",
+          "assets/images/icono_miel.png"
+        ],
+        "preparation": [
+          "- Coloca los ingredientes en una licuadora.",
+          "- Licua hasta que todo este completamente mezclado.",
+          "- Sirve  y bebe de inmediato."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name_category": "para la gastritis",
+    "image_category": "assets/images/gastritis.png",
+    "recipes": [
+      {
+        "id": 18.1,
+        "image_smoothie": "assets/images/za_pe.png",
+        "name": "Jugo de Zanahoria y Perejil",
+        "ingredient_amount": [
+          "2 pzas",
+          "1 taza",
+          "1 rama"
+        ],
+        "ingredient_description": [
+          "de Zanahorias",
+          "de Agua",
+          "de Perejil"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_zanahoria.png",
+          "assets/images/icono_agua.png",
+          "assets/images/icono_perejil.png"
+        ],
+        "preparation": [
+          "- Para empezar lava, pela y corta en trozos las zanahorias.",
+          "- Ponlas en la licuadora.",
+          "- Añade perejil y un vaso de agua.",
+          "- Tritura hasta que quede bien mezclado. Si queda muy espeso, corrige la textura con un poco de agua."
+        ]
+      },
+      {
+        "id": 18.2,
+        "image_smoothie": "assets/images/man_ap_esp.png",
+        "name": "Jugo de Manzana, Apio y Espinaca",
+        "ingredient_amount": [
+          "1/2 pza",
+          "2 tallos",
+          "Un puñado",
+          "Un vaso"
+        ],
+        "ingredient_description": [
+          "de Manzana",
+          "de Apio",
+          "de hojas de Espinaca",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_manzana.png",
+          "assets/images/icono_apio.png",
+          "assets/images/icono_espinaca.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lava bien el apio, las espinacas y la manzana.",
+          "- Retira la piel de la manzana.",
+          "- Corta en trozos y lleva la licuadora.",
+          "- Añade el agua.",
+          "- Licua todo muy bien hasta que quede homogéneo.",
+          "- Sirve y bebe de inmediato."
+        ]
+      },
+      {
+        "id": 18.3,
+        "image_smoothie": "assets/images/papaya.png",
+        "name": "Jugo de Papaya",
+        "ingredient_amount": [
+          "1/2 pza",
+          "Un vaso"
+        ],
+        "ingredient_description": [
+          "de Papaya madura",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_papaya.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Pelar la papaya, retirar las semillas y cortar en cuadros.",
+          "- Licua junto con el agua hasta lograr una mezcla homogénea.",
+          "- Sírvela y disfruta inmediato."
+        ]
+      },
+      {
+        "id": 18.4,
+        "image_smoothie": "assets/images/ba_pe.png",
+        "name": "Batido de Banana y Pera",
+        "ingredient_amount": [
+          "1/2 pza",
+          "1/2 pza",
+          "Un vaso"
+        ],
+        "ingredient_description": [
+          "de Banana madura",
+          "de Pera madura",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_banana.png",
+          "assets/images/icono_pera.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Empieza por pelar y cortar la fruta en trozos mas o menos iguales.",
+          "- Combina todos los ingredientes en una licuadora, hasta obtener una mezcla homogénea.",
+          "- Sírvela y bebe inmediatamente."
+        ]
+      },
+      {
+        "id": 18.5,
+        "image_smoothie": "assets/images/man_co.png",
+        "name": "Batido de Manzana con Agua de Coco",
+        "ingredient_amount": [
+          "1 pza",
+          "Un vaso"
+        ],
+        "ingredient_description": [
+          "de Manzana Madura",
+          "de Agua de Coco"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_manzana.png",
+          "assets/images/icono_coco.png"
+        ],
+        "preparation": [
+          "- Limpia, pela y retira el corazón de la manzana, córtala en trozos.",
+          "- Licua la manzana y el agua de coco hasta que quede una mezcla totalmente homogénea.",
+          "- Sírvela y disfrútala."
+        ]
+      },
+      {
+        "id": 18.6,
+        "image_smoothie": "assets/images/aloe_pa.png",
+        "name": "Jugo de Aloe Vera y Papaya",
+        "ingredient_amount": [
+          "2 cdas",
+          "1/2 pza",
+          "1 vaso"
+        ],
+        "ingredient_description": [
+          "de zumo de Aloe Vera",
+          "de Papaya",
+          "de Agua"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_aloe.png",
+          "assets/images/icono_papaya.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Introduce todos los ingredientes en un procesador de alimentos o licuadora.",
+          "- Licua o procesa hasta obtener una mezcla homogénea.",
+          "- Bebe una vez este listo.",
+          "- Aunque el aloe vera tiene destacadas acciones en el organismo, este jugo no esta aconsejado en mujeres embarazadas y lactantes.",
+          "",
+          "Nota: Antes de extraer el aloe vera, recuerda poner la hoja de la planta en remojo en una jarra con agua para drenar su aloina."
+        ]
+      },
+      {
+        "id": 18.7,
+        "image_smoothie": "assets/images/col.png",
+        "name": "Jugo de Col",
+        "ingredient_amount": [
+          "150grs",
+          "Un vaso"
+        ],
+        "ingredient_description": [
+          "de Hojas de Col",
+          "de Agua o leche de Almendras"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_col.png",
+          "assets/images/icono_agua.png"
+        ],
+        "preparation": [
+          "- Lava la col, cortala por la mitad.",
+          "- Lleva a la licuadora con el agua o la leche de almendras.",
+          "- Sírvela y consumir inmediatamente."
+        ]
+      },
+      {
+        "id": 18.8,
+        "image_smoothie": "assets/images/ag_mang.png",
+        "name": "Jugo de Aguacate y Mango",
+        "ingredient_amount": [
+          "1 pza",
+          "1/2 pza",
+          "Un vaso",
+          "Una pizca"
+        ],
+        "ingredient_description": [
+          "de Mango",
+          "de Aguacate",
+          "de Agua o leche descremada",
+          "de Canela al gusto"
+        ],
+        "ingredient_icon": [
+          "assets/images/icono_mango.png",
+          "assets/images/icono_aguacate.png",
+          "assets/images/icono_agua.png",
+          "assets/images/icono_canela.png"
+        ],
+        "preparation": [
+          "- Pela el mango y el aguacate, retira el hueso y vierte la pulpa en un vaso de la licuadora.",
+          "- Licua todo junto con el agua o la leche hasta lograr una mezcla homogénea.",
+          "- Sírvelo en un vaso y agrega una pizca de canela al gusto."
+        ]
+      }
+    ]
+  }
+]
+}
+
+
+

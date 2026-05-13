@@ -7,14 +7,18 @@ import 'package:flutter/services.dart' show rootBundle;
 class SmoothieProvider extends ChangeNotifier {
   List<Category> categories = [];
   List<Recipe> recetas = [];
-
   SmoothieProvider() {
     loadData();
   }
 
-  Future<void> loadData() async {
+  Future<void> loadData({String locale = 'es'}) async {
+    categories = [];
+    recetas = [];
+    final asset = locale == 'en'
+        ? 'assets/json/Batidos_en.json'
+        : 'assets/json/Batidos_es.json';
     try {
-      final value = await rootBundle.loadString('assets/json/Batidos.json');
+      final value = await rootBundle.loadString(asset);
       Map data = jsonDecode(value);
 
       categories = List.from(
