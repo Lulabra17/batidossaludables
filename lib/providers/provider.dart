@@ -7,11 +7,13 @@ import 'package:flutter/services.dart' show rootBundle;
 class SmoothieProvider extends ChangeNotifier {
   List<Category> categories = [];
   List<Recipe> recetas = [];
-  SmoothieProvider() {
-    loadData();
-  }
+  String _loadedLocale = '';
+
+  SmoothieProvider();
 
   Future<void> loadData({String locale = 'es'}) async {
+    if (locale == _loadedLocale) return;
+    _loadedLocale = locale;
     categories = [];
     recetas = [];
     final asset = locale == 'en'

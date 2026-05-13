@@ -104,34 +104,36 @@ class MyApp extends StatelessWidget {
 
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => SmoothieProvider()),
-        ChangeNotifierProvider(create: (_) => LocaleProvider(Hive.box('prefs'))),
-      ],
-      child: Consumer<LocaleProvider>(
-        builder: (context, localeProvider, _) {
-          // Recargar recetas cuando cambia el idioma
-          WidgetsBinding.instance.addPostFrameCallback((_) {
-            context.read<SmoothieProvider>().loadData(
+        ChangeNotifierProvider(
+          create: (_) => LocaleProvider(Hive.box('prefs')),
+        ),
+        ChangeNotifierProxyProvider<LocaleProvider, SmoothieProvider>(
+          create: (_) => SmoothieProvider(),
+          update: (_, localeProvider, smoothieProvider) {
+            smoothieProvider!.loadData(
               locale: localeProvider.locale.languageCode,
             );
-          });
-          return MaterialApp(
-            debugShowCheckedModeBanner: false,
-            locale: localeProvider.locale,
-            onGenerateTitle: (context) => context.l10n.appTitle,
-            localizationsDelegates: const [
-              AppLocalizations.delegate,
-              GlobalMaterialLocalizations.delegate,
-              GlobalWidgetsLocalizations.delegate,
-              GlobalCupertinoLocalizations.delegate,
-            ],
-            supportedLocales: const [
-              Locale('en'),
-              Locale('es'),
-            ],
-            home: const Bienvenida(),
-          );
-        },
+            return smoothieProvider;
+          },
+        ),
+      ],
+      child: Consumer<LocaleProvider>(
+        builder: (context, localeProvider, _) => MaterialApp(
+          debugShowCheckedModeBanner: false,
+          locale: localeProvider.locale,
+          onGenerateTitle: (context) => context.l10n.appTitle,
+          localizationsDelegates: const [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: const [
+            Locale('en'),
+            Locale('es'),
+          ],
+          home: const Bienvenida(),
+        ),
       ),
     );
   }
