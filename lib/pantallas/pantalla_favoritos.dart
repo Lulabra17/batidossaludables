@@ -4,6 +4,7 @@ import 'package:batidos_salud/providers/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import '../functions/category_name.dart';
 import '../functions/functions.dart';
 import 'descripRecetas.dart';
 import 'package:hive/hive.dart';
@@ -90,7 +91,6 @@ class _PantallaFavoritosState extends State<PantallaFavoritos> {
 Widget cardReceta(
 BuildContext context, int index, dynamic recipe, void Function() delete) {
   int id = recipe.id.toInt();
-  final nombreCategoria = Provider.of<SmoothieProvider>(context, listen: false).getCategoryNameById(id);
   return GestureDetector(
     onTap: () {
       Navigator.push(
@@ -136,7 +136,7 @@ BuildContext context, int index, dynamic recipe, void Function() delete) {
                           ),
                         )),
                     const SizedBox(height: 4),
-                    Text(context.l10n.smoothiesCategoryTitle(nombreCategoria),
+                    Text(categoryLocalizedName(context, id),
                       overflow: TextOverflow.ellipsis,
                       maxLines: 1,
                       style: GoogleFonts.nunito(
