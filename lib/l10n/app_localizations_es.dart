@@ -19,6 +19,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get welcomeButton => '¡Adelante!';
 
   @override
+  String get appSlogan => 'Más frutas, más vitalidad, más vida.';
+
+  @override
   String get homeTitle => 'Bebidas Saludables desde Casa';
 
   @override
@@ -201,4 +204,58 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get sharePreparation => '👨‍🍳 *Preparación:*';
+
+  @override
+  String get cat1 => 'Desintoxicantes';
+
+  @override
+  String get cat2 => 'Para el Estreñimiento';
+
+  @override
+  String get cat3 => 'Para el Estrés y la Ansiedad';
+
+  @override
+  String get cat4 => 'Para la Retención de Líquidos';
+
+  @override
+  String get cat5 => 'Para la Circulación';
+
+  @override
+  String get cat6 => 'Para Mejorar la Piel';
+
+  @override
+  String get cat7 => 'Para Aumentar Masa Muscular';
+
+  @override
+  String get cat8 => 'Para Bajar la Grasa Abdominal';
+
+  @override
+  String get cat9 => 'Para el Dolor de Cabeza';
+
+  @override
+  String get cat10 => 'Para Personas con Diabetes';
+
+  @override
+  String get cat11 => 'Para la Hipertensión';
+
+  @override
+  String get cat12 => 'Para las Hemorroides';
+
+  @override
+  String get cat13 => 'Para Dolores Menstruales';
+
+  @override
+  String get cat14 => 'Para la Resaca';
+
+  @override
+  String get cat15 => 'Antigripales';
+
+  @override
+  String get cat16 => 'Para el Hígado Graso';
+
+  @override
+  String get cat17 => 'Para el Colon Inflamado';
+
+  @override
+  String get cat18 => 'Para la Gastritis';
 }

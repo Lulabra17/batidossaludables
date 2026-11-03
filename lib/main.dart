@@ -5,8 +5,10 @@ import 'package:batidos_salud/main/main_screen.dart';
 import 'package:batidos_salud/providers/locale_provider.dart';
 import 'package:batidos_salud/providers/provider.dart';
 import 'package:batidos_salud/services/ad_helper.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:batidos_salud/services/analytics_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -15,6 +17,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:provider/provider.dart';
 import 'dart:async';
+import 'dart:math' show pi;
 import 'favoritos.dart';
 
 // configurando canales para reprogramar alarmas en un reinicio
@@ -55,6 +58,11 @@ Future<void> main() async {
   await Hive.openBox('listAlarms');
   await Hive.openBox('alarms');
   await Hive.openBox('prefs');
+
+  // Inicializar Firebase antes de runApp
+  await Firebase.initializeApp();
+  await FirebaseAnalytics.instance.setAnalyticsCollectionEnabled(true);
+  await _setupFCM();
 
   // Pedir permisos antes de programar alarmas/notificaciones
   await requestPermissions();
@@ -120,6 +128,7 @@ class MyApp extends StatelessWidget {
       child: Consumer<LocaleProvider>(
         builder: (context, localeProvider, _) => MaterialApp(
           debugShowCheckedModeBanner: false,
+          navigatorObservers: [AnalyticsService.instance.observer],
           locale: localeProvider.locale,
           onGenerateTitle: (context) => context.l10n.appTitle,
           localizationsDelegates: const [
@@ -132,6 +141,37 @@ class MyApp extends StatelessWidget {
             Locale('en'),
             Locale('es'),
           ],
+          theme: ThemeData(
+            useMaterial3: false,
+            primaryColor: const Color(0xFF00695C),
+            colorScheme: const ColorScheme.light(
+              primary: Color(0xFF00695C),
+              secondary: Color(0xFF2BBFAA),
+              surface: Color(0xFFFAFAF8),
+            ),
+            scaffoldBackgroundColor: const Color(0xFFFAFAF8),
+            appBarTheme: const AppBarTheme(
+              backgroundColor: Colors.white,
+              foregroundColor: Colors.black87,
+              elevation: 1,
+              shadowColor: Colors.grey,
+              iconTheme: IconThemeData(color: Colors.black54),
+            ),
+            bottomAppBarTheme: const BottomAppBarThemeData(
+              color: Colors.white,
+              elevation: 4,
+              shadowColor: Colors.grey,
+            ),
+            elevatedButtonTheme: ElevatedButtonThemeData(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFF00695C),
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+              ),
+            ),
+          ),
           home: const Bienvenida(),
         ),
       ),
@@ -145,29 +185,77 @@ class Bienvenida extends StatefulWidget {
   State<Bienvenida> createState() => _BienvenidaState();
 }
 
-class _BienvenidaState extends State<Bienvenida> {
+class _BienvenidaState extends State<Bienvenida> with TickerProviderStateMixin {
   InterstitialAd? _interstitialAd;
   bool _isAdReady = false;
 
-  // El intersticial solo se muestra a partir del 2° inicio para no bloquear la primera experiencia
   static const _launchCountKey = 'launch_count';
   final _prefsBox = Hive.box('prefs');
+
+  // Animación entrada logo: spin + escala + fade
+  late final AnimationController _entranceCtrl;
+  late final Animation<double> _spinAnim;
+  late final Animation<double> _scaleAnim;
+  late final Animation<double> _fadeAnim;
+
+  // Animación loop logo: floating
+  late final AnimationController _floatCtrl;
+  late final Animation<double> _floatAnim;
+
+  // Animación entrada KIMO: fade in retrasado
+  late final AnimationController _kimoFadeCtrl;
+  late final Animation<double> _kimoFadeAnim;
 
   @override
   void initState() {
     super.initState();
     _incrementLaunchCount();
     _loadInterstitialAd();
-    _initFirebase();
+    _setupAnimations();
   }
 
-  Future<void> _initFirebase() async {
-    try {
-      await Firebase.initializeApp();
-      await _setupFCM();
-    } catch (e) {
-      debugPrint('⚠️ Firebase init en background: $e');
-    }
+  void _setupAnimations() {
+    _entranceCtrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 900),
+    );
+
+    _spinAnim = Tween<double>(begin: -2 * pi, end: 0).animate(
+      CurvedAnimation(parent: _entranceCtrl, curve: Curves.easeOut),
+    );
+    _scaleAnim = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(parent: _entranceCtrl, curve: Curves.elasticOut),
+    );
+    _fadeAnim = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(
+        parent: _entranceCtrl,
+        curve: const Interval(0.0, 0.5, curve: Curves.easeIn),
+      ),
+    );
+
+    _floatCtrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 2200),
+    );
+    _floatAnim = Tween<double>(begin: -7.0, end: 7.0).animate(
+      CurvedAnimation(parent: _floatCtrl, curve: Curves.easeInOut),
+    );
+
+    _kimoFadeCtrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 800),
+    );
+    _kimoFadeAnim = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(parent: _kimoFadeCtrl, curve: Curves.easeIn),
+    );
+
+    // Logo entra → arranca floating → 1s después aparece KIMO
+    _entranceCtrl.forward().whenComplete(() {
+      _floatCtrl.repeat(reverse: true);
+      Future.delayed(const Duration(milliseconds: 1000), () {
+        if (mounted) _kimoFadeCtrl.forward();
+      });
+    });
   }
 
   void _incrementLaunchCount() {
@@ -203,7 +291,6 @@ class _BienvenidaState extends State<Bienvenida> {
         onAdFailedToLoad: (LoadAdError error) {
           debugPrint('❌ Error al cargar interstitial: $error');
           _isAdReady = false;
-          goToMainScreen();
         },
       ),
     );
@@ -226,6 +313,9 @@ class _BienvenidaState extends State<Bienvenida> {
 
   @override
   void dispose() {
+    _entranceCtrl.dispose();
+    _floatCtrl.dispose();
+    _kimoFadeCtrl.dispose();
     _interstitialAd?.dispose();
     super.dispose();
   }
@@ -233,49 +323,119 @@ class _BienvenidaState extends State<Bienvenida> {
   @override
   Widget build(BuildContext context) {
     final l10n = context.l10n;
-    return Container(
-      decoration: const BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('assets/images/background.png'),
-          fit: BoxFit.cover,
+    final size = MediaQuery.of(context).size;
+
+    return Scaffold(
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF004D40),
+              Color(0xFF00695C),
+              Color(0xFF00897B),
+              Color(0xFF26A69A),
+            ],
+          ),
         ),
-      ),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: Center(
+        child: SafeArea(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const SizedBox(height: 50),
+              // ── Logo + KIMO (Stack: logo detrás, KIMO encima) ─────
+              SizedBox(
+                height: size.height * 0.62,
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    // Logo — detrás, más ancho que KIMO
+                    AnimatedBuilder(
+                      animation: Listenable.merge([_entranceCtrl, _floatCtrl]),
+                      builder: (context, child) {
+                        return Transform.translate(
+                          offset: Offset(0, _floatAnim.value),
+                          child: Transform.rotate(
+                            angle: _spinAnim.value,
+                            child: Transform.scale(
+                              scale: _scaleAnim.value,
+                              child: Opacity(
+                                opacity: _fadeAnim.value,
+                                child: child,
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                      child: Image.asset(
+                        'assets/images/logo_batidos.png',
+                        width: size.width * 0.82,
+                      ),
+                    ),
+
+                    // KIMO — encima, centrado con leve desplazamiento hacia abajo
+                    Align(
+                      alignment: const Alignment(0, 0.25),
+                      child: FadeTransition(
+                        opacity: _kimoFadeAnim,
+                        child: Image.asset(
+                          'assets/images/kimo_bienvenida.png',
+                          width: size.width * 0.70,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              // ── Slogan ────────────────────────────────────────────
               Padding(
-                padding: const EdgeInsets.all(25.0),
+                padding: const EdgeInsets.symmetric(horizontal: 32.0),
                 child: Text(
-                  l10n.welcomeMessage,
+                  l10n.appSlogan,
                   textAlign: TextAlign.center,
                   style: const TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white70,
+                    letterSpacing: 0.5,
+                    height: 1.4,
                   ),
                 ),
               ),
-              SizedBox(
-                width: 200,
-                height: 50,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.brown[900],
-                    textStyle: const TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
+
+              const SizedBox(height: 12),
+
+              // ── Botón ─────────────────────────────────────────────
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 48.0),
+                child: SizedBox(
+                  width: double.infinity,
+                  height: 52,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      foregroundColor: const Color(0xFF00695C),
+                      elevation: 0,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      textStyle: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 0.5,
+                      ),
                     ),
-                    backgroundColor: Colors.teal[300],
-                    elevation: 0,
+                    onPressed: showInterstitialAdIfAllowed,
+                    child: Text(l10n.welcomeButton),
                   ),
-                  onPressed: showInterstitialAdIfAllowed,
-                  child: Text(l10n.welcomeButton),
                 ),
               ),
+
+              const SizedBox(height: 20),
             ],
           ),
         ),
@@ -283,3 +443,4 @@ class _BienvenidaState extends State<Bienvenida> {
     );
   }
 }
+

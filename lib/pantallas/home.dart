@@ -41,70 +41,99 @@ class _HomeState extends State<Home> {
         ),
         child: Container(
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(20),
             gradient: const LinearGradient(
-              colors: [Color(0xFF008776), Color(0xFF2BBFAA)],
+              colors: [Color(0xFF004D40), Color(0xFF00897B)],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
             boxShadow: [
               BoxShadow(
-                color: const Color(0xFF2BBFAA).withValues(alpha: 0.35),
-                blurRadius: 10,
-                offset: const Offset(0, 4),
+                color: const Color(0xFF00695C).withValues(alpha: 0.4),
+                blurRadius: 12,
+                offset: const Offset(0, 5),
               )
             ],
           ),
-          padding: const EdgeInsets.all(14),
+          padding: const EdgeInsets.all(16),
           child: Row(
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(12),
-                child: Image.asset(
-                  recipe.image_smoothie,
-                  width: 72,
-                  height: 72,
-                  fit: BoxFit.cover,
+              // Imagen con borde sutil
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(14),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withValues(alpha: 0.25),
+                      blurRadius: 8,
+                      offset: const Offset(0, 3),
+                    )
+                  ],
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(14),
+                  child: Image.asset(
+                    recipe.image_smoothie,
+                    width: 82,
+                    height: 82,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
-              const SizedBox(width: 12),
+              const SizedBox(width: 14),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      l10n.recipeDayCardTitle,
-                      style: const TextStyle(
-                        color: Colors.white70,
-                        fontSize: 11,
-                        fontWeight: FontWeight.w600,
-                        letterSpacing: 1,
+                    // Badge "Receta del día"
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withValues(alpha: 0.15),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Text(
+                        '🥤  ${l10n.recipeDayCardTitle.toUpperCase()}',
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 10,
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: 0.8,
+                        ),
                       ),
                     ),
-                    const SizedBox(height: 4),
+                    const SizedBox(height: 8),
                     Text(
                       recipe.name,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
+                      style: GoogleFonts.nunito(
+                        textStyle: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          height: 1.2,
+                        ),
                       ),
                     ),
-                    const SizedBox(height: 4),
-                    Text(
-                      categoryLocalizedName(context, recipe.id.toInt()),
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
-                        color: Colors.white70,
-                        fontSize: 11,
-                      ),
+                    const SizedBox(height: 6),
+                    Row(
+                      children: [
+                        const Icon(Icons.check_circle_outline, color: Colors.white60, size: 12),
+                        const SizedBox(width: 4),
+                        Text(
+                          categoryLocalizedName(context, recipe.id.toInt()),
+                          style: const TextStyle(
+                            color: Colors.white60,
+                            fontSize: 11,
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
               ),
+              const Icon(Icons.chevron_right, color: Colors.white38, size: 22),
             ],
           ),
         ),
@@ -119,19 +148,28 @@ class _HomeState extends State<Home> {
       backgroundColor: Color(0xFFE8E8DE),
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        leading: null,
-        title: Text(context.l10n.homeTitle,
-            style: GoogleFonts.nunito(
-              textStyle: TextStyle(
-                  color: Colors.black,
+        title: Row(
+          children: [
+            Image.asset(
+              'assets/images/logo_batidos.png',
+              height: 34,
+            ),
+            const SizedBox(width: 10),
+            Text(
+              context.l10n.appTitle,
+              style: GoogleFonts.nunito(
+                textStyle: const TextStyle(
+                  color: Colors.black87,
                   fontWeight: FontWeight.bold,
-                  fontSize: MediaQuery.of(context).size.width * 0.04),
-            )),
-        backgroundColor: Colors.white,
-        shadowColor: Colors.grey,
+                  fontSize: 17,
+                ),
+              ),
+            ),
+          ],
+        ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.language, color: Colors.black54),
+            icon: const Icon(Icons.language),
             onPressed: () => _showLanguageDialog(context),
           ),
         ],

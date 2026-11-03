@@ -19,6 +19,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get welcomeButton => 'Let\'s go!';
 
   @override
+  String get appSlogan => 'More fruits, more vitality, more life.';
+
+  @override
   String get homeTitle => 'Healthy Drinks from Home';
 
   @override
@@ -197,4 +200,58 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get sharePreparation => '👨‍🍳 *Preparation:*';
+
+  @override
+  String get cat1 => 'Detox Smoothies';
+
+  @override
+  String get cat2 => 'For Constipation';
+
+  @override
+  String get cat3 => 'For Stress & Anxiety';
+
+  @override
+  String get cat4 => 'For Water Retention';
+
+  @override
+  String get cat5 => 'For Better Circulation';
+
+  @override
+  String get cat6 => 'For Better Skin';
+
+  @override
+  String get cat7 => 'For Muscle Mass';
+
+  @override
+  String get cat8 => 'For Abdominal Fat';
+
+  @override
+  String get cat9 => 'For Headaches';
+
+  @override
+  String get cat10 => 'For Diabetes';
+
+  @override
+  String get cat11 => 'For Hypertension';
+
+  @override
+  String get cat12 => 'For Hemorrhoids';
+
+  @override
+  String get cat13 => 'For Menstrual Pain';
+
+  @override
+  String get cat14 => 'For Hangovers';
+
+  @override
+  String get cat15 => 'For the Flu';
+
+  @override
+  String get cat16 => 'For Fatty Liver';
+
+  @override
+  String get cat17 => 'For Colon Inflammation';
+
+  @override
+  String get cat18 => 'For Gastritis';
 }

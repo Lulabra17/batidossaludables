@@ -116,6 +116,12 @@ abstract class AppLocalizations {
   /// **'Let\'s go!'**
   String get welcomeButton;
 
+  /// No description provided for @appSlogan.
+  ///
+  /// In en, this message translates to:
+  /// **'More fruits, more vitality, more life.'**
+  String get appSlogan;
+
   /// No description provided for @homeTitle.
   ///
   /// In en, this message translates to:
@@ -439,6 +445,114 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'👨‍🍳 *Preparation:*'**
   String get sharePreparation;
+
+  /// No description provided for @cat1.
+  ///
+  /// In en, this message translates to:
+  /// **'Detox Smoothies'**
+  String get cat1;
+
+  /// No description provided for @cat2.
+  ///
+  /// In en, this message translates to:
+  /// **'For Constipation'**
+  String get cat2;
+
+  /// No description provided for @cat3.
+  ///
+  /// In en, this message translates to:
+  /// **'For Stress & Anxiety'**
+  String get cat3;
+
+  /// No description provided for @cat4.
+  ///
+  /// In en, this message translates to:
+  /// **'For Water Retention'**
+  String get cat4;
+
+  /// No description provided for @cat5.
+  ///
+  /// In en, this message translates to:
+  /// **'For Better Circulation'**
+  String get cat5;
+
+  /// No description provided for @cat6.
+  ///
+  /// In en, this message translates to:
+  /// **'For Better Skin'**
+  String get cat6;
+
+  /// No description provided for @cat7.
+  ///
+  /// In en, this message translates to:
+  /// **'For Muscle Mass'**
+  String get cat7;
+
+  /// No description provided for @cat8.
+  ///
+  /// In en, this message translates to:
+  /// **'For Abdominal Fat'**
+  String get cat8;
+
+  /// No description provided for @cat9.
+  ///
+  /// In en, this message translates to:
+  /// **'For Headaches'**
+  String get cat9;
+
+  /// No description provided for @cat10.
+  ///
+  /// In en, this message translates to:
+  /// **'For Diabetes'**
+  String get cat10;
+
+  /// No description provided for @cat11.
+  ///
+  /// In en, this message translates to:
+  /// **'For Hypertension'**
+  String get cat11;
+
+  /// No description provided for @cat12.
+  ///
+  /// In en, this message translates to:
+  /// **'For Hemorrhoids'**
+  String get cat12;
+
+  /// No description provided for @cat13.
+  ///
+  /// In en, this message translates to:
+  /// **'For Menstrual Pain'**
+  String get cat13;
+
+  /// No description provided for @cat14.
+  ///
+  /// In en, this message translates to:
+  /// **'For Hangovers'**
+  String get cat14;
+
+  /// No description provided for @cat15.
+  ///
+  /// In en, this message translates to:
+  /// **'For the Flu'**
+  String get cat15;
+
+  /// No description provided for @cat16.
+  ///
+  /// In en, this message translates to:
+  /// **'For Fatty Liver'**
+  String get cat16;
+
+  /// No description provided for @cat17.
+  ///
+  /// In en, this message translates to:
+  /// **'For Colon Inflammation'**
+  String get cat17;
+
+  /// No description provided for @cat18.
+  ///
+  /// In en, this message translates to:
+  /// **'For Gastritis'**
+  String get cat18;
 }
 
 class _AppLocalizationsDelegate
