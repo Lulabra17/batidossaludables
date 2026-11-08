@@ -70,17 +70,14 @@ class _MainScreenState extends State<MainScreen> {
       // ✅ Body con banner como overlay fijo en la parte inferior
       body: Stack(
         children: [
-          Padding(
-            padding: EdgeInsets.only(bottom: _isBannerLoaded ? _bannerHeight : 0),
-            child: IndexedStack(
-              index: _selectedIndex,
-              children: [
-                const Home(),
-                const Categorias(),
-                PantallaFavoritos(),
-                ReminderWater(),
-              ],
-            ),
+          IndexedStack(
+            index: _selectedIndex,
+            children: [
+              const Home(),
+              const Categorias(),
+              PantallaFavoritos(),
+              ReminderWater(),
+            ],
           ),
           if (_isBannerLoaded && _bannerAd != null)
             Positioned(
@@ -90,7 +87,7 @@ class _MainScreenState extends State<MainScreen> {
               child: SafeArea(
                 child: SizedBox(
                   height: _bannerHeight,
-                  width: _bannerAd!.size.width.toDouble(),
+                  width: double.infinity,
                   child: AdWidget(ad: _bannerAd!),
                 ),
               ),
