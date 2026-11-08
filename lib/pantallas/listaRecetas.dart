@@ -2,6 +2,7 @@ import 'package:batidos_salud/models/receta_model.dart';
 import 'package:batidos_salud/pantallas/descripRecetas.dart';
 import 'package:batidos_salud/pantallas/searchScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import '../functions/category_name.dart';
 import '../functions/functions.dart';
@@ -59,20 +60,23 @@ class _ListaRecetasState extends State<ListaRecetas> {
     final List<Recipe> listaReceta = depuratedListReceta(smProvider.recetas, idcategory);
 
     return Scaffold(
-      backgroundColor: Color(0xFFE8E8DE),
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.teal[600]),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () => Navigator.pop(context),
         ),
         title: Text(
           categoryLocalizedName(context, widget.category.id),
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: MediaQuery.of(context).size.width*0.04),
+          style: GoogleFonts.nunito(
+            textStyle: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 17,
+            ),
+          ),
         ),
-        backgroundColor: Colors.white,
         actions: [
           IconButton(
-            icon: Icon(Icons.search, color: Colors.teal[600]),
+            icon: const Icon(Icons.search),
             onPressed: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => const SearchScreen()),
@@ -129,35 +133,41 @@ Widget cardReceta(BuildContext context, dynamic recipe) {
       );
     },
     child: Padding(
-      padding: const EdgeInsets.all(6.0),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
       child: SizedBox(
-        width: MediaQuery.of(context).size.width,
-        height: 125,
+        height: 90,
         child: Card(
-          elevation: 8.0,
+          elevation: 2,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
           child: Row(
             children: [
-              Container(
-                width: 120,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('${recipe.image_smoothie}'),
-                    fit: BoxFit.cover,
-                  ),
-                  borderRadius: BorderRadius.circular(12),
+              ClipRRect(
+                borderRadius: const BorderRadius.horizontal(left: Radius.circular(14)),
+                child: Image.asset(
+                  '${recipe.image_smoothie}',
+                  width: 90,
+                  height: 90,
+                  fit: BoxFit.cover,
                 ),
               ),
-              const SizedBox(width: 15),
+              const SizedBox(width: 14),
               Expanded(
                 child: Text(
                   '${recipe.name}',
-                  style: TextStyle(
-                    color: Colors.green[900],
-                    fontFamily: 'Quicksand',
-                    fontSize: MediaQuery.of(context).size.width * 0.040,
-                    fontWeight: FontWeight.bold,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: GoogleFonts.nunito(
+                    textStyle: TextStyle(
+                      color: Theme.of(context).colorScheme.primary,
+                      fontSize: MediaQuery.of(context).size.width * 0.040,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 8),
+                child: Icon(Icons.chevron_right, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.25), size: 20),
               ),
             ],
           ),

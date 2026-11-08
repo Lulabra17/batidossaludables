@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 
 class LocaleProvider extends ChangeNotifier {
-  static const _key = 'app_locale';
+  static const _localeKey = 'app_locale';
+  static const _themeKey = 'app_theme';
   final Box _prefs;
 
   LocaleProvider(this._prefs);
 
   Locale get locale {
-    final saved = _prefs.get(_key) as String?;
+    final saved = _prefs.get(_localeKey) as String?;
     if (saved != null) return Locale(saved);
-    // Sin preferencia guardada: detecta el idioma del dispositivo
     final platformLocales =
         WidgetsBinding.instance.platformDispatcher.locales;
     if (platformLocales.any((l) => l.languageCode == 'es')) {
@@ -20,7 +20,27 @@ class LocaleProvider extends ChangeNotifier {
   }
 
   void setLocale(String languageCode) {
-    _prefs.put(_key, languageCode);
+    _prefs.put(_localeKey, languageCode);
+    notifyListeners();
+  }
+
+  ThemeMode get themeMode {
+    final saved = _prefs.get(_themeKey) as String?;
+    if (saved == 'dark') return ThemeMode.dark;
+    if (saved == 'light') return ThemeMode.light;
+    return ThemeMode.system;
+  }
+
+  bool get isDark {
+    if (themeMode == ThemeMode.dark) return true;
+    if (themeMode == ThemeMode.light) return false;
+    return WidgetsBinding.instance.platformDispatcher.platformBrightness ==
+        Brightness.dark;
+  }
+
+  void toggleTheme() {
+    final newMode = isDark ? ThemeMode.light : ThemeMode.dark;
+    _prefs.put(_themeKey, newMode == ThemeMode.dark ? 'dark' : 'light');
     notifyListeners();
   }
 }

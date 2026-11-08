@@ -22,6 +22,11 @@ String categoryLocalizedName(BuildContext context, int id) {
     case 16: return l10n.cat16;
     case 17: return l10n.cat17;
     case 18: return l10n.cat18;
+    case 19: return l10n.cat19;
+    case 20: return l10n.cat20;
+    case 21: return l10n.cat21;
+    case 22: return l10n.cat22;
+    case 23: return l10n.cat23;
     default: return '';
   }
 }

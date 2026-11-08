@@ -66,7 +66,6 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Color(0xFFFAFAF8),
 
       // ✅ Body con banner como overlay fijo en la parte inferior
       body: Stack(
@@ -101,9 +100,7 @@ class _MainScreenState extends State<MainScreen> {
 
       // ✅ BottomAppBar con FAB embebido en el centro — banner en body overlay queda libre
       bottomNavigationBar: BottomAppBar(
-        shadowColor: Colors.grey,
         elevation: 4.0,
-        color: Colors.white,
         height: 62,
         clipBehavior: Clip.none,
         child: Row(
@@ -113,14 +110,18 @@ class _MainScreenState extends State<MainScreen> {
             IconButton(
               icon: ImageIcon(
                 const AssetImage('assets/images/iconohome.png'),
-                color: _selectedIndex == 0 ? Colors.teal[600] : Colors.black45,
+                color: _selectedIndex == 0
+                    ? Theme.of(context).colorScheme.primary
+                    : Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4),
               ),
               onPressed: () => _onItemTapped(0),
             ),
             IconButton(
               icon: Icon(
                 Icons.menu,
-                color: _selectedIndex == 1 ? Colors.teal[600] : Colors.black45,
+                color: _selectedIndex == 1
+                    ? Theme.of(context).colorScheme.primary
+                    : Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4),
               ),
               onPressed: () => _onItemTapped(1),
             ),
@@ -148,7 +149,7 @@ class _MainScreenState extends State<MainScreen> {
                     width: 60,
                     height: 60,
                     decoration: BoxDecoration(
-                      color: Colors.teal[600],
+                      color: Theme.of(context).colorScheme.primary,
                       shape: BoxShape.circle,
                       boxShadow: const [
                         BoxShadow(
@@ -169,14 +170,18 @@ class _MainScreenState extends State<MainScreen> {
             IconButton(
               icon: Icon(
                 Icons.favorite,
-                color: _selectedIndex == 2 ? Colors.teal[600] : Colors.black45,
+                color: _selectedIndex == 2
+                    ? Theme.of(context).colorScheme.primary
+                    : Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4),
               ),
               onPressed: () => _onItemTapped(2),
             ),
             IconButton(
               icon: Icon(
                 Icons.water_drop,
-                color: _selectedIndex == 3 ? Colors.teal[600] : Colors.black45,
+                color: _selectedIndex == 3
+                    ? Theme.of(context).colorScheme.primary
+                    : Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4),
               ),
               onPressed: () => _onItemTapped(3),
             ),

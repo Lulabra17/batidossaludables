@@ -92,7 +92,6 @@ class _SearchScreenState extends State<SearchScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Color(0xFFFAFAF8),
       appBar: AppBar(
         title: TextField(
           autofocus: true,
@@ -100,13 +99,13 @@ class _SearchScreenState extends State<SearchScreen> {
           decoration: InputDecoration(
             hintText: context.l10n.searchHint,
             border: InputBorder.none,
-            hintStyle: const TextStyle(color: Colors.black38),
+            hintStyle: TextStyle(
+              color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4),
+            ),
           ),
-          style: const TextStyle(color: Colors.black),
-          cursorColor: Colors.teal,
+          style: TextStyle(color: Theme.of(context).colorScheme.onSurface),
+          cursorColor: Theme.of(context).colorScheme.primary,
         ),
-        backgroundColor: Color(0xFFFAFAF8),
-        iconTheme: const IconThemeData(color: Colors.teal),
       ),
       body: Stack(
         children: [
@@ -117,7 +116,10 @@ class _SearchScreenState extends State<SearchScreen> {
                   ? Center(
                       child: Text(
                         context.l10n.searchPrompt,
-                        style: const TextStyle(fontSize: 16, color: Colors.black54),
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
+                        ),
                       ),
                     )
                   : _filteredCategories.isNotEmpty
@@ -129,9 +131,22 @@ class _SearchScreenState extends State<SearchScreen> {
                         )
                       : _filteredRecipes.isEmpty
                           ? Center(
-                              child: Text(
-                                context.l10n.noResults,
-                                style: const TextStyle(fontSize: 16, color: Colors.black54),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    'assets/images/kimo_sin_resultados.png',
+                                    width: 180,
+                                  ),
+                                  const SizedBox(height: 12),
+                                  Text(
+                                    context.l10n.noResults,
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
+                                    ),
+                                  ),
+                                ],
                               ),
                             )
                           : ListView.builder(

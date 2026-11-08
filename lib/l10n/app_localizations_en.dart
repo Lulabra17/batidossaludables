@@ -39,6 +39,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get noFavorites => 'No favorite recipes';
 
   @override
+  String get noFavoritesHint =>
+      'Explore the recipes and mark\nthe ones you like the most.';
+
+  @override
   String get ingredientsTitle => 'Ingredients';
 
   @override
@@ -99,7 +103,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get activateReminders => 'Activate reminders';
 
   @override
-  String get deleteReminders => 'Delete existing reminders';
+  String get deleteReminders => 'Delete all';
 
   @override
   String get scheduledRemindersLabel => 'SCHEDULED REMINDERS';
@@ -254,4 +258,90 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get cat18 => 'For Gastritis';
+
+  @override
+  String get cat19 => 'Teas for Weight Loss';
+
+  @override
+  String get cat20 => 'Laxative Teas';
+
+  @override
+  String get cat21 => 'Teas for Headaches';
+
+  @override
+  String get cat22 => 'Rejuvenating Smoothies';
+
+  @override
+  String get cat23 => 'Immunity Smoothies for Kids';
+
+  @override
+  String get tabSetup => 'Setup';
+
+  @override
+  String get tabReminders => 'Reminders';
+
+  @override
+  String get tabToday => 'Today';
+
+  @override
+  String get kimoSetupGuide =>
+      'Hello! Set up your daily hydration to get started.';
+
+  @override
+  String get kimoSetupConfigured => 'All set! Your reminders are active.';
+
+  @override
+  String get noRemindersInfo =>
+      'No reminders yet. Go to Setup to configure them.';
+
+  @override
+  String get goToSetupButton => 'Go to Setup';
+
+  @override
+  String get reconfigurarButton => 'Reconfigure';
+
+  @override
+  String get todayProgressTitle => 'TODAY\'S PROGRESS';
+
+  @override
+  String get kimoComment0pct => 'Start your hydration today! 💧';
+
+  @override
+  String get kimoComment25pct => 'Come on! You need more water 💪';
+
+  @override
+  String get kimoComment50pct => 'Great pace! You\'re halfway there ⭐';
+
+  @override
+  String get kimoComment75pct => 'Almost there! Just a bit more 🌟';
+
+  @override
+  String get kimoComment100pct => 'Goal achieved! You\'re amazing! 🎉';
+
+  @override
+  String get addWaterTitle => 'LOG WATER';
+
+  @override
+  String get resetDayButton => 'Reset day';
+
+  @override
+  String get reminderLabelMorning => 'Morning hydration';
+
+  @override
+  String get reminderLabelMidMorning => 'Mid-morning';
+
+  @override
+  String get reminderLabelMidday => 'Midday hydration';
+
+  @override
+  String get reminderLabelAfternoon => 'Afternoon recharge';
+
+  @override
+  String get reminderLabelEvening => 'Evening hydration';
+
+  @override
+  String get reminderLabelNight => 'Before sleep';
+
+  @override
+  String get editReminderRoutine => 'Change routine';
 }

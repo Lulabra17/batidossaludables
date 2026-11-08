@@ -28,17 +28,24 @@ class _PantallaFavoritosState extends State<PantallaFavoritos> {
 
 
     return Scaffold(
-        backgroundColor: Color(0xFFE8E8DE),
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          leading: null,
-          title: Text(context.l10n.favoritesTitle,
-            style: GoogleFonts.nunito(textStyle: TextStyle(
-                color: Colors.black, fontWeight: FontWeight.bold, fontSize: MediaQuery.of(context).size.width*0.04),
-            ),
+          title: Row(
+            children: [
+              Image.asset('assets/images/logo_batidos.png', height: 34),
+              const SizedBox(width: 10),
+              Text(
+                context.l10n.favoritesTitle,
+                style: GoogleFonts.nunito(
+                  textStyle: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 17,
+                  ),
+                ),
+              ),
+            ],
           ),
-          backgroundColor: Colors.white,
-          shadowColor: Colors.grey,),
+        ),
         body: Builder(
           builder: (context) {
             if (listafavoritos.isEmpty) {
@@ -46,15 +53,29 @@ class _PantallaFavoritosState extends State<PantallaFavoritos> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.favorite_border, size: 64, color: Colors.teal[300]),
+                    Image.asset(
+                      'assets/images/kimo_favoritos_vacio.png',
+                      width: 180,
+                    ),
                     const SizedBox(height: 16),
                     Text(
                       context.l10n.noFavorites,
                       style: GoogleFonts.nunito(
                         textStyle: TextStyle(
-                          color: Colors.grey[600],
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
+                          color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7),
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      context.l10n.noFavoritesHint,
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.nunito(
+                        textStyle: TextStyle(
+                          color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
+                          fontSize: 13,
                         ),
                       ),
                     ),
@@ -130,7 +151,7 @@ BuildContext context, int index, dynamic recipe, void Function() delete) {
                         maxLines: 2,
                         style: GoogleFonts.nunito(
                           textStyle: TextStyle(
-                            color: Colors.teal[800],
+                            color: Theme.of(context).colorScheme.primary,
                             fontSize: MediaQuery.of(context).size.width * 0.040,
                             fontWeight: FontWeight.bold,
                           ),
@@ -141,7 +162,7 @@ BuildContext context, int index, dynamic recipe, void Function() delete) {
                       maxLines: 1,
                       style: GoogleFonts.nunito(
                         textStyle: TextStyle(
-                          color: Colors.grey[600],
+                          color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
                           fontSize: MediaQuery.of(context).size.width * 0.030,
                         ),
                       ))

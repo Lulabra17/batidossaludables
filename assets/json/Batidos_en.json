@@ -4354,6 +4354,1157 @@
           ]
         }
       ]
+    },
+    {
+      "id": 19,
+      "name_category": "Teas for Weight Loss",
+      "image_category": "assets/images/tes_peso.png",
+      "recipes": [
+        {
+          "id": 19.1,
+          "image_smoothie": "assets/images/pi_jen.png",
+          "name": "Ginger and Pineapple Tea",
+          "ingredient_amount": [
+            "1 peel",
+            "1 peel",
+            "1 tbsp",
+            "1 liter"
+          ],
+          "ingredient_description": [
+            "of half a pineapple",
+            "of orange",
+            "of ginger",
+            "of water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_pina.png",
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_jengibre.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Add the pineapple peel, orange peel, and tablespoon of ginger to 1 liter of water.",
+            "- Bring to a boil for 3 minutes.",
+            "- Turn off the heat, cover, and let steep for 5 minutes.",
+            "- Strain and drink immediately.",
+            "- Drink throughout the day between meals."
+          ]
+        },
+        {
+          "id": 19.2,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Green Tea",
+          "ingredient_amount": [
+            "1 tsp",
+            "150 ml"
+          ],
+          "ingredient_description": [
+            "of dried green tea leaves",
+            "of boiling water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_teverde.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Place dried green tea leaves in a cup.",
+            "- Add 150 ml of boiling water.",
+            "- Cover and let steep for 10 minutes.",
+            "- Strain and drink.",
+            "- Drink before main meals for 2 to 3 weeks."
+          ]
+        },
+        {
+          "id": 19.3,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Saffron and Ginger Tea",
+          "ingredient_amount": [
+            "1 tbsp",
+            "1 tbsp",
+            "500 ml"
+          ],
+          "ingredient_description": [
+            "of saffron threads",
+            "of ginger or 2-3 cm of root",
+            "of boiling water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_azafran.png",
+            "assets/images/icono_jengibre.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Add saffron threads and ginger to boiling water.",
+            "- Cover and let steep for 5 minutes.",
+            "- Strain, let cool slightly and drink 1 cup twice a day.",
+            "- Combine with regular physical activity."
+          ]
+        },
+        {
+          "id": 19.4,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Dandelion Tea",
+          "ingredient_amount": [
+            "1-2 tsp",
+            "150-200 ml"
+          ],
+          "ingredient_description": [
+            "of crushed or powdered dandelion root",
+            "of water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_dandelion.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Pour boiling water over the crushed dandelion root.",
+            "- Let steep for 10 minutes.",
+            "- Strain and drink warm up to 3 times a day."
+          ]
+        },
+        {
+          "id": 19.5,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Red Tea",
+          "ingredient_amount": [
+            "1 tbsp",
+            "250 ml"
+          ],
+          "ingredient_description": [
+            "of red tea",
+            "of water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_teverde.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Boil the water and let it cool for 1 to 2 minutes.",
+            "- Add the red tea and let steep for 10 minutes.",
+            "- Can be served hot or cold.",
+            "- Drink 1 to 3 cups per day."
+          ]
+        },
+        {
+          "id": 19.6,
+          "image_smoothie": "assets/images/te_pe_pi.png",
+          "name": "Hibiscus and Cinnamon Tea",
+          "ingredient_amount": [
+            "1 tbsp",
+            "1 tbsp",
+            "1 stick",
+            "1 liter"
+          ],
+          "ingredient_description": [
+            "of dried hibiscus",
+            "of horsetail leaves",
+            "of cinnamon",
+            "of boiling water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_hibisco.png",
+            "assets/images/icono_hierbabuena.png",
+            "assets/images/icono_canela.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Add the dried hibiscus, horsetail leaves, and cinnamon stick to 1 liter of boiling water.",
+            "- Let steep for 10 minutes.",
+            "- Strain before drinking.",
+            "- Drink 3 to 4 times a day, half an hour before main meals."
+          ]
+        },
+        {
+          "id": 19.7,
+          "image_smoothie": "assets/images/jen_li.png",
+          "name": "Yerba Mate and Lemon Tea",
+          "ingredient_amount": [
+            "1-2 tsp",
+            "½ lemon",
+            "150 ml"
+          ],
+          "ingredient_description": [
+            "of yerba mate",
+            "squeezed",
+            "of boiling water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_teverde.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Place dried yerba mate leaves and half a lemon in a cup.",
+            "- Add 150 ml of boiling water.",
+            "- Cover and let steep for 5 to 10 minutes.",
+            "- Strain and drink."
+          ]
+        },
+        {
+          "id": 19.8,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Fenugreek and Artichoke Tea",
+          "ingredient_amount": [
+            "1 tsp",
+            "1 tsp",
+            "1 liter"
+          ],
+          "ingredient_description": [
+            "of fenugreek seeds in powder",
+            "of dried artichoke leaves",
+            "of water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_linaza.png",
+            "assets/images/icono_alcachofa.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Boil the water, turn off the heat and add fenugreek and artichoke leaves.",
+            "- Cover and let steep for 5 to 10 minutes.",
+            "- Strain and drink 1 cup three times a day between meals."
+          ]
+        },
+        {
+          "id": 19.9,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Lemongrass Tea",
+          "ingredient_amount": [
+            "1 tsp",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "of chopped lemongrass leaves",
+            "of boiling water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_menta.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Place chopped lemongrass leaves in a cup.",
+            "- Cover with boiling water.",
+            "- Cover, let steep, and strain well.",
+            "- Drink 3 to 4 cups a day with healthy eating and exercise."
+          ]
+        },
+        {
+          "id": 19.1,
+          "image_smoothie": "assets/images/ba_cur.png",
+          "name": "Turmeric and Lemon Tea",
+          "ingredient_amount": [
+            "1 tsp",
+            "1 tbsp",
+            "150 ml"
+          ],
+          "ingredient_description": [
+            "of turmeric powder",
+            "of lemon juice",
+            "of boiling water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_curcuma.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Add turmeric powder and lemon juice to boiling water.",
+            "- Let steep for 10 to 15 minutes.",
+            "- Let cool slightly and drink up to 3 cups a day between meals."
+          ]
+        },
+        {
+          "id": 19.11,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Matcha Tea",
+          "ingredient_amount": [
+            "1 tsp",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "of matcha",
+            "of water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_teverde.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Heat water to just below boiling and turn off the heat.",
+            "- Add matcha and stir well until completely dissolved.",
+            "- Let rest until lukewarm.",
+            "- Drink up to 3 cups a day, before or after meals or after exercise."
+          ]
+        },
+        {
+          "id": 19.12,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Olive Leaf Tea",
+          "ingredient_amount": [
+            "10 g",
+            "150 ml"
+          ],
+          "ingredient_description": [
+            "of fresh crushed olive leaves (or 5 g dried)",
+            "of boiling water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_hierbabuena.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Add olive leaves to boiling water.",
+            "- Cover and let steep for 10 to 15 minutes.",
+            "- Strain and drink twice a day after main meals."
+          ]
+        },
+        {
+          "id": 19.13,
+          "image_smoothie": "assets/images/te_pe_pi.png",
+          "name": "Black Tea with Orange and Cinnamon",
+          "ingredient_amount": [
+            "2 tbsp",
+            "peel of ½",
+            "1 stick",
+            "2 cups"
+          ],
+          "ingredient_description": [
+            "of black tea leaves",
+            "orange",
+            "of cinnamon",
+            "of boiling water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_teverde.png",
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_canela.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Toast the orange peel and cinnamon stick in a pot over medium heat for 3 minutes.",
+            "- Add these ingredients and the black tea to the boiling water.",
+            "- Let steep for 5 minutes.",
+            "- Strain and drink hot or cold, 1 to 2 cups a day for at least 3 months."
+          ]
+        },
+        {
+          "id": 19.14,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Oolong Tea",
+          "ingredient_amount": [
+            "1 tsp",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "of oolong",
+            "of boiling water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_teverde.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Add oolong to boiling water.",
+            "- Let steep for a maximum of 3 minutes.",
+            "- Strain and drink 1 cup a day for at least 6 weeks with a balanced diet."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name_category": "Laxative Teas",
+      "image_category": "assets/images/tes_laxantes.png",
+      "recipes": [
+        {
+          "id": 20.1,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Cascara Sagrada Tea",
+          "ingredient_amount": [
+            "0.5 g",
+            "150 ml"
+          ],
+          "ingredient_description": [
+            "of cascara sagrada",
+            "of boiling water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_hierbabuena.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Add cascara sagrada to a cup of boiling water.",
+            "- Let steep for 15 minutes.",
+            "- Strain and drink immediately before bedtime.",
+            "- Effect occurs 8 to 12 hours after ingestion.",
+            "- Do not use during pregnancy, breastfeeding or in children under 10."
+          ]
+        },
+        {
+          "id": 20.2,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Dried Prune Tea",
+          "ingredient_amount": [
+            "3 units",
+            "250 ml"
+          ],
+          "ingredient_description": [
+            "dried prunes without seeds",
+            "of water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_ciruela.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Add the dried prunes and water to a pot.",
+            "- Boil for 5 to 7 minutes.",
+            "- Let cool and drink throughout the day.",
+            "- Alternative: soak prunes overnight and drink on an empty stomach the next morning."
+          ]
+        },
+        {
+          "id": 20.3,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Senna Tea",
+          "ingredient_amount": [
+            "0.5-2 g",
+            "250 ml"
+          ],
+          "ingredient_description": [
+            "of dried senna leaves",
+            "of boiling water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_hierbabuena.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Add senna leaves to a cup of boiling water.",
+            "- Let steep for 5 minutes, strain and drink.",
+            "- Can be taken 2 to 3 times a day.",
+            "- Laxative effect within 6 hours of ingestion.",
+            "- Do not use in pregnancy, breastfeeding or children under 12."
+          ]
+        },
+        {
+          "id": 20.4,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Psyllium Tea",
+          "ingredient_amount": [
+            "3 g",
+            "100 ml"
+          ],
+          "ingredient_description": [
+            "of psyllium seeds",
+            "of boiling water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_linaza.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Place psyllium seeds in a cup with boiling water.",
+            "- Let steep, strain and take up to 3 times a day.",
+            "- Do not use during pregnancy, breastfeeding or in children under 12."
+          ]
+        },
+        {
+          "id": 20.5,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Frangula Tea",
+          "ingredient_amount": [
+            "5-10 g",
+            "1 liter"
+          ],
+          "ingredient_description": [
+            "of frangula bark",
+            "of water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_hierbabuena.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Place frangula bark and water in a pot and boil for 15 minutes.",
+            "- Let rest for 2 hours and strain.",
+            "- Drink 1 to 2 cups before bedtime.",
+            "- Laxative effect occurs 10 to 12 hours later.",
+            "- Do not use during pregnancy or in cases of colitis or ulcers."
+          ]
+        },
+        {
+          "id": 20.6,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Rhubarb Tea",
+          "ingredient_amount": [
+            "2 tbsp",
+            "500 ml"
+          ],
+          "ingredient_description": [
+            "of rhubarb stalk",
+            "of water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_ruibarbo.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Add the rhubarb stalk and water to a container and boil for 10 minutes.",
+            "- Strain and drink warm 1 cup before sleep.",
+            "- Do not use in pregnancy, children under 12, or in cases of abdominal pain or intestinal obstruction."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name_category": "Teas for Headaches",
+      "image_category": "assets/images/tes_cabeza.png",
+      "recipes": [
+        {
+          "id": 21.1,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Lemon Balm Tea",
+          "ingredient_amount": [
+            "3 tbsp",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "of lemon balm leaves",
+            "of boiling water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_hierbabuena.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Add lemon balm leaves to boiling water.",
+            "- Cover and let steep for a few minutes.",
+            "- Strain and drink 3 to 4 cups a day.",
+            "- Do not consume with sleep medications or thyroid treatments."
+          ]
+        },
+        {
+          "id": 21.2,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Chamomile Tea",
+          "ingredient_amount": [
+            "1 tbsp",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "of dried chamomile flowers",
+            "of boiling water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_manzanilla.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Add chamomile flowers to boiling water.",
+            "- Cover and let steep for 5 to 10 minutes.",
+            "- Remove flowers, let cool and drink.",
+            "- Drink 2 to 3 times a day or when headache begins."
+          ]
+        },
+        {
+          "id": 21.3,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Boldo Tea",
+          "ingredient_amount": [
+            "1 tbsp",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "of fresh boldo leaves chopped",
+            "of water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_boldo.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Bring water to a boil, then turn off the heat.",
+            "- Add boldo leaves, cover and let cool.",
+            "- Strain and sweeten to taste.",
+            "- Do not use with liver disease, pregnancy or breastfeeding."
+          ]
+        },
+        {
+          "id": 21.4,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Bay Leaf Tea",
+          "ingredient_amount": [
+            "2 dry leaves",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "of bay leaf",
+            "of water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_laurel.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Bring water to a boil.",
+            "- Remove from heat, add bay leaves, cover and let steep for 10 minutes.",
+            "- Strain and drink up to 3 cups a day.",
+            "- Avoid in children and pregnant or breastfeeding women."
+          ]
+        },
+        {
+          "id": 21.5,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Oregano Tea",
+          "ingredient_amount": [
+            "1 tbsp",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "of fresh or dried oregano",
+            "of boiling water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_oregano.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Place oregano in the cup of boiling water.",
+            "- Let steep for 5 to 10 minutes.",
+            "- Strain and drink warm 2 to 3 cups per day.",
+            "- Do not exceed 3 cups daily."
+          ]
+        },
+        {
+          "id": 21.6,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Peppermint Tea",
+          "ingredient_amount": [
+            "2 tsp",
+            "150 ml"
+          ],
+          "ingredient_description": [
+            "of fresh chopped peppermint",
+            "of water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_menta.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Add peppermint leaves to the cup of boiling water.",
+            "- Cover and let steep for a few minutes.",
+            "- Strain, let cool and drink 1 cup 2 to 4 times a day.",
+            "- Not recommended during pregnancy, breastfeeding, or for children under 2."
+          ]
+        },
+        {
+          "id": 21.7,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Lavender Tea",
+          "ingredient_amount": [
+            "30 g",
+            "1 liter"
+          ],
+          "ingredient_description": [
+            "of chopped lavender flowers",
+            "of water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_lavanda.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Bring water to a boil and add lavender flowers.",
+            "- Turn off the heat, cover and let cool.",
+            "- Strain and drink.",
+            "- Do not consume during pregnancy, breastfeeding, in children, or with gastric ulcers."
+          ]
+        },
+        {
+          "id": 21.8,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Valerian Tea",
+          "ingredient_amount": [
+            "1-3 g",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "of dried valerian root",
+            "of boiling water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_valeriana.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Add dried valerian root to boiling water.",
+            "- Cover and let steep for 10 minutes.",
+            "- Strain and drink up to 3 cups a day.",
+            "- Do not use in pregnancy, breastfeeding or children under 12."
+          ]
+        },
+        {
+          "id": 21.9,
+          "image_smoothie": "assets/images/jen_li.png",
+          "name": "Ginger Tea",
+          "ingredient_amount": [
+            "1 cm",
+            "1 liter"
+          ],
+          "ingredient_description": [
+            "of ginger root sliced or grated",
+            "of boiling water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_jengibre.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Add ginger to a container with water and boil for 5 to 10 minutes.",
+            "- Cool, strain and drink a maximum of 4 cups a day.",
+            "- Avoid with anticoagulant treatment."
+          ]
+        },
+        {
+          "id": 21.1,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "White Willow Tea",
+          "ingredient_amount": [
+            "1 tbsp",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "of dried white willow bark",
+            "of water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_hierbabuena.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Bring water to a boil and add willow bark.",
+            "- Boil for 10 minutes, strain and let cool slightly.",
+            "- Drink up to 2 cups a day.",
+            "- Do not use in children, pregnancy, aspirin allergy or anticoagulant treatment."
+          ]
+        },
+        {
+          "id": 21.11,
+          "image_smoothie": "assets/images/ba_cur.png",
+          "name": "Turmeric Tea",
+          "ingredient_amount": [
+            "1 tbsp",
+            "1 cup"
+          ],
+          "ingredient_description": [
+            "of turmeric powder",
+            "of water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_curcuma.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Bring water to a boil and add turmeric.",
+            "- Boil for 5 to 10 minutes.",
+            "- Strain and drink 2 to 3 cups a day.",
+            "- Do not use with anticoagulants such as warfarin or aspirin."
+          ]
+        },
+        {
+          "id": 21.12,
+          "image_smoothie": "assets/images/te_pe_na.png",
+          "name": "Feverfew Tea",
+          "ingredient_amount": [
+            "15 g",
+            "600 ml"
+          ],
+          "ingredient_description": [
+            "of aerial parts of feverfew",
+            "of water"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_hierbabuena.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Bring water to a boil, remove from heat and add the plant.",
+            "- Cover and let steep for about 10 minutes.",
+            "- Drink one cup of this tea 3 times a day."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name_category": "Rejuvenating Smoothies",
+      "image_category": "assets/images/rejuvenecedor.png",
+      "recipes": [
+        {
+          "id": 22.1,
+          "image_smoothie": "assets/images/ba_na.png",
+          "name": "Tropical Smoothie",
+          "ingredient_amount": [
+            "½ unit",
+            "½ unit",
+            "1 unit",
+            "1 unit",
+            "¼ cup"
+          ],
+          "ingredient_description": [
+            "orange",
+            "banana",
+            "apple",
+            "mandarin",
+            "of fresh pineapple"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_banana.png",
+            "assets/images/icono_manzana.png",
+            "assets/images/icono_mandarina.png",
+            "assets/images/icono_pina.png"
+          ],
+          "preparation": [
+            "- Wash, peel and cut all ingredients into pieces.",
+            "- Place in a blender and blend at high speed for a few seconds.",
+            "- Add a little water for a more liquid consistency if desired.",
+            "- Serve and drink immediately."
+          ]
+        },
+        {
+          "id": 22.2,
+          "image_smoothie": "assets/images/pe_aran.png",
+          "name": "Raspberry and Cherry Juice",
+          "ingredient_amount": [
+            "20 units",
+            "20 units",
+            "juice of 1",
+            "2 glasses"
+          ],
+          "ingredient_description": [
+            "cherries",
+            "raspberries",
+            "lemon",
+            "of water (500 ml)"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_cereza.png",
+            "assets/images/icono_frambuesa.png",
+            "assets/images/icono_limon.png",
+            "assets/images/icono_agua.png"
+          ],
+          "preparation": [
+            "- Wash the berries and place in a blender with water and lemon juice.",
+            "- Blend all ingredients for a few seconds.",
+            "- Add a little ice and drink immediately."
+          ]
+        },
+        {
+          "id": 22.3,
+          "image_smoothie": "assets/images/na_re_za.png",
+          "name": "Rejuvenating Detox Smoothie",
+          "ingredient_amount": [
+            "1 unit",
+            "2 units",
+            "½ unit",
+            "1 unit",
+            "1 stalk"
+          ],
+          "ingredient_description": [
+            "orange",
+            "radishes",
+            "cucumber",
+            "carrot",
+            "of celery"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_remolacha.png",
+            "assets/images/icono_pepino.png",
+            "assets/images/icono_zanahoria.png",
+            "assets/images/icono_apio.png"
+          ],
+          "preparation": [
+            "- Squeeze the orange juice.",
+            "- Blend it with the radishes, carrot, cucumber and celery chopped.",
+            "- Process until smooth.",
+            "- Serve and drink immediately."
+          ]
+        },
+        {
+          "id": 22.4,
+          "image_smoothie": "assets/images/pa_pi.png",
+          "name": "Papaya and Pineapple Juice",
+          "ingredient_amount": [
+            "½ unit",
+            "½ unit",
+            "juice of 1"
+          ],
+          "ingredient_description": [
+            "fresh pineapple",
+            "medium papaya",
+            "orange"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_pina.png",
+            "assets/images/icono_papaya.png",
+            "assets/images/icono_naranja.png"
+          ],
+          "preparation": [
+            "- Peel and cut the pineapple and papaya into pieces.",
+            "- Mix in a blender with the orange juice.",
+            "- Best served very fresh, preferably on an empty stomach."
+          ]
+        },
+        {
+          "id": 22.5,
+          "image_smoothie": "assets/images/fram_me.png",
+          "name": "Yogurt and Peach Smoothie",
+          "ingredient_amount": [
+            "½ cup",
+            "½ cup",
+            "¼ cup",
+            "1 unit (optional)"
+          ],
+          "ingredient_description": [
+            "of frozen strawberries",
+            "of natural yogurt",
+            "of peach",
+            "orange"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_fresa.png",
+            "assets/images/icono_yogurt.png",
+            "assets/images/icono_melocoton.png",
+            "assets/images/icono_naranja.png"
+          ],
+          "preparation": [
+            "- Wash, peel and cut the orange and peach into pieces.",
+            "- Place in a blender with yogurt and strawberries.",
+            "- Blend for a few seconds until smooth and creamy.",
+            "- Serve and drink immediately."
+          ]
+        },
+        {
+          "id": 22.6,
+          "image_smoothie": "assets/images/ki_fre.png",
+          "name": "Kiwi and Orange Juice",
+          "ingredient_amount": [
+            "2 cups",
+            "1 unit",
+            "2 cups"
+          ],
+          "ingredient_description": [
+            "of ice",
+            "medium kiwi peeled",
+            "of orange juice (500 ml)"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_hielo.png",
+            "assets/images/icono_kiwi.png",
+            "assets/images/icono_naranja.png"
+          ],
+          "preparation": [
+            "- Squeeze several oranges to get two glasses of juice.",
+            "- Peel and cut the kiwi.",
+            "- Blend both ingredients with the ice.",
+            "- Blend until smooth and serve very fresh."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name_category": "Immunity Smoothies for Kids",
+      "image_category": "assets/images/defensas_ninos.png",
+      "recipes": [
+        {
+          "id": 23.1,
+          "image_smoothie": "assets/images/rem_fram.png",
+          "name": "Beet and Raspberry Smoothie",
+          "ingredient_amount": [
+            "250 ml",
+            "1 unit",
+            "½ small",
+            "1 unit",
+            "100 g",
+            "1-2 units",
+            "2 cubes"
+          ],
+          "ingredient_description": [
+            "of yogurt",
+            "frozen banana",
+            "beet",
+            "orange",
+            "of raspberries",
+            "dates",
+            "of ice"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_yogurt.png",
+            "assets/images/icono_banana.png",
+            "assets/images/icono_remolacha.png",
+            "assets/images/icono_naranja.png",
+            "assets/images/icono_frambuesa.png",
+            "assets/images/icono_datil.png",
+            "assets/images/icono_hielo.png"
+          ],
+          "preparation": [
+            "- Peel the beet, cut into pieces and cook in a pot with water and salt for about 20 minutes. Let cool.",
+            "- Peel the orange and cut into pieces. Remove the date pits.",
+            "- Combine all ingredients in a powerful blender and blend.",
+            "- Add more water or sweetener if needed."
+          ]
+        },
+        {
+          "id": 23.2,
+          "image_smoothie": "assets/images/aran_cala.png",
+          "name": "Blueberry and Zucchini Smoothie",
+          "ingredient_amount": [
+            "1 unit",
+            "150 g",
+            "½ small",
+            "1 leaf",
+            "2 tbsp",
+            "a pinch",
+            "250 ml",
+            "1 tbsp (optional)"
+          ],
+          "ingredient_description": [
+            "frozen banana",
+            "of frozen blueberries",
+            "frozen zucchini",
+            "of kale",
+            "of raw cashews",
+            "of cinnamon",
+            "of coconut milk",
+            "of maple syrup"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_banana.png",
+            "assets/images/icono_arandano.png",
+            "assets/images/icono_calabacin.png",
+            "assets/images/icono_col.png",
+            "assets/images/icono_nuez.png",
+            "assets/images/icono_canela.png",
+            "assets/images/icono_coco.png",
+            "assets/images/icono_miel.png"
+          ],
+          "preparation": [
+            "- Cut zucchini into pieces, steam for 5 minutes, let cool and freeze.",
+            "- Blend all ingredients in a powerful blender.",
+            "- Taste and serve."
+          ]
+        },
+        {
+          "id": 23.3,
+          "image_smoothie": "assets/images/cala_mang.png",
+          "name": "Pumpkin and Mango Smoothie",
+          "ingredient_amount": [
+            "250 ml",
+            "1 unit",
+            "250 ml",
+            "a pinch",
+            "1 tbsp (optional)"
+          ],
+          "ingredient_description": [
+            "of pumpkin puree",
+            "mango",
+            "of milk",
+            "of cinnamon",
+            "of maple syrup"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_calabaza.png",
+            "assets/images/icono_mango.png",
+            "assets/images/icono_leche.png",
+            "assets/images/icono_canela.png",
+            "assets/images/icono_miel.png"
+          ],
+          "preparation": [
+            "- Bake pumpkin at 180°C for 45 minutes, let cool and scoop out the flesh.",
+            "- Peel the mango and cut into pieces.",
+            "- Add all ingredients to a blender and blend.",
+            "- Taste and add more sweetener if preferred."
+          ]
+        },
+        {
+          "id": 23.4,
+          "image_smoothie": "assets/images/fre_coli.png",
+          "name": "Strawberry and Cauliflower Smoothie",
+          "ingredient_amount": [
+            "250 g",
+            "150 g",
+            "1 unit",
+            "1 tbsp",
+            "350 ml",
+            "1 unit"
+          ],
+          "ingredient_description": [
+            "of cooked cauliflower",
+            "of strawberries",
+            "frozen banana",
+            "of hemp seeds",
+            "of milk",
+            "date"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_col.png",
+            "assets/images/icono_fresa.png",
+            "assets/images/icono_banana.png",
+            "assets/images/icono_chia.png",
+            "assets/images/icono_leche.png",
+            "assets/images/icono_datil.png"
+          ],
+          "preparation": [
+            "- Cut cauliflower into florets and steam until soft, about 10 minutes. Let cool.",
+            "- Remove the green tops from strawberries and cut in half. Remove the date pit.",
+            "- Blend all ingredients in a powerful blender.",
+            "- Check the flavor and add more milk if desired."
+          ]
+        },
+        {
+          "id": 23.5,
+          "image_smoothie": "assets/images/choco_ave.png",
+          "name": "Chocolate and Hazelnut Smoothie",
+          "ingredient_amount": [
+            "4 tbsp",
+            "1-2 units",
+            "250 ml",
+            "60 g",
+            "1 tsp",
+            "1 tbsp",
+            "2 cubes"
+          ],
+          "ingredient_description": [
+            "of oat flakes ground to flour",
+            "dates",
+            "of milk",
+            "of spinach",
+            "of cocoa powder",
+            "of hazelnut butter",
+            "of ice"
+          ],
+          "ingredient_icon": [
+            "assets/images/icono_avena.png",
+            "assets/images/icono_datil.png",
+            "assets/images/icono_leche.png",
+            "assets/images/icono_espinaca.png",
+            "assets/images/icono_chocolate.png",
+            "assets/images/icono_nuez.png",
+            "assets/images/icono_hielo.png"
+          ],
+          "preparation": [
+            "- Blend all ingredients in a powerful blender until smooth.",
+            "- Start with 1 date, taste and add another if you prefer it sweeter.",
+            "- Add more liquid if needed."
+          ]
+        }
+      ]
     }
   ]
 }

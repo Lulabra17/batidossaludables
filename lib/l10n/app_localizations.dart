@@ -152,6 +152,12 @@ abstract class AppLocalizations {
   /// **'No favorite recipes'**
   String get noFavorites;
 
+  /// No description provided for @noFavoritesHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Explore the recipes and mark\nthe ones you like the most.'**
+  String get noFavoritesHint;
+
   /// No description provided for @ingredientsTitle.
   ///
   /// In en, this message translates to:
@@ -269,7 +275,7 @@ abstract class AppLocalizations {
   /// No description provided for @deleteReminders.
   ///
   /// In en, this message translates to:
-  /// **'Delete existing reminders'**
+  /// **'Delete all'**
   String get deleteReminders;
 
   /// No description provided for @scheduledRemindersLabel.
@@ -553,6 +559,174 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'For Gastritis'**
   String get cat18;
+
+  /// No description provided for @cat19.
+  ///
+  /// In en, this message translates to:
+  /// **'Teas for Weight Loss'**
+  String get cat19;
+
+  /// No description provided for @cat20.
+  ///
+  /// In en, this message translates to:
+  /// **'Laxative Teas'**
+  String get cat20;
+
+  /// No description provided for @cat21.
+  ///
+  /// In en, this message translates to:
+  /// **'Teas for Headaches'**
+  String get cat21;
+
+  /// No description provided for @cat22.
+  ///
+  /// In en, this message translates to:
+  /// **'Rejuvenating Smoothies'**
+  String get cat22;
+
+  /// No description provided for @cat23.
+  ///
+  /// In en, this message translates to:
+  /// **'Immunity Smoothies for Kids'**
+  String get cat23;
+
+  /// No description provided for @tabSetup.
+  ///
+  /// In en, this message translates to:
+  /// **'Setup'**
+  String get tabSetup;
+
+  /// No description provided for @tabReminders.
+  ///
+  /// In en, this message translates to:
+  /// **'Reminders'**
+  String get tabReminders;
+
+  /// No description provided for @tabToday.
+  ///
+  /// In en, this message translates to:
+  /// **'Today'**
+  String get tabToday;
+
+  /// No description provided for @kimoSetupGuide.
+  ///
+  /// In en, this message translates to:
+  /// **'Hello! Set up your daily hydration to get started.'**
+  String get kimoSetupGuide;
+
+  /// No description provided for @kimoSetupConfigured.
+  ///
+  /// In en, this message translates to:
+  /// **'All set! Your reminders are active.'**
+  String get kimoSetupConfigured;
+
+  /// No description provided for @noRemindersInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'No reminders yet. Go to Setup to configure them.'**
+  String get noRemindersInfo;
+
+  /// No description provided for @goToSetupButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Go to Setup'**
+  String get goToSetupButton;
+
+  /// No description provided for @reconfigurarButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Reconfigure'**
+  String get reconfigurarButton;
+
+  /// No description provided for @todayProgressTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'TODAY\'S PROGRESS'**
+  String get todayProgressTitle;
+
+  /// No description provided for @kimoComment0pct.
+  ///
+  /// In en, this message translates to:
+  /// **'Start your hydration today! 💧'**
+  String get kimoComment0pct;
+
+  /// No description provided for @kimoComment25pct.
+  ///
+  /// In en, this message translates to:
+  /// **'Come on! You need more water 💪'**
+  String get kimoComment25pct;
+
+  /// No description provided for @kimoComment50pct.
+  ///
+  /// In en, this message translates to:
+  /// **'Great pace! You\'re halfway there ⭐'**
+  String get kimoComment50pct;
+
+  /// No description provided for @kimoComment75pct.
+  ///
+  /// In en, this message translates to:
+  /// **'Almost there! Just a bit more 🌟'**
+  String get kimoComment75pct;
+
+  /// No description provided for @kimoComment100pct.
+  ///
+  /// In en, this message translates to:
+  /// **'Goal achieved! You\'re amazing! 🎉'**
+  String get kimoComment100pct;
+
+  /// No description provided for @addWaterTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'LOG WATER'**
+  String get addWaterTitle;
+
+  /// No description provided for @resetDayButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset day'**
+  String get resetDayButton;
+
+  /// No description provided for @reminderLabelMorning.
+  ///
+  /// In en, this message translates to:
+  /// **'Morning hydration'**
+  String get reminderLabelMorning;
+
+  /// No description provided for @reminderLabelMidMorning.
+  ///
+  /// In en, this message translates to:
+  /// **'Mid-morning'**
+  String get reminderLabelMidMorning;
+
+  /// No description provided for @reminderLabelMidday.
+  ///
+  /// In en, this message translates to:
+  /// **'Midday hydration'**
+  String get reminderLabelMidday;
+
+  /// No description provided for @reminderLabelAfternoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Afternoon recharge'**
+  String get reminderLabelAfternoon;
+
+  /// No description provided for @reminderLabelEvening.
+  ///
+  /// In en, this message translates to:
+  /// **'Evening hydration'**
+  String get reminderLabelEvening;
+
+  /// No description provided for @reminderLabelNight.
+  ///
+  /// In en, this message translates to:
+  /// **'Before sleep'**
+  String get reminderLabelNight;
+
+  /// No description provided for @editReminderRoutine.
+  ///
+  /// In en, this message translates to:
+  /// **'Change routine'**
+  String get editReminderRoutine;
 }
 
 class _AppLocalizationsDelegate

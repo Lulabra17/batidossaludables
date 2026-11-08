@@ -133,7 +133,10 @@ class _HomeState extends State<Home> {
                   ],
                 ),
               ),
-              const Icon(Icons.chevron_right, color: Colors.white38, size: 22),
+              Image.asset(
+                'assets/images/kimo_receta_dia.png',
+                height: 72,
+              ),
             ],
           ),
         ),
@@ -143,9 +146,10 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    // Suscripción a LocaleProvider para reconstruir al cambiar tema o idioma
+    context.watch<LocaleProvider>();
     final smProvider = Provider.of<SmoothieProvider>(context, listen: false);
     return Scaffold(
-      backgroundColor: Color(0xFFE8E8DE),
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: Row(
@@ -159,7 +163,6 @@ class _HomeState extends State<Home> {
               context.l10n.appTitle,
               style: GoogleFonts.nunito(
                 textStyle: const TextStyle(
-                  color: Colors.black87,
                   fontWeight: FontWeight.bold,
                   fontSize: 17,
                 ),
@@ -168,6 +171,12 @@ class _HomeState extends State<Home> {
           ],
         ),
         actions: [
+          Consumer<LocaleProvider>(
+            builder: (context, lp, _) => IconButton(
+              icon: Icon(lp.isDark ? Icons.light_mode : Icons.dark_mode),
+              onPressed: () => lp.toggleTheme(),
+            ),
+          ),
           IconButton(
             icon: const Icon(Icons.language),
             onPressed: () => _showLanguageDialog(context),
@@ -177,6 +186,7 @@ class _HomeState extends State<Home> {
       body: Stack(children: [
         Consumer<SmoothieProvider>(
           builder: (context, provider, child) {
+            context.watch<LocaleProvider>(); // reconstruir al cambiar tema
             return SingleChildScrollView(
               child: Column(
                 children: [
@@ -273,6 +283,7 @@ class _HomeState extends State<Home> {
                       child: Column(
                         children: [
                           ListView.builder(
+                            key: ValueKey(Theme.of(context).brightness),
                             physics: NeverScrollableScrollPhysics(),
                             shrinkWrap: true,
                             itemCount: provider.categories.length,
@@ -303,10 +314,10 @@ class _HomeState extends State<Home> {
       builder: (_) => AlertDialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         title: Row(
-          children: const [
-            Icon(Icons.language, color: Colors.teal),
-            SizedBox(width: 8),
-            Text('Idioma / Language'),
+          children: [
+            Icon(Icons.language, color: Theme.of(context).colorScheme.primary),
+            const SizedBox(width: 8),
+            const Text('Idioma / Language'),
           ],
         ),
         content: Column(
@@ -345,7 +356,7 @@ class _HomeState extends State<Home> {
     return ListTile(
       leading: Text(flag, style: const TextStyle(fontSize: 28)),
       title: Text(label, style: GoogleFonts.nunito(fontWeight: FontWeight.w600)),
-      trailing: selected ? const Icon(Icons.check_circle, color: Colors.teal) : null,
+      trailing: selected ? Icon(Icons.check_circle, color: Theme.of(context).colorScheme.primary) : null,
       onTap: () {
         provider.setLocale(code);
         Navigator.pop(context);
@@ -381,7 +392,7 @@ Widget listxCategoria(BuildContext context, dynamic category) {
                 child: Text(categoryLocalizedName(context, category.id),
                     style: GoogleFonts.nunito(
                       textStyle: TextStyle(
-                          color: Colors.black,
+                          color: Theme.of(context).colorScheme.onSurface,
                           fontWeight: FontWeight.bold,
                           fontSize: MediaQuery.of(context).size.width * 0.05),
                     )),
@@ -395,7 +406,7 @@ Widget listxCategoria(BuildContext context, dynamic category) {
                                 ListaRecetas(category: category)));
                   },
                   icon: const Icon(Icons.arrow_forward_ios),
-                  color: Colors.black,
+                  color: Theme.of(context).colorScheme.onSurface,
                   iconSize: 18),
             ],
           ),

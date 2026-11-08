@@ -39,6 +39,10 @@ class AppLocalizationsEs extends AppLocalizations {
   String get noFavorites => 'No hay recetas favoritas';
 
   @override
+  String get noFavoritesHint =>
+      'Explora las recetas y marca\nlas que más te gusten.';
+
+  @override
   String get ingredientsTitle => 'Ingredientes';
 
   @override
@@ -99,7 +103,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get activateReminders => 'Activar recordatorios';
 
   @override
-  String get deleteReminders => 'Borrar recordatorios existentes';
+  String get deleteReminders => 'Borrar todo';
 
   @override
   String get scheduledRemindersLabel => 'RECORDATORIOS PROGRAMADOS';
@@ -258,4 +262,91 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get cat18 => 'Para la Gastritis';
+
+  @override
+  String get cat19 => 'Tés para Bajar de Peso';
+
+  @override
+  String get cat20 => 'Tés Laxantes';
+
+  @override
+  String get cat21 => 'Tés para el Dolor de Cabeza';
+
+  @override
+  String get cat22 => 'Batidos Rejuvenecedores';
+
+  @override
+  String get cat23 => 'Batidos para Defensas en Niños';
+
+  @override
+  String get tabSetup => 'Inicio';
+
+  @override
+  String get tabReminders => 'Recordatorios';
+
+  @override
+  String get tabToday => 'Hoy';
+
+  @override
+  String get kimoSetupGuide =>
+      '¡Hola! Configura tu hidratación diaria para empezar.';
+
+  @override
+  String get kimoSetupConfigured =>
+      '¡Todo listo! Tus recordatorios están activos.';
+
+  @override
+  String get noRemindersInfo =>
+      'Aún no hay recordatorios. Ve a Inicio para configurarlos.';
+
+  @override
+  String get goToSetupButton => 'Ir a Inicio';
+
+  @override
+  String get reconfigurarButton => 'Reconfigurar';
+
+  @override
+  String get todayProgressTitle => 'PROGRESO DE HOY';
+
+  @override
+  String get kimoComment0pct => '¡Comienza tu hidratación de hoy! 💧';
+
+  @override
+  String get kimoComment25pct => '¡Vamos! Necesitas hidratarte más 💪';
+
+  @override
+  String get kimoComment50pct => '¡Buen ritmo! Vas a la mitad ⭐';
+
+  @override
+  String get kimoComment75pct => '¡Casi lo logras! Un poco más 🌟';
+
+  @override
+  String get kimoComment100pct => '¡Meta cumplida! ¡Eres increíble! 🎉';
+
+  @override
+  String get addWaterTitle => 'REGISTRAR AGUA';
+
+  @override
+  String get resetDayButton => 'Reiniciar día';
+
+  @override
+  String get reminderLabelMorning => 'Hidratación matutina';
+
+  @override
+  String get reminderLabelMidMorning => 'Media mañana';
+
+  @override
+  String get reminderLabelMidday => 'Hidratación del mediodía';
+
+  @override
+  String get reminderLabelAfternoon => 'Recarga de tarde';
+
+  @override
+  String get reminderLabelEvening => 'Hidratación nocturna';
+
+  @override
+  String get reminderLabelNight => 'Antes de dormir';
+
+  @override
+  String get editReminderRoutine => 'Cambiar rutina';
 }

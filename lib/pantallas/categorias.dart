@@ -21,18 +21,23 @@ class _CategoriasState extends State<Categorias> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFE8E8DE),
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        leading: null,
-        title: Text(context.l10n.categoriesTitle,
-            style: GoogleFonts.nunito(textStyle: TextStyle(
-                color: Colors.black, fontWeight: FontWeight.bold, fontSize: MediaQuery.of(context).size.width*0.04),
+        title: Row(
+          children: [
+            Image.asset('assets/images/logo_batidos.png', height: 34),
+            const SizedBox(width: 10),
+            Text(
+              context.l10n.categoriesTitle,
+              style: GoogleFonts.nunito(
+                textStyle: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 17,
+                ),
+              ),
             ),
+          ],
         ),
-        backgroundColor: Colors.white,
-        shadowColor: Colors.grey,
-
       ),
       body: Consumer<SmoothieProvider>(
         builder: (context, provider, child) {

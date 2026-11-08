@@ -1,4 +1,3 @@
-import 'package:alarm/alarm.dart';
 import 'package:batidos_salud/alarms_functions.dart';
 import 'package:batidos_salud/l10n/l10n_extension.dart';
 import 'package:batidos_salud/main/main_screen.dart';
@@ -9,6 +8,7 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:batidos_salud/services/analytics_service.dart';
+import 'package:batidos_salud/services/recipe_notification_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -20,35 +20,15 @@ import 'dart:async';
 import 'dart:math' show pi;
 import 'favoritos.dart';
 
-// configurando canales para reprogramar alarmas en un reinicio
-@pragma('vm:entry-point')
-Future<void> reprogramAlarmsHandler() async {
-  try {
-    await loadAndScheduleAlarms();
-  } catch (e) {
-    debugPrint('⚠️ reprogramAlarmsHandler: canal no disponible en background ($e)');
-  }
-}
-
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await MobileAds.instance.initialize(); // INICIALIZAMOS ADMOB
+  await MobileAds.instance.initialize();
 
-  await Alarm.init();
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
-
-  // Configuramos el MethodChannel para recibir la llamada del BroadcastReceiver
-  const MethodChannel channel = MethodChannel("com.example.batidos_salud/alarm");
-  channel.setMethodCallHandler((MethodCall call) async {
-    if (call.method == "reprogramAlarms") {
-      await reprogramAlarmsHandler();
-    }
-  });
 
   // Inicializar Hive
   await Hive.initFlutter();
@@ -64,11 +44,27 @@ Future<void> main() async {
   await FirebaseAnalytics.instance.setAnalyticsCollectionEnabled(true);
   await _setupFCM();
 
-  // Pedir permisos antes de programar alarmas/notificaciones
+  // Inicializar plugins de notificación (sin programar aún)
+  await initWaterNotifications();
+  await RecipeNotificationService.initialize();
+
+  // Pedir permisos
   await requestPermissions();
 
+  // Limpiar caché de SharedPreferences ANTES de cualquier zonedSchedule().
+  // El formato de flutter_local_notifications cambió entre versiones y los datos
+  // antiguos causan "Missing type parameter" al intentar guardar una nueva notificación.
+  // Clave v18 fuerza una nueva limpieza aunque v17 ya se ejecutó antes.
+  // Programar notificaciones — la limpieza del caché corrupto se hace
+  // en MainActivity.clearCorruptNotifCacheIfNeeded() antes de que arranque Dart.
   try {
-    await loadAndScheduleAlarms(); // Cargar y reprogramar alarmas al iniciar
+    await RecipeNotificationService.enableIfFirstTime();
+  } catch (e) {
+    debugPrint('⚠️ RecipeNotificationService en startup: $e');
+  }
+
+  try {
+    await loadAndScheduleAlarms();
   } catch (e) {
     debugPrint('⚠️ loadAndScheduleAlarms en startup: $e');
   }
@@ -85,9 +81,6 @@ Future<void> _setupFCM() async {
     badge: true,
     sound: true,
   );
-
-  // Suscribir al topic — todos los dispositivos reciben la notificación diaria
-  await messaging.subscribeToTopic('receta_del_dia');
 
   // Manejar notificaciones cuando la app está en primer plano
   FirebaseMessaging.onMessage.listen((RemoteMessage message) {
@@ -150,6 +143,7 @@ class MyApp extends StatelessWidget {
               surface: Color(0xFFFAFAF8),
             ),
             scaffoldBackgroundColor: const Color(0xFFFAFAF8),
+            cardColor: Colors.white,
             appBarTheme: const AppBarTheme(
               backgroundColor: Colors.white,
               foregroundColor: Colors.black87,
@@ -172,6 +166,41 @@ class MyApp extends StatelessWidget {
               ),
             ),
           ),
+          darkTheme: ThemeData(
+            useMaterial3: false,
+            brightness: Brightness.dark,
+            primaryColor: const Color(0xFF2BBFAA),
+            colorScheme: const ColorScheme.dark(
+              primary: Color(0xFF2BBFAA),
+              secondary: Color(0xFF26A69A),
+              surface: Color(0xFF1E1E1E),
+              onSurface: Colors.white,
+            ),
+            scaffoldBackgroundColor: const Color(0xFF121212),
+            cardColor: const Color(0xFF1E1E1E),
+            appBarTheme: const AppBarTheme(
+              backgroundColor: Color(0xFF1A1A1A),
+              foregroundColor: Colors.white,
+              elevation: 1,
+              shadowColor: Colors.black,
+              iconTheme: IconThemeData(color: Colors.white70),
+            ),
+            bottomAppBarTheme: const BottomAppBarThemeData(
+              color: Color(0xFF1A1A1A),
+              elevation: 4,
+              shadowColor: Colors.black,
+            ),
+            elevatedButtonTheme: ElevatedButtonThemeData(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFF2BBFAA),
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+              ),
+            ),
+          ),
+          themeMode: localeProvider.themeMode,
           home: const Bienvenida(),
         ),
       ),

@@ -1,3 +1,17 @@
+# --- Gson / TypeToken ---
+# R8 strips generic type parameters from anonymous TypeToken subclasses.
+# Gson uses reflection to recover them at runtime; without -keepattributes Signature
+# TypeToken.<init> throws "Missing type parameter." — crashing all zonedSchedule() calls.
+-keepattributes Signature
+-keepattributes *Annotation*
+-keep class com.google.gson.reflect.TypeToken { *; }
+-keep class * extends com.google.gson.reflect.TypeToken
+-keep class com.google.gson.** { *; }
+
+# --- flutter_local_notifications ---
+# Keep all model/enum classes so Gson can serialize/deserialize by field name.
+-keep class com.dexterous.flutterlocalnotifications.** { *; }
+
 # --- Flutter native methods ---
 -keep class io.flutter.** { *; }
 -dontwarn io.flutter.embedding.**

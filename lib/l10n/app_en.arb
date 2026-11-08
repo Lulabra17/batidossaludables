@@ -17,6 +17,7 @@
   "categoriesTitle": "Categories",
   "favoritesTitle": "Favorites",
   "noFavorites": "No favorite recipes",
+  "noFavoritesHint": "Explore the recipes and mark\nthe ones you like the most.",
 
   "ingredientsTitle": "Ingredients",
   "preparationTitle": "Preparation",
@@ -45,7 +46,7 @@
     }
   },
   "activateReminders": "Activate reminders",
-  "deleteReminders": "Delete existing reminders",
+  "deleteReminders": "Delete all",
   "scheduledRemindersLabel": "SCHEDULED REMINDERS",
   "drinkWaterAt": "Drink water at {time}",
   "@drinkWaterAt": {
@@ -106,5 +107,34 @@
   "cat15": "For the Flu",
   "cat16": "For Fatty Liver",
   "cat17": "For Colon Inflammation",
-  "cat18": "For Gastritis"
+  "cat18": "For Gastritis",
+  "cat19": "Teas for Weight Loss",
+  "cat20": "Laxative Teas",
+  "cat21": "Teas for Headaches",
+  "cat22": "Rejuvenating Smoothies",
+  "cat23": "Immunity Smoothies for Kids",
+
+  "tabSetup": "Setup",
+  "tabReminders": "Reminders",
+  "tabToday": "Today",
+  "kimoSetupGuide": "Hello! Set up your daily hydration to get started.",
+  "kimoSetupConfigured": "All set! Your reminders are active.",
+  "noRemindersInfo": "No reminders yet. Go to Setup to configure them.",
+  "goToSetupButton": "Go to Setup",
+  "reconfigurarButton": "Reconfigure",
+  "todayProgressTitle": "TODAY'S PROGRESS",
+  "kimoComment0pct": "Start your hydration today! 💧",
+  "kimoComment25pct": "Come on! You need more water 💪",
+  "kimoComment50pct": "Great pace! You're halfway there ⭐",
+  "kimoComment75pct": "Almost there! Just a bit more 🌟",
+  "kimoComment100pct": "Goal achieved! You're amazing! 🎉",
+  "addWaterTitle": "LOG WATER",
+  "resetDayButton": "Reset day",
+  "reminderLabelMorning": "Morning hydration",
+  "reminderLabelMidMorning": "Mid-morning",
+  "reminderLabelMidday": "Midday hydration",
+  "reminderLabelAfternoon": "Afternoon recharge",
+  "reminderLabelEvening": "Evening hydration",
+  "reminderLabelNight": "Before sleep",
+  "editReminderRoutine": "Change routine"
 }

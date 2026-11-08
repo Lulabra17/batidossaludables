@@ -1,6 +1,4 @@
-import 'dart:ui';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:hive/hive.dart';
 import 'package:timezone/data/latest.dart' as tz;
@@ -11,7 +9,7 @@ import 'package:timezone/timezone.dart' as tz;
 /// flutter_timezone, y convierte a UTC para programar la notificación.
 class RecipeNotificationService {
   static const int _notifId = 1001;
-  static const String _channelId = 'recipe_of_day';
+  static const String _channelId = 'recipe_of_day_v3';
   static const String _prefKey = 'recipe_notif_enabled';
 
   static final FlutterLocalNotificationsPlugin _plugin =
@@ -21,9 +19,25 @@ class RecipeNotificationService {
   static Future<void> initialize() async {
     tz.initializeTimeZones();
 
-    const androidInit = AndroidInitializationSettings('@mipmap/ic_launcher');
+    const androidInit = AndroidInitializationSettings('ic_notification');
     const initSettings = InitializationSettings(android: androidInit);
     await _plugin.initialize(initSettings);
+
+    // Crear el canal explícitamente con sonido personalizado.
+    // Borramos versiones anteriores para asegurar sonido correcto.
+    final ap = _plugin.resolvePlatformSpecificImplementation<
+        AndroidFlutterLocalNotificationsPlugin>();
+    await ap?.deleteNotificationChannel('recipe_of_day');
+    await ap?.deleteNotificationChannel('recipe_of_day_v2');
+    await ap?.createNotificationChannel(
+      const AndroidNotificationChannel(
+        _channelId,
+        'Receta del día',
+        description: 'Receta saludable diaria a las 8am',
+        importance: Importance.high,
+        sound: RawResourceAndroidNotificationSound('notif_batidos'),
+      ),
+    );
   }
 
   /// Devuelve true si el usuario tiene la notificación diaria activada.
@@ -97,9 +111,10 @@ class RecipeNotificationService {
         _channelId,
         'Receta del día',
         channelDescription: 'Receta saludable diaria a las 8am',
-        importance: Importance.defaultImportance,
-        priority: Priority.defaultPriority,
+        importance: Importance.high,
+        priority: Priority.high,
         icon: 'ic_notification',
+        sound: RawResourceAndroidNotificationSound('notif_batidos'),
       ),
     );
 
@@ -111,17 +126,20 @@ class RecipeNotificationService {
         uiLocalNotificationDateInterpretation:
             UILocalNotificationDateInterpretation.absoluteTime,
       );
-    } on PlatformException catch (e) {
-      // SCHEDULE_EXACT_ALARM not granted — fall back to inexact scheduling.
-      // The notification may arrive a few minutes late but will still fire.
-      debugPrint('⚠️ Exact alarm not available ($e), falling back to inexact.');
-      await _plugin.zonedSchedule(
-        _notifId, title, body, tzScheduled, details,
-        androidScheduleMode: AndroidScheduleMode.inexact,
-        matchDateTimeComponents: DateTimeComponents.time,
-        uiLocalNotificationDateInterpretation:
-            UILocalNotificationDateInterpretation.absoluteTime,
-      );
+      debugPrint('✅ Receta del día programada para las 8:00 AM');
+    } catch (e) {
+      debugPrint('⚠️ Exacta falló ($e), usando inexacta');
+      try {
+        await _plugin.zonedSchedule(
+          _notifId, title, body, tzScheduled, details,
+          androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
+          matchDateTimeComponents: DateTimeComponents.time,
+          uiLocalNotificationDateInterpretation:
+              UILocalNotificationDateInterpretation.absoluteTime,
+        );
+      } catch (e2) {
+        debugPrint('❌ Fallo total receta del día: $e2');
+      }
     }
   }
 }
