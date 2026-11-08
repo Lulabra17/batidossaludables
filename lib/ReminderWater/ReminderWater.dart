@@ -48,6 +48,8 @@ class _ReminderWaterState extends State<ReminderWater>
 
   // ── Animations ───────────────────────────────────────────────────
   late final AnimationController _waveCtrl;
+  late final AnimationController _btnPressCtrl;
+  late final Animation<double> _btnScaleAnim;
 
   static const _gradientStart = Color(0xFF008776);
   static const _gradientEnd = Color(0xFF2BBFAA);
@@ -57,6 +59,18 @@ class _ReminderWaterState extends State<ReminderWater>
   void initState() {
     super.initState();
     _tabCtrl = TabController(length: 3, vsync: this);
+    _btnPressCtrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 100),
+      reverseDuration: const Duration(milliseconds: 400),
+    );
+    _btnScaleAnim = Tween<double>(begin: 1.0, end: 0.85).animate(
+      CurvedAnimation(
+        parent: _btnPressCtrl,
+        curve: Curves.easeIn,
+        reverseCurve: Curves.easeOutCubic,
+      ),
+    );
     _tabCtrl.addListener(() {
       if (_tabCtrl.index == 2 && !_tabCtrl.indexIsChanging && _todayMl > 0) {
         _playWaterSound();
@@ -83,6 +97,7 @@ class _ReminderWaterState extends State<ReminderWater>
   void dispose() {
     _tabCtrl.dispose();
     _waveCtrl.dispose();
+    _btnPressCtrl.dispose();
     _audioPlayer.dispose();
     super.dispose();
   }
@@ -90,7 +105,7 @@ class _ReminderWaterState extends State<ReminderWater>
   Future<void> _playWaterSound() async {
     try {
       await _audioPlayer.stop();
-      await _audioPlayer.play(AssetSource('sounds/agua.mp3'));
+      await _audioPlayer.play(AssetSource('sounds/agua.mp3'), volume: 0.6);
     } catch (_) {}
   }
 
@@ -1146,53 +1161,66 @@ class _ReminderWaterState extends State<ReminderWater>
   }
 
   Widget _circularAddButton(Color primary) {
-    return GestureDetector(
-      onTap: () => _logWater(250),
-      child: Container(
-        width: 72,
-        height: 72,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          gradient: const LinearGradient(
-            colors: [_gradientStart, _gradientEnd],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
+    return AnimatedBuilder(
+      animation: _btnScaleAnim,
+      builder: (context, child) => Transform.scale(
+        scale: _btnScaleAnim.value,
+        child: child,
+      ),
+      child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTapDown: (_) {
+          _btnPressCtrl.value = 1.0; // salto instantáneo a 0.85
+          _btnPressCtrl.reverse();   // rebote elástico de vuelta
+        },
+        onTapUp: (_) => _logWater(250),
+        onTapCancel: () {},
+        child: Container(
+          width: 72,
+          height: 72,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            gradient: const LinearGradient(
+              colors: [_gradientStart, _gradientEnd],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: _gradientEnd.withValues(alpha: 0.5),
+                blurRadius: 14,
+                offset: const Offset(0, 5),
+              ),
+            ],
           ),
-          boxShadow: [
-            BoxShadow(
-              color: _gradientEnd.withValues(alpha: 0.5),
-              blurRadius: 14,
-              offset: const Offset(0, 5),
-            ),
-          ],
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Icon(Icons.water_drop, color: Colors.white, size: 20),
-            const SizedBox(height: 2),
-            Text(
-              '+250',
-              style: GoogleFonts.nunito(
-                textStyle: const TextStyle(
-                  fontSize: 13,
-                  fontWeight: FontWeight.w900,
-                  color: Colors.white,
-                  height: 1,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(Icons.water_drop, color: Colors.white, size: 20),
+              const SizedBox(height: 2),
+              Text(
+                '+250',
+                style: GoogleFonts.nunito(
+                  textStyle: const TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w900,
+                    color: Colors.white,
+                    height: 1,
+                  ),
                 ),
               ),
-            ),
-            Text(
-              'ml',
-              style: GoogleFonts.nunito(
-                textStyle: TextStyle(
-                  fontSize: 10,
-                  color: Colors.white.withValues(alpha: 0.85),
-                  height: 1.1,
+              Text(
+                'ml',
+                style: GoogleFonts.nunito(
+                  textStyle: TextStyle(
+                    fontSize: 10,
+                    color: Colors.white.withValues(alpha: 0.85),
+                    height: 1.1,
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
