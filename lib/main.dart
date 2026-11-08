@@ -11,6 +11,7 @@ import 'package:batidos_salud/services/analytics_service.dart';
 import 'package:batidos_salud/services/recipe_notification_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -373,102 +374,125 @@ class _BienvenidaState extends State<Bienvenida> with TickerProviderStateMixin {
         child: SafeArea(
           child: Column(
             children: [
-              const SizedBox(height: 50),
-              // ── Logo + KIMO (Stack: logo detrás, KIMO encima) ─────
+              const SizedBox(height: 100),
+
+              // ── Logo ─────────────────────────────────────────────
               SizedBox(
-                height: size.height * 0.62,
-                child: Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    // Logo — detrás, más ancho que KIMO
-                    AnimatedBuilder(
-                      animation: Listenable.merge([_entranceCtrl, _floatCtrl]),
-                      builder: (context, child) {
-                        return Transform.translate(
-                          offset: Offset(0, _floatAnim.value),
-                          child: Transform.rotate(
-                            angle: _spinAnim.value,
-                            child: Transform.scale(
-                              scale: _scaleAnim.value,
-                              child: Opacity(
-                                opacity: _fadeAnim.value,
-                                child: child,
-                              ),
+                height: size.height * 0.40,
+                child: Center(
+                  child: AnimatedBuilder(
+                    animation: Listenable.merge([_entranceCtrl, _floatCtrl]),
+                    builder: (context, child) {
+                      return Transform.translate(
+                        offset: Offset(0, _floatAnim.value),
+                        child: Transform.rotate(
+                          angle: _spinAnim.value,
+                          child: Transform.scale(
+                            scale: _scaleAnim.value,
+                            child: Opacity(
+                              opacity: _fadeAnim.value,
+                              child: child,
                             ),
                           ),
-                        );
-                      },
-                      child: Image.asset(
-                        'assets/images/logo_batidos.png',
-                        width: size.width * 0.82,
-                      ),
-                    ),
-
-                    // KIMO — encima, centrado con leve desplazamiento hacia abajo
-                    Align(
-                      alignment: const Alignment(0, 0.25),
-                      child: FadeTransition(
-                        opacity: _kimoFadeAnim,
-                        child: Image.asset(
-                          'assets/images/kimo_bienvenida.png',
-                          width: size.width * 0.70,
-                          fit: BoxFit.contain,
                         ),
-                      ),
+                      );
+                    },
+                    child: Image.asset(
+                      'assets/images/logo_batidos.png',
+                      width: size.width * 0.82,
                     ),
-                  ],
+                  ),
                 ),
               ),
+
+              const SizedBox(height: 8),
+
+              // ── Nombre de la app ──────────────────────────────────
+              FadeTransition(
+                opacity: _kimoFadeAnim,
+                child: Text(
+                  l10n.appTitle,
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.nunito(
+                    fontSize: 32,
+                    fontWeight: FontWeight.w900,
+                    color: Colors.white,
+                    letterSpacing: 0.5,
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 8),
 
               // ── Slogan ────────────────────────────────────────────
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32.0),
-                child: Text(
-                  l10n.appSlogan,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.white70,
-                    letterSpacing: 0.5,
-                    height: 1.4,
+              FadeTransition(
+                opacity: _kimoFadeAnim,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 36.0),
+                  child: Text(
+                    l10n.appSlogan,
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.nunito(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white.withValues(alpha: 0.85),
+                      height: 1.4,
+                    ),
                   ),
                 ),
               ),
 
-              const SizedBox(height: 12),
+              const SizedBox(height: 24),
 
               // ── Botón ─────────────────────────────────────────────
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 48.0),
-                child: SizedBox(
-                  width: double.infinity,
-                  height: 52,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      foregroundColor: const Color(0xFF00695C),
-                      elevation: 0,
-                      shape: RoundedRectangleBorder(
+              FadeTransition(
+                opacity: _kimoFadeAnim,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 36.0),
+                  child: GestureDetector(
+                    onTap: showInterstitialAdIfAllowed,
+                    child: Container(
+                      width: double.infinity,
+                      height: 56,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
                         borderRadius: BorderRadius.circular(30),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withValues(alpha: 0.20),
+                            blurRadius: 20,
+                            offset: const Offset(0, 8),
+                          ),
+                        ],
                       ),
-                      textStyle: const TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 0.5,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Icon(Icons.local_drink_rounded,
+                              color: Color(0xFF00695C), size: 22),
+                          const SizedBox(width: 10),
+                          Text(
+                            l10n.welcomeButton,
+                            style: const TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w800,
+                              color: Color(0xFF00695C),
+                              letterSpacing: 0.5,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    onPressed: showInterstitialAdIfAllowed,
-                    child: Text(l10n.welcomeButton),
                   ),
                 ),
               ),
 
-              const SizedBox(height: 20),
+              const SizedBox(height: 32),
             ],
           ),
         ),
       ),
+
     );
   }
 }

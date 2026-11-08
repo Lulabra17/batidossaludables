@@ -333,8 +333,8 @@ class _ReminderWaterState extends State<ReminderWater>
           // KIMO section
           _kimoWithBubble(
             imagePath: configured
-                ? 'assets/images/kimo_favorito.png'
-                : 'assets/images/kimo_receta_dia.png',
+                ? 'assets/images/kimo_agua_activo.png'
+                : 'assets/images/kimo_agua_setup.png',
             message: configured
                 ? l10n.kimoSetupConfigured
                 : l10n.kimoSetupGuide,
@@ -724,7 +724,7 @@ class _ReminderWaterState extends State<ReminderWater>
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Image.asset('assets/images/kimo_sin_resultados.png',
+              Image.asset('assets/images/kimo_agua_vacio.png',
                   height: 130),
               const SizedBox(height: 20),
               Text(
@@ -953,8 +953,8 @@ class _ReminderWaterState extends State<ReminderWater>
     final pct = (_fillLevel * 100).toInt();
 
     final kimoImage = _fillLevel >= 0.5
-        ? 'assets/images/kimo_favorito.png'
-        : 'assets/images/kimo_receta_dia.png';
+        ? 'assets/images/kimo_agua_hidratado.png'
+        : 'assets/images/kimo_agua_sed.png';
 
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
